@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="SIR_L2_INTERM_MDSR_v1" last-modified="2014-09-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record format="binary" name="SIR_L2_INTERM_MDSR_v1" last-modified="2015-11-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>SIRAL L2 intermediate measurement data set record</cd:Description>
   <cd:Field name="mdsr_time">
     <cd:Time timeformat="binary_envisat_datetime">
@@ -1617,7 +1617,6 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeSnowDepth"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="snow_density">
@@ -1626,7 +1625,6 @@
       <cd:Unit>kg/m3</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeSnowDepth"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="discr_res">
@@ -1949,6 +1947,7 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeMSSGeoidHeight"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="geoid_from_mdl">
@@ -1957,6 +1956,7 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeMSSGeoidHeight"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="depth_elev_model">
@@ -2013,7 +2013,6 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeInverseBarometricCorrection"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="dyn_atm_corr">
@@ -2040,22 +2039,22 @@
       <cd:NativeType>int32</cd:NativeType>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="ocean_tide">
+  <cd:Field name="elast_ocean_tide">
     <cd:Integer>
-      <cd:Description>Ocean tide (component of total ocean tide)</cd:Description>
+      <cd:Description>Elastic ocean tide</cd:Description>
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeOceanTide"/>
+      <ct:NamedTest id="RangeOceanTideOcean"/>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="lp_eq_ocean_tide">
+  <cd:Field name="lp_ocean_tide">
     <cd:Integer>
-      <cd:Description>Long period equilibrium ocean tide (component of total ocean tide)</cd:Description>
+      <cd:Description>Long period ocean tide</cd:Description>
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeEquilibriumOceanTide"/>
+      <ct:NamedTest id="RangeEquilibriumOceanTideOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="ocean_load_tide">

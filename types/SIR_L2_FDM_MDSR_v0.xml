@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="SIR_L2_FDM_MDSR_v0" last-modified="2015-06-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record format="binary" name="SIR_L2_FDM_MDSR_v0" last-modified="2015-11-18" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>SIRAL L2 Fast Delivery Marine Mode measurement data set record</cd:Description>
   <cd:Field name="mdsr_time">
     <cd:Time timeformat="binary_envisat_datetime">
@@ -316,7 +316,7 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeAltitudeCOG"/>
+      <ct:NamedTest id="RangeAltitudeCOGOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="alt_cog_ref_ellip_20hz">
@@ -327,7 +327,7 @@
         <cd:Unit>mm</cd:Unit>
         <cd:BitSize>32</cd:BitSize>
         <cd:NativeType>int32</cd:NativeType>
-        <ct:NamedTest id="RangeAltitudeCOG"/>
+        <ct:NamedTest id="RangeAltitudeCOGOceanFD2"/>
       </cd:Integer>
     </cd:Array>
   </cd:Field>
@@ -442,8 +442,8 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
-      <ct:NamedTest id="RangeDryTroposphericCorrection"/>
-      <ct:NamedTest id="MissingValueShortInt"/>
+      <ct:NamedTest id="RangeDryTroposphericCorrectionOcean"/>
+      <ct:NamedTest id="MissingValueShortIntOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="wet_tropo_corr">
@@ -452,8 +452,8 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
-      <ct:NamedTest id="RangeWetTroposphericCorrection"/>
-      <ct:NamedTest id="MissingValueShortInt"/>
+      <ct:NamedTest id="RangeWetTroposphericCorrectionOcean"/>
+      <ct:NamedTest id="MissingValueShortIntOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="inv_barom_corr">
@@ -462,8 +462,8 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
-      <ct:NamedTest id="RangeInverseBarometricCorrection"/>
-      <ct:NamedTest id="MissingValueShortInt"/>
+      <ct:NamedTest id="RangeInverseBarometricCorrectionOcean"/>
+      <ct:NamedTest id="MissingValueShortIntOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="high_freq_var_corr">
@@ -480,8 +480,8 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
-      <ct:NamedTest id="RangeIonosphericCorrection"/>
-      <ct:NamedTest id="MissingValueShortInt"/>
+      <ct:NamedTest id="RangeIonosphericCorrectionOcean"/>
+      <ct:NamedTest id="MissingValueShortIntOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="sea_state_bias_corr">
@@ -490,8 +490,8 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
-      <ct:NamedTest id="RangeSeaStateBiasCorrection"/>
-      <ct:NamedTest id="MissingValueShortInt"/>
+      <ct:NamedTest id="RangeSeaStateBiasCorrectionOcean"/>
+      <ct:NamedTest id="MissingValueShortIntOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="spare_2">
@@ -573,8 +573,8 @@
       </cd:Conversion>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
-      <ct:NamedTest id="RangeBackscatterSigmaZero"/>
-      <ct:NamedTest id="MissingValueShortInt"/>
+      <ct:NamedTest id="RangeBackscatterSigmaZeroOcean"/>
+      <ct:NamedTest id="MissingValueShortIntOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="bkscat_20hz">
@@ -588,8 +588,8 @@
         </cd:Conversion>
         <cd:BitSize>16</cd:BitSize>
         <cd:NativeType>int16</cd:NativeType>
-        <ct:NamedTest id="RangeBackscatterSigmaZero"/>
-      <ct:NamedTest id="MissingValueShortInt"/>
+        <ct:NamedTest id="RangeBackscatterSigmaZeroOceanFD2"/>
+        <ct:NamedTest id="MissingValueShortIntOceanFD2"/>
       </cd:Integer>
     </cd:Array>
   </cd:Field>
@@ -634,6 +634,8 @@
       </cd:Conversion>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangeBackscatterSigmaZeroOcean"/>
+      <ct:NamedTest id="MissingValueShortIntOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="ocog_20hz">
@@ -647,6 +649,8 @@
         </cd:Conversion>
         <cd:BitSize>16</cd:BitSize>
         <cd:NativeType>int16</cd:NativeType>
+        <ct:NamedTest id="RangeBackscatterSigmaZeroOceanFD2"/>
+        <ct:NamedTest id="MissingValueShortIntOceanFD2"/>
       </cd:Integer>
     </cd:Array>
   </cd:Field>
@@ -699,7 +703,7 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeMSSGeoidHeight"/>
+      <ct:NamedTest id="RangeMSSGeoidHeightOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="geoid_height">
@@ -708,7 +712,7 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeMSSGeoidHeight"/>
+      <ct:NamedTest id="RangeMSSGeoidHeightOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="odle">
@@ -725,8 +729,8 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
-      <ct:NamedTest id="RangeOceanTide"/>
-      <ct:NamedTest id="MissingValueShortInt"/>
+      <ct:NamedTest id="RangeOceanTideOcean"/>
+      <ct:NamedTest id="MissingValueShortIntOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="long_period_tide">
@@ -735,6 +739,7 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangeEquilibriumOceanTideOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="ocean_load_tide">
@@ -743,8 +748,8 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
-      <ct:NamedTest id="RangeOceanLoadingTide"/>
-      <ct:NamedTest id="MissingValueShortInt"/>
+      <ct:NamedTest id="RangeOceanLoadingTideOcean"/>
+      <ct:NamedTest id="MissingValueShortIntOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="sol_earth_tide">
@@ -753,8 +758,8 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
-      <ct:NamedTest id="RangeSolidEarthTide"/>
-      <ct:NamedTest id="MissingValueShortInt"/>
+      <ct:NamedTest id="RangeSolidEarthTideOcean"/>
+      <ct:NamedTest id="MissingValueShortIntOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="geocen_pol_tide">
@@ -763,8 +768,8 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
-      <ct:NamedTest id="RangeGeocentricPolarTide"/>
-      <ct:NamedTest id="MissingValueShortInt"/>
+      <ct:NamedTest id="RangeGeocentricPolarTideOcean"/>
+      <ct:NamedTest id="MissingValueShortIntOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="wind_speed">
@@ -798,7 +803,7 @@
       <cd:Integer>
         <cd:BitSize>16</cd:BitSize>
         <cd:NativeType>uint16</cd:NativeType>
-        <ct:NamedTest id="RangePeakiness"/>
+        <ct:NamedTest id="RangePeakinessFDM"/>
       </cd:Integer>
     </cd:Array>
   </cd:Field>
@@ -809,7 +814,7 @@
       <cd:NativeType>uint32</cd:NativeType>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="surface_type">
+  <cd:Field name="surf_type">
     <cd:Integer>
       <cd:Description>Altimeter surface type flag</cd:Description>
       <cd:BitSize>16</cd:BitSize>

@@ -166,7 +166,7 @@
       </cd:Conversion>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangePhaseCorrection"/>
+      <ct:NamedTest id="RangePhaseCorrectionInternal"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="ext_phase_corr">
@@ -178,7 +178,7 @@
       </cd:Conversion>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangePhaseCorrection"/>
+      <ct:NamedTest id="RangePhaseCorrectionExternal"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="noise_pow_meas">

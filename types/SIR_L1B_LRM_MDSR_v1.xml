@@ -63,9 +63,9 @@
       <cd:NativeType>int32</cd:NativeType>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="ocean_eq_tide">
+  <cd:Field name="elast_ocean_tide">
     <cd:Integer>
-      <cd:Description>Ocean equilibrium tide</cd:Description>
+      <cd:Description>Elastic ocean tide</cd:Description>
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
@@ -167,7 +167,6 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeAltitudeCOG"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="win_delay">
@@ -179,7 +178,6 @@
       </cd:Conversion>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>int64</cd:NativeType>
-      <ct:NamedTest id="RangeWindowDelay"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="avg_pow_echo_wavef">

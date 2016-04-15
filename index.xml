@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass name="CRYOSAT" last-modified="2014-11-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductClass name="CRYOSAT" last-modified="2015-11-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>CRYOSAT products</cd:Description>
   <cd:ProductType name="SAT_HKTM__">
     <cd:Description>Recorded House-Keeping Telemetry product (DBL)</cd:Description>
@@ -725,7 +725,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR_LRM_1B_v1" format="binary" version="1">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_LRM_1B</cd:MatchData>
@@ -736,7 +736,7 @@
   <cd:ProductType name="SIR_LRM_1B_HDR">
     <cd:Description>SIRAL L1B LRM product (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_LRM_1B_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_LRM_1B</cd:MatchData>
       </cd:DetectionRule>
@@ -763,7 +763,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR_SAR_1B_v1" format="binary" version="1">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_SAR_1B</cd:MatchData>
@@ -774,7 +774,7 @@
   <cd:ProductType name="SIR_SAR_1B_HDR">
     <cd:Description>SIRAL L1B SAR mode product (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_SAR_1B_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_SAR_1B</cd:MatchData>
       </cd:DetectionRule>
@@ -801,7 +801,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR_SIN_1B_v1" format="binary" version="1">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_SIN_1B</cd:MatchData>
@@ -812,7 +812,7 @@
   <cd:ProductType name="SIR_SIN_1B_HDR">
     <cd:Description>SIRAL L1B SARin mode product (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_SIN_1B_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_SIN_1B</cd:MatchData>
       </cd:DetectionRule>
@@ -839,7 +839,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR1LRC11B_v1" format="binary" version="1">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR1LRC11B</cd:MatchData>
@@ -850,7 +850,7 @@
   <cd:ProductType name="SIR1LRC11B_HDR">
     <cd:Description>SIRAL CAL1-LRM product (Rx1 channel) (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR1LRC11B_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR1LRC11B</cd:MatchData>
       </cd:DetectionRule>
@@ -877,7 +877,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR2LRC11B_v1" format="binary" version="1">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR2LRC11B</cd:MatchData>
@@ -888,7 +888,7 @@
   <cd:ProductType name="SIR2LRC11B_HDR">
     <cd:Description>SIRAL CAL1-LRM product (Rx2 channel) (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR2LRC11B_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR2LRC11B</cd:MatchData>
       </cd:DetectionRule>
@@ -915,7 +915,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR1SAC11B_v1" format="binary" version="1">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR1SAC11B</cd:MatchData>
@@ -926,7 +926,7 @@
   <cd:ProductType name="SIR1SAC11B_HDR">
     <cd:Description>SIRAL CAL1-SAR product (Rx1 channel) (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR1SAC11B_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR1SAC11B</cd:MatchData>
       </cd:DetectionRule>
@@ -953,7 +953,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR2SAC11B_v1" format="binary" version="1">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR2SAC11B</cd:MatchData>
@@ -964,7 +964,7 @@
   <cd:ProductType name="SIR2SAC11B_HDR">
     <cd:Description>SIRAL CAL1-SAR product (Rx2 channel) (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR2SAC11B_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR2SAC11B</cd:MatchData>
       </cd:DetectionRule>
@@ -991,7 +991,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR_SIC11B_v1" format="binary" version="1">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_SIC11B</cd:MatchData>
@@ -1002,7 +1002,7 @@
   <cd:ProductType name="SIR_SIC11B_HDR">
     <cd:Description>SIRAL CAL1-SARin product (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_SIC11B_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_SIC11B</cd:MatchData>
       </cd:DetectionRule>
@@ -1011,7 +1011,7 @@
   <cd:ProductType name="SIR_SICC1B">
     <cd:Description>SIRAL complex CAL1-SARin product (DBL)</cd:Description>
     <cd:ProductDefinition id="SIR_SICC1B_v0" format="binary" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_SICC1B</cd:MatchData>
@@ -1037,7 +1037,7 @@
   <cd:ProductType name="SIR_SICC1B_HDR">
     <cd:Description>SIRAL complex CAL1-SARin product (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_SICC1B_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_SICC1B</cd:MatchData>
       </cd:DetectionRule>
@@ -1046,7 +1046,7 @@
   <cd:ProductType name="SIR1SAC21B">
     <cd:Description>SIRAL CAL2-SAR product (Rx1 channel) (DBL)</cd:Description>
     <cd:ProductDefinition id="SIR1SAC21B_v0" format="binary" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR1SAC21B</cd:MatchData>
@@ -1072,7 +1072,7 @@
   <cd:ProductType name="SIR1SAC21B_HDR">
     <cd:Description>SIRAL CAL2-SAR product (Rx1 channel) (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR1SAC21B_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR1SAC21B</cd:MatchData>
       </cd:DetectionRule>
@@ -1081,7 +1081,7 @@
   <cd:ProductType name="SIR2SAC21B">
     <cd:Description>SIRAL CAL2-SAR product (Rx2 channel) (DBL)</cd:Description>
     <cd:ProductDefinition id="SIR2SAC21B_v0" format="binary" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR2SAC21B</cd:MatchData>
@@ -1107,7 +1107,7 @@
   <cd:ProductType name="SIR2SAC21B_HDR">
     <cd:Description>SIRAL CAL2-SAR product (Rx2 channel) (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR2SAC21B_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR2SAC21B</cd:MatchData>
       </cd:DetectionRule>
@@ -1116,7 +1116,7 @@
   <cd:ProductType name="SIR1SIC21B">
     <cd:Description>SIRAL CAL2-SARin product (Rx1 channel) (DBL)</cd:Description>
     <cd:ProductDefinition id="SIR1SIC21B_v0" format="binary" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR1SIC21B</cd:MatchData>
@@ -1142,7 +1142,7 @@
   <cd:ProductType name="SIR1SIC21B_HDR">
     <cd:Description>SIRAL CAL2-SARin product (Rx1 channel) (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR1SIC21B_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR1SIC21B</cd:MatchData>
       </cd:DetectionRule>
@@ -1151,7 +1151,7 @@
   <cd:ProductType name="SIR2SIC21B">
     <cd:Description>SIRAL CAL2-SARin product (Rx2 channel) (DBL)</cd:Description>
     <cd:ProductDefinition id="SIR2SIC21B_v0" format="binary" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR2SIC21B</cd:MatchData>
@@ -1177,7 +1177,7 @@
   <cd:ProductType name="SIR2SIC21B_HDR">
     <cd:Description>SIRAL CAL2-SARin product (Rx2 channel) (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR2SIC21B_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR2SIC21B</cd:MatchData>
       </cd:DetectionRule>
@@ -1204,7 +1204,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR_FDM_1B_v1" format="binary" version="1">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_FDM_1B</cd:MatchData>
@@ -1215,7 +1215,7 @@
   <cd:ProductType name="SIR_FDM_1B_HDR">
     <cd:Description>SIRAL L1B FDM product (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_FDM_1B_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_FDM_1B</cd:MatchData>
       </cd:DetectionRule>
@@ -1262,7 +1262,7 @@
   <cd:ProductType name="SIR1LRM_0M">
     <cd:Description>SIRAL MON-LRM/TRK product (Rx1 channel) (DBL)</cd:Description>
     <cd:ProductDefinition id="SIR1LRM_0M_v0" format="binary" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR1LRM_0M</cd:MatchData>
@@ -1272,7 +1272,7 @@
   <cd:ProductType name="SIR1LRM_0M_HDR">
     <cd:Description>SIRAL MON-LRM/TRK product (Rx1 channel) (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR1LRM_0M_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR1LRM_0M</cd:MatchData>
       </cd:DetectionRule>
@@ -1281,7 +1281,7 @@
   <cd:ProductType name="SIR2LRM_0M">
     <cd:Description>SIRAL MON-LRM/TRK product (Rx2 channel) (DBL)</cd:Description>
     <cd:ProductDefinition id="SIR2LRM_0M_v0" format="binary" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR2LRM_0M</cd:MatchData>
@@ -1291,7 +1291,7 @@
   <cd:ProductType name="SIR2LRM_0M_HDR">
     <cd:Description>SIRAL MON-LRM/TRK product (Rx2 channel) (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR2LRM_0M_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR2LRM_0M</cd:MatchData>
       </cd:DetectionRule>
@@ -1300,7 +1300,7 @@
   <cd:ProductType name="SIR1SAR_0M">
     <cd:Description>SIRAL MON-SAR product (Rx1 channel) (DBL)</cd:Description>
     <cd:ProductDefinition id="SIR1SAR_0M_v0" format="binary" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR1SAR_0M</cd:MatchData>
@@ -1310,7 +1310,7 @@
   <cd:ProductType name="SIR1SAR_0M_HDR">
     <cd:Description>SIRAL MON-SAR product (Rx1 channel) (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR1SAR_0M_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR1SAR_0M</cd:MatchData>
       </cd:DetectionRule>
@@ -1319,7 +1319,7 @@
   <cd:ProductType name="SIR2SAR_0M">
     <cd:Description>SIRAL MON-SAR product (Rx2 channel) (DBL)</cd:Description>
     <cd:ProductDefinition id="SIR2SAR_0M_v0" format="binary" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR2SAR_0M</cd:MatchData>
@@ -1329,7 +1329,7 @@
   <cd:ProductType name="SIR2SAR_0M_HDR">
     <cd:Description>SIRAL MON-SAR product (Rx2 channel) (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR2SAR_0M_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR2SAR_0M</cd:MatchData>
       </cd:DetectionRule>
@@ -1338,7 +1338,7 @@
   <cd:ProductType name="SIR_SIN_0M">
     <cd:Description>SIRAL MON-SARin product (DBL)</cd:Description>
     <cd:ProductDefinition id="SIR_SIN_0M_v0" format="binary" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_SIN_0M</cd:MatchData>
@@ -1348,7 +1348,7 @@
   <cd:ProductType name="SIR_SIN_0M_HDR">
     <cd:Description>SIRAL MON-SARin product (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_SIN_0M_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_SIN_0M</cd:MatchData>
       </cd:DetectionRule>
@@ -1357,7 +1357,7 @@
   <cd:ProductType name="SIR_SIC40M">
     <cd:Description>SIRAL MON-CAL4 product (DBL)</cd:Description>
     <cd:ProductDefinition id="SIR_SIC40M_v0" format="binary" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_SIC40M</cd:MatchData>
@@ -1367,7 +1367,7 @@
   <cd:ProductType name="SIR_SIC40M_HDR">
     <cd:Description>SIRAL MON-CAL4 product (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_SIC40M_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_SIC40M</cd:MatchData>
       </cd:DetectionRule>
@@ -1394,7 +1394,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR1SAR_FR_v1" format="binary" version="1">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR1SAR_FR</cd:MatchData>
@@ -1405,7 +1405,7 @@
   <cd:ProductType name="SIR1SAR_FR_HDR">
     <cd:Description>SIRAL FBR-SAR mode product (Rx1 channel) (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR1SAR_FR_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR1SAR_FR</cd:MatchData>
       </cd:DetectionRule>
@@ -1432,7 +1432,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR2SAR_FR_v1" format="binary" version="1">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR2SAR_FR</cd:MatchData>
@@ -1443,7 +1443,7 @@
   <cd:ProductType name="SIR2SAR_FR_HDR">
     <cd:Description>SIRAL FBR-SAR mode product (Rx2 channel) (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR2SAR_FR_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR2SAR_FR</cd:MatchData>
       </cd:DetectionRule>
@@ -1470,7 +1470,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR_SIN_FR_v1" format="binary" version="1">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_SIN_FR</cd:MatchData>
@@ -1481,7 +1481,7 @@
   <cd:ProductType name="SIR_SIN_FR_HDR">
     <cd:Description>SIRAL FBR-SARin mode product (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_SIN_FR_HDR_v0" format="xml" version="0">
-      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.0</cd:Description>
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9 - 6.4</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_SIN_FR</cd:MatchData>
       </cd:DetectionRule>
@@ -1508,7 +1508,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR_LRM_2__v1" format="binary" version="1">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_LRM_2_</cd:MatchData>
@@ -1519,7 +1519,7 @@
   <cd:ProductType name="SIR_LRM_2__HDR">
     <cd:Description>SIRAL L2 product from LRM processing (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_LRM_2__HDR_v0" format="xml" version="0">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 2.8 - 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 2.8 - 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_LRM_2_</cd:MatchData>
       </cd:DetectionRule>
@@ -1546,7 +1546,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR_SIN_2__v1" format="binary" version="1">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_SIN_2_</cd:MatchData>
@@ -1557,7 +1557,7 @@
   <cd:ProductType name="SIR_SIN_2__HDR">
     <cd:Description>SIRAL L2 product from SARin processing (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_SIN_2__HDR_v0" format="xml" version="0">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 2.8 - 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 2.8 - 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_SIN_2_</cd:MatchData>
       </cd:DetectionRule>
@@ -1626,7 +1626,7 @@
   <cd:ProductType name="SIR_SAR_2_">
     <cd:Description>SIRAL L2 product from SAR processing (DBL)</cd:Description>
     <cd:ProductDefinition id="SIR_SAR_2__v1" format="binary" version="1">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_SAR_2_</cd:MatchData>
@@ -1637,7 +1637,7 @@
   <cd:ProductType name="SIR_SAR_2__HDR">
     <cd:Description>SIRAL L2 product from SAR processing (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_SAR_2__HDR_v1" format="xml" version="1">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_SAR_2_</cd:MatchData>
       </cd:DetectionRule>
@@ -1664,7 +1664,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR_SID_2__v1" format="binary" version="1">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_SID_2_</cd:MatchData>
@@ -1675,7 +1675,7 @@
   <cd:ProductType name="SIR_SID_2__HDR">
     <cd:Description>SIRAL L2 product from SARin degraded processing (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_SID_2__HDR_v0" format="xml" version="0">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 2.8 - 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 2.8 - 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_SID_2_</cd:MatchData>
       </cd:DetectionRule>
@@ -1722,7 +1722,7 @@
   <cd:ProductType name="SIR_GDR_2_">
     <cd:Description>SIRAL L2 consolidated product including SAR data (SIR_SAR_2_) (DBL)</cd:Description>
     <cd:ProductDefinition id="SIR_GDR_2__v1" format="binary" version="1">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_GDR_2_</cd:MatchData>
@@ -1732,7 +1732,7 @@
   <cd:ProductType name="SIR_GDR_2__HDR">
     <cd:Description>SIRAL L2 consolidated product including SAR data (SIR_SAR_2_) (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_GDR_2__HDR_v1" format="xml" version="1">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_GDR_2_</cd:MatchData>
       </cd:DetectionRule>
@@ -1759,7 +1759,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR_FDM_2__v1" format="binary" version="1">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_FDM_2_</cd:MatchData>
@@ -1770,7 +1770,7 @@
   <cd:ProductType name="SIR_FDM_2__HDR">
     <cd:Description>SIRAL L2 product from fast delivery marine mode processing (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_FDM_2__HDR_v0" format="xml" version="0">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 2.8 - 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 2.8 - 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_FDM_2_</cd:MatchData>
       </cd:DetectionRule>
@@ -1797,7 +1797,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR_LRMI2__v1" format="binary" version="1">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_LRMI2_</cd:MatchData>
@@ -1808,7 +1808,7 @@
   <cd:ProductType name="SIR_LRMI2__HDR">
     <cd:Description>SIRAL intermediate L2 product from LRM processing (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_LRMI2__HDR_v0" format="xml" version="0">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 2.8 - 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 2.8 - 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_LRMI2_</cd:MatchData>
       </cd:DetectionRule>
@@ -1835,7 +1835,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR_SINI2__v1" format="binary" version="1">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_SINI2_</cd:MatchData>
@@ -1846,7 +1846,7 @@
   <cd:ProductType name="SIR_SINI2__HDR">
     <cd:Description>SIRAL intermediate L2 product from SARin processing (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_SINI2__HDR_v0" format="xml" version="0">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 2.8 - 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 2.8 - 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_SINI2_</cd:MatchData>
       </cd:DetectionRule>
@@ -1893,7 +1893,7 @@
   <cd:ProductType name="SIR_SARI2_">
     <cd:Description>SIRAL intermediate L2 product from SAR processing (DBL)</cd:Description>
     <cd:ProductDefinition id="SIR_SARI2__v1" format="binary" version="1">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_SARI2_</cd:MatchData>
@@ -1903,7 +1903,7 @@
   <cd:ProductType name="SIR_SARI2__HDR">
     <cd:Description>SIRAL intermediate L2 product from SAR processing (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_SARI2__HDR_v1" format="xml" version="1">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_SARI2_</cd:MatchData>
       </cd:DetectionRule>
@@ -1930,7 +1930,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR_SIDI2__v1" format="binary" version="1">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_SIDI2_</cd:MatchData>
@@ -1941,7 +1941,7 @@
   <cd:ProductType name="SIR_SIDI2__HDR">
     <cd:Description>SIRAL intermediate L2 product from SARin degraded processing (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_SIDI2__HDR_v0" format="xml" version="0">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 2.8 - 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 2.8 - 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_SIDI2_</cd:MatchData>
       </cd:DetectionRule>
@@ -1968,7 +1968,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="SIR_FDMI2__v1" format="binary" version="1">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_FDMI2_</cd:MatchData>
@@ -1979,7 +1979,7 @@
   <cd:ProductType name="SIR_FDMI2__HDR">
     <cd:Description>SIRAL intermediate L2 product from fast delivery marine mode processing (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_FDMI2__HDR_v0" format="xml" version="0">
-      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 2.8 - 4.0</cd:Description>
+      <cd:Description>L2-PFS CS-RS-ACS-GS-5123 2.8 - 4.5</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">SIR_FDMI2_</cd:MatchData>
       </cd:DetectionRule>

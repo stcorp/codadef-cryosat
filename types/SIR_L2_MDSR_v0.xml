@@ -111,7 +111,6 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
-      <ct:NamedTest id="RangeInverseBarometricCorrection"/>
       <ct:NamedTest id="MissingValueShortInt"/>
     </cd:Integer>
   </cd:Field>
@@ -121,6 +120,7 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="MissingValueShortInt"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="ion_corr">
@@ -139,7 +139,7 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
-      <ct:NamedTest id="RangeSeaStateBiasCorrection"/>
+      <ct:NamedTest id="RangeSeaStateBiasCorrectionOceanSF20Hz"/>
       <ct:NamedTest id="MissingValueShortInt"/>
     </cd:Integer>
   </cd:Field>
@@ -149,7 +149,7 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
-      <ct:NamedTest id="RangeOceanTide"/>
+      <ct:NamedTest id="RangeOceanTideOceanSF20Hz"/>
       <ct:NamedTest id="MissingValueShortInt"/>
     </cd:Integer>
   </cd:Field>
@@ -159,7 +159,7 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
-      <ct:NamedTest id="RangeEquilibriumOceanTide"/>
+      <ct:NamedTest id="RangeEquilibriumOceanTideOceanSF20Hz"/>
       <ct:NamedTest id="MissingValueShortInt"/>
     </cd:Integer>
   </cd:Field>
@@ -253,7 +253,6 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
-      <ct:NamedTest id="RangeSnowDepth"/>
       <ct:NamedTest id="MissingValueShortInt"/>
     </cd:Integer>
   </cd:Field>
@@ -455,7 +454,6 @@
             </cd:Conversion>
             <cd:BitSize>32</cd:BitSize>
             <cd:NativeType>int32</cd:NativeType>
-            <ct:NamedTest id="RangeDeltaTime"/>
           </cd:Integer>
         </cd:Field>
         <cd:Field name="lat">
@@ -497,7 +495,6 @@
             <cd:Unit>mm</cd:Unit>
             <cd:BitSize>16</cd:BitSize>
             <cd:NativeType>int16</cd:NativeType>
-            <ct:NamedTest id="RangeSeaSurfaceHeightAnomaly"/>
           </cd:Integer>
         </cd:Field>
         <cd:Field name="num_intp_rec_sha">
@@ -524,8 +521,6 @@
             </cd:Conversion>
             <cd:BitSize>16</cd:BitSize>
             <cd:NativeType>int16</cd:NativeType>
-            <ct:NamedTest id="RangeBackscatterSigmaZero"/>
-            <ct:NamedTest id="MissingValueShortInt"/>
           </cd:Integer>
         </cd:Field>
         <cd:Field name="peakiness">
@@ -534,7 +529,6 @@
             <cd:Conversion numerator="1.000000" denominator="100.000000"/>
             <cd:BitSize>16</cd:BitSize>
             <cd:NativeType>uint16</cd:NativeType>
-            <ct:NamedTest id="RangePeakiness"/>
           </cd:Integer>
         </cd:Field>
         <cd:Field name="freeb">
@@ -543,7 +537,6 @@
             <cd:Unit>mm</cd:Unit>
             <cd:BitSize>16</cd:BitSize>
             <cd:NativeType>int16</cd:NativeType>
-            <ct:NamedTest id="RangeFreeboard"/>
           </cd:Integer>
         </cd:Field>
         <cd:Field name="num_avg">
@@ -551,7 +544,6 @@
             <cd:Description>Number of echoes or beams averaged</cd:Description>
             <cd:BitSize>16</cd:BitSize>
             <cd:NativeType>uint16</cd:NativeType>
-            <ct:NamedTest id="RangeEchoesBeamsAveraged"/>
           </cd:Integer>
         </cd:Field>
         <cd:Field name="spare_1">

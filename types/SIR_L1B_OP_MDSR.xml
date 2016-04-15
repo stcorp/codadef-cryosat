@@ -20,7 +20,7 @@
       <cd:Description>Data record time (MDSR time stamp)</cd:Description>
       <ct:NamedTest id="RangeSecond" path="seconds"/>
       <ct:NamedTest id="RangeMicrosecond" path="microseconds"/>
-      <ct:NamedTest id="RangeSensingStartStop"/>
+      <ct:NamedTest id="RangeSensingStartStopOP"/>
     </cd:Time>
   </cd:Field>
   <cd:Field name="tai_utc_diff">
@@ -68,7 +68,7 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeAltitudeCOG"/>
+      <ct:NamedTest id="RangeAltitudeCOGOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="inst_alt_rate">
@@ -127,6 +127,7 @@
       </cd:Conversion>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangeAGCOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="agc_corr">
@@ -333,6 +334,7 @@
             <cd:Description>Number of echoes averaged</cd:Description>
             <cd:BitSize>16</cd:BitSize>
             <cd:NativeType>uint16</cd:NativeType>
+            <ct:NamedTest id="RangeEchoesBeamsAveragedOceanFD3"/>
           </cd:Integer>
         </cd:Field>
         <cd:Field name="flag">

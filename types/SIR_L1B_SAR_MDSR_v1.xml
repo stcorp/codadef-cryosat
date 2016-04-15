@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="SIR_L1B_SAR_MDSR_v1" last-modified="2014-01-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record format="binary" name="SIR_L1B_SAR_MDSR_v1" last-modified="2015-11-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>SIRAL L1B SAR measurement data set record</cd:Description>
   <cd:Field name="time_orb_data">
     <cd:Array>
@@ -63,9 +63,9 @@
       <cd:NativeType>int32</cd:NativeType>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="ocean_eq_tide">
+  <cd:Field name="elast_ocean_tide">
     <cd:Integer>
-      <cd:Description>Ocean equilibrium tide</cd:Description>
+      <cd:Description>Elastic ocean tide</cd:Description>
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
@@ -167,7 +167,6 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeAltitudeCOG"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="win_delay">
@@ -179,7 +178,6 @@
       </cd:Conversion>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>int64</cd:NativeType>
-      <ct:NamedTest id="RangeWindowDelay"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="avg_pow_echo_wavef">

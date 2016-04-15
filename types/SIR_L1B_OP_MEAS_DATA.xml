@@ -81,6 +81,7 @@
       </cd:Conversion>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangeAGCOceanFD3"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="spare_2">

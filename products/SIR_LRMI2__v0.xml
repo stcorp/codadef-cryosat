@@ -1,6 +1,33 @@
 <?xml version="1.0"?>
 <cd:ProductDefinition id="SIR_LRMI2__v0" format="binary" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
-  <cd:NamedType id="SIR_L2_INTERM_v0"/>
+  <cd:Record>
+    <cd:Description>SIRAL L2 intermediate root type</cd:Description>
+    <cd:Field name="mph">
+      <cd:NamedType id="MPH"/>
+    </cd:Field>
+    <cd:Field name="sph">
+      <cd:NamedType id="SIR_L2_SPH"/>
+    </cd:Field>
+    <cd:Field name="dsd">
+      <cd:Array format="ascii">
+        <cd:Dimension><![CDATA[int(/mph/num_dsd)]]></cd:Dimension>
+        <cd:NamedType id="DSD"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="siral_l2_interm_mds">
+      <cd:Array>
+        <cd:Description>SIRAL L2 intermediate measurement data set</cd:Description>
+        <cd:Dimension><![CDATA[int(/dsd[0]/num_dsr)]]></cd:Dimension>
+        <cd:NamedType id="SIR_L2_INTERM_MDSR_v0"/>
+      </cd:Array>
+      <cd:BitOffset><![CDATA[8 * int(/dsd[0]/ds_offset)]]></cd:BitOffset>
+    </cd:Field>
+    <ct:NamedTest id="DSDTypeMDSR" path="dsd[0]/ds_type"/>
+    <ct:NamedTest id="MPHRefDocL2" path="mph/ref_doc"/>
+    <ct:NamedTest id="RangeDynamicAtmosphericCorrectionOcean" path="siral_l2_interm_mds[]/dyn_atm_corr"/>
+    <ct:NamedTest id="RangeIonosphericCorrection" path="siral_l2_interm_mds[]/ion_corr_gim"/>
+    <ct:NamedTest id="RangeIonosphericCorrection" path="siral_l2_interm_mds[]/ion_corr_mdl"/>
+  </cd:Record>
 
   <!-- MPH Cross File Tests -->
   <ct:NamedCrossFileTest id="MPH_Product"/>

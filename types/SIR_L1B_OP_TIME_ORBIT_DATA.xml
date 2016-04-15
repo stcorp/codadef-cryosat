@@ -6,7 +6,7 @@
       <cd:Description>Data record time (MDSR time stamp)</cd:Description>
       <ct:NamedTest id="RangeSecondOrBlank" path="seconds"/>
       <ct:NamedTest id="RangeMicrosecondOrBlank" path="microseconds"/>
-      <ct:NamedTest id="RangeSensingStartStopOrBlank"/>
+      <ct:NamedTest id="RangeSensingStartStopOPOrBlank"/>
     </cd:Time>
   </cd:Field>
   <cd:Field name="tai_utc_diff">
@@ -47,6 +47,7 @@
       <cd:Description>Source sequence counter (only for LRM - spare in SAR and SARin)</cd:Description>
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>uint16</cd:NativeType>
+      <ct:NamedTest id="SequenceCounterStepTOD"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="instr_conf_flags">
@@ -57,6 +58,7 @@
       <cd:Description>Burst counter (surface sample counter, always starts from 1 and incremented at group rate)</cd:Description>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="BurstCounterStepTOD"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="lat">
@@ -89,7 +91,7 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeAltitudeCOGOrBlank"/>
+      <ct:NamedTest id="RangeAltitudeCOGOrBlankOceanFD3"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="inst_alt_rate">

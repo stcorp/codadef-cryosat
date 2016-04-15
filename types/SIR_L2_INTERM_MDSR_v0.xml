@@ -1454,7 +1454,6 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeSnowDepth"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="snow_density">
@@ -1463,7 +1462,6 @@
       <cd:Unit>kg/m3</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeSnowDepth"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="discr_res">
@@ -1796,6 +1794,7 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeMSSGeoidHeight"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="geoid_from_mdl">
@@ -1804,6 +1803,7 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeMSSGeoidHeight"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="depth_elev_model">
@@ -1860,7 +1860,6 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeInverseBarometricCorrection"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="high_freq_var_corr">
@@ -1893,7 +1892,7 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeOceanTide"/>
+      <ct:NamedTest id="RangeOceanTideOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="lp_eq_ocean_tide">
@@ -1902,7 +1901,7 @@
       <cd:Unit>mm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeEquilibriumOceanTide"/>
+      <ct:NamedTest id="RangeEquilibriumOceanTideOcean"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="ocean_load_tide">

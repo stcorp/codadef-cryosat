@@ -23,9 +23,7 @@
       <cd:BitOffset><![CDATA[8 * int(/dsd[0]/ds_offset)]]></cd:BitOffset>
     </cd:Field>
     <ct:NamedTest id="DSDTypeMDSR" path="dsd[0]/ds_type"/>
-    <ct:NamedTest id="MPHRefDocOP" path="mph/ref_doc"/>
-    <ct:NamedTest id="SequenceCounterStepTOD" path="siral_l1b_mds[]/time_orb_data[]/src_seq_count"/>
-    <ct:NamedTest id="BurstCounterStepTOD" path="siral_l1b_mds[]/time_orb_data[]/burst_count"/>
+    <ct:NamedTest id="MPHRefDocOPL1" path="mph/ref_doc"/>
   </cd:Record>
 
   <!-- MPH Cross File Tests -->

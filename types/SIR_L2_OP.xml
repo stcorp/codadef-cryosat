@@ -22,5 +22,5 @@
     <cd:BitOffset><![CDATA[8 * int(/dsd[0]/ds_offset)]]></cd:BitOffset>
   </cd:Field>
   <ct:NamedTest id="DSDTypeMDSR" path="dsd[0]/ds_type"/>
-  <ct:NamedTest id="MPHRefDocOP" path="mph/ref_doc"/>
+  <ct:NamedTest id="MPHRefDocOPL2" path="mph/ref_doc"/>
 </cd:Record>

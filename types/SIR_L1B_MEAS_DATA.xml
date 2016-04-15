@@ -61,7 +61,6 @@
       </cd:Conversion>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeAGCOrFlagged"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="agc_2">
@@ -73,7 +72,6 @@
       </cd:Conversion>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeAGCOrFlagged"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="tot_fix_gain_rx1">
@@ -85,7 +83,6 @@
       </cd:Conversion>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeTotalFixedGain"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="tot_fix_gain_rx2">
@@ -97,7 +94,6 @@
       </cd:Conversion>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangeTotalFixedGain"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="tx_pow">
@@ -166,7 +162,6 @@
       </cd:Conversion>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangePhaseCorrection"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="ext_phase_corr">
@@ -178,7 +173,6 @@
       </cd:Conversion>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RangePhaseCorrection"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="noise_pow_meas">

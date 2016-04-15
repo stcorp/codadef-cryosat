@@ -35,6 +35,7 @@
       <cd:Description>Burst counter (surface sample counter, always starts from 1 and incremented at group rate)</cd:Description>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="BurstCounterStepTOD"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="lat">

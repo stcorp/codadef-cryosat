@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="SIR_FBR_TIME_ORBIT_DATA_v1" last-modified="2012-01-30" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record format="binary" name="SIR_FBR_TIME_ORBIT_DATA_v1" last-modified="2012-01-30" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>SIRAL FBR mode independent time and orbit data</cd:Description>
   <cd:Field name="mdsr_time">
     <cd:Time timeformat="binary_envisat_datetime">
@@ -32,6 +32,7 @@
       <cd:Description>Burst counter (always starts from 1 and incremented at group rate)</cd:Description>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="BurstCounterStepTOD"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="lat">

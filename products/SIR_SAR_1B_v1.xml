@@ -24,8 +24,14 @@
     </cd:Field>
     <ct:NamedTest id="DSDTypeMDSR" path="dsd[0]/ds_type"/>
     <ct:NamedTest id="MPHRefDocL1" path="mph/ref_doc"/>
-    <ct:NamedTest id="SequenceCounterStepTOD" path="siral_l1b_mds[]/time_orb_data[]/src_seq_count"/>
-    <ct:NamedTest id="BurstCounterStepTOD" path="siral_l1b_mds[]/time_orb_data[]/burst_count"/>
+    <ct:NamedTest id="RangeAltitudeCOGOrBlank" path="siral_l1b_mds[]/time_orb_data[]/alt_cog_ref_ellip"/>
+    <ct:NamedTest id="RangeWindowDelay" path="siral_l1b_mds[]/meas_data[]/win_delay"/>
+    <ct:NamedTest id="RangeAGCOrFlagged" path="siral_l1b_mds[]/meas_data[]/agc_1"/>
+    <ct:NamedTest id="RangeAGCOrFlagged" path="siral_l1b_mds[]/meas_data[]/agc_2"/>
+    <ct:NamedTest id="RangeTotalFixedGain" path="siral_l1b_mds[]/meas_data[]/tot_fix_gain_rx1"/>
+    <ct:NamedTest id="RangeTotalFixedGain" path="siral_l1b_mds[]/meas_data[]/tot_fix_gain_rx2"/>
+    <ct:NamedTest id="RangeAltitudeCOG" path="siral_l1b_mds[]/alt_cog_ref_ellip"/>
+    <ct:NamedTest id="RangeWindowDelay" path="siral_l1b_mds[]/win_delay"/>
   </cd:Record>
 
   <!-- MPH Cross File Tests -->

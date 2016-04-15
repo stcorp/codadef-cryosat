@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="SIR_FBR_L1B_INSTR_CONFIG_v1" last-modified="2014-09-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record format="binary" name="SIR_FBR_L1B_INSTR_CONFIG_v1" last-modified="2015-11-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Instrument configuration bit field (common to FBR and L1B MDSR)</cd:Description>
   <cd:Field name="rx_chain">
     <cd:Integer>
@@ -99,26 +99,26 @@
       <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="star_trkr_1">
-    <cd:Integer>
-      <cd:Description>Star tracker 1 used: set to 1 if star tracker 1 is used</cd:Description>
+  <cd:Field name="spare_4">
+    <cd:Raw>
+      <cd:Description>spare (reserved, set to 0)</cd:Description>
       <cd:BitSize>1</cd:BitSize>
-      <cd:NativeType>uint8</cd:NativeType>
-    </cd:Integer>
+    </cd:Raw>
+    <cd:Hidden/>
   </cd:Field>
-  <cd:Field name="star_trkr_2">
-    <cd:Integer>
-      <cd:Description>Star tracker 2 used: set to 1 if star tracker 2 is used</cd:Description>
+  <cd:Field name="spare_5">
+    <cd:Raw>
+      <cd:Description>spare (reserved, set to 0)</cd:Description>
       <cd:BitSize>1</cd:BitSize>
-      <cd:NativeType>uint8</cd:NativeType>
-    </cd:Integer>
+    </cd:Raw>
+    <cd:Hidden/>
   </cd:Field>
-  <cd:Field name="star_trkr_3">
-    <cd:Integer>
-      <cd:Description>Star tracker 3 used: set to 1 if star tracker 3 is used</cd:Description>
+  <cd:Field name="spare_6">
+    <cd:Raw>
+      <cd:Description>spare (reserved, set to 0)</cd:Description>
       <cd:BitSize>1</cd:BitSize>
-      <cd:NativeType>uint8</cd:NativeType>
-    </cd:Integer>
+    </cd:Raw>
+    <cd:Hidden/>
   </cd:Field>
   <cd:Field name="str_attref">
     <cd:Integer>
@@ -127,7 +127,7 @@
       <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="spare_4">
+  <cd:Field name="spare_7">
     <cd:Raw>
       <cd:Description>spare (reserved, set to 0)</cd:Description>
       <cd:BitSize>10</cd:BitSize>
