@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_L1B_TIME_ORBIT_DATA_v1" last-modified="2014-03-20" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>SIRAL L1B mode independent time and orbit data</cd:Description>
+  <cd:Field name="mdsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Data record time (MDSR time stamp)</cd:Description>
+      <ct:NamedTest id="RangeSecondOrBlank" path="seconds"/>
+      <ct:NamedTest id="RangeMicrosecondOrBlank" path="microseconds"/>
+      <ct:NamedTest id="RangeRecordTAIStartStopOrBlank"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="uso_corr">
+    <cd:Integer>
+      <cd:Description>USO correction factor</cd:Description>
+      <cd:Conversion numerator="1" denominator="1e15"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mode_id">
+    <cd:NamedType id="SIR_FBR_L1B_MODE_ID"/>
+  </cd:Field>
+  <cd:Field name="src_seq_count">
+    <cd:Integer>
+      <cd:Description>Source sequence counter (only for LRM - spare in SAR and SARin)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="instr_conf_flags">
+    <cd:NamedType id="SIR_FBR_L1B_INSTR_CONFIG_v1"/>
+  </cd:Field>
+  <cd:Field name="burst_count">
+    <cd:Integer>
+      <cd:Description>Burst counter (surface sample counter, always starts from 1 and incremented at group rate)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lat">
+    <cd:Integer>
+      <cd:Description>Latitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLatitudeOrBlank_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lon">
+    <cd:Integer>
+      <cd:Description>Longitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLongitudeOrBlank_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="alt_cog_ref_ellip">
+    <cd:Integer>
+      <cd:Description>Altitude of CoG above reference ellipsoid (interpolated value)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeAltitudeCOGOrBlank"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="inst_alt_rate">
+    <cd:Integer>
+      <cd:Description>Instantaneous altitude rate derived from orbit</cd:Description>
+      <cd:Unit>mm/s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sat_vel_vec">
+    <cd:Array>
+      <cd:Description>Satellite velocity vector[3] described in the international terrestial reference frame in the international earth fixed system. Note that this is not a unit vector, because the velocity magnitude is needed as well.</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Velocity vector component</cd:Description>
+        <cd:Unit>mm/s</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="beam_dir_vec">
+    <cd:Array>
+      <cd:Description>Real beam direction vector[3] described in the CRYOSAT reference frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Beam direction vector component</cd:Description>
+        <cd:Unit>1e-6 m</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+      <ct:NamedTest id="UnitVectorOrBlank_6"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ifm_basel_vec">
+    <cd:Array>
+      <cd:Description>Interferometer baseline vector[3] described in the CRYOSAT reference frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Baseline vector component</cd:Description>
+        <cd:Unit>1e-6 m</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+      <ct:NamedTest id="UnitVectorOrBlank_6"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="star_trkr_id">
+    <cd:Integer>
+      <cd:Description>Star Tracker Identification. 0 = No Star Tracker data used for product generation and attitude initialisation done by using default values from the IPFDB. 1 = Data of Star Tracker 1 used for product generation. 2 = Data of Star Tracker 2 used for product generation. 3 = Data of Star Tracker 3 used for product generation. 4 = Data of STR_ATTREF used for product generation.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ant_bench_roll_angle">
+    <cd:Integer>
+      <cd:Description>Antenna Bench Roll Angle</cd:Description>
+      <cd:Unit>1e-7 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ant_bench_pitch_angle">
+    <cd:Integer>
+      <cd:Description>Antenna Bench Pitch Angle</cd:Description>
+      <cd:Unit>1e-7 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ant_bench_yaw_angle">
+    <cd:Integer>
+      <cd:Description>Antenna Bench Yaw Angle</cd:Description>
+      <cd:Unit>1e-7 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="meas_conf_flags">
+    <cd:NamedType id="SIR_L1B_MEAS_CONF_v1"/>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

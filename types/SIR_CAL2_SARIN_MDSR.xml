@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_CAL2_SARIN_MDSR" last-modified="2012-01-30" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>SIRAL CAL2-SARin measurement data set record</cd:Description>
+  <cd:Field name="mdsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Data record time (MDSR time stamp)</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicrosecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="uso_corr">
+    <cd:Integer>
+      <cd:Description>USO correction factor</cd:Description>
+      <cd:Conversion numerator="1" denominator="1e15"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mode_id">
+    <cd:Integer>
+      <cd:Description>Mode ID</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="instr_conf_flags">
+    <cd:Integer>
+      <cd:Description>Instrument configuration flags</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rec_count">
+    <cd:Integer>
+      <cd:Description>Record counter (fixed to 1)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RecordCountMDSR"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lat">
+    <cd:Integer>
+      <cd:Description>Latitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLatitude_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lon">
+    <cd:Integer>
+      <cd:Description>Longitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLongitude_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="alt_cog_ref_ellip">
+    <cd:Integer>
+      <cd:Description>Altitude of CoG above reference ellipsoid (interpolated value)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeAltitudeCOG"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="inst_alt_rate">
+    <cd:Integer>
+      <cd:Description>Instantaneous altitude rate derived from orbit</cd:Description>
+      <cd:Unit>mm/s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="meas_conf_flags">
+    <cd:NamedType id="SIR_CAL2_MEAS_CONF"/>
+  </cd:Field>
+  <cd:Field name="lpf_shp_corr_msk">
+    <cd:Array>
+      <cd:Description>LPF filter shape correction mask (512 power samples)</cd:Description>
+      <cd:Dimension>512</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_noise_spec">
+    <cd:Integer>
+      <cd:Description>Number of noise spectra averaged</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="agc_corr">
+    <cd:Integer>
+      <cd:Description>AGC (AGC_1 + AGC_2) corrected</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="agc1_cmd">
+    <cd:Integer>
+      <cd:Description>AGC_1 command</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="agc2_cmd">
+    <cd:Integer>
+      <cd:Description>AGC_2 command</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_spk_sirdbf">
+    <cd:Integer>
+      <cd:Description>Number of spikes from AUX SIRDBF</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_spk_auto">
+    <cd:Integer>
+      <cd:Description>Number of spikes autodetected</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>128</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

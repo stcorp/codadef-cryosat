@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="PRODUCT_FILE_NAME_HEADER" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Formal specification of the fixed part of earth explorer product file names, used for product type detection</cd:Description>
+  <cd:Field name="mission_id">
+    <cd:Text>
+      <cd:Description>Mission identifier (CS for Cryosat)</cd:Description>
+      <cd:ByteSize>2</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="underscore_1">
+    <cd:Text>
+      <cd:Description>underscore</cd:Description>
+      <cd:FixedValue>_</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="file_class">
+    <cd:Text>
+      <cd:Description>File class (OPER = routine operation, NRT_ = near real time, RPR0 = reporcessing, TEST = testing, TIxx = stand alone IPF1 testing associated with test data sets tagged as Tixx, LTA_ = long term archive</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="underscore_2">
+    <cd:Text>
+      <cd:Description>underscore</cd:Description>
+      <cd:FixedValue>_</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="file_type">
+    <cd:Text>
+      <cd:Description>File type</cd:Description>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_L1B_OP_INSTR_CONFIG" last-modified="2013-09-09" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Instrument configuration bit field (for L1B OP MDSR)</cd:Description>
+  <cd:Field name="rx_chain">
+    <cd:Integer>
+      <cd:Description>Reception chain in use: 0 = unknown, 1 = chain 1, 2 = chain 2, 3 = both</cd:Description>
+      <cd:BitSize>2</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sir_id">
+    <cd:Integer>
+      <cd:Description>SIRAL Identifier, 0 = Nominal, 1 = Redundant</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>spare (reserved, set to 0)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="bandw">
+    <cd:Integer>
+      <cd:Description>Bandwidth: 0 = unknown, 1 = 320 MHz, 2 = 40 MHz</cd:Description>
+      <cd:BitSize>2</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>spare (reserved, set to 0)</cd:Description>
+      <cd:BitSize>2</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="trk_mode">
+    <cd:Integer>
+      <cd:Description>Tracking mode: 0 = unknown, 1 = LRM, 2 = SAR, 3 = SARin</cd:Description>
+      <cd:BitSize>2</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Raw>
+      <cd:Description>spare (reserved, set to 0)</cd:Description>
+      <cd:BitSize>2</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="loop_stat">
+    <cd:Integer>
+      <cd:Description>Loop status: 0 = closed loop, 1 = open loop</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="echo_loss">
+    <cd:Integer>
+      <cd:Description>Loss of echo (from cycle report): 0 = OK, 1 = loss of echo</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rt_err">
+    <cd:Integer>
+      <cd:Description>Real time error (from cycle report): 0 = OK, 1 = real time computation error (computing cycle too long)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="echo_sat_err">
+    <cd:Integer>
+      <cd:Description>Echo saturation error (from cycle report): 0 = OK, 1 = echo saturation detected</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rx_band_att">
+    <cd:Integer>
+      <cd:Description>Reception band attenuation: 0 = not attenuated, 1 = attenuated</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cycl_gen_err">
+    <cd:Integer>
+      <cd:Description>Cycle report general error: 0 = cycle report is 0, 1 = cycle report is not 0</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Raw>
+      <cd:Description>spare (reserved, set to 0)</cd:Description>
+      <cd:BitSize>14</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

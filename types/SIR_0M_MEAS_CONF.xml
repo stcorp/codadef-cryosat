@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_0M_MEAS_CONF" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>SIRAL MON mode independent measurement confidence bit field</cd:Description>
+  <cd:Field name="blk_degr">
+    <cd:Integer>
+      <cd:Description>Block degraded: 0 = OK, 1 = degraded, block should not be processed</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="blnk_blk">
+    <cd:Integer>
+      <cd:Description>Blank block: 0 = OK, 1 = blank block inserted for record padding</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dat_degr">
+    <cd:Integer>
+      <cd:Description>Datation degraded: 0 = OK, 1 = datation is bad or not set</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="orb_prop_err">
+    <cd:Integer>
+      <cd:Description>Orbit propagation error: 0 = OK, 1 = error (returned by CFI or by independent check)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="orb_file_chng">
+    <cd:Integer>
+      <cd:Description>Orbit file change: 0 = OK, 1 = orbit file has changed w.r.t. previous record</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="orb_discnt">
+    <cd:Integer>
+      <cd:Description>Orbit discontinuity: 0 = OK, 1 = discontinuity (e.g. gap)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="echo_sat">
+    <cd:Integer>
+      <cd:Description>Echo saturation (from cycle report): 0 = OK, 1 = saturated</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="other_echo_err">
+    <cd:Integer>
+      <cd:Description>Other echo error: 0 = OK, 1 = echo error (bit fields 'tracking echo error', 'echo Rx1 error', or 'echo Rx2 error' set to 1)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rx_ch1_err">
+    <cd:Integer>
+      <cd:Description>Receive chain 1 error for SARin: 0 = OK, 1 = degraded or missing</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rx_ch2_err">
+    <cd:Integer>
+      <cd:Description>Receive chain 2 error for SARin: 0 = OK, 1 = degraded or missing</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>spare (reserved, set to 0)</cd:Description>
+      <cd:BitSize>6</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="trk_echo_err">
+    <cd:Integer>
+      <cd:Description>TRK echo error: 0 = OK, 1 = empty (or null) tracking echo</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="echo_rx1_err">
+    <cd:Integer>
+      <cd:Description>Echo Rx1 error: 0 = OK, 1 = empty (or null) raw echo</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="echo_rx2_err">
+    <cd:Integer>
+      <cd:Description>Echo Rx2 error: 0 = OK, 1 = empty (or null) raw echo</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>spare (reserved, set to 0)</cd:Description>
+      <cd:BitSize>13</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

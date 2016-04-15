@@ -1,0 +1,604 @@
+<?xml version="1.0"?>
+<cd:Record name="Data_Block_USER" format="xml" namexml="Data_Block" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Cryosat User List Data Block</cd:Description>
+  <cd:Attribute name="type">
+    <cd:FixedValue>xml</cd:FixedValue>
+  </cd:Attribute>
+  <cd:Field name="List_of_Users">
+    <cd:Record namexml="List_of_Users">
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="User">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="User">
+            <cd:Attribute name="unit">
+              <cd:FixedValue>Days</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Field name="User_ID">
+              <cd:Text namexml="User-ID">
+                <cd:Description>uniquely identifies the user. format is CLV-xxxx for Cal-Val Users. format is USR-xxxx for other users</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="Cal_Val">
+              <cd:Text namexml="Cal-Val">
+                <cd:Description>yes : for Cal-Val Users. no : for other users</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="Contact_info">
+              <cd:Record namexml="Contact_info">
+                <cd:Field name="First_name">
+                  <cd:Text namexml="First_name">
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Last_name">
+                  <cd:Text namexml="Last_name">
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Phone">
+                  <cd:Text namexml="Phone">
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Fax">
+                  <cd:Text namexml="Fax">
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Email">
+                  <cd:Text namexml="Email">
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Address">
+                  <cd:Text namexml="Address">
+                  </cd:Text>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="ProjectAndProcessing">
+              <cd:Text namexml="ProjectAndProcessing">
+                <cd:Description>Free text ( which can even be several pages long) to identify the projects where tha data will be used and the type of processing that will be applied</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="NRT_Files">
+              <cd:Record namexml="NRT_Files">
+                <cd:Field name="List_of_File_Types">
+                  <cd:Record namexml="List_of_File_Types">
+                    <cd:Field name="File_Type">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Text namexml="File_Type">
+                          <cd:Description>File type of the product to be delivered</cd:Description>
+                        </cd:Text>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Packaging">
+                  <cd:Record namexml="Packaging">
+                    <cd:Field name="Package_Required">
+                      <cd:Type namexml="Package_Required">
+                        <cd:Integer format="ascii">
+                          <cd:Description>The following values are admitted : -TRUE : packaging is done coherently with "package_Type" below  -FALSE : no packaging is done, whathever the value of "Package_Type" below</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Package_Type">
+                      <cd:Text namexml="Package_Type">
+                        <cd:Description>The following values are admitted: -none : TAR packaging -gzip : TAR.GZ packaging -zip : ZIP packaging (containing directly the set of files and not the TAS, for windows compatible packaging)</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Distribution">
+                  <cd:Record namexml="Distribution">
+                    <cd:Field name="Media">
+                      <cd:Text namexml="Media">
+                        <cd:Description>Media used to distribute the products e.g CD, DVD, TAPE, FTP, etc...</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                    <cd:Field name="Frequency">
+                      <cd:Type namexml="Frequency">
+                        <cd:Integer format="ascii">
+                          <cd:Description>for DVD : Frequency in days at which ( i.e after how many days) the media is burned and distributed for FTP: distribution priority setting, the lower the value, the higher the priority</cd:Description>
+                          <cd:Unit>Days</cd:Unit>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Deadline">
+                      <cd:Type namexml="Deadline">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>Days</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Integer format="ascii">
+                          <cd:Description>Deadline by when the product shall be delivered</cd:Description>
+                          <cd:Unit>Days</cd:Unit>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Mail_Warning_Flag">
+                      <cd:Type namexml="Mail_Warning_Flag">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Used to configure if whether or not user shall be warned of data delivery per the selected media Allowed values : TRUE or FALSE</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Repocessing_Notification_Flag">
+                      <cd:Type namexml="Repocessing_Notification_Flag">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Used to configure if data are re-deleivered because of reprocessing. Allowed values : TRUE or FALSE</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="IO_Repository">
+                      <cd:Record namexml="IO_Repository">
+                        <cd:Field name="URL">
+                          <cd:Text namexml="URL">
+                            <cd:Description>URL address of the Client FTP server, for distribution by PDS</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="QCC_URL">
+                          <cd:Text namexml="QCC_URL">
+                            <cd:Description>URL address of the Client FTP server, for distribution by QCC</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="User">
+                          <cd:Text namexml="User">
+                            <cd:Description>User Access Loggin in lower case</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="Password">
+                          <cd:Text namexml="Password">
+                            <cd:Description>User Access Password in lower case</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="FTP_Policy">
+                          <cd:Text namexml="FTP_Policy">
+                            <cd:Description>To configure to PUSH or PULL method Allowed values : PUSH or PULL</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="SFTP_Flag">
+                          <cd:Type namexml="SFTP_Flag">
+                            <cd:Integer format="ascii">
+                              <cd:Description>Allowed values : TRUE or FALSE</cd:Description>
+                              <cd:ByteSize>4</cd:ByteSize>
+                              <cd:NativeType>uint8</cd:NativeType>
+                              <cd:Mapping string="False" value="0"/>
+                              <cd:Mapping string="false" value="0"/>
+                              <cd:Mapping string="True" value="1"/>
+                              <cd:Mapping string="true" value="1"/>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Routine_Files">
+              <cd:Record namexml="Routine_Files">
+                <cd:Field name="List_of_File_Types">
+                  <cd:Record namexml="List_of_File_Types">
+                    <cd:Field name="File_Type">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Text namexml="File_Type">
+                          <cd:Description>File type of the product to be delivered</cd:Description>
+                        </cd:Text>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Packaging">
+                  <cd:Record namexml="Packaging">
+                    <cd:Field name="Package_Required">
+                      <cd:Type namexml="Package_Required">
+                        <cd:Integer format="ascii">
+                          <cd:Description>The following values are admitted : -TRUE : packaging is done coherently with "package_Type" below  -FALSE : no packaging is done, whathever the value of "Package_Type" below</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Package_Type">
+                      <cd:Text namexml="Package_Type">
+                        <cd:Description>The following values are admitted: -none : TAR packaging -gzip : TAR.GZ packaging -zip : ZIP packaging (containing directly the set of files and not the TAS, for windows compatible packaging)</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Distribution">
+                  <cd:Record namexml="Distribution">
+                    <cd:Field name="Media">
+                      <cd:Text namexml="Media">
+                        <cd:Description>Media used to distribute the products e.g CD, DVD, TAPE, FTP, etc...</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                    <cd:Field name="Frequency">
+                      <cd:Type namexml="Frequency">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>Days</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Integer format="ascii">
+                          <cd:Description>for DVD : Frequency in days at which ( i.e after how many days) the media is burned and distributed for FTP: distribution priority setting, the lower the value, the higher the priority</cd:Description>
+                          <cd:Unit>Days</cd:Unit>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Deadline">
+                      <cd:Type namexml="Deadline">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>Days</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Integer format="ascii">
+                          <cd:Description>Deadline by when the product shall be delivered</cd:Description>
+                          <cd:Unit>Days</cd:Unit>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Mail_Warning_Flag">
+                      <cd:Type namexml="Mail_Warning_Flag">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Used to configure if whether or not user shall be warned of data delivery per the selected media Allowed values : TRUE or FALSE</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Repocessing_Notification_Flag">
+                      <cd:Type namexml="Repocessing_Notification_Flag">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Used to configure if data are re-deleivered because of reprocessing. Allowed values : TRUE or FALSE</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="IO_Repository">
+                      <cd:Record namexml="IO_Repository">
+                        <cd:Field name="URL">
+                          <cd:Text namexml="URL">
+                            <cd:Description>URL address of the Client FTP server, for distribution by PDS</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="QCC_URL">
+                          <cd:Text namexml="QCC_URL">
+                            <cd:Description>URL address of the Client FTP server, for distribution by QCC</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="User">
+                          <cd:Text namexml="User">
+                            <cd:Description>User Access Loggin in lower case</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="Password">
+                          <cd:Text namexml="Password">
+                            <cd:Description>User Access Password in lower case</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="FTP_Policy">
+                          <cd:Text namexml="FTP_Policy">
+                            <cd:Description>To configure to PUSH or PULL method Allowed values : PUSH or PULL</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="SFTP_Flag">
+                          <cd:Type namexml="SFTP_Flag">
+                            <cd:Integer format="ascii">
+                              <cd:Description>Allowed values : TRUE or FALSE</cd:Description>
+                              <cd:NativeType>uint8</cd:NativeType>
+                              <cd:Mapping string="False" value="0"/>
+                              <cd:Mapping string="false" value="0"/>
+                              <cd:Mapping string="True" value="1"/>
+                              <cd:Mapping string="true" value="1"/>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Reprocessed_Files">
+              <cd:Record namexml="Reprocessed_Files">
+                <cd:Field name="List_of_File_Types">
+                  <cd:Record namexml="List_of_File_Types">
+                    <cd:Field name="File_Type">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Text namexml="File_Type">
+                          <cd:Description>File type of the product to be delivered</cd:Description>
+                        </cd:Text>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Packaging">
+                  <cd:Record namexml="Packaging">
+                    <cd:Field name="Package_Required">
+                      <cd:Type namexml="Package_Required">
+                        <cd:Integer format="ascii">
+                          <cd:Description>The following values are admitted : -TRUE : packaging is done coherently with "package_Type" below  -FALSE : no packaging is done, whathever the value of "Package_Type" below</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Package_Type">
+                      <cd:Text namexml="Package_Type">
+                        <cd:Description>The following values are admitted: -none : TAR packaging -gzip : TAR.GZ packaging -zip : ZIP packaging (containing directly the set of files and not the TAS, for windows compatible packaging)</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Distribution">
+                  <cd:Record namexml="Distribution">
+                    <cd:Field name="Media">
+                      <cd:Text namexml="Media">
+                        <cd:Description>Media used to distribute the products e.g CD, DVD, TAPE, FTP, etc...</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                    <cd:Field name="Frequency">
+                      <cd:Type namexml="Frequency">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>Days</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Integer format="ascii">
+                          <cd:Description>for DVD : Frequency in days at which ( i.e after how many days) the media is burned and distributed for FTP: distribution priority setting, the lower the value, the higher the priority</cd:Description>
+                          <cd:Unit>Days</cd:Unit>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Deadline">
+                      <cd:Type namexml="Deadline">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>Days</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Integer format="ascii">
+                          <cd:Description>Deadline by when the product shall be delivered</cd:Description>
+                          <cd:Unit>Days</cd:Unit>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Mail_Warning_Flag">
+                      <cd:Type namexml="Mail_Warning_Flag">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Used to configure if whether or not user shall be warned of data delivery per the selected media Allowed values : TRUE or FALSE</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Repocessing_Notification_Flag">
+                      <cd:Type namexml="Repocessing_Notification_Flag">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Used to configure if data are re-deleivered because of reprocessing. Allowed values : TRUE or FALSE</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="IO_Repository">
+                      <cd:Record namexml="IO_Repository">
+                        <cd:Field name="URL">
+                          <cd:Text namexml="URL">
+                            <cd:Description>URL address of the Client FTP server, for distribution by PDS</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="QCC_URL">
+                          <cd:Text namexml="QCC_URL">
+                            <cd:Description>URL address of the Client FTP server, for distribution by QCC</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="User">
+                          <cd:Text namexml="User">
+                            <cd:Description>User Access Loggin in lower case</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="Password">
+                          <cd:Text namexml="Password">
+                            <cd:Description>User Access Password in lower case</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="FTP_Policy">
+                          <cd:Text namexml="FTP_Policy">
+                            <cd:Description>To configure to PUSH or PULL method Allowed values : PUSH or PULL</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="SFTP_Flag">
+                          <cd:Type namexml="SFTP_Flag">
+                            <cd:Integer format="ascii">
+                              <cd:Description>Allowed values : TRUE or FALSE</cd:Description>
+                              <cd:NativeType>uint8</cd:NativeType>
+                              <cd:Mapping string="False" value="0"/>
+                              <cd:Mapping string="false" value="0"/>
+                              <cd:Mapping string="True" value="1"/>
+                              <cd:Mapping string="true" value="1"/>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Other_Files">
+              <cd:Record namexml="Other_Files">
+                <cd:Field name="List_of_File_Types">
+                  <cd:Record namexml="List_of_File_Types">
+                    <cd:Field name="File_Type">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Text namexml="File_Type">
+                          <cd:Description>File type of the product to be delivered</cd:Description>
+                        </cd:Text>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Packaging">
+                  <cd:Record namexml="Packaging">
+                    <cd:Field name="Package_Required">
+                      <cd:Type namexml="Package_Required">
+                        <cd:Integer format="ascii">
+                          <cd:Description>The following values are admitted : -TRUE : packaging is done coherently with "package_Type" below  -FALSE : no packaging is done, whathever the value of "Package_Type" below</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Package_Type">
+                      <cd:Text namexml="Package_Type">
+                        <cd:Description>The following values are admitted: -none : TAR packaging -gzip : TAR.GZ packaging -zip : ZIP packaging (containing directly the set of files and not the TAS, for windows compatible packaging)</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Distribution">
+                  <cd:Record namexml="Distribution">
+                    <cd:Field name="Media">
+                      <cd:Text namexml="Media">
+                        <cd:Description>Media used to distribute the products e.g CD, DVD, TAPE, FTP, etc...</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                    <cd:Field name="Frequency">
+                      <cd:Type namexml="Frequency">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>Days</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Integer format="ascii">
+                          <cd:Description>for DVD : Frequency in days at which ( i.e after how many days) the media is burned and distributed for FTP: distribution priority setting, the lower the value, the higher the priority</cd:Description>
+                          <cd:Unit>Days</cd:Unit>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Deadline">
+                      <cd:Type namexml="Deadline">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>Days</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Integer format="ascii">
+                          <cd:Description>Deadline by when the product shall be delivered</cd:Description>
+                          <cd:Unit>Days</cd:Unit>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Mail_Warning_Flag">
+                      <cd:Type namexml="Mail_Warning_Flag">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Used to configure if whether or not user shall be warned of data delivery per the selected media Allowed values : TRUE or FALSE</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Repocessing_Notification_Flag">
+                      <cd:Type namexml="Repocessing_Notification_Flag">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Used to configure if data are re-deleivered because of reprocessing. Allowed values : TRUE or FALSE</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="IO_Repository">
+                      <cd:Record namexml="IO_Repository">
+                        <cd:Field name="URL">
+                          <cd:Text namexml="URL">
+                            <cd:Description>URL address of the Client FTP server, for distribution by PDS</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="QCC_URL">
+                          <cd:Text namexml="QCC_URL">
+                            <cd:Description>URL address of the Client FTP server, for distribution by QCC</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="User">
+                          <cd:Text namexml="User">
+                            <cd:Description>User Access Loggin in lower case</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="Password">
+                          <cd:Text namexml="Password">
+                            <cd:Description>User Access Password in lower case</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="FTP_Policy">
+                          <cd:Text namexml="FTP_Policy">
+                            <cd:Description>To configure to PUSH or PULL method Allowed values : PUSH or PULL</cd:Description>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="SFTP_Flag">
+                          <cd:Type namexml="SFTP_Flag">
+                            <cd:Integer format="ascii">
+                              <cd:Description>Allowed values : TRUE or FALSE</cd:Description>
+                              <cd:NativeType>uint8</cd:NativeType>
+                              <cd:Mapping string="False" value="0"/>
+                              <cd:Mapping string="false" value="0"/>
+                              <cd:Mapping string="True" value="1"/>
+                              <cd:Mapping string="true" value="1"/>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

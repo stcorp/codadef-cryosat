@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_CAL1_LRM_INTERP_COR_MDSR_v1" last-modified="2014-01-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>SIRAL CAL1-LRM interpolated corrections measurement data set record</cd:Description>
+  <cd:Field name="mdsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Data record time (MDSR time stamp)</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicrosecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="err_flag">
+    <cd:Integer>
+      <cd:Description>Error flag: 0 = valid measurement, 1 = invalid measurement</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="EnumFlag"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rec_count">
+    <cd:Integer>
+      <cd:Description>Record counter (always starts from 1)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RecordCountMDSR"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="txrx_pow_gain_var">
+    <cd:Integer>
+      <cd:Description>Tx-Rx peak power * gain variation (interpolated value)</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="txrx_diff_path_delay">
+    <cd:Integer>
+      <cd:Description>Tx-Rx local oscillator differential path delay (one way delay, interpolated value)</cd:Description>
+      <cd:Unit>1e-12 s</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000000000.000000">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="txrx_int_pow_gain_var">
+    <cd:Integer>
+      <cd:Description>Tx-Rx integrated power * gain variation</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

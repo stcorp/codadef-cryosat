@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_CAL4_0M_MDSR" last-modified="2012-01-30" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>SIRAL monitoring CAL4 measurement data set record</cd:Description>
+  <cd:Field name="mdsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Data record time (MDSR time stamp)</cd:Description>
+      <ct:NamedTest id="RangeSecondOrBlank" path="seconds"/>
+      <ct:NamedTest id="RangeMicrosecondOrBlank" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="rec_count">
+    <cd:Integer>
+      <cd:Description>Record counter (always starts from 1)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RecordCountMDSR"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lat">
+    <cd:Integer>
+      <cd:Description>Latitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLatitudeOrBlank_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lon">
+    <cd:Integer>
+      <cd:Description>Longitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLongitudeOrBlank_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="alt_cog_ref_ellip">
+    <cd:Integer>
+      <cd:Description>Altitude of CoG above reference ellipsoid (interpolated value)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="inst_alt_rate">
+    <cd:Integer>
+      <cd:Description>Instantaneous altitude rate derived from orbit</cd:Description>
+      <cd:Unit>mm/s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>80</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="meas_conf_flags">
+    <cd:NamedType id="SIR_0M_MEAS_CONF"/>
+  </cd:Field>
+  <cd:Field name="src_seq_count">
+    <cd:Integer>
+      <cd:Description>Source sequence count (from TM-ECHO-SARIN master ch)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mode_id">
+    <cd:Integer>
+      <cd:Description>Mode ID: 1 = LRM, 2 = SAR, 3 = SARin</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="chirp_bandw">
+    <cd:Integer>
+      <cd:Description>Chirp bandwidth</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rx_band_att_flag">
+    <cd:Integer>
+      <cd:Description>Rx band attenuation flag</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rx_ch_sel">
+    <cd:Integer>
+      <cd:Description>Rx channel selected</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="loop_cmd">
+    <cd:Integer>
+      <cd:Description>Loop command</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cycl_report">
+    <cd:Integer>
+      <cd:Description>Cycle report</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="agc1">
+    <cd:Integer>
+      <cd:Description>AGC1</cd:Description>
+      <cd:Unit>dB</cd:Unit>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="agc2">
+    <cd:Integer>
+      <cd:Description>AGC2</cd:Description>
+      <cd:Unit>dB</cd:Unit>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="alt_cmd_ho">
+    <cd:Integer>
+      <cd:Description>Altitude command HO</cd:Description>
+      <cd:Unit>48.8 ps</cd:Unit>
+      <cd:Conversion numerator="48.800000" denominator="1000000000000.000000">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="vert_spd_hpr">
+    <cd:Integer>
+      <cd:Description>Vertical speed second order HPR (unit: 3.05 ps/rc)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="noise_meas">
+    <cd:Integer>
+      <cd:Description>Noise measurement</cd:Description>
+      <cd:Unit>dB/100</cd:Unit>
+      <cd:Conversion numerator="1" denominator="100">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="comp_dat_rx1">
+    <cd:Array>
+      <cd:Description>CAL4 complex data from Rx1 channel</cd:Description>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Dimension>512</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>int8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="comp_dat_rx2">
+    <cd:Array>
+      <cd:Description>CAL4 complex data from Rx2 channel</cd:Description>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Dimension>512</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>int8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cid_sarin_pkt_rx1">
+    <cd:Integer>
+      <cd:Description>CID SARIN packet Rx1 channel</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cid_sarin_pkt_rx2">
+    <cd:Integer>
+      <cd:Description>CID SARIN packet Rx2 channel</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="cid_trk_pkt">
+    <cd:Integer>
+      <cd:Description>CID TRK packet</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sir_id">
+    <cd:Integer>
+      <cd:Description>SIRAL Identifier (0 = Nominal, 1 = Redundant)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>120</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

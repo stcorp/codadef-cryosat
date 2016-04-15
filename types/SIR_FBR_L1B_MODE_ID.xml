@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_FBR_L1B_MODE_ID" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Mode ID bit field (common to FBR and L1B MDSR)</cd:Description>
+  <cd:Field name="instr_mode">
+    <cd:Integer>
+      <cd:Description>Instrument mode: 1 = LRM, 2 = SAR, 3 = SARin, 11 = CAL1-LRM, 12 = CAL1-SAR, 13 = CAL1-SARin, 22 = CAL2-SAR, 23 = CAL-SARin</cd:Description>
+      <cd:BitSize>6</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sarin_degr">
+    <cd:Integer>
+      <cd:Description>SARin degraded case (set to 1 if one receive chain is missing)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>spare (reserved, set to 0)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="cal4_mode">
+    <cd:Integer>
+      <cd:Description>CAL4 mode (set to 1 for CAL4 packets)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pltf_att_contr">
+    <cd:Integer>
+      <cd:Description>Platform attitude control: 0 = unknown, 1 = local normal pointing mode, 2 = yaw steering mode</cd:Description>
+      <cd:BitSize>2</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>spare (reserved, set to 0)</cd:Description>
+      <cd:BitSize>5</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

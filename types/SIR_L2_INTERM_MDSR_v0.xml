@@ -1,0 +1,2361 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_L2_INTERM_MDSR_v0" last-modified="2012-01-30" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>SIRAL L2 intermediate measurement data set record</cd:Description>
+  <cd:Field name="mdsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Data record time (MDSR time stamp)</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicrosecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="uso_corr">
+    <cd:Integer>
+      <cd:Description>USO correction factor</cd:Description>
+      <cd:Conversion numerator="1" denominator="1e15"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mode_id">
+    <cd:Record>
+      <cd:Description>Mode ID (instrument mode information)</cd:Description>
+      <cd:Field name="instr_mode">
+        <cd:Integer>
+          <cd:Description>Instrument mode (derived from configuration bits in L0): 1 = LRM, 2 = SAR, 3 = SARin, 11 = CAL1-LRM, 12 = CAL1-SAR, 13 = CAL1-SARin, 22 = CAL2-SAR, 23 = CAL-SARin</cd:Description>
+          <cd:BitSize>6</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sarin_degr">
+        <cd:Integer>
+          <cd:Description>SARin degraded case (set to 1 if one receive chain is missing)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>spare (reserved, set to 0)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="cal4_mode">
+        <cd:Integer>
+          <cd:Description>CAL4 mode (set to 1 for CAL4 packets)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="pltf_att_contr">
+        <cd:Integer>
+          <cd:Description>Platform attitude control: 0 = unknown, 1 = local normal pointing mode (affirmed), 2 = yaw steering mode (affirmed)</cd:Description>
+          <cd:BitSize>2</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_2">
+        <cd:Raw>
+          <cd:Description>spare (reserved, set to 0)</cd:Description>
+          <cd:BitSize>5</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="src_seq_count">
+    <cd:Integer>
+      <cd:Description>Source sequence counter (a 16384 cyclic modulo counter, starting from 0, incrementing by 1, a separate counter is maintained for each instrument mode)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="instr_conf_flags">
+    <cd:Record>
+      <cd:Description>Instrument configuration flags</cd:Description>
+      <cd:Field name="rx_chain">
+        <cd:Integer>
+          <cd:Description>Reception chain in use: 0 = unknown, 1 = chain 1, 2 = chain 2, 3 = both</cd:Description>
+          <cd:BitSize>2</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="instr_id">
+        <cd:Integer>
+          <cd:Description>SIRAL identifier: 0 = Nominal, 1 = Redundant</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>spare (reserved, set to 0)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="bandw">
+        <cd:Integer>
+          <cd:Description>Bandwidth: 0 = unknown, 1 = 320 MHz, 2 = 40 MHz</cd:Description>
+          <cd:BitSize>2</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_2">
+        <cd:Raw>
+          <cd:Description>spare (reserved, set to 0)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="spare_3">
+        <cd:Raw>
+          <cd:Description>spare (reserved, set to 0)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="trk_mode">
+        <cd:Integer>
+          <cd:Description>Tracking mode: 0 = unknown, 1 = LRM, 2 = SAR, 3 = SARin</cd:Description>
+          <cd:BitSize>2</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ext_cal">
+        <cd:Integer>
+          <cd:Description>External calibration: 0 = no, 1 = external calibration</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_4">
+        <cd:Raw>
+          <cd:Description>spare (reserved, set to 0)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="loop_stat">
+        <cd:Integer>
+          <cd:Description>Loop status: 0 = closed loop, 1 = open loop</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="echo_loss">
+        <cd:Integer>
+          <cd:Description>Loss of echo (from cycle report): 0 = OK, 1 = loss of echo</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="rt_err">
+        <cd:Integer>
+          <cd:Description>Real time error (from cycle report): 0 = OK, 1 = real time computation error (computing cycle too long)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="echo_sat_err">
+        <cd:Integer>
+          <cd:Description>Echo saturation error (from cycle report): 0 = OK, 1 = echo saturation detected</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="rx_band_att">
+        <cd:Integer>
+          <cd:Description>Reception band attenuation: 0 = not attenuated, 1 = attenuated</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="cycl_gen_err">
+        <cd:Integer>
+          <cd:Description>Cycle report general error: 0 = cycle report is 0, 1 = cycle report is not 0</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="star_trk1">
+        <cd:Integer>
+          <cd:Description>Star Tracker 1 used: 0 = not used, 1 = used</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="star_trk2">
+        <cd:Integer>
+          <cd:Description>Star Tracker 2 used: 0 = not used, 1 = used</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="star_trk3">
+        <cd:Integer>
+          <cd:Description>Star Tracker 3 used: 0 = not used, 1 = used</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_5">
+        <cd:Raw>
+          <cd:Description>spare (reserved, set to 0)</cd:Description>
+          <cd:BitSize>11</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="surf_samp_count">
+    <cd:Integer>
+      <cd:Description>Surface sample counter (record counter)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lat">
+    <cd:Integer>
+      <cd:Description>Latitude of measurement in WSG84</cd:Description>
+      <cd:Unit>1e-7 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLatitude_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lon">
+    <cd:Integer>
+      <cd:Description>Longitude of measurement in WSG84</cd:Description>
+      <cd:Unit>1e-7 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLongitude_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="alt_cog_ref_ellip">
+    <cd:Integer>
+      <cd:Description>Altitude of CoG above reference ellipsoid (interpolated value)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeAltitudeCOG"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="inst_alt_rate">
+    <cd:Integer>
+      <cd:Description>Instantaneous altitude rate derived from orbit</cd:Description>
+      <cd:Unit>mm/s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sat_vel_vec">
+    <cd:Array>
+      <cd:Description>Satellite velocity vector[3] described in the international terrestial reference frame in the international earth fixed system. Note that this is not a unit vector, because the velocity magnitude is needed as well.</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Velocity vector component</cd:Description>
+        <cd:Unit>mm/s</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="beam_dir_vec">
+    <cd:Array>
+      <cd:Description>Real beam direction vector[3] described in the CRYOSAT reference frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Beam direction vector component</cd:Description>
+        <cd:Unit>1e-6 m</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ifm_basel_vec">
+    <cd:Array>
+      <cd:Description>Interferometer baseline vector[3] described in the CRYOSAT reference frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Baseline vector component</cd:Description>
+        <cd:Unit>1e-6 m</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="meas_conf_flags">
+    <cd:Record>
+      <cd:Description>Measurement confidence flags. Serious errors are indicated by setting the 'block degraded' flag, in which case the block must not be processed. Other error settings can be regarded as warnings.</cd:Description>
+      <cd:Field name="blk_degr">
+        <cd:Integer>
+          <cd:Description>Block degraded: 0 = OK, 1 = degraded, block should not be processed</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="blnk_blk">
+        <cd:Integer>
+          <cd:Description>Blank block: 0 = OK, 1 = blank block inserted for record padding</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="dat_degr">
+        <cd:Integer>
+          <cd:Description>Datation degraded: 0 = OK, 1 = datation is bad or not set</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="orb_prop_err">
+        <cd:Integer>
+          <cd:Description>Orbit propagation error: 0 = OK, 1 = error (returned by CFI or by independent check)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="orb_file_chng">
+        <cd:Integer>
+          <cd:Description>Orbit file change: 0 = OK, 1 = orbit file has changed w.r.t. previous record</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="orb_discnt">
+        <cd:Integer>
+          <cd:Description>Orbit discontinuity: 0 = OK, 1 = discontinuity (e.g. gap)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="echo_sat">
+        <cd:Integer>
+          <cd:Description>Echo saturation (from L0): 0 = OK, 1 = saturated (from echo saturation flag in the telemetry)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="other_echo_err">
+        <cd:Integer>
+          <cd:Description>Other echo error (e.g. empty waveform): 0 = OK, 1 = echo error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="rx_ch1_err">
+        <cd:Integer>
+          <cd:Description>Receive chain 1 error for SARin: 0 = OK, 1 = degraded or missing</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="rx_ch2_err">
+        <cd:Integer>
+          <cd:Description>Receive chain 2 error for SARin: 0 = OK, 1 = degraded or missing</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="win_delay_inc">
+        <cd:Integer>
+          <cd:Description>Window delay inconsistency: 0 = OK, 1 = degraded, value out of range, or computation error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="agc_inc">
+        <cd:Integer>
+          <cd:Description>AGC inconsistency: 0 = OK, 1 = degraded, value out of range, or computation error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="cal1_corr_miss">
+        <cd:Integer>
+          <cd:Description>CAL1 correction missing: 0 = OK, 1 = missing - not applied</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="cal1_ipf_used">
+        <cd:Integer>
+          <cd:Description>CAL1 from IPF DB used: 0 = default not used, 1 = default from IPF DB used</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="doris_uso_corr">
+        <cd:Integer>
+          <cd:Description>DORIS USO correction: 0 = OK, correction available, 1 = correction not available</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="comp_cal1_ipf_used">
+        <cd:Integer>
+          <cd:Description>Complex CAL1 from IPF DB used: 0 = default not used, 1 = default from IPF DB used</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="trk_echo_err">
+        <cd:Integer>
+          <cd:Description>TRK echo error: 0 = OK, 1 = degraded tracking echo</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="echo_rx1_err">
+        <cd:Integer>
+          <cd:Description>Echo Rx1 error: 0 = OK, 1 = bad raw echo</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="echo_rx2_err">
+        <cd:Integer>
+          <cd:Description>Echo Rx2 error: 0 = OK, 1 = bad raw echo</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="npm_inc">
+        <cd:Integer>
+          <cd:Description>NPM inconsistency: 0 = OK, 1 = degraded, value out of range, or computation error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="azi_cal_miss">
+        <cd:Integer>
+          <cd:Description>Azimuth calibration missing: 0 = OK, azimuth calibration applied, 1 = no azimuth calibration</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="azi_cal_ipf_used">
+        <cd:Integer>
+          <cd:Description>Azimuth calibration from IPF DB used: 0 = default not used, 1 = default from IPF DB used</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="win_cal_func_miss">
+        <cd:Integer>
+          <cd:Description>Range window calibration function (i.e. the frequency dependent phase and amplitude correction function applicable to the range window) missing: 0 = OK, calibrated, 1 = no calibration applied</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="win_cal_func_ipf_used">
+        <cd:Integer>
+          <cd:Description>Range window calibration function from IPF DB used: 0 = default not used, 1 = default from IPF DB used</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="phase_pert_corr">
+        <cd:Integer>
+          <cd:Description>Phase perturbation correction application: 0 = applied, 1 = not applied</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="cal2_corr_miss">
+        <cd:Integer>
+          <cd:Description>CAL2 correction missing: 0 = OK, 1 = missing - not applied</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="cal2_ipf_used">
+        <cd:Integer>
+          <cd:Description>CAL2 from IPF DB used: 0 = default not used, 1 = default from IPF DB used</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="pow_scl_fac">
+        <cd:Integer>
+          <cd:Description>Power scaling factor: 0 = OK, 1 = error in power scaling factor</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="att_corr_miss">
+        <cd:Integer>
+          <cd:Description>Attitude correction missing: 0 = OK, attitude correction applied, 1 = not corrected</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="att_intp_err">
+        <cd:Integer>
+          <cd:Description>Attitude interpolation error: 0 = OK, 1 = interpolation error, attitude is wrong</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>spare (reserved, set to 0)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="phase_pert_corr_mode">
+        <cd:Integer>
+          <cd:Description>Phase perturbation correction mode: 0 = computed by CCAL1, 1 = default from IPF DB used (applicable only to SARin data)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="surf_height">
+    <cd:Integer>
+      <cd:Description>Height of surface w.r.t reference ellipsoid WSG84</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sig_0">
+    <cd:Integer>
+      <cd:Description>Backscatter Sigma 0, fully corrected including instrument gain corrections and retracker correction</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="swh">
+    <cd:Integer>
+      <cd:Description>Significant Wave Height</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="peak">
+    <cd:Integer>
+      <cd:Description>Peakiness</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="100.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="retrk_range_corr">
+    <cd:Integer>
+      <cd:Description>Retracked range correction: the offset of the retracked point on the echo from the reference point on the range window. This is a 1-way correction.</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="retrk_sig_0_corr">
+    <cd:Integer>
+      <cd:Description>Retracked backscatter sigma 0 correction: correction to sigma 0 resulting from actual echo power being different from normal, or expected, echo power</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="retrk_outp_3">
+    <cd:Integer>
+      <cd:Description>Retracker output 3: LRM = amplitude estimate Pu [femto watts], SARin = power [femto watts], SAR = unused</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="retrk_outp_4">
+    <cd:Integer>
+      <cd:Description>Retracker output 4: LRM = leading edge width (sigma c) [mBin], SARin = echo width, SAR = unused</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="retrk_outp_5">
+    <cd:Integer>
+      <cd:Description>Retracker output 5: LRM = initialisation value (retracked range correction from ocog) [mm], SARin = retracked bin, SAR = unused</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="retrk_outp_6">
+    <cd:Integer>
+      <cd:Description>Retracker output 6: LRM = reserved for U10 tbc, SARin = tail slope fw * bin^n.5, SAR = unused</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="retrk_outp_7">
+    <cd:Integer>
+      <cd:Description>Retracker output 7: LRM = reserved for SSB tbc, SARin = tail delay [1/mBin], SAR = unused</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="retrk_outp_8">
+    <cd:Integer>
+      <cd:Description>Retracker output 8: LRM = unused, SARin = leading edge slope [1/1000], SAR = unused</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="retrk_outp_9">
+    <cd:Integer>
+      <cd:Description>Retracker output 9: LRM = unused, SARin = chi^2 [1e6], SAR = unused</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="retrk_outp_10">
+    <cd:Integer>
+      <cd:Description>Retracker output 10: LRM = unused, SARin = minimum chi^2 [1e6], SAR = unused</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="retrk_outp_11">
+    <cd:Integer>
+      <cd:Description>Retracker output 11: LRM = unused, SARin = phi constant (phase shift constant) [micro rad], SAR = unused</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="retrk_outp_12">
+    <cd:Integer>
+      <cd:Description>Retracker output 12: LRM = unused, SARin = phi slope (phase fit slope) [micro rad/bin], SAR = unused</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="retrk_outp_13">
+    <cd:Integer>
+      <cd:Description>Retracker output 13: LRM = retracked point [mBin], SARin = retracked range (note: not the correction) [mm], SAR = retracked point [mBin]</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pow_echo_shp">
+    <cd:Integer>
+      <cd:Description>Power echo shape parameter</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="beam_beh_params">
+    <cd:Record>
+      <cd:Description>Beam behaviour parameters, defined as an array of 50 integers related to surface characteristics seen in the set of doppler echoes prior to stacking. As only the first 5 integers currently have been given a definition, the array is mapped to a record of 6 fields: the 5 meaningful integers, and a spare of 45*2 bytes.</cd:Description>
+      <cd:Field name="stk_half_width">
+        <cd:Integer>
+          <cd:Description>Stack half width (standard deviation) (Stack beam/100)</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="stk_centre">
+        <cd:Integer>
+          <cd:Description>Stack centre (beam in stack at maximum of fitted Gaussian) (Stack beam/100)</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="stk_scl_amp">
+        <cd:Integer>
+          <cd:Description>Stack scaled amplitude</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="stk_skew">
+        <cd:Integer>
+          <cd:Description>Stack skewness (Value/100 or -99900 if cannot be computed)</cd:Description>
+          <cd:Conversion numerator="100.000000" denominator="1.000000"/>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="stk_kurt">
+        <cd:Integer>
+          <cd:Description>Stack kurtosis (Value/100 or -99900 if cannot be computed)</cd:Description>
+          <cd:Conversion numerator="100.000000" denominator="1.000000"/>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="stdev">
+        <cd:Integer>
+          <cd:Description>Standard deviation (as a function of angle)</cd:Description>
+          <cd:Unit>1e-6 rad</cd:Unit>
+          <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+            <cd:Unit>rad</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="stk_center_angle">
+        <cd:Integer>
+          <cd:Description>Stack centre angle (as a function of angle)</cd:Description>
+          <cd:Unit>1e-6 rad</cd:Unit>
+          <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+            <cd:Unit>rad</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>spare</cd:Description>
+          <cd:BitSize>688</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="x_trk_angle">
+    <cd:Integer>
+      <cd:Description>x-Track angle (interferometric angle computed at retrack point). This is the inferred cross-track angle corresponding to the retrack point of the SARin echo. It can be used in combination with the altitude to derive a horizontal offset from nadir. The latitude and longitude of measurement (field 6 and 7) include this offset. Set to zero for SAR and LRM.</cd:Description>
+      <cd:Unit>1e-6 rad</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>rad</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="retrk_coh">
+    <cd:Integer>
+      <cd:Description>Coherence at retrack point, set to 0 for SAR and LRM</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="interp_ocean_ht">
+    <cd:Integer>
+      <cd:Description>Interpolated ocean height (or MSS). The ocean height interpolated from SAR data or read from an MSS model (tbd) which is used in conjunction with surface height to compute a freeboard</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="freeb">
+    <cd:Integer>
+      <cd:Description>Freeboard of the sea ice, set to 0 for SARin and LRM</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="surf_ht_anom">
+    <cd:Integer>
+      <cd:Description>Surface height anomaly</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="interp_sea_surf_anom">
+    <cd:Integer>
+      <cd:Description>Interpolated sea surface height anomaly</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ocean_ht_interp_err">
+    <cd:Integer>
+      <cd:Description>Interpolation error for ocean height</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_interp_pts_fw">
+    <cd:Integer>
+      <cd:Description>Number of interpolation points used (forward)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_interp_pts_bw">
+    <cd:Integer>
+      <cd:Description>Number of interpolation points used (backward)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="interp_rad_fw">
+    <cd:Integer>
+      <cd:Description>Radius of interpolation (forward in time)</cd:Description>
+      <cd:Unit>1e-3 s</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="interp_rad_bw">
+    <cd:Integer>
+      <cd:Description>Radius of interpolation (backward in time)</cd:Description>
+      <cd:Unit>1e-3 s</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="interp_err_flag">
+    <cd:Integer>
+      <cd:Description>Interpolation error flag</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="meas_mode">
+    <cd:Integer>
+      <cd:Description>Measurement mode: 1 = LRM, 2 = SAR, 3 = SARin</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="meas_qual_flags">
+    <cd:Record>
+      <cd:Description>Measurement quality flags</cd:Description>
+      <cd:Field name="height_err">
+        <cd:Integer>
+          <cd:Description>Height error: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sig_0_err">
+        <cd:Integer>
+          <cd:Description>Sigma 0 backscatter error: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="peak_err">
+        <cd:Integer>
+          <cd:Description>Peakiness error: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="echo_shp_err">
+        <cd:Integer>
+          <cd:Description>Echo shape error: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="x_trk_angle_err">
+        <cd:Integer>
+          <cd:Description>x-Track angle error: 0 = no, 1 = ambiguous angle</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="coh_err">
+        <cd:Integer>
+          <cd:Description>Coherence error: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="arithm_err">
+        <cd:Integer>
+          <cd:Description>Arithmetic error: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="wind_err">
+        <cd:Integer>
+          <cd:Description>Altimeter wind calculation error: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="swh_err">
+        <cd:Integer>
+          <cd:Description>Significant wave height calculation error: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_2">
+        <cd:Raw>
+          <cd:Description>padding</cd:Description>
+          <cd:BitSize>22</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="retrkr_flags">
+    <cd:Record>
+      <cd:Description>Retracker flags</cd:Description>
+      <cd:Field name="retrkr_fail">
+        <cd:Integer>
+          <cd:Description>Overall retracker failure: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="low_wavef_pow">
+        <cd:Integer>
+          <cd:Description>Low or zero power in waveform: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="low_peak">
+        <cd:Integer>
+          <cd:Description>Low peakiness: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="high_peak">
+        <cd:Integer>
+          <cd:Description>High peakiness: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="high_noise">
+        <cd:Integer>
+          <cd:Description>High noise: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="low_var">
+        <cd:Integer>
+          <cd:Description>Low variance: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="bad_lead_edge">
+        <cd:Integer>
+          <cd:Description>Bad leading edge: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="retrk_pos_oor">
+        <cd:Integer>
+          <cd:Description>Retrack position out of range: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="abn_beam_beh_params">
+        <cd:Integer>
+          <cd:Description>Abnormal beam behaviour parameters: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_9">
+        <cd:Raw>
+          <cd:Description>spare (reserved for SWH)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="spare_10">
+        <cd:Raw>
+          <cd:Description>spare (reserved for SWH)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="spare_11">
+        <cd:Raw>
+          <cd:Description>spare (reserved for U10)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="spare_12">
+        <cd:Raw>
+          <cd:Description>spare (reserved for SSB)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="spare_13">
+        <cd:Raw>
+          <cd:Description>spare</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="sarin_retrk_interp_fail">
+        <cd:Integer>
+          <cd:Description>SARin retrack interpolation failure: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sarin_low_coh">
+        <cd:Integer>
+          <cd:Description>SARin low coherence: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="fit_failed">
+        <cd:Integer>
+          <cd:Description>Fit failed: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="fdm_ocog_failed">
+        <cd:Integer>
+          <cd:Description>FDM OCOG failed: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="poor_fit">
+        <cd:Integer>
+          <cd:Description>Poor Power fit: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="poor_phase_fit">
+        <cd:Integer>
+          <cd:Description>Poor Phase fit: 0 = no, 1 = yes (SARIN mode only)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_20">
+        <cd:Raw>
+          <cd:Description>spare</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="spare_21">
+        <cd:Raw>
+          <cd:Description>spare</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="spare_22">
+        <cd:Raw>
+          <cd:Description>spare (reserved for SAR)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="spare_23">
+        <cd:Raw>
+          <cd:Description>spare (reserved for SAR)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="spare_24">
+        <cd:Raw>
+          <cd:Description>spare (reserved for SAR)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="spare_25">
+        <cd:Raw>
+          <cd:Description>spare (reserved for SAR)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="spare_26">
+        <cd:Raw>
+          <cd:Description>spare (reserved for SAR)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="spare_27">
+        <cd:Raw>
+          <cd:Description>spare (reserved for SAR)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="spare_28">
+        <cd:Raw>
+          <cd:Description>spare (reserved for SAR)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="spare_29">
+        <cd:Raw>
+          <cd:Description>spare (reserved for SAR)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="retrk_cfi_ocean">
+        <cd:Integer>
+          <cd:Description>LRM retracker was CFI ocean: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="retrk_cfi_ocog">
+        <cd:Integer>
+          <cd:Description>LRM retracker was OCOG: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="ht_stat_flags">
+    <cd:Record>
+      <cd:Description>Height status flags, indicate height corrections that were applied</cd:Description>
+      <cd:Field name="corr_int_cal">
+        <cd:Integer>
+          <cd:Description>Corrected for internal calibration: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="corr_rad_dopp">
+        <cd:Integer>
+          <cd:Description>Corrected for radial doppler: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="corr_dry_tropo">
+        <cd:Integer>
+          <cd:Description>Corrected for dry troposphere: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="corr_wet_tropo">
+        <cd:Integer>
+          <cd:Description>Corrected for wet troposphere: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="corr_inv_barom">
+        <cd:Integer>
+          <cd:Description>Corrected for inverse barometer: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="corr_high_freq_var">
+        <cd:Integer>
+          <cd:Description>Corrected for high frequency variability (Dynamic Atmospheric Correction): 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="corr_ion_gim">
+        <cd:Integer>
+          <cd:Description>Corrected for ionosphere (GIM): 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="corr_ion_mdl">
+        <cd:Integer>
+          <cd:Description>Corrected for ionosphere (model): 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ocean_tide_1_used">
+        <cd:Integer>
+          <cd:Description>Ocean tide 1 used: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ocean_tide_2_used">
+        <cd:Integer>
+          <cd:Description>Ocean tide 2 used: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ocean_load_tide_used">
+        <cd:Integer>
+          <cd:Description>Ocean loading tide used: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sol_earth_tide_used">
+        <cd:Integer>
+          <cd:Description>Solid earth tide used: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="geocen_pol_tide_used">
+        <cd:Integer>
+          <cd:Description>Geocentric polar tide used: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="slp_dopp_corr">
+        <cd:Integer>
+          <cd:Description>Slope doppler corrected: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spec_win_offs_app">
+        <cd:Integer>
+          <cd:Description>Mode specific window offset applied: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sar_retrkr_app">
+        <cd:Integer>
+          <cd:Description>SAR retracker applied: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sarin_retrkr_app">
+        <cd:Integer>
+          <cd:Description>SARin retracker applied: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="lrm_retrkr_app">
+        <cd:Integer>
+          <cd:Description>LRM retracker applied: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="lrm_ocean_bias_app">
+        <cd:Integer>
+          <cd:Description>LRM ocean bias applied: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="lrm_ice_bias_app">
+        <cd:Integer>
+          <cd:Description>LRM ice bias applied: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sar_ocean_bias_app">
+        <cd:Integer>
+          <cd:Description>SAR ocean bias applied: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sar_ice_bias_app">
+        <cd:Integer>
+          <cd:Description>SAR ice bias applied: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sarin_ocean_bias_app">
+        <cd:Integer>
+          <cd:Description>SARin ocean bias applied: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sarin_ice_bias_app">
+        <cd:Integer>
+          <cd:Description>SARin ice bias applied: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="lrm_slp_mdl_valid">
+        <cd:Integer>
+          <cd:Description>LRM slope model data valid: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sarin_basel">
+        <cd:Integer>
+          <cd:Description>SARin baseline bag: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sarin_oor">
+        <cd:Integer>
+          <cd:Description>SARin out of range: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sarin_bad_vel">
+        <cd:Integer>
+          <cd:Description>SARin bad velocity: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ssb_used">
+        <cd:Integer>
+          <cd:Description>Sea-state bias used: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>padding</cd:Description>
+          <cd:BitSize>2</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="failure">
+        <cd:Integer>
+          <cd:Description>Failure: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="freeb_stat_flags">
+    <cd:Record>
+      <cd:Description>SAR freeboard status flags, indicate the availability and reliability of the freeboard measurement</cd:Description>
+      <cd:Field name="freeb_meas_unavail">
+        <cd:Integer>
+          <cd:Description>Freeboard measurement unavailable: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="freeb_meas_unrel">
+        <cd:Integer>
+          <cd:Description>Freeboard measurement unreliable: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="freeb_meas_north">
+        <cd:Integer>
+          <cd:Description>Freeboard measurement is in nothern geographical boundary: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="freeb_meas_south">
+        <cd:Integer>
+          <cd:Description>Freeboard measurement is in southern geographical boundary: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>spare (tbd)</cd:Description>
+          <cd:BitSize>28</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="num_avg">
+    <cd:Integer>
+      <cd:Description>Number of echoes or beams averaged. In LRM mode this is the number of echoes which have been averaged to make one measurement (normally). In SAR and SARin mode, it is the number of doppler beams which have been stacked to derive each measurement. Near the beginning and end of each sectin of SAR or SARin mode operation, this number will reduce below the nominal value and there is a corresponding decrease in the signal to noise ratio of the waveform.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>spare (reserved for wind speed)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>96</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ice_conc">
+    <cd:Integer>
+      <cd:Description>Ice concentration parameter, a percentage estimate of sea ice concentration merged from model data</cd:Description>
+      <cd:Unit>1e-3 %</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="snow_depth">
+    <cd:Integer>
+      <cd:Description>Snow depth</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeSnowDepth"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="snow_density">
+    <cd:Integer>
+      <cd:Description>Snow density</cd:Description>
+      <cd:Unit>kg/m3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeSnowDepth"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="discr_res">
+    <cd:Integer>
+      <cd:Description>Discriminator result: 1 = LRM undefined, 2 = LRM ocean, 3 = LRM land ice plateau, 101 = SARin undefined, 102 = SARin altimeter mode, 201 = SAR undefined, 202 = SAR ocean, 203 = SAR sea ice, 204 = SAR leads</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="discr_param_1">
+    <cd:Integer>
+      <cd:Description>SARin discriminator parameter 1 = total power</cd:Description>
+      <cd:Unit>1e-18W</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000000000000.000000">
+        <cd:Unit>W</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="discr_param_2">
+    <cd:Integer>
+      <cd:Description>SARin discriminator parameter 2 = max power</cd:Description>
+      <cd:Unit>1e-18W</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000000000000.000000">
+        <cd:Unit>W</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="discr_param_3">
+    <cd:Integer>
+      <cd:Description>SARin discriminator parameter 3 = mean power</cd:Description>
+      <cd:Unit>1e-18W</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000000000000.000000">
+        <cd:Unit>W</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="discr_param_4">
+    <cd:Integer>
+      <cd:Description>SARin discriminator parameter 4 = bin with max power</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="discr_param_5">
+    <cd:Integer>
+      <cd:Description>SARin discriminator parameter 5 = bin of half max power</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="discr_param_6">
+    <cd:Integer>
+      <cd:Description>SARin discriminator parameter 6 = max coherence</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="discr_param_7">
+    <cd:Integer>
+      <cd:Description>SARin discriminator parameter 7 = bin with max coherence</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="discr_param_8">
+    <cd:Integer>
+      <cd:Description>SARin discriminator parameter 8 = first power bin</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="discr_param_9">
+    <cd:Integer>
+      <cd:Description>SARin discriminator parameter 9 = last power bin</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="discr_param_10">
+    <cd:Integer>
+      <cd:Description>SARin discriminator parameter 10 = reserved (tbd)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="discr_stat_flags">
+    <cd:Record>
+      <cd:Description>Discriminator status flags</cd:Description>
+      <cd:Field name="overall_discr_fail">
+        <cd:Integer>
+          <cd:Description>Overall discriminator failure: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="lrm_discr_flags">
+        <cd:Integer>
+          <cd:Description>LRM discriminator flags TBD: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>spare (reserved for LRM, set to 0)</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="sarin_low_var">
+        <cd:Integer>
+          <cd:Description>SARin low variance: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sarin_bad_lead_edge">
+        <cd:Integer>
+          <cd:Description>SARin bad leading edge: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sarin_high_noise">
+        <cd:Integer>
+          <cd:Description>SARin high noise: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sarin_low_peak">
+        <cd:Integer>
+          <cd:Description>SARin low peakiness: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sarin_high_peak">
+        <cd:Integer>
+          <cd:Description>SARin high peakiness: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sarin_low_pow">
+        <cd:Integer>
+          <cd:Description>SARin low power: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_2">
+        <cd:Raw>
+          <cd:Description>spare (reserved for SARin, set to 0)</cd:Description>
+          <cd:BitSize>4</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="sar_very_high_peak">
+        <cd:Integer>
+          <cd:Description>SAR very high peakiness: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sar_very_low_peak">
+        <cd:Integer>
+          <cd:Description>SAR very low peakiness: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sar_low_pow">
+        <cd:Integer>
+          <cd:Description>SAR low or zero power: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sar_abn_beam_beh_params">
+        <cd:Integer>
+          <cd:Description>SAR abnormal beam behaviour parameters: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sar_ice_conc_unavail">
+        <cd:Integer>
+          <cd:Description>SAR ice concentration unavailable: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sar_ice_conc_unrel">
+        <cd:Integer>
+          <cd:Description>SAR ice concentration unreliable: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sar_snr_low">
+        <cd:Integer>
+          <cd:Description>SAR signal to noise ratio too low: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="wavef_wide">
+        <cd:Integer>
+          <cd:Description>Waveform too wide: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_3">
+        <cd:Raw>
+          <cd:Description>spare (tbd, set to 0)</cd:Description>
+          <cd:BitSize>4</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="slope_mdl_corr_att">
+    <cd:Integer>
+      <cd:Description>Slope model correction attitude: attitude angle of nearest echoing point on the surface as determined from slope models in LRM processing. Set to 0 if model not present or invalid. Set to 0 for SAR and SARin, but may be used in the event of SARin mode with only 1 receive chain operating</cd:Description>
+      <cd:Unit>1e-6 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="slope_mdl_corr_azi">
+    <cd:Integer>
+      <cd:Description>Slope model correction azimuth, as for attitude</cd:Description>
+      <cd:Unit>1e-6 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="uncorr_lat">
+    <cd:Integer>
+      <cd:Description>Uncorrected latitude of the nadir position, allows for removal of the slope correction position if desired</cd:Description>
+      <cd:Unit>1e-7 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="uncorr_lon">
+    <cd:Integer>
+      <cd:Description>Uncorrected longitude of the nadir position, allows for removal of the slope correction position if desired</cd:Description>
+      <cd:Unit>1e-7 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ambg_ind">
+    <cd:Record>
+      <cd:Description>Ambiguity indicator, to indicate the case where the interferometric angle may be ambiguous due to phase wrapping.</cd:Description>
+      <cd:Field name="overall_ambg">
+        <cd:Integer>
+          <cd:Description>Overall ambiguity: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="tdb_ambg">
+        <cd:Integer>
+          <cd:Description>TDB ambiguity: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>padding</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="dem_unavail">
+        <cd:Integer>
+          <cd:Description>DEM not available: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="diff_elv">
+        <cd:Integer>
+          <cd:Description>Different elevations: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_2">
+        <cd:Raw>
+          <cd:Description>padding</cd:Description>
+          <cd:BitSize>20</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="mss_from_mdl">
+    <cd:Integer>
+      <cd:Description>MSS from the ocean model supplied in the CFI library</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="geoid_from_mdl">
+    <cd:Integer>
+      <cd:Description>Geoid from the geoid model supplied in the CFI library</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="depth_elev_model">
+    <cd:Integer>
+      <cd:Description>Ocean depth / land elevation from model</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dem_elv_from_mdl">
+    <cd:Integer>
+      <cd:Description>DEM elevation, interpolated from a DEM (model tbd) to act as a check against SARin derived elevation. Set to 0 for LRM and SAR.</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dem_mdl_id">
+    <cd:Integer>
+      <cd:Description>DEM identifier, to identify the DEM model used for SARin</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>128</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="dry_tropo_corr">
+    <cd:Integer>
+      <cd:Description>Dry tropospheric correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeDryTroposphericCorrection"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="wet_tropo_corr">
+    <cd:Integer>
+      <cd:Description>Wet tropospheric correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeWetTroposphericCorrection"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="inv_barom_corr">
+    <cd:Integer>
+      <cd:Description>Inverse barometric correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeInverseBarometricCorrection"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="high_freq_var_corr">
+    <cd:Integer>
+      <cd:Description>High frequency variability correction (Dynamic Atmospheric Correction)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ion_corr_gim">
+    <cd:Integer>
+      <cd:Description>GIM ionospheric correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ion_corr_mdl">
+    <cd:Integer>
+      <cd:Description>Model ionospheric correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ocean_tide">
+    <cd:Integer>
+      <cd:Description>Ocean tide (component of total ocean tide)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeOceanTide"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lp_eq_ocean_tide">
+    <cd:Integer>
+      <cd:Description>Long period equilibrium ocean tide (component of total ocean tide)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeEquilibriumOceanTide"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ocean_load_tide">
+    <cd:Integer>
+      <cd:Description>Ocean loading tide</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeOceanLoadingTide"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sol_earth_tide">
+    <cd:Integer>
+      <cd:Description>Solid earth tide</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeSolidEarthTide"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="geocen_pol_tide">
+    <cd:Integer>
+      <cd:Description>Geocentric polar tide</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeGeocentricPolarTide"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="surf_type">
+    <cd:Integer>
+      <cd:Description>Surface type flag, enumerated key to classify surface at nadir</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="corr_stat_flags">
+    <cd:Record>
+      <cd:Description>Correction status flags, indicate which correction algorithms have been called</cd:Description>
+      <cd:Field name="dry_tropo_corr_call">
+        <cd:Integer>
+          <cd:Description>Dry tropospheric correction called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="wet_tropo_corr_call">
+        <cd:Integer>
+          <cd:Description>Wet tropospheric correction called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="inv_barom_corr_call">
+        <cd:Integer>
+          <cd:Description>Inverse barometric correction called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="high_freq_var_corr_call">
+        <cd:Integer>
+          <cd:Description>High Frequency Variability correction called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ion_gim_corr_call">
+        <cd:Integer>
+          <cd:Description>Ionospheric (GIM) correction called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ion_mdl_corr_call">
+        <cd:Integer>
+          <cd:Description>Ionospheric (model) correction called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ocean_tide_call">
+        <cd:Integer>
+          <cd:Description>Ocean tide called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="lp_eq_ocean_tide_call">
+        <cd:Integer>
+          <cd:Description>Long period equilibrium ocean tide called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ocean_load_tide_call">
+        <cd:Integer>
+          <cd:Description>Ocean loading tide called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sol_earth_tide_call">
+        <cd:Integer>
+          <cd:Description>Solid earth tide called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="geocen_pol_tide_call">
+        <cd:Integer>
+          <cd:Description>Geocentric polar tide called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="surf_type_flag_call">
+        <cd:Integer>
+          <cd:Description>Surface type flag called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ice_conc_mdl_call">
+        <cd:Integer>
+          <cd:Description>Ice concentration model called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="snow_depth_mdl_call">
+        <cd:Integer>
+          <cd:Description>Snow depth model called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="snow_density_mdl_call">
+        <cd:Integer>
+          <cd:Description>Snow density model called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="mss_mdl_call">
+        <cd:Integer>
+          <cd:Description>MSS model called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="geoid_mdl_call">
+        <cd:Integer>
+          <cd:Description>Geoid model called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="odle_mdl_call">
+        <cd:Integer>
+          <cd:Description>ODLE model called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="dem_mdl_call">
+        <cd:Integer>
+          <cd:Description>DEM model called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="slp_mdl_call">
+        <cd:Integer>
+          <cd:Description>Slope model called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ssb_mdl_call">
+        <cd:Integer>
+          <cd:Description>Sea-state bias model called: 0 = no, 1 = yes</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>spare (reserved, set to 0)</cd:Description>
+          <cd:BitSize>11</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="corr_err_flags">
+    <cd:Record>
+      <cd:Description>Correction error flags, indicate if a correction algorithm returned an error when called</cd:Description>
+      <cd:Field name="dry_tropo_corr_err">
+        <cd:Integer>
+          <cd:Description>Dry tropospheric correction error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="wet_tropo_corr_err">
+        <cd:Integer>
+          <cd:Description>Wet tropospheric correction error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="inv_barom_corr_err">
+        <cd:Integer>
+          <cd:Description>Inverse barometric correction error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="high_freq_var_corr_err">
+        <cd:Integer>
+          <cd:Description>High frequency variability correction error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ion_gim_corr_err">
+        <cd:Integer>
+          <cd:Description>Ionospheric (GIM) correction error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ion_mdl_corr_err">
+        <cd:Integer>
+          <cd:Description>Ionospheric (model) correction error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ocean_tide_err">
+        <cd:Integer>
+          <cd:Description>Ocean tide error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="lp_eq_ocean_tide_err">
+        <cd:Integer>
+          <cd:Description>Long period equilibrium ocean tide error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ocean_load_tide_err">
+        <cd:Integer>
+          <cd:Description>Ocean loading tide error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="sol_earth_tide_err">
+        <cd:Integer>
+          <cd:Description>Solid earth tide error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="geocen_pol_tide_err">
+        <cd:Integer>
+          <cd:Description>Geocentric polar tide error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="surf_type_err">
+        <cd:Integer>
+          <cd:Description>Surface type error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ice_conc_err">
+        <cd:Integer>
+          <cd:Description>Ice concentration error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="snow_depth_err">
+        <cd:Integer>
+          <cd:Description>Snow depth error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="snow_density_err">
+        <cd:Integer>
+          <cd:Description>Snow density error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="mss_mdl_err">
+        <cd:Integer>
+          <cd:Description>MSS model error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="geoid_mdl_err">
+        <cd:Integer>
+          <cd:Description>Geoid model error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="odle_mdl_err">
+        <cd:Integer>
+          <cd:Description>ODLE model error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="dem_mdl_err">
+        <cd:Integer>
+          <cd:Description>DEM model error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="slope_mdl_err">
+        <cd:Integer>
+          <cd:Description>Slope model error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ssb_mdl_err">
+        <cd:Integer>
+          <cd:Description>Sea-state bias model error: 0 = OK, 1 = error</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>spare (reserved, set to 0)</cd:Description>
+          <cd:BitSize>11</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="sea_state_bias">
+    <cd:Integer>
+      <cd:Description>Sea state bias (EM bias)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="dopp_range_corr">
+    <cd:Integer>
+      <cd:Description>Doppler range correction (incl. slope)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="instr_txrx_range_corr">
+    <cd:Integer>
+      <cd:Description>Instrument range correction (tx-rx antenna)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="instr_rx_range_corr">
+    <cd:Integer>
+      <cd:Description>Instrument range correction (rx only antenna)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="instr_sig_0_txrx_corr">
+    <cd:Integer>
+      <cd:Description>Instrument sigma 0 correction (tx-rx antenna)</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="instr_sig_0_rx_corr">
+    <cd:Integer>
+      <cd:Description>Instrument sigma 0 correction (rx only antenna)</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="int_phase_corr">
+    <cd:Integer>
+      <cd:Description>Internal phase correction</cd:Description>
+      <cd:Unit>1e-3 rad</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>rad</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ext_phase_corr">
+    <cd:Integer>
+      <cd:Description>External phase correction</cd:Description>
+      <cd:Unit>1e-3 rad</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>rad</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="noise_pow_meas">
+    <cd:Integer>
+      <cd:Description>Noise power measurement</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_5">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>96</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

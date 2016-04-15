@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_IONGIM_v0" format="binary" last-modified="2009-07-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="binary">
+    <cd:Description>GIM Ionospheric Corrections</cd:Description>
+    <cd:Field name="mph">
+      <cd:NamedType id="MPH_SSALTO"/>
+    </cd:Field>
+    <cd:Field name="sph">
+      <cd:NamedType id="AUX_SPH"/>
+    </cd:Field>
+    <cd:Field name="dsd">
+      <cd:Array format="ascii">
+        <cd:Dimension><![CDATA[int(/mph/num_dsd)]]></cd:Dimension>
+        <cd:NamedType id="DSD"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="gim_iono_corr">
+      <cd:Array>
+        <cd:Description>GIM ionospheric corrections</cd:Description>
+        <cd:Dimension><![CDATA[int(/dsd[0]/num_dsr)]]></cd:Dimension>
+        <cd:Array>
+          <cd:Dimension><![CDATA[int(/dsd[0]/ds_size) / 4]]></cd:Dimension>
+          <cd:Integer>
+            <cd:Description>The correction in micrometers</cd:Description>
+            <cd:Unit>1e-6 m</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Array>
+      <cd:BitOffset><![CDATA[8 * int(/dsd[0]/ds_offset)]]></cd:BitOffset>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

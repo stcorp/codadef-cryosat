@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="AFTF" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>SIRAL Annotated Filtered Transfer Frame</cd:Description>
+  <cd:Field name="downlink_seconds">
+    <cd:Integer>
+      <cd:Description>Time of the downlink on ground of the transfer frame (G/S time). Number of seconds elapsed since the 1st of January 200 at 00:00:00 hour</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="downlink_microseconds">
+    <cd:Integer>
+      <cd:Description>Time of the downlink on ground of the transfer frame (G/S time). Number of microseconds elapsed since the last second</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_corr_sym">
+    <cd:Integer>
+      <cd:Description>Number of symbols corrected by Reed-Solomon in current Transfer Frame</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rs_flag">
+    <cd:Integer>
+      <cd:Description>Reed-Solomon Error Flag, indentifying the detection of RS error in the transfer frame (set to FF in case of error, otherwise set to 00)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare + padding</cd:Description>
+      <cd:BitSize>24</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="transfer_frame">
+    <cd:Record>
+      <cd:Description>Filtered Transfer Frame</cd:Description>
+      <cd:Field name="header">
+        <cd:Raw>
+          <cd:Description>Transfer Frame Primary Header</cd:Description>
+          <cd:BitSize>48</cd:BitSize>
+        </cd:Raw>
+      </cd:Field>
+      <cd:Field name="data">
+        <cd:Raw>
+          <cd:Description>Transfer Frame Data Field</cd:Description>
+          <cd:BitSize>8840</cd:BitSize>
+        </cd:Raw>
+      </cd:Field>
+      <cd:Field name="trailer">
+        <cd:Raw>
+          <cd:Description>Transfer Frame Trailer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+        </cd:Raw>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

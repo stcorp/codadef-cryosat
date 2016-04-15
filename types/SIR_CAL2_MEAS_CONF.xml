@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_CAL2_MEAS_CONF" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>SIRAL CAL2 measurement confidence bit field</cd:Description>
+  <cd:Field name="cal_err">
+    <cd:Integer>
+      <cd:Description>CAL error: 0 = valid record, 1 = invalid record</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>spare (reserved, set to 0)</cd:Description>
+      <cd:BitSize>3</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="cal1_corr_miss">
+    <cd:Integer>
+      <cd:Description>CAL1 correction missing: 0 = correction applied, 1 = correction not applied</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="comp_cal1_ipf_used">
+    <cd:Integer>
+      <cd:Description>Complex CAL1 correction from IPF DB: 0 = correction from complex CAL1 product used, 1 = correction from IPF DB used</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="agc_inc">
+    <cd:Integer>
+      <cd:Description>AGC inconsistency: 0 = OK (AGC is static), 1 = AGC stepping detected</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="noise_spec_comp_err">
+    <cd:Integer>
+      <cd:Description>Noise spectra computation error: 0 = OK, 1 = error (some spectra were not computed)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="noise_pow_err">
+    <cd:Integer>
+      <cd:Description>Noise power error: 0 = OK, 1 = mean noise power out of range</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>spare (reserved, set to 0)</cd:Description>
+      <cd:BitSize>23</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

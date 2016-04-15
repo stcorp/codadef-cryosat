@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_L1B_WAVEFORM_FLAGS" last-modified="2010-03-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Waveform flags</cd:Description>
+  <cd:Field name="appr_beam_steer">
+    <cd:Integer>
+      <cd:Description>Approximate beam steering : 0 = no, 1 = approximate steering used</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="exct_beam_steer">
+    <cd:Integer>
+      <cd:Description>Exact beam steering : 0 = no, 1 = exact steering used</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dopp_weigh_comp">
+    <cd:Integer>
+      <cd:Description>Doppler weighting computed : 0 = not computed, 1 = computed</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dopp_weigh_pre_stck">
+    <cd:Integer>
+      <cd:Description>Doppler weighting applied before stack : 0 = not applied, 1 = applied</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mult_look_incmp">
+    <cd:Integer>
+      <cd:Description>Multi look incomplete : 0 = no (i.e. complete), 1 = incomplete</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="beam_ang_steer_err">
+    <cd:Integer>
+      <cd:Description>Beam angle steering error : 0 = OK, 1 = error</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="aa_power_echoes">
+    <cd:Integer>
+      <cd:Description>Anti aliased power echoes : 0 = no, 1 = anti aliased</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="auto_beam_steer">
+    <cd:Integer>
+      <cd:Description>Auto beam steering : 0 = no, 1 = auto beam steering used</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare (reserved, set to 0)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

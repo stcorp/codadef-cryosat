@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="SIR_FDMI2__v0" format="binary" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:NamedType id="SIR_L2_INTERM_v0"/>
+
+  <!-- MPH Cross File Tests -->
+  <ct:NamedCrossFileTest id="MPH_Product"/>
+  <ct:NamedCrossFileTest id="MPH_Proc_Stage_Code"/>
+  <ct:NamedCrossFileTest id="MPH_Ref_Doc"/>
+  <ct:NamedCrossFileTest id="MPH_Software_Version"/>
+  <ct:NamedCrossFileTest id="MPH_Phase"/>
+  <ct:NamedCrossFileTest id="MPH_Cycle"/>
+  <ct:NamedCrossFileTest id="MPH_Rel_Orbit"/>
+  <ct:NamedCrossFileTest id="MPH_Abs_Orbit"/>
+  <ct:NamedCrossFileTest id="MPH_Delta_UT1"/>
+  <ct:NamedCrossFileTest id="MPH_X_Position"/>
+  <ct:NamedCrossFileTest id="MPH_Y_Position"/>
+  <ct:NamedCrossFileTest id="MPH_Z_Position"/>
+  <ct:NamedCrossFileTest id="MPH_X_Velocity"/>
+  <ct:NamedCrossFileTest id="MPH_Y_Velocity"/>
+  <ct:NamedCrossFileTest id="MPH_Z_Velocity"/>
+  <ct:NamedCrossFileTest id="MPH_State_Vector_Source"/>
+  <ct:NamedCrossFileTest id="MPH_Product_Err"/>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+
+  <!-- SPH Cross File Tests -->
+  <ct:NamedCrossFileTest id="SPH_SPH_Descriptor"/>
+  <ct:NamedCrossFileTest id="SPH_Start_Record_Time"/>
+  <ct:NamedCrossFileTest id="SPH_Stop_Record_Time"/>
+  <ct:NamedCrossFileTest id="SPH_ABS_Orbit_Start"/>
+  <ct:NamedCrossFileTest id="SPH_Rel_Time_ASC_Node_Start"/>
+  <ct:NamedCrossFileTest id="SPH_ABS_Orbit_Stop"/>
+  <ct:NamedCrossFileTest id="SPH_Rel_Time_ASC_Node_Stop"/>
+  <ct:NamedCrossFileTest id="SPH_Equator_Cross_Time"/>
+  <ct:NamedCrossFileTest id="SPH_Equator_Cross_Long"/>
+  <ct:NamedCrossFileTest id="SPH_Ascending_Flag"/>
+  <ct:NamedCrossFileTest id="SPH_Start_Lat"/>
+  <ct:NamedCrossFileTest id="SPH_Start_Long"/>
+  <ct:NamedCrossFileTest id="SPH_Stop_Lat"/>
+  <ct:NamedCrossFileTest id="SPH_Stop_Long"/>
+  <ct:NamedCrossFileTest id="SPH_L1_Proc_Flag"/>
+  <ct:NamedCrossFileTest id="SPH_L1_Processing_Quality"/>
+  <ct:NamedCrossFileTest id="SPH_L1_Proc_Thresh"/>
+  <ct:NamedCrossFileTest id="SPH_Num_L1_DSR_Processed"/>
+  <ct:NamedCrossFileTest id="SPH_Instrument_Identifier"/>
+  <ct:NamedCrossFileTest id="SPH_LRM_Mode_Percent"/>
+  <ct:NamedCrossFileTest id="SPH_SAR_Mode_Percent"/>
+  <ct:NamedCrossFileTest id="SPH_SARIN_Mode_Percent"/>
+  <ct:NamedCrossFileTest id="SPH_Other_Modes_Percent"/>
+  <ct:NamedCrossFileTest id="SPH_Open_Ocean_Percent"/>
+  <ct:NamedCrossFileTest id="SPH_Close_Sea_Percent"/>
+  <ct:NamedCrossFileTest id="SPH_Continent_Ice_Percent"/>
+  <ct:NamedCrossFileTest id="SPH_Land_Percent"/>
+  <ct:NamedCrossFileTest id="SPH_L2_Prod_Status"/>
+  <ct:NamedCrossFileTest id="SPH_L2_Proc_Flag"/>
+  <ct:NamedCrossFileTest id="SPH_L2_Processing_Quality"/>
+  <ct:NamedCrossFileTest id="SPH_L2_Proc_Thresh"/>
+</cd:ProductDefinition>

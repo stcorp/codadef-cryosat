@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_L1B_SARIN_MDSR_v1" last-modified="2014-01-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>SIRAL L1B SARin measurement data set record</cd:Description>
+  <cd:Field name="time_orb_data">
+    <cd:Array>
+      <cd:Description>Time and orbit data</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:NamedType id="SIR_L1B_TIME_ORBIT_DATA_v1"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="meas_data">
+    <cd:Array>
+      <cd:Description>Measurement data</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:NamedType id="SIR_L1B_MEAS_DATA"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dry_tropo_corr">
+    <cd:Integer>
+      <cd:Description>Dry tropospheric correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="wet_tropo_corr">
+    <cd:Integer>
+      <cd:Description>Wet tropospheric correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="inv_barom_corr">
+    <cd:Integer>
+      <cd:Description>Inverse barometric correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dyn_atm_corr">
+    <cd:Integer>
+      <cd:Description>Dynamic atmospheric correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ion_corr_gim">
+    <cd:Integer>
+      <cd:Description>GIM ionospheric correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ion_corr_mdl">
+    <cd:Integer>
+      <cd:Description>Model ionospheric correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ocean_eq_tide">
+    <cd:Integer>
+      <cd:Description>Ocean equilibrium tide</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lp_ocean_tide">
+    <cd:Integer>
+      <cd:Description>Long period ocean tide</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ocean_load_tide">
+    <cd:Integer>
+      <cd:Description>Ocean loading tide</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sol_earth_tide">
+    <cd:Integer>
+      <cd:Description>Solid earth tide</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="geocen_pol_tide">
+    <cd:Integer>
+      <cd:Description>Geocentric polar tide</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="surf_type">
+    <cd:Integer>
+      <cd:Description>Surface type flag, enumerated key to classify surface at nadir</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="corr_stat_flags">
+    <cd:NamedType id="SIR_FBR_L1B_CORR_STAT"/>
+  </cd:Field>
+  <cd:Field name="corr_err_flags">
+    <cd:NamedType id="SIR_FBR_L1B_CORR_ERR"/>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="mdsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Data record time (MDSR time stamp)</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicrosecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="lat">
+    <cd:Integer>
+      <cd:Description>Latitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLatitude_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lon">
+    <cd:Integer>
+      <cd:Description>Longitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLongitude_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="alt_cog_ref_ellip">
+    <cd:Integer>
+      <cd:Description>Altitude of CoG above reference ellipsoid (interpolated value)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeAltitudeCOG"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="win_delay">
+    <cd:Integer>
+      <cd:Description>Window delay (two-way) uncorrected for instrument delays</cd:Description>
+      <cd:Unit>1e-12 s</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000000000.000000">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>int64</cd:NativeType>
+      <ct:NamedTest id="RangeWindowDelay"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="avg_pow_echo_wavef">
+    <cd:Array>
+      <cd:Description>1 Hz averaged power echo waveform (in scaled units)</cd:Description>
+      <cd:Dimension>512</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="echo_scl_fact">
+    <cd:Integer>
+      <cd:Description>Echo scale factor (to scale echo to watts)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="echo_scl_pow">
+    <cd:Integer>
+      <cd:Description>Echo scale power (a power of 2)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_echo">
+    <cd:Integer>
+      <cd:Description>Number of echoes averaged</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="flag">
+    <cd:NamedType id="SIR_L1B_WAVEFORM_FLAGS"/>
+  </cd:Field>
+  <cd:Field name="wavef_data">
+    <cd:Array>
+      <cd:Description>Waveform data</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Record>
+        <cd:Description>Waveform data</cd:Description>
+        <cd:Field name="avg_pow_echo_wavef">
+          <cd:Array>
+            <cd:Description>Averaged power echo waveform (in scaled units)</cd:Description>
+            <cd:Dimension>1024</cd:Dimension>
+            <cd:Integer>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="echo_scl_fact">
+          <cd:Integer>
+            <cd:Description>Echo scale factor (to scale echo to watts)</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="echo_scl_pow">
+          <cd:Integer>
+            <cd:Description>Echo scale power (a power of 2)</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="num_echo">
+          <cd:Integer>
+            <cd:Description>Number of echoes averaged</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="flag">
+          <cd:NamedType id="SIR_L1B_WAVEFORM_FLAGS"/>
+        </cd:Field>
+        <cd:Field name="beam_beh_params">
+          <cd:NamedType id="SIR_L1B_BEAM_PARAM_v1"/>
+        </cd:Field>
+        <cd:Field name="coherence">
+          <cd:Array>
+            <cd:Description>Coherence</cd:Description>
+            <cd:Dimension>1024</cd:Dimension>
+            <cd:Integer>
+              <cd:Conversion numerator="1.000000" denominator="1000.000000"/>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint16</cd:NativeType>
+              <ct:NamedTest id="RangeCoherence"/>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="phase_diff">
+          <cd:Array>
+            <cd:Description>Phase difference</cd:Description>
+            <cd:Dimension>1024</cd:Dimension>
+            <cd:Integer>
+              <cd:Unit>1e-6 rad</cd:Unit>
+              <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+                <cd:Unit>rad</cd:Unit>
+              </cd:Conversion>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>int32</cd:NativeType>
+              <ct:NamedTest id="RangePhaseDifference"/>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

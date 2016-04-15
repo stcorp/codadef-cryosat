@@ -1,0 +1,467 @@
+<?xml version="1.0"?>
+<ct:Tests xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" last-modified="2014-09-25">
+  <ct:Test name="BurstCounterStepTOD" criticality="Warning" description="The burst counter should be one higher with regard to the previous burst counter"><![CDATA[if(index(..) == 0, index(../../..) == 0 || int(../meas_conf_flags/blnk_blk) == 1 || int(../../../..[index(:/../../..) - 1]/time_orb_data[19]/meas_conf_flags/blnk_blk) == 1 || int(.) == int(../../../..[index(:/../../..) - 1]/time_orb_data[19]/burst_count) + 1, int(../meas_conf_flags/blnk_blk) == 1 || int(../..[index(:/..) - 1]/meas_conf_flags/blnk_blk) == 1 || int(.) == int(../..[index(:/..) - 1]/burst_count) + 1)]]></ct:Test>
+  <ct:Test name="DSDTotalSize" description="The total dataset size should equal the DSR size times the number of DSRs" criticality="Error"><![CDATA[int(.) == int(../num_dsr) * int(../dsr_size)]]></ct:Test>
+  <ct:Test name="DSDTypeMDSR" description="The DSD type should be M for DSDs that refer to measurement datasets" criticality="Error"><![CDATA[str(.) == "M"]]></ct:Test>
+  <ct:Test name="EnumDSDType" description="The DSD type should be either M, G, or R" criticality="Error"><![CDATA[str(.) == "M" || str(.) == "G" || str(.) == "R"]]></ct:Test>
+  <ct:Test name="EnumDSDTypeWithSpare" description="The DSD type should be either 'M', 'G', 'R' or ' '" criticality="Error"><![CDATA[str(.) == "M" || str(.) == "G" || str(.) == "R" || str(.) == " "]]></ct:Test>
+  <ct:Test name="EnumFlag" description="The Flag field should be either 0 or 1" criticality="Error"><![CDATA[int(.) == 0 || int(.) == 1]]></ct:Test>
+  <ct:Test name="EnumOrbitAscendingFlag" description="The orbit ascending flag should be either A or D" criticality="Error"><![CDATA[str(.) == "A" || str(.) == "D"]]></ct:Test>
+  <ct:Test name="EnumOrbitVectorSource" description="orbit vector source should match one of the allowed enumeration values" criticality="Error"><![CDATA[str(.) == "FP" || str(.) == "DN" || str(.) == "DP" || str(.) == "FR" || str(.) == "DI"]]></ct:Test>
+  <ct:Test name="EnumSiralConfiguration" description="The siral configuration should match one of the allowed enumeration values" criticality="Error"><![CDATA[str(.) == "RX_1   " || str(.) == "RX_2   " || str(.) == "BOTH   " || str(.) == "UNKNOWN"]]></ct:Test>
+  <ct:Test name="EnumSiralOperativeMode" description="The siral operative mode should match one of the allowed enumeration values" criticality="Error"><![CDATA[str(.) == "LRM       " || str(.) == "SAR       " || str(.) == "SARIN     " || str(.) == "CAL1_LRM  " || str(.) == "CAL1_SAR  " || str(.) == "CAL1_SARIN" || str(.) == "CAL2_SAR  " || str(.) == "CAL2_SARIN" || str(.) == "CAL3      " || str(.) == "ACQ       " || str(.) == "TRK_SAR   " || str(.) == "TRK_SARIN " || str(.) == "CAL4      "]]></ct:Test>
+  <ct:Test name="FileNameCheckDBL" description="The name of the DBL file should be consistent with the product name in the MPH" criticality="Warning"><![CDATA[filename() == str(., 55) + ".DBL"]]></ct:Test>
+  <ct:Test name="FileNameCheckEEF" description="The name of the EEF file should be consistent with the product name in the fixed header" criticality="Warning"><![CDATA[filename() == str(., 55) + ".EEF"]]></ct:Test>
+  <ct:Test name="FileNameCheckHDR" description="The name of the HDR file should be consistent with the product name in the fixed header" criticality="Warning"><![CDATA[filename() == str(., 55) + ".HDR"]]></ct:Test>
+  <ct:Test name="FileNameMatchFileClass" description="The class of the file should be consistent with the product name" criticality="Error"><![CDATA[(substr(3, 4, str(../File_Name)) == "OPER" && str(.) == "Routine Operations") || (substr(3, 4, str(../File_Name)) == "LTA_" && str(.) == "LTA Reprocessed Files") || (substr(3, 4, str(../File_Name)) == "NRT_" && str(.) == "Near-Real-Time Processing") || (substr(3, 4, str(../File_Name)) == "OFFL" && str(.) == "Off-Line Processing") || (substr(3, 4, str(../File_Name)) == "RPRO" && str(.) == "Re-Processing") || (substr(3, 4, str(../File_Name)) == "TEST" && str(.) == "Test Data Set") || (substr(3, 4, str(../File_Name)) == "SVT1" && str(.) == "Satellite Validation Test 1") || (substr(3, 4, str(../File_Name)) == "SVT2" && str(.) == "Satellite Validation Test 2") || (substr(3, 4, str(../File_Name)) == "SVT3" && str(.) == "Satellite Validation Test 3") || (substr(3, 4, str(../File_Name)) == "SVT4" && str(.) == "Satellite Validation Test 4")]]></ct:Test>
+  <ct:Test name="FileNameMatchFileType" description="The type of the file should be consistent with the product name" criticality="Error"><![CDATA[substr(8, 10, str(.)) == str(../File_Type)]]></ct:Test>
+  <ct:Test name="FileNameMatchFileVersion" description="The version of the file should be consistent with the product name" criticality="Error"><![CDATA[int(substr(52, 3, str(.))) == int(../File_Version)]]></ct:Test>
+  <ct:Test name="FixedValue0" description="The value of this field should be 0" criticality="Error"><![CDATA[int(.) == 0]]></ct:Test>
+  <ct:Test name="FixedValueAUX_IONGIM" criticality="Error" description="The value should be 'AUX_IONGIM'"><![CDATA[str(.) == "AUX_IONGIM"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_ORBDOP" criticality="Error" description="The value should be 'AUX_ORBDOP'"><![CDATA[str(.) == "AUX_ORBDOP"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_ORBDOR" criticality="Error" description="The value should be 'AUX_ORBDOR'"><![CDATA[str(.) == "AUX_ORBDOR"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_PAR_QC" criticality="Error" description="The value should be 'AUX_PAR_QC'"><![CDATA[str(.) == "AUX_PAR_QC"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_REP_QC" criticality="Error" description="The value should be 'AUX_REP_QC'"><![CDATA[str(.) == "AUX_REP_QC"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_SUNACT" criticality="Error" description="The value should be 'AUX_SUNACT'"><![CDATA[str(.) == "AUX_SUNACT"]]></ct:Test>
+  <ct:Test name="FixedValueCryoSat" description="The value should be 'CryoSat'" criticality="Error"><![CDATA[str(.) == "CryoSat"]]></ct:Test>
+  <ct:Test name="FixedValueDOR_DAT_0_" criticality="Error" description="The value should be 'DOR_DAT_0_'"><![CDATA[str(.) == "DOR_DAT_0_"]]></ct:Test>
+  <ct:Test name="FixedValueDOR_DMP_0_" criticality="Error" description="The value should be 'DOR_DMP_0_'"><![CDATA[str(.) == "DOR_DMP_0_"]]></ct:Test>
+  <ct:Test name="FixedValueDOR_DOP_0_" criticality="Error" description="The value should be 'DOR_DOP_0_'"><![CDATA[str(.) == "DOR_DOP_0_"]]></ct:Test>
+  <ct:Test name="FixedValueDOR_JAM_0_" criticality="Error" description="The value should be 'DOR_JAM_0_'"><![CDATA[str(.) == "DOR_JAM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueDOR_NAV_0_" criticality="Error" description="The value should be 'DOR_NAV_0_'"><![CDATA[str(.) == "DOR_NAV_0_"]]></ct:Test>
+  <ct:Test name="FixedValueDOR_TST_0_" criticality="Error" description="The value should be 'DOR_TST_0_'"><![CDATA[str(.) == "DOR_TST_0_"]]></ct:Test>
+  <ct:Test name="FixedValueMPL_ORBLPR" criticality="Error" description="The value should be 'MPL_ORBLPR'"><![CDATA[str(.) == "MPL_ORBLPR"]]></ct:Test>
+  <ct:Test name="FixedValueMPL_ORBPRE" criticality="Error" description="The value should be 'MPL_ORBPRE'"><![CDATA[str(.) == "MPL_ORBPRE"]]></ct:Test>
+  <ct:Test name="FixedValueMPL_ORBREF" criticality="Error" description="The value should be 'MPL_ORBREF'"><![CDATA[str(.) == "MPL_ORBREF"]]></ct:Test>
+  <ct:Test name="FixedValueSAT_HKTM__" criticality="Error" description="The value should be 'SAT_HKTM__'"><![CDATA[str(.) == "SAT_HKTM__"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_FDM_1B" criticality="Error" description="The value should be 'SIR_FDM_1B'"><![CDATA[str(.) == "SIR_FDM_1B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_FDM_2_" criticality="Error" description="The value should be 'SIR_FDM_2_'"><![CDATA[str(.) == "SIR_FDM_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_FDMI2_" criticality="Error" description="The value should be 'SIR_FDMI2_'"><![CDATA[str(.) == "SIR_FDMI2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_GDR_2_" criticality="Error" description="The value should be 'SIR_GDR_2_'"><![CDATA[str(.) == "SIR_GDR_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_GDR_2A" criticality="Error" description="The value should be 'SIR_GDR_2A'"><![CDATA[str(.) == "SIR_GDR_2A"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_GDR_2B" criticality="Error" description="The value should be 'SIR_GDR_2B'"><![CDATA[str(.) == "SIR_GDR_2B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_GOP_1B" criticality="Error" description="The value should be 'SIR_GOP_1B'"><![CDATA[str(.) == "SIR_GOP_1B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_GOP_2_" criticality="Error" description="The value should be 'SIR_GOP_2_'"><![CDATA[str(.) == "SIR_GOP_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_IOP_1B" criticality="Error" description="The value should be 'SIR_IOP_1B'"><![CDATA[str(.) == "SIR_IOP_1B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_IOP_2_" criticality="Error" description="The value should be 'SIR_IOP_2_'"><![CDATA[str(.) == "SIR_IOP_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_LRM_1B" criticality="Error" description="The value should be 'SIR_LRM_1B'"><![CDATA[str(.) == "SIR_LRM_1B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_LRM_2_" criticality="Error" description="The value should be 'SIR_LRM_2_'"><![CDATA[str(.) == "SIR_LRM_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_LRMI2_" criticality="Error" description="The value should be 'SIR_LRMI2_'"><![CDATA[str(.) == "SIR_LRMI2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SAR_1B" criticality="Error" description="The value should be 'SIR_SAR_1B'"><![CDATA[str(.) == "SIR_SAR_1B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SAR_2_" criticality="Error" description="The value should be 'SIR_SAR_2_'"><![CDATA[str(.) == "SIR_SAR_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SAR_2A" criticality="Error" description="The value should be 'SIR_SAR_2A'"><![CDATA[str(.) == "SIR_SAR_2A"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SAR_2B" criticality="Error" description="The value should be 'SIR_SAR_2B'"><![CDATA[str(.) == "SIR_SAR_2_B]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SARI2_" criticality="Error" description="The value should be 'SIR_SARI2_'"><![CDATA[str(.) == "SIR_SARI2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SARI2A" criticality="Error" description="The value should be 'SIR_SARI2A'"><![CDATA[str(.) == "SIR_SARI2A"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SARI2B" criticality="Error" description="The value should be 'SIR_SARI2B'"><![CDATA[str(.) == "SIR_SARI2B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SIC11B" criticality="Error" description="The value should be 'SIR_SIC11B'"><![CDATA[str(.) == "SIR_SIC11B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SIC40M" criticality="Error" description="The value should be 'SIR_SIC40M'"><![CDATA[str(.) == "SIR_SIC40M"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SICC1B" criticality="Error" description="The value should be 'SIR_SICC1B'"><![CDATA[str(.) == "SIR_SICC1B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SID_2_" criticality="Error" description="The value should be 'SIR_SID_2_'"><![CDATA[str(.) == "SIR_SID_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SIDI2_" criticality="Error" description="The value should be 'SIR_SIDI2_'"><![CDATA[str(.) == "SIR_SIDI2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SIN_0M" criticality="Error" description="The value should be 'SIR_SIN_0M'"><![CDATA[str(.) == "SIR_SIN_0M"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SIN_1B" criticality="Error" description="The value should be 'SIR_SIN_1B'"><![CDATA[str(.) == "SIR_SIN_1B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SIN_2_" criticality="Error" description="The value should be 'SIR_SIN_2_'"><![CDATA[str(.) == "SIR_SIN_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SIN_FR" criticality="Error" description="The value should be 'SIR_SIN_FR'"><![CDATA[str(.) == "SIR_SIN_FR"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SINI2_" criticality="Error" description="The value should be 'SIR_SINI2_'"><![CDATA[str(.) == "SIR_SINI2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1ACQ_0_" criticality="Error" description="The value should be 'SIR1ACQ_0_'"><![CDATA[str(.) == "SIR1ACQ_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1LRC10_" criticality="Error" description="The value should be 'SIR1LRC10_'"><![CDATA[str(.) == "SIR1LRC10_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1LRC11B" criticality="Error" description="The value should be 'SIR1LRC11B'"><![CDATA[str(.) == "SIR1LRC11B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1LRM_0_" criticality="Error" description="The value should be 'SIR1LRM_0_'"><![CDATA[str(.) == "SIR1LRM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1LRM_0M" criticality="Error" description="The value should be 'SIR1LRM_0M'"><![CDATA[str(.) == "SIR1LRM_0M"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1SAC10_" criticality="Error" description="The value should be 'SIR1SAC10_'"><![CDATA[str(.) == "SIR1SAC10_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1SAC11B" criticality="Error" description="The value should be 'SIR1SAC11B'"><![CDATA[str(.) == "SIR1SAC11B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1SAC20_" criticality="Error" description="The value should be 'SIR1SAC20_'"><![CDATA[str(.) == "SIR1SAC20_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1SAC21B" criticality="Error" description="The value should be 'SIR1SAC21B'"><![CDATA[str(.) == "SIR1SAC21B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1SAR_0_" criticality="Error" description="The value should be 'SIR1SAR_0_'"><![CDATA[str(.) == "SIR1SAR_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1SAR_0M" criticality="Error" description="The value should be 'SIR1SAR_0M'"><![CDATA[str(.) == "SIR1SAR_0M"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1SAR_FR" criticality="Error" description="The value should be 'SIR1SAR_FR'"><![CDATA[str(.) == "SIR1SAR_FR"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1SIC10_" criticality="Error" description="The value should be 'SIR1SIC10_'"><![CDATA[str(.) == "SIR1SIC10_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1SIC20_" criticality="Error" description="The value should be 'SIR1SIC20_'"><![CDATA[str(.) == "SIR1SIC20_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1SIC21B" criticality="Error" description="The value should be 'SIR1SIC21B'"><![CDATA[str(.) == "SIR1SIC21B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1SIN_0_" criticality="Error" description="The value should be 'SIR1SIN_0_'"><![CDATA[str(.) == "SIR1SIN_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1STST0_" criticality="Error" description="The value should be 'SIR1STST0_'"><![CDATA[str(.) == "SIR1STST0_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1TKSA0_" criticality="Error" description="The value should be 'SIR1TKSA0_'"><![CDATA[str(.) == "SIR1TKSA0_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR1TKSI0_" criticality="Error" description="The value should be 'SIR1TKSI0_'"><![CDATA[str(.) == "SIR1TKSI0_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2ACQ_0_" criticality="Error" description="The value should be 'SIR2ACQ_0_'"><![CDATA[str(.) == "SIR2ACQ_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2LRC10_" criticality="Error" description="The value should be 'SIR2LRC10_'"><![CDATA[str(.) == "SIR2LRC10_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2LRC11B" criticality="Error" description="The value should be 'SIR2LRC11B'"><![CDATA[str(.) == "SIR2LRC11B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2LRM_0_" criticality="Error" description="The value should be 'SIR2LRM_0_'"><![CDATA[str(.) == "SIR2LRM_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2LRM_0M" criticality="Error" description="The value should be 'SIR2LRM_0M'"><![CDATA[str(.) == "SIR2LRM_0M"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2SAC10_" criticality="Error" description="The value should be 'SIR2SAC10_'"><![CDATA[str(.) == "SIR2SAC10_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2SAC11B" criticality="Error" description="The value should be 'SIR2SAC11B'"><![CDATA[str(.) == "SIR2SAC11B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2SAC20_" criticality="Error" description="The value should be 'SIR2SAC20_'"><![CDATA[str(.) == "SIR2SAC20_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2SAC21B" criticality="Error" description="The value should be 'SIR2SAC21B'"><![CDATA[str(.) == "SIR2SAC21B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2SAR_0_" criticality="Error" description="The value should be 'SIR2SAR_0_'"><![CDATA[str(.) == "SIR2SAR_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2SAR_0M" criticality="Error" description="The value should be 'SIR2SAR_0M'"><![CDATA[str(.) == "SIR2SAR_0M"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2SAR_FR" criticality="Error" description="The value should be 'SIR2SAR_FR'"><![CDATA[str(.) == "SIR2SAR_FR"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2SIC10_" criticality="Error" description="The value should be 'SIR2SIC10_'"><![CDATA[str(.) == "SIR2SIC10_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2SIC20_" criticality="Error" description="The value should be 'SIR2SIC20_'"><![CDATA[str(.) == "SIR2SIC20_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2SIC21B" criticality="Error" description="The value should be 'SIR2SIC21B'"><![CDATA[str(.) == "SIR2SIC21B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2SIN_0_" criticality="Error" description="The value should be 'SIR2SIN_0_'"><![CDATA[str(.) == "SIR2SIN_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2STST0_" criticality="Error" description="The value should be 'SIR2STST0_'"><![CDATA[str(.) == "SIR2STST0_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2TKSA0_" criticality="Error" description="The value should be 'SIR2TKSA0_'"><![CDATA[str(.) == "SIR2TKSA0_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR2TKSI0_" criticality="Error" description="The value should be 'SIR2TKSI0_'"><![CDATA[str(.) == "SIR2TKSI0_"]]></ct:Test>
+  <ct:Test name="FixedValueSTR1ATT_0_" criticality="Error" description="The value should be 'STR1ATT_0_'"><![CDATA[str(.) == "STR1ATT_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSTR1DAT_0_" criticality="Error" description="The value should be 'STR1DAT_0_'"><![CDATA[str(.) == "STR1DAT_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSTR2ATT_0_" criticality="Error" description="The value should be 'STR2ATT_0_'"><![CDATA[str(.) == "STR2ATT_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSTR2DAT_0_" criticality="Error" description="The value should be 'STR2DAT_0_'"><![CDATA[str(.) == "STR2DAT_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSTR3ATT_0_" criticality="Error" description="The value should be 'STR3ATT_0_'"><![CDATA[str(.) == "STR3ATT_0_"]]></ct:Test>
+  <ct:Test name="FixedValueSTR3DAT_0_" criticality="Error" description="The value should be 'STR3DAT_0_'"><![CDATA[str(.) == "STR3DAT_0_"]]></ct:Test>
+  <ct:Test name="FixedValueTLM_STRHK_" criticality="Error" description="The value should be 'TLM_STRHK_'"><![CDATA[str(.) == "TLM_STRHK_"]]></ct:Test>  
+  <ct:Test name="L0GapsField" description="The level 0 gaps flag should be 1 if and only if the number of gaps is greather than 0 (and 0 otherwise)" criticality="Error"><![CDATA[int(./l0_gaps_flag) == if(int(./l0_gaps_num) > 0, 1, 0)]]></ct:Test>
+  <ct:Test name="L0QualityThreshold" description="The level 0 processing flag should be 1 if and only if the quality is less than the given threshold (and 0 otherwise)" criticality="Error"><![CDATA[int(./l0_proc_flag) == if(float(./l0_processing_quality) < float(./l0_proc_thresh), 1, 0)]]></ct:Test>
+  <ct:Test name="L1BQualityThreshold" description="The level 1b processing flag should be 1 if and only if the quality is less than the given threshold (and 0 otherwise)" criticality="Error"><![CDATA[int(./l1b_proc_flag) == if(float(./l1b_processing_quality) < float(./l1b_proc_thresh), 1, 0)]]></ct:Test>
+  <ct:Test name="L1QualityThreshold" description="The level 1 processing flag should be 1 if and only if the quality is less than the given threshold (and 0 otherwise)" criticality="Error"><![CDATA[int(./l1_proc_flag) == if(float(./l1_processing_quality) < float(./l1_proc_thresh), 1, 0)]]></ct:Test>
+  <ct:Test name="L2QualityThreshold" description="The level 2 processing flag should be 1 if and only if the quality is less than the given threshold (and 0 otherwise)" criticality="Error"><![CDATA[int(./l2_proc_flag) == if(float(./l2_processing_quality) < float(./l2_proc_thresh), 1, 0)]]></ct:Test>
+  <ct:Test name="MissingValueShortInt" description="The value is a 'missing value'" criticality="Warning"><![CDATA[float(.) != 32767]]></ct:Test>
+  <ct:Test name="MPHProductSize" description="The size reported in the MPH should equal the actual product size" criticality="Error"><![CDATA[int(.) == filesize()]]></ct:Test>
+  <ct:Test name="MPHRefDocL0" description="The REF_DOC field in the MPH should have the value 'CS-ID-ACS-GS-0119 03.03'" criticality="Warning"><![CDATA[str(.) == "CS-ID-ACS-GS-0119 03.03"]]></ct:Test>
+  <ct:Test name="MPHRefDocL1" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-GS-5106 04.60'" criticality="Warning"><![CDATA[str(.) == "CS-RS-ACS-GS-5106 04.60"]]></ct:Test>
+  <ct:Test name="MPHRefDocL2" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-GS-5123 02.05'" criticality="Warning"><![CDATA[str(.) == "CS-RS-ACS-GS-5123 02.05"]]></ct:Test>
+  <ct:Test name="MPHRefDocOP" description="The REF_DOC field in the MPH should have the value 'C2-RS-ACS-ESL-5213 1.40'" criticality="Warning"><![CDATA[str(.) == "C2-RS-ACS-ESL-5213 1.40"]]></ct:Test>
+  <ct:Test name="MPHSensingTimeOrder" description="Start sensing time should be before stop sensing time" criticality="Error"><![CDATA[float(./sensing_start) <= float(./sensing_stop)]]></ct:Test>
+  <ct:Test name="MPHStartTimeAISP" criticality="Warning" description="The start time in the MPH should be the same as the start time of the first Instrument Source Packet in the product"><![CDATA[numelements(/mds) == 0 || float(.) == float(/mds[0]/sensing_time)]]></ct:Test>
+  <ct:Test name="MPHStopTimeAISP" criticality="Warning" description="The stop time in the MPH should be the same as the start time of the last Instrument Source Packet in the product"><![CDATA[numelements(/mds) == 0 || float(.) == float(/mds[numelements(/mds) - 1]/sensing_time)]]></ct:Test>
+  <ct:Test name="QualityFlag" description="This quality flag should be 0" criticality="Warning"><![CDATA[int(.) == 0]]></ct:Test>
+  <ct:Test name="RangeAGC" description="The AGC should be between 0 and 6200" criticality="Warning"><![CDATA[(float(.) >= 0 && float(.) <= 6200)]]></ct:Test>
+  <ct:Test name="RangeAGCOrFlagged" description="The AGC should be between 0 and 6200 or the AGC_Inconsistency flag should be set" criticality="Warning"><![CDATA[int(../../../time_orb_data[index(:/..)]/meas_conf_flags/agc_inc) == 1 || (float(.) >= 0 && float(.) <= 6200)]]></ct:Test>
+  <ct:Test name="RangeAltitudeCOG" description="The CoG altitude should be between 700000000mm and 750000000mm" criticality="Warning"><![CDATA[int(.) >= 700000000 && int(.) <= 750000000]]></ct:Test>
+  <ct:Test name="RangeAltitudeCOGOrBlank" description="The CoG altitude should be between 700000000mm and 750000000mm" criticality="Warning"><![CDATA[int(../meas_conf_flags/blnk_blk) == 1 || (int(.) >= 700000000 && int(.) <= 750000000)]]></ct:Test>
+  <ct:Test name="RangeAltitudeCOGOrBlankOP" description="The CoG altitude should be between 700000000mm and 750000000mm" criticality="Warning"><![CDATA[int(../../meas_conf_flags[index(:)]/blnk_blk) == 1 || (int(.) >= 700000000 && int(.) <= 750000000)]]></ct:Test>
+  <ct:Test name="RangeBackscatterSigmaZero" description="The backscatter sigma zero should be between -2500 and 6000 (or missing)" criticality="Warning"><![CDATA[float(.) == 32767 || (float(.) >= -2500 && float(.) <= 6000)]]></ct:Test>
+  <ct:Test name="RangeCoherence" description="The coherence should be between 0 and 10000" criticality="Warning"><![CDATA[float(.) >= 0 && float(.) <= 1000]]></ct:Test>
+  <ct:Test name="RangeDeltaTime" description="The delta time should be between 0 and 1E6" criticality="Warning"><![CDATA[float(.) >= 0 && float(.) <= 1.0E6]]></ct:Test>
+  <ct:Test name="RangeDryTroposphericCorrection" description="The Dry tropospheric correction should be between -2500mm and -1700mm (or missing)" criticality="Warning"><![CDATA[float(.) == 32767 || (float(.) >= -2500 && float(.) <= -1700)]]></ct:Test>
+  <ct:Test name="RangeEchoesBeamsAveraged" description="The number of Echoes or Beams averaged should be between 30 and 280" criticality="Warning"><![CDATA[float(.) >= 30 && float(.) <= 280]]></ct:Test>
+  <ct:Test name="RangeEquilibriumOceanTide" description="The long period equilibrium ocean tide should be between -1500mm and 1500mm (or missing)" criticality="Warning"><![CDATA[float(.) == 32767 || (float(.) >= -1500 && float(.) <= 1500)]]></ct:Test>
+  <ct:Test name="RangeFreeboard" description="The freeboard should be between -500mm and 5000mm (or equal -9999mm)" criticality="Warning"><![CDATA[float(.) == -9999 || (float(.) >= -500 && float(.) <= 5000)]]></ct:Test>
+  <ct:Test name="RangeGeocentricPolarTide" description="The geocentric polar tide should be between -100mm and 100mm (or missing)" criticality="Warning"><![CDATA[float(.) == 32767 || (float(.) >= -100 && float(.) <= 100)]]></ct:Test>
+  <ct:Test name="RangeInstrumentIdentifier" description="The SIRAL instrument identifier should be either 'A' or 'B'" criticality="Error"><![CDATA[str(.) == "A" || str(.) == "B"]]></ct:Test>
+  <ct:Test name="RangeInverseBarometricCorrection" description="The Inverse barometric correction should be between -500mm and 500mm (or missing)" criticality="Warning"><![CDATA[float(.) == 32767 || (float(.) >= -500 && float(.) <= 500)]]></ct:Test>
+  <ct:Test name="RangeIonosphericCorrection" description="The ionospheric correction should be between -1500mm and 0mm (or missing)" criticality="Warning"><![CDATA[float(.) == 32767 || (float(.) >= -1500 && float(.) <= 0)]]></ct:Test>
+  <ct:Test name="RangeLatitude_6" description="Latitude should be between -90E6 and 90E6" criticality="Error"><![CDATA[float(.) >= -90.0E6 && float(.) <= 90.0E6]]></ct:Test>
+  <ct:Test name="RangeLatitude_7" description="Latitude should be between -90E7 and 90E7 degrees" criticality="Error"><![CDATA[float(.) >= -90.0E7 && float(.) <= 90.0E7]]></ct:Test>
+  <ct:Test name="RangeLatitudeOrBlank_7" description="Latitude should be between -90E7 and 90E7 degrees" criticality="Error"><![CDATA[int(../meas_conf_flags/blnk_blk) == 1 || (float(.) >= -90.0E7 && float(.) <= 90.0E7)]]></ct:Test>
+  <ct:Test name="RangeLatitudeOrBlankOP_7" description="Latitude should be between -90E7 and 90E7 degrees" criticality="Error"><![CDATA[int(../../meas_conf_flags[index(:)]/blnk_blk) == 1 || (float(.) >= -90.0E7 && float(.) <= 90.0E7)]]></ct:Test>
+  <ct:Test name="RangeLongitude_6" description="Longitude should be between -180E6 and 180E6" criticality="Error"><![CDATA[float(.) >= -180.0E6 && float(.) <= 180.0E6]]></ct:Test>
+  <ct:Test name="RangeLongitude_7" description="Longitude should be between -180E7 and 180E7" criticality="Error"><![CDATA[float(.) >= -180.0E7 && float(.) <= 180.0E7]]></ct:Test>
+  <ct:Test name="RangeLongitudeOrBlank_7" description="Longitude should be between -180E7 and 180E7" criticality="Error"><![CDATA[int(../meas_conf_flags/blnk_blk) == 1 || (float(.) >= -180.0E7 && float(.) <= 180.0E7)]]></ct:Test>
+  <ct:Test name="RangeLongitudeOrBlankOP_7" description="Longitude should be between -180E7 and 180E7" criticality="Error"><![CDATA[int(../../meas_conf_flags[index(:)]/blnk_blk) == 1 || (float(.) >= -180.0E7 && float(.) <= 180.0E7)]]></ct:Test>
+  <ct:Test name="RangeMicrosecond" description="The number of microseconds relative to a second should be in the range [0..999999]" criticality="Error"><![CDATA[int(.) >= 0 && int(.) <= 999999]]></ct:Test>
+  <ct:Test name="RangeMicrosecondOrBlank" description="The number of microseconds relative to a second should be in the range [0..999999]" criticality="Error"><![CDATA[int(../../meas_conf_flags/blnk_blk) == 1 || (int(.) >= 0 && int(.) <= 999999)]]></ct:Test>
+  <ct:Test name="RangeMispointingAttitudeAngle" description="The mispointing attitude angle (10^-2) should be between 0 and 200" criticality="Warning"><![CDATA[float(.) >= 0 && float(.) <= 200]]></ct:Test>
+  <ct:Test name="RangeMSSGeoidHeight" description="The MSS/geoid height should be between -200000mm and 200000mm" criticality="Warning"><![CDATA[int(.) >= -200000 && int(.) <= 200000]]></ct:Test>
+  <ct:Test name="RangeOceanLoadingTide" description="The ocean loading tide should be between -100mm and 100mm (or missing)" criticality="Warning"><![CDATA[float(.) == 32767 || (float(.) >= -100 && float(.) <= 100)]]></ct:Test>
+  <ct:Test name="RangeOceanTide" description="The ocean tide should be between -10000mm and 10000mm (or missing)" criticality="Warning"><![CDATA[float(.) == 32767 || (float(.) >= -10000 && float(.) <= 10000)]]></ct:Test>
+  <ct:Test name="RangePeakiness" description="The Peakiness should be between 0 and 64000" criticality="Warning"><![CDATA[float(.) >= 0 && float(.) <= 64000]]></ct:Test>
+  <ct:Test name="RangePercentage_2" description="Percentage 10^-2 should be between 0 and 10000" criticality="Error"><![CDATA[float(.) >= 0 && float(.) <= 10000]]></ct:Test>
+  <ct:Test name="RangePhaseCorrection" description="The phase correction should be 0" criticality="Warning"><![CDATA[float(.) == 0]]></ct:Test>
+  <ct:Test name="RangePhaseDifference" description="The phase difference should be between -pi*10^-6 and pi*10^-6" criticality="Warning"><![CDATA[float(.) >= -3141592.65359 && float(.) <= 3141592.65360]]></ct:Test>
+  <ct:Test name="RangeSensingStartStop" description="The time value should be between the sensing start/stop times of the MPH" criticality="Error"><![CDATA[float(.) >= float(/mph/sensing_start) && float(.) <= float(/mph/sensing_stop)]]></ct:Test>
+  <ct:Test name="RangeSensingStartStopOrBlank" description="The time value should be between the sensing start/stop times of the MPH" criticality="Error"><![CDATA[int(../meas_conf_flags/blnk_blk) == 1 || (float(.) >= float(/mph/sensing_start) && float(.) <= float(/mph/sensing_stop))]]></ct:Test>
+  <ct:Test name="RangeSensingTAIStartStop" description="The time value should be between the record TAI start/stop times of the SPH" criticality="Error"><![CDATA[float(.) >= float(/sph/start_record_tai_time) && float(.) <= float(/sph/stop_record_tai_time)]]></ct:Test>
+  <ct:Test name="RangeRecordTAIStartStopOrBlank" description="The time value should be between the record TAI start/stop times of the SPH" criticality="Error"><![CDATA[int(../meas_conf_flags/blnk_blk) == 1 || (float(.) >= float(/sph/start_record_tai_time) && float(.) <= float(/sph/stop_record_tai_time))]]></ct:Test>
+  <ct:Test name="RangeSeaStateBiasCorrection" description="The sea state bias correction should be between -150mm and 0mm (or missing)" criticality="Warning"><![CDATA[float(.) == 32767 || (float(.) >= -150 && float(.) <= 0)]]></ct:Test>
+  <ct:Test name="RangeSeaSurfaceHeightAnomaly" description="The sea surface height anomaly should be between -5000mm and 5000mm" criticality="Warning"><![CDATA[int(.) >= -5000 && int(.) <= 5000]]></ct:Test>
+  <ct:Test name="RangeSecond" description="The number of seconds relative to a day should be in the range [0..86400]" criticality="Error"><![CDATA[int(.) >= 0 && int(.) <= 86400]]></ct:Test>
+  <ct:Test name="RangeSecondOrBlank" description="The number of seconds relative to a day should be in the range [0..86400]" criticality="Error"><![CDATA[int(../../meas_conf_flags/blnk_blk) == 1 || (int(.) >= 0 && int(.) <= 86400)]]></ct:Test>
+  <ct:Test name="RangeSnowDepth" description="The snow depth should be between 0mm and 5000mm (or missing)" criticality="Warning"><![CDATA[float(.) == 32767 || (int(.) >= 0 && int(.) <= 5000)]]></ct:Test>
+  <ct:Test name="RangeSolidEarthTide" description="The solid earth tide should be between -1000mm and 1000mm (or missing)" criticality="Warning"><![CDATA[float(.) == 32767 || (float(.) >= -1000 && float(.) <= 1000)]]></ct:Test>
+  <ct:Test name="RangeSurfaceHeight" description="The height of the surface w.r.t. the ellipsoid should be between -430000 and 8800000" criticality="Warning"><![CDATA[float(.) >= -430000 && float(.) <= 8800000]]></ct:Test>
+  <ct:Test name="RangeSurfaceTypeFlag" description="The surface type flag should be 0, 1, 2, or 3" criticality="Error"><![CDATA[int(.) >= 0 && int(.) <= 3]]></ct:Test>
+  <ct:Test name="RangeTotalFixedGain" description="The Total Fixed Gain should be between 0 and 6200" criticality="Warning"><![CDATA[float(.) >= 0 && float(.) <= 6200]]></ct:Test>
+  <ct:Test name="RangeWetTroposphericCorrection" description="The Wet tropospheric correction should be between -500mm and 0mm (or missing)" criticality="Warning"><![CDATA[float(.) == 32767 || (float(.) >= -500 && float(.) <= 0)]]></ct:Test>
+  <ct:Test name="RangeWindowDelay" description="The window delay should be between 4.669E9 and 5.0135E9" criticality="Warning"><![CDATA[float(.) >= 4.669E9 && float(.) <= 5.1035E9]]></ct:Test>
+  <ct:Test name="RecordCountMDSR" criticality="Warning" description="The record counter should equal the MDSR index"><![CDATA[int(.) == index(..) + 1]]></ct:Test>
+  <ct:Test name="SequenceCounterStep" criticality="Warning" description="The sequence counter should be one higher (modulo 16384) with regard to the previous sequence counter"><![CDATA[index(..) == 0 || int(.) == (int(../..[index(:/..) - 1]/src_seq_count) + 1) % 16384]]></ct:Test>
+  <ct:Test name="SequenceCounterStepTOD" criticality="Warning" description="The sequence counter should be one higher (modulo 16384) with regard to the previous sequence counter"><![CDATA[if(index(..) == 0, index(../../..) == 0 || int(../meas_conf_flags/blnk_blk) == 1 || int(../../../..[index(:/../../..) - 1]/time_orb_data[19]/meas_conf_flags/blnk_blk) == 1 || int(.) == (int(../../../..[index(:/../../..) - 1]/time_orb_data[19]/src_seq_count) + 1) % 16384, int(../meas_conf_flags/blnk_blk) == 1 || int(../..[index(:/..) - 1]/meas_conf_flags/blnk_blk) == 1 || int(.) == (int(../..[index(:/..) - 1]/src_seq_count) + 1) % 16384)]]></ct:Test>
+  <ct:Test name="SPHAbsoluteOrbitOrder" description="The start absolute orbit should be before the end orbit" criticality="Error"><![CDATA[float(./abs_orbit_start) <= float(./abs_orbit_stop)]]></ct:Test>
+  <ct:Test name="SPHDownlinkTimeOrder" description="The downlink utc start time should be before the end time" criticality="Error"><![CDATA[float(./downlink_start_utc) <= float(./downlink_stop_utc)]]></ct:Test>
+  <ct:Test name="SPHRecordTaiTimeOrder" description="Start record TAI time should be before stop time" criticality="Error"><![CDATA[float(./start_record_tai_time) <= float(./stop_record_tai_time)]]></ct:Test>
+  <ct:Test name="SPHSensingTimeTAIOrder" description="Start sensing time TAI should be before stop sensing time TAI" criticality="Error"><![CDATA[float(./sensing_start_tai) <= float(./sensing_stop_tai)]]></ct:Test>
+  <ct:Test name="UnitVector_6" description="The three array elements should form a unit vector (using a scale factor of 10^-6)" criticality="Error"><![CDATA[float(.[0]) >= -1.0E6 && float(.[0]) <= 1.0E6 && float(.[1]) >= -1.0E6 && float(.[1]) <= 1.0E6 && float(.[2]) >= -1.0E6 && float(.[2]) <= 1.0E6 && abs(float(.[0])^2 + float(.[1])^2 + float(.[2])^2 - 1.0E12) <= 1.0E6]]></ct:Test>
+  <ct:Test name="UnitVectorOrBlank_6" description="The three array elements should form a unit vector (using a scale factor of 10^-6)" criticality="Error"><![CDATA[int(../meas_conf_flags/blnk_blk) == 1 || (float(.[0]) >= -1.0E6 && float(.[0]) <= 1.0E6 && float(.[1]) >= -1.0E6 && float(.[1]) <= 1.0E6 && float(.[2]) >= -1.0E6 && float(.[2]) <= 1.0E6 && abs(float(.[0])^2 + float(.[1])^2 + float(.[2])^2 - 1.0E12) <= 1.0E6)]]></ct:Test>
+  <ct:Test name="ValidityPeriodOrder" description="Validity start time should be before validity stop time" criticality="Error"><![CDATA[float(./Validity_Start) <= float(./Validity_Stop)]]></ct:Test>
+  <ct:Test name="ValueOfCountAttributeForParent" criticality="Error" description="The value for the count attribute of the parent List_of_... element should equal the number of occurences of this element"><![CDATA[int(str(..@count)) == numelements(.)]]></ct:Test>
+  <ct:CrossFileTest name="MPH_Product" criticality="Error" description="Product mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/mph/product))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/MPH/Product)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Proc_Stage_Code" criticality="Error" description="Proc_Stage_Code mismatch">
+    <ct:ValueExpressionDbl><![CDATA[str(/mph/proc_stage)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/MPH/Proc_Stage_Code, 1)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Ref_Doc" criticality="Error" description="Ref_Doc mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/mph/ref_doc))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/MPH/Ref_Doc)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Software_Version" criticality="Error" description="Software_Version mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/mph/software_ver))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/MPH/Software_Version)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Phase" criticality="Error" description="Phase mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/mph/phase))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/MPH/Phase)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Cycle" criticality="Error" description="Cycle mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/cycle)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/MPH/Cycle)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Rel_Orbit" criticality="Error" description="Rel_Orbit mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/rel_orbit)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/MPH/Rel_Orbit)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Abs_Orbit" criticality="Error" description="Abs_Orbit mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/abs_orbit)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/MPH/Abs_Orbit)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Delta_UT1" criticality="Error" description="Delta_UT1 mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/delta_ut1)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/MPH/Delta_UT1)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_X_Position" criticality="Error" description="X_Position mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/x_position)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/MPH/X_Position)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Y_Position" criticality="Error" description="Y_Position mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/y_position)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/MPH/Y_Position)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Z_Position" criticality="Error" description="Z_Position mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/z_position)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/MPH/Z_Position)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_X_Velocity" criticality="Error" description="X_Velocity mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/x_velocity)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/MPH/X_Velocity)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Y_Velocity" criticality="Error" description="Y_Velocity mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/y_velocity)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/MPH/Y_Velocity)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Z_Velocity" criticality="Error" description="Z_Velocity mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/z_velocity)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/MPH/Z_Velocity)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_State_Vector_Source" criticality="Error" description="State_Vector_Source mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/mph/vector_source))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/MPH/State_Vector_Source)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Product_Err" criticality="Error" description="Product_Err mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/product_err)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/MPH/Product_Err)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Tot_Size" criticality="Error" description="Tot_Size mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/tot_size)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/MPH/Tot_Size)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_SPH_Descriptor" criticality="Error" description="SPH_Descriptor mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/sph/sph_descriptor))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/SPH/SPH_Descriptor)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Start_Record_Time_L0" criticality="Error" description="Start_Record_Time mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/sensing_start_tai)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/SPH/Orbit_Information/Sensing_Start)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Stop_Record_Time_L0" criticality="Error" description="Stop_Record_Time mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/sensing_stop_tai)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/SPH/Orbit_Information/Sensing_Stop)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Start_Record_Time" criticality="Error" description="Start_Record_Time mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/start_record_tai_time)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/SPH/Time_Information/Start_Record_Time)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Stop_Record_Time" criticality="Error" description="Stop_Record_Time mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/stop_record_tai_time)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/SPH/Time_Information/Stop_Record_Time)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_ABS_Orbit_Start" criticality="Error" description="ABS_Orbit_Start mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/abs_orbit_start)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Orbit_Information/ABS_Orbit_Start)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Rel_Time_ASC_Node_Start" criticality="Error" description="Rel_Time_ASC_Node_Start mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/rel_time_asc_node_start)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/SPH/Orbit_Information/Rel_Time_ASC_Node_Start)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_ABS_Orbit_Stop" criticality="Error" description="ABS_Orbit_Stop mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/abs_orbit_stop)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Orbit_Information/ABS_Orbit_Stop)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Rel_Time_ASC_Node_Stop" criticality="Error" description="Rel_Time_ASC_Node_Stop mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/rel_time_asc_node_stop)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/SPH/Orbit_Information/Rel_Time_ASC_Node_Stop)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Equator_Cross_Time" criticality="Error" description="Equator_Cross_Time mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/equator_cross_time_utc)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/SPH/Orbit_Information/Equator_Cross_Time)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Equator_Cross_Long" criticality="Error" description="Equator_Cross_Long mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/equator_cross_long)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Orbit_Information/Equator_Cross_Long)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Ascending_Flag" criticality="Error" description="Ascending_Flag mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/sph/ascending_flag))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/SPH/Orbit_Information/Ascending_Flag)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Start_Lat" criticality="Error" description="Start_Lat mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/start_lat)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Product_Location/Start_Lat)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Start_Long" criticality="Error" description="Start_Long mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/start_long)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Product_Location/Start_Long)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Stop_Lat" criticality="Error" description="Stop_Lat mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/stop_lat)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Product_Location/Stop_Lat)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Stop_Long" criticality="Error" description="Stop_Long mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/stop_long)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Product_Location/Stop_Long)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_ISPs" criticality="Error" description="Num_ISPs mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_isps)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Product_Confidence_Data/Num_ISPs)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Missing_ISPs" criticality="Error" description="Num_Missing_ISPs mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_missing_isps)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Product_Confidence_Data/Num_Missing_ISPs)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Error_ISPs" criticality="Error" description="Num_Error_ISPs mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_error_isps)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Product_Confidence_Data/Num_Error_ISPs)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Discarded_ISPs" criticality="Error" description="Num_Discarded_ISPs mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_discarded_isps)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Product_Confidence_Data/Num_Discarded_ISPs)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_RS_ISPs" criticality="Error" description="Num_RS_ISPs mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_rs_isps)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Product_Confidence_Data/Num_RS_ISPs)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_RS_Corrections" criticality="Error" description="Num_RS_Corrections mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_rs_corrections)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Product_Confidence_Data/Num_RS_Corrections)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Instrument_ID" criticality="Error" description="Instrument_ID mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/sph/instr_id))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/SPH/Instrument_ID)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_L0_Proc_Flag" criticality="Error" description="L0_Proc_Flag mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/l0_proc_flag)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_0_Confidence_Data/L0_Proc_Flag)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_L0_Processing_Quality" criticality="Error" description="L0_Processing_Quality mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/l0_processing_quality)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_0_Confidence_Data/L0_Processing_Quality)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_L0_Proc_Thresh" criticality="Error" description="L0_Proc_Thresh mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/l0_proc_thresh)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_0_Confidence_Data/L0_Proc_Thresh)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_L0_Gaps_Flag" criticality="Error" description="L0_Gaps_Flag mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/l0_gaps_flag)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_0_Confidence_Data/L0_Gaps_Flag)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_L0_Gaps_Num" criticality="Error" description="L0_Gaps_Num mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/l0_gaps_num)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_0_Confidence_Data/L0_Gaps_Num)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_SIR_Op_Mode" criticality="Error" description="SIR_Op_Mode mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/sph/sir_op_mode)) + substr(0, 10 - length(trim(str(/sph/sir_op_mode))), "__________")]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/SPH/SIR_Instrument_Configuration/SIR_Op_Mode)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_SIR_Configuration" criticality="Error" description="SIR_Configuration mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/sph/sir_configuration)) + substr(0, 7 - length(trim(str(/sph/sir_configuration))), "_______")]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/SPH/SIR_Instrument_Configuration/SIR_Configuration)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Open_Ocean_Percent" criticality="Error" description="Open_Ocean_Percent mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/open_ocean_percent)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Surface_Statistics/Open_Ocean_Percent)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Close_Sea_Percent" criticality="Error" description="Close_Sea_Percent mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/close_sea_percent)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Surface_Statistics/Close_Sea_Percent)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Continent_Ice_Percent" criticality="Error" description="Continent_Ice_Percent mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/continent_ice_percent)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Surface_Statistics/Continent_Ice_Percent)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Land_Percent" criticality="Error" description="Land_Percent mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/land_percent)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Surface_Statistics/Land_Percent)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_L1B_Prod_Status" criticality="Error" description="L1B_Prod_Status mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/l1b_prod_status)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_1_Confidence_Data/L1B_Prod_Status)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_L1B_Proc_Flag" criticality="Error" description="L1B_Proc_Flag mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/l1b_proc_flag)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_1_Confidence_Data/L1B_Proc_Flag)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_L1B_Processing_Quality" criticality="Error" description="L1B_Processing_Quality mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/l1b_processing_quality)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_1_Confidence_Data/L1B_Processing_Quality)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_L1B_Proc_Thresh" criticality="Error" description="L1B_Proc_Thresh mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/l1b_proc_thresh)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_1_Confidence_Data/L1B_Proc_Thresh)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_L1_Proc_Flag" criticality="Error" description="L1_Proc_Flag mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/l1_proc_flag)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_1_Confidence_Data/L1_Proc_Flag)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_L1_Processing_Quality" criticality="Error" description="L1_Processing_Quality mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/l1_processing_quality)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_1_Confidence_Data/L1_Processing_Quality)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_L1_Proc_Thresh" criticality="Error" description="L1_Proc_Thresh mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/l1_proc_thresh)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_1_Confidence_Data/L1_Proc_Thresh)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_L1_DSR_Processed" criticality="Error" description="Num_L1_DSR_Processed mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_l1_dsr_proc)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_1_Confidence_Data/Num_L1_DSR_Processed)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Instrument_Identifier" criticality="Error" description="Instrument_Identifier mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/sph/instr_id))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/SPH/SIR_Instrument_Configuration/Instrument_Identifier)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_LRM_Mode_Percent" criticality="Error" description="LRM_Mode_Percent mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/lrm_mode_percent)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/SIR_Mode_Statistics/LRM_Mode_Percent)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_SAR_Mode_Percent" criticality="Error" description="SAR_Mode_Percent mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/sar_mode_percent)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/SIR_Mode_Statistics/SAR_Mode_Percent)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_SARIN_Mode_Percent" criticality="Error" description="SARIN_Mode_Percent mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/sarin_mode_percent)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/SIR_Mode_Statistics/SARIN_Mode_Percent)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Other_Modes_Percent" criticality="Error" description="Other_Modes_Percent mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/other_modes_percent)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/SIR_Mode_Statistics/Other_Modes_Percent)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Open_Ocean_Percent" criticality="Error" description="Open_Ocean_Percent mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/open_ocean_percent)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Surface_Statistics/Open_Ocean_Percent)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_L2_Prod_Status" criticality="Error" description="L2_Prod_Status mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/l2_prod_status)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_2_Confidence_Data/L2_Prod_Status)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_L2_Proc_Flag" criticality="Error" description="L2_Proc_Flag mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/l2_proc_flag)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_2_Confidence_Data/L2_Proc_Flag)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_L2_Processing_Quality" criticality="Error" description="L2_Processing_Quality mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/l2_processing_quality)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_2_Confidence_Data/L2_Processing_Quality)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_L2_Proc_Thresh" criticality="Error" description="L2_Proc_Thresh mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/l2_proc_thresh)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/SPH/Level_2_Confidence_Data/L2_Proc_Thresh)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+</ct:Tests>

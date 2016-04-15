@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_CAL1_LRM_MDSR_v0" last-modified="2012-01-30" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>SIRAL CAL1-LRM measurement data set record</cd:Description>
+  <cd:Field name="mdsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Data record time (MDSR time stamp)</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicrosecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="uso_corr">
+    <cd:Integer>
+      <cd:Description>USO correction factor</cd:Description>
+      <cd:Conversion numerator="1" denominator="1e15"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mode_id">
+    <cd:Integer>
+      <cd:Description>Mode ID</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="instr_conf_flags">
+    <cd:Integer>
+      <cd:Description>Instrument configuration flags</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rec_count">
+    <cd:Integer>
+      <cd:Description>Record counter (always starts from 1)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RecordCountMDSR"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lat">
+    <cd:Integer>
+      <cd:Description>Latitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLatitude_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lon">
+    <cd:Integer>
+      <cd:Description>Longitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLongitude_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="alt_cog_ref_ellip">
+    <cd:Integer>
+      <cd:Description>Altitude of CoG above reference ellipsoid (interpolated value)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeAltitudeCOG"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="inst_alt_rate">
+    <cd:Integer>
+      <cd:Description>Instantaneous altitude rate derived from orbit</cd:Description>
+      <cd:Unit>mm/s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="meas_conf_flags">
+    <cd:Record>
+      <cd:Description>Measurement confidence flags</cd:Description>
+      <cd:Field name="cal_err">
+        <cd:Integer>
+          <cd:Description>CAL error: 0 = valid record, 1 = invalid record</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>spare (reserved, set to 0)</cd:Description>
+          <cd:BitSize>3</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="cal1_corr_miss">
+        <cd:Integer>
+          <cd:Description>CAL1 correction missing: 0 = correction applied, 1 = correction not applied</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="comp_cal1_ipf_used">
+        <cd:Integer>
+          <cd:Description>Complex CAL1 correction from IPF DB: 0 = correction from complex CAL1 product used, 1 = correction from IPF DB used</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="agc_inc">
+        <cd:Integer>
+          <cd:Description>AGC inconsistency: 0 = OK (AGC is static), 1 = AGC stepping detected</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_2">
+        <cd:Raw>
+          <cd:Description>spare (reserved, set to 0)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ptr_comp_err">
+        <cd:Integer>
+          <cd:Description>PTR computation error: 0 = average PTR computed, 1 = error (not available)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="cal2_corr_miss">
+        <cd:Integer>
+          <cd:Description>CAL2 correction missing: 0 = correction applied to PTR, 1 = correction not applied</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="cal2_ipf_used">
+        <cd:Integer>
+          <cd:Description>CAL2 correction from IPF DB: 0 = correction from CAL1 product used, 1 = correction from IPF DB used</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="doris_uso_corr">
+        <cd:Integer>
+          <cd:Description>DORIS USO correction: 0 = OK, correction available, 1 = correction not available</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ptr_meth">
+        <cd:Integer>
+          <cd:Description>PTR analysis method: 0 = Gauss fitting, 1 = search for maximum</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ptr_width_err">
+        <cd:Integer>
+          <cd:Description>PTR width error: 0 = OK, 1 = error (width is out of range)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ptr_pslr_err">
+        <cd:Integer>
+          <cd:Description>PTR PSLR error: 0 = OK, 1 = error (PSLR is out of range)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="gain_corr_err">
+        <cd:Integer>
+          <cd:Description>Gain correction error: 0 = OK, 1 = error (value out of range)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="delay_corr_err">
+        <cd:Integer>
+          <cd:Description>Delay correction error: 0 = OK, 1 = error (value out of range)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_3">
+        <cd:Raw>
+          <cd:Description>spare (reserved, set to 0)</cd:Description>
+          <cd:BitSize>15</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="norm_ptr_smp">
+    <cd:Array>
+      <cd:Description>Normalised point target response samples (P * 128, P in range 1..64)</cd:Description>
+      <cd:Dimension>8192</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="agc_corr">
+    <cd:Integer>
+      <cd:Description>AGC (AGC_1 + AGC_2) corrected</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="txrx_pow_gain_var">
+    <cd:Integer>
+      <cd:Description>Tx-Rx power * gain variation</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="txrx_diff_path_delay">
+    <cd:Integer>
+      <cd:Description>Tx-Rx LO differential path delay (one way delay)</cd:Description>
+      <cd:Unit>1e-12 s</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000000000.000000">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pslr">
+    <cd:Integer>
+      <cd:Description>PSLR</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="three_db_width">
+    <cd:Integer>
+      <cd:Description>3 dB width</cd:Description>
+      <cd:Unit>1e-12 s</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000000000.000000">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="agc1_cmd">
+    <cd:Integer>
+      <cd:Description>AGC_1 command</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="agc2_cmd">
+    <cd:Integer>
+      <cd:Description>AGC_2 command</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ptr_scl_fact">
+    <cd:Integer>
+      <cd:Description>PTR scale factor</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ptr_scl_pow">
+    <cd:Integer>
+      <cd:Description>PTR scale power</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

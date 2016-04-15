@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<cd:Record name="SPH_Recorded_HKTM" format="xml" namexml="SPH" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Specific Product Header for ALD Recorded HK/TM products</cd:Description>
+  <cd:Field name="SPH_Descriptor">
+    <cd:Text namexml="SPH_Descriptor">
+      <cd:Description>Name describing the Specific Product Header</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Product_Confidence_Data">
+    <cd:Record namexml="Product_Confidence_Data">
+      <cd:Field name="Num_Frames">
+        <cd:Type namexml="Num_Frames">
+          <cd:Integer format="ascii">
+            <cd:Description>Number of frames in the product</cd:Description>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Num_Missing_Frames">
+        <cd:Type namexml="Num_Missing_Frames">
+          <cd:Integer format="ascii">
+            <cd:Description>Number of missing Frames</cd:Description>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Num_Error_Frames">
+        <cd:Type namexml="Num_Error_Frames">
+          <cd:Integer format="ascii">
+            <cd:Description>Number of Frames containing CRC errors</cd:Description>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Num_Discarded_Frames">
+        <cd:Type namexml="Num_Discarded_Frames">
+          <cd:Integer format="ascii">
+            <cd:Description>Number of Frames discarded</cd:Description>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Num_RS_Frames">
+        <cd:Type namexml="Num_RS_Frames">
+          <cd:Integer format="ascii">
+            <cd:Description>Number of Frames with Reed-Solomon correction in the product</cd:Description>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Num_RS_Corrections">
+        <cd:Type namexml="Num_RS_Corrections">
+          <cd:Integer format="ascii">
+            <cd:Description>Number of symbols corrected with Reed-Solomon in the product</cd:Description>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

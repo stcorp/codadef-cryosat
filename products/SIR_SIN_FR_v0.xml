@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="SIR_SIN_FR_v0" format="binary" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="binary">
+    <cd:Description>SIRAL FBR-SARin mode root type</cd:Description>
+    <cd:Field name="mph">
+      <cd:NamedType id="MPH"/>
+    </cd:Field>
+    <cd:Field name="sph">
+      <cd:NamedType id="SIR_L1B_SPH"/>
+    </cd:Field>
+    <cd:Field name="dsd">
+      <cd:Array format="ascii">
+        <cd:Dimension><![CDATA[int(/mph/num_dsd)]]></cd:Dimension>
+        <cd:NamedType id="DSD"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="siral_fbr_mds">
+      <cd:Array>
+        <cd:Description>SIRAL full bit rate measurement data set</cd:Description>
+        <cd:Dimension><![CDATA[int(/dsd[0]/num_dsr)]]></cd:Dimension>
+        <cd:NamedType id="SIR_FBR_SARIN_MDSR_v0"/>
+      </cd:Array>
+      <cd:BitOffset><![CDATA[8 * int(/dsd[0]/ds_offset)]]></cd:BitOffset>
+    </cd:Field>
+    <ct:NamedTest id="DSDTypeMDSR" path="dsd[0]/ds_type"/>
+    <ct:NamedTest id="MPHRefDocL1" path="mph/ref_doc"/>
+  </cd:Record>
+
+  <!-- MPH Cross File Tests -->
+  <ct:NamedCrossFileTest id="MPH_Product"/>
+  <ct:NamedCrossFileTest id="MPH_Proc_Stage_Code"/>
+  <ct:NamedCrossFileTest id="MPH_Ref_Doc"/>
+  <ct:NamedCrossFileTest id="MPH_Software_Version"/>
+  <ct:NamedCrossFileTest id="MPH_Phase"/>
+  <ct:NamedCrossFileTest id="MPH_Cycle"/>
+  <ct:NamedCrossFileTest id="MPH_Rel_Orbit"/>
+  <ct:NamedCrossFileTest id="MPH_Abs_Orbit"/>
+  <ct:NamedCrossFileTest id="MPH_Delta_UT1"/>
+  <ct:NamedCrossFileTest id="MPH_X_Position"/>
+  <ct:NamedCrossFileTest id="MPH_Y_Position"/>
+  <ct:NamedCrossFileTest id="MPH_Z_Position"/>
+  <ct:NamedCrossFileTest id="MPH_X_Velocity"/>
+  <ct:NamedCrossFileTest id="MPH_Y_Velocity"/>
+  <ct:NamedCrossFileTest id="MPH_Z_Velocity"/>
+  <ct:NamedCrossFileTest id="MPH_State_Vector_Source"/>
+  <ct:NamedCrossFileTest id="MPH_Product_Err"/>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+
+  <!-- SPH Cross File Tests -->
+  <ct:NamedCrossFileTest id="SPH_SPH_Descriptor"/>
+  <ct:NamedCrossFileTest id="SPH_Start_Record_Time"/>
+  <ct:NamedCrossFileTest id="SPH_Stop_Record_Time"/>
+  <ct:NamedCrossFileTest id="SPH_ABS_Orbit_Start"/>
+  <ct:NamedCrossFileTest id="SPH_Rel_Time_ASC_Node_Start"/>
+  <ct:NamedCrossFileTest id="SPH_ABS_Orbit_Stop"/>
+  <ct:NamedCrossFileTest id="SPH_Rel_Time_ASC_Node_Stop"/>
+  <ct:NamedCrossFileTest id="SPH_Equator_Cross_Time"/>
+  <ct:NamedCrossFileTest id="SPH_Equator_Cross_Long"/>
+  <ct:NamedCrossFileTest id="SPH_Ascending_Flag"/>
+  <ct:NamedCrossFileTest id="SPH_Start_Lat"/>
+  <ct:NamedCrossFileTest id="SPH_Start_Long"/>
+  <ct:NamedCrossFileTest id="SPH_Stop_Lat"/>
+  <ct:NamedCrossFileTest id="SPH_Stop_Long"/>
+  <ct:NamedCrossFileTest id="SPH_L0_Proc_Flag"/>
+  <ct:NamedCrossFileTest id="SPH_L0_Processing_Quality"/>
+  <ct:NamedCrossFileTest id="SPH_L0_Proc_Thresh"/>
+  <ct:NamedCrossFileTest id="SPH_L0_Gaps_Flag"/>
+  <ct:NamedCrossFileTest id="SPH_L0_Gaps_Num"/>
+  <ct:NamedCrossFileTest id="SPH_Instrument_Identifier"/>
+  <ct:NamedCrossFileTest id="SPH_SIR_Op_Mode"/>
+  <ct:NamedCrossFileTest id="SPH_SIR_Configuration"/>
+  <ct:NamedCrossFileTest id="SPH_Open_Ocean_Percent"/>
+  <ct:NamedCrossFileTest id="SPH_Close_Sea_Percent"/>
+  <ct:NamedCrossFileTest id="SPH_Continent_Ice_Percent"/>
+  <ct:NamedCrossFileTest id="SPH_Land_Percent"/>
+  <ct:NamedCrossFileTest id="SPH_L1B_Prod_Status"/>
+  <ct:NamedCrossFileTest id="SPH_L1B_Proc_Flag"/>
+  <ct:NamedCrossFileTest id="SPH_L1B_Processing_Quality"/>
+  <ct:NamedCrossFileTest id="SPH_L1B_Proc_Thresh"/>
+</cd:ProductDefinition>

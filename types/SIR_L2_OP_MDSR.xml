@@ -1,0 +1,815 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_L2_OP_MDSR" last-modified="2015-06-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>SIRAL L2 measurement data set record</cd:Description>
+  <cd:Field name="mdsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Data record time (MDSR time stamp)</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicrosecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="tai_utc_diff">
+    <cd:Integer>
+      <cd:Description>TAI - UTC Difference</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spares</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="time_diff">
+    <cd:Array>
+      <cd:Description>20 Hz Time differences</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 s</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tai_utc_diff_20hz">
+    <cd:Array>
+      <cd:Description>TAI - UTC differences</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>s</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rec_count">
+    <cd:Integer>
+      <cd:Description>Record counter</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="RecordCountMDSR"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lat">
+    <cd:Integer>
+      <cd:Description>Latitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLatitude_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lat_20hz">
+    <cd:Array>
+      <cd:Description>20 Hz Latitude of measurement</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-7 degrees_north</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+          <cd:Unit>degrees_north</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLatitudeOrBlankOP_7"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="lon">
+    <cd:Integer>
+      <cd:Description>Longitude of the measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLongitude_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lon_20hz">
+    <cd:Array>
+      <cd:Description>20 Hz Longitude of measurement</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-7 degrees_east</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+          <cd:Unit>degrees_east</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLongitudeOrBlankOP_7"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="alt_cog_ref_ellip">
+    <cd:Integer>
+      <cd:Description>Altitude of CoG above reference ellipsoid</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeAltitudeCOG"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="alt_cog_ref_ellip_20hz">
+    <cd:Array>
+      <cd:Description>20 Hz Altitude of CoG above reference ellipsoid</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>mm</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeAltitudeCOGOrBlankOP"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="inst_alt_rate">
+    <cd:Integer>
+      <cd:Description>Instantaneous altitude rate derived from orbit</cd:Description>
+      <cd:Unit>mm/s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="meas_conf_flags">
+    <cd:Array>
+      <cd:Description>20 Hz Level 2 Measurement Confidence Data</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:NamedType id="SIR_L1B_OP_MEAS_CONF"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>padding</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="peakiness">
+    <cd:Integer>
+      <cd:Description>Peakiness</cd:Description>
+      <cd:Conversion numerator="1" denominator="100"/>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangePeakiness"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="peakiness_20hz">
+    <cd:Array>
+      <cd:Description>20 Hz peakiness</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1" denominator="100"/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+        <ct:NamedTest id="RangePeakiness"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ocean_retracking_mqe_20hz">
+    <cd:Array>
+      <cd:Description>20 Hz Mean Quadratic Error from ocean retracking</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1" denominator="1e4"/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ocean_retracking_quality">
+    <cd:Integer>
+      <cd:Description>Ocean retracking quality (20 bits)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Raw>
+      <cd:Description>padding</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ocean_range">
+    <cd:Integer>
+      <cd:Description>Ocean range to ocean surface (corrected). Corrected for: (USO drift, antenna-COG distance, internal calibration (CAL1), doppler correction, modeled instrumental correction, system bias)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ocean_range_20hz">
+    <cd:Array>
+      <cd:Description>20-Hz ocean range (corrected). Corrected for: (USO drift, antenna-COG distance, internal calibration (CAL1), doppler correction, modeled instrumental correction, system bias)</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>mm</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ocean_range_20hz_std">
+    <cd:Integer>
+      <cd:Description>Standard deviation of 20Hz ocean range</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_valid_ocean_range_20hz">
+    <cd:Integer>
+      <cd:Description>Number of 20Hz valid points for ocean range</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ocean_range_av_status">
+    <cd:Integer>
+      <cd:Description>Ocean range averaging status flags. First 20 least significant bits (0-19) correspond to the 20 values (one per data block) containing : 0=valid measurement, 1=invalid. Bit 0 applies to the first data block. Unused bits are set to 0.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ice_range">
+    <cd:Integer>
+      <cd:Description>Ice range to ocean surface (corrected). Corrected for: (USO drift, antenna-COG distance, internal calibration (CAL1), doppler correction, system bias)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ice_range_20hz">
+    <cd:Array>
+      <cd:Description>20-Hz ice range (corrected). Corrected for: (USO drift, antenna-COG distance, internal calibration (CAL1), doppler correction, system bias)</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>mm</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ice_range_20hz_std">
+    <cd:Integer>
+      <cd:Description>Standard deviation of 20Hz ice range</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_valid_ice_range_20hz">
+    <cd:Integer>
+      <cd:Description>Number of 20Hz valid points for ice range</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ice_range_av_status">
+    <cd:Integer>
+      <cd:Description>Ocean range averaging status flags. First 20 least significant bits (0-19) correspond to the 20 values (one per data block) containing : 0=valid measurement, 1=invalid. Bit 0 applies to the first data block. Unused bits are set to 0.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dopp_corr">
+    <cd:Integer>
+      <cd:Description>Doppler correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="uso_corr">
+    <cd:Integer>
+      <cd:Description>USO drift correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ant_cog_dist">
+    <cd:Integer>
+      <cd:Description>Distance antenna - COG</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="range_icc">
+    <cd:Integer>
+      <cd:Description>Range internal calibration correction (CAL1)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="range_mic">
+    <cd:Integer>
+      <cd:Description>Range modeled instrumental correction (ocean table)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dry_tropo_corr">
+    <cd:Integer>
+      <cd:Description>Dry tropospheric correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="wet_tropo_corr">
+    <cd:Integer>
+      <cd:Description>Wet tropospheric correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="inv_barom_corr">
+    <cd:Integer>
+      <cd:Description>Inverse barometric correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dyn_atm_corr">
+    <cd:Integer>
+      <cd:Description>Dynamic atmospheric correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ion_corr_gim">
+    <cd:Integer>
+      <cd:Description>GIM ionospheric correction</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sea_state_bias_corr">
+    <cd:Integer>
+      <cd:Description>Sea State Bias correction (EM bias)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangeSeaStateBiasCorrection"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Raw>
+      <cd:Description>padding</cd:Description>
+      <cd:BitSize>48</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="swh_squared">
+    <cd:Integer>
+      <cd:Description>Square of Significant Wave Height</cd:Description>
+      <cd:Unit>mm2</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="swh">
+    <cd:Integer>
+      <cd:Description>Significant Wave Height</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_5">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="swh_squared_20hz">
+    <cd:Array>
+      <cd:Description>20 Hz Square of Significant wave height (corrected). Corrected for: modeled instrumental correction, system bias</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>mm2</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="swh_squared_20hz_std">
+    <cd:Integer>
+      <cd:Description>Standard deviation of 20Hz Square of Significant wave height</cd:Description>
+      <cd:Unit>mm2</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_valid_swh_squared_20hz">
+    <cd:Integer>
+      <cd:Description>Number of 20Hz valid points for Square of Significant wave height</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="swh_squared_avg_status">
+    <cd:Integer>
+      <cd:Description>SWH squared averaging status flags. First 20 least significant bits (0-19) correspond to the 20 values (one per data block) containing : 0=valid measurement, 1=invalid. Bit 0 applies to the first data block. Unused bits are set to 0.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_6">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ocean_bkscat">
+    <cd:Integer>
+      <cd:Description>Ocean backscatter coefficient (corrected). Corrected for : AGC correction, internal calibration (CAL1), modeled instrumental correction, system bias. Not corrected for atmospheric attenuation</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangeBackscatterSigmaZero"/>
+      <ct:NamedTest id="MissingValueShortInt"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ocean_bkscat_20hz">
+    <cd:Array>
+      <cd:Description>20 Hz Corrected ocean backscatter coefficient (corrected). Corrected for: AGC correction, internal calibration (CAL1), modeled instrumental correction, system bias. Not corrected for atmospheric attenuation</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 dB</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>dB</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+        <ct:NamedTest id="RangeBackscatterSigmaZero"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ocean_bkscat_20hz_std">
+    <cd:Integer>
+      <cd:Description>Standard deviation of 20Hz corrected ocean backscatter coefficient</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_valid_ocean_bkscat_20hz">
+    <cd:Integer>
+      <cd:Description>Number of 20Hz valid points for corrected ocean backscatter coefficient</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ocean_bkscat_avg_status">
+    <cd:Integer>
+      <cd:Description>Ocean backscatter averaging status flags</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_7">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ice_bkscat">
+    <cd:Integer>
+      <cd:Description>Ice backscatter coefficient (corrected). Corrected for : AGC correction, internal calibration (CAL1), system bias. Not corrected for atmospheric attenuation</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangeBackscatterSigmaZero"/>
+      <ct:NamedTest id="MissingValueShortInt"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ice_bkscat_20hz">
+    <cd:Array>
+      <cd:Description>20 Hz Corrected ice backscatter coefficient (corrected). Corrected for: AGC correction, internal calibration (CAL1), system bias. Not corrected for atmospheric attenuation</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 dB</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>dB</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+        <ct:NamedTest id="RangeBackscatterSigmaZero"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ice_bkscat_20hz_std">
+    <cd:Integer>
+      <cd:Description>Standard deviation of 20Hz corrected ice backscatter coefficient</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_valid_ice_bkscat_20hz">
+    <cd:Integer>
+      <cd:Description>Number of 20Hz valid points for corrected ice backscatter coefficient</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ice_bkscat_avg_status">
+    <cd:Integer>
+      <cd:Description>Ice backscatter averaging status flags</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="off_nadir_angle_squared">
+    <cd:Integer>
+      <cd:Description>Square of the off nadir angle of the satellite from waveforms</cd:Description>
+      <cd:Unit>1e-4 degrees2</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_8">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>48</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="agc">
+    <cd:Integer>
+      <cd:Description>AGC (corrected)</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangeAGC"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="bkscat_scl_fact">
+    <cd:Array>
+      <cd:Description>Scaling factor for backscatter coefficient evaluation (corrected). Corrected for: AGC errors and internal calibration (CAL1)</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 dB</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>dB</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="swh_mic">
+    <cd:Integer>
+      <cd:Description>SWH modeled instrumental correction (ocean table)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="agc_corr">
+    <cd:Integer>
+      <cd:Description>AGC correction</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sigma0_icc">
+    <cd:Integer>
+      <cd:Description>Sigma0 internal calibration correction (CAL1)</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="backscat_mic">
+    <cd:Integer>
+      <cd:Description>Backscatter coefficient modeled instrumental correction (Ocean table)</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="atm_attn">
+    <cd:Integer>
+      <cd:Description>Atmospheric attenuation</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_9">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>48</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="mss_1">
+    <cd:Integer>
+      <cd:Description>Mean Sea Surface height (Solution 1)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeMSSGeoidHeight"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mss_2">
+    <cd:Integer>
+      <cd:Description>Mean Sea Surface height (Solution 2)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeMSSGeoidHeight"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="geoid_height">
+    <cd:Integer>
+      <cd:Description>Geoid height</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeMSSGeoidHeight"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="odle">
+    <cd:Integer>
+      <cd:Description>Ocean Depth/Land Elevation (ODLE)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mdt">
+    <cd:Integer>
+      <cd:Description>Mean Dynamic Topography height</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_10">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ocean_tide_got">
+    <cd:Integer>
+      <cd:Description>Total geocentric ocean tide height (Solution 1: GOT)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ocean_tide_fes">
+    <cd:Integer>
+      <cd:Description>Total geocentric ocean tide height (Solution 2: FES)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lp_ocean_tide">
+    <cd:Integer>
+      <cd:Description>Long Period Tide Height</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nelp_ocean_tide">
+    <cd:Integer>
+      <cd:Description>Non equilibrium long period ocean tide height</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ocean_load_tide_got">
+    <cd:Integer>
+      <cd:Description>Ocean loading tide (Solution 1: GOT)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ocean_load_tide_fes">
+    <cd:Integer>
+      <cd:Description>Ocean loading tide (Solution 2: FES)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sol_earth_tide">
+    <cd:Integer>
+      <cd:Description>Solid earth tide</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="geocen_pol_tide">
+    <cd:Integer>
+      <cd:Description>Geocentric polar tide</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_11">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>48</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="wind_speed">
+    <cd:Integer>
+      <cd:Description>Altimeter wind speed</cd:Description>
+      <cd:Unit>mm/s</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="wind_u">
+    <cd:Integer>
+      <cd:Description>U-component of the wind vector</cd:Description>
+      <cd:Unit>mm/s</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="wind_v">
+    <cd:Integer>
+      <cd:Description>V-component of the wind vector</cd:Description>
+      <cd:Unit>mm/s</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="surf_type">
+    <cd:Integer>
+      <cd:Description>Surface type flag (0 = open ocean, 1 = enclosed sea, 2 = continental ice, 3 = land)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_12">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

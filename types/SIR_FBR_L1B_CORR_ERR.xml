@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_FBR_L1B_CORR_ERR" last-modified="2010-03-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Correction error bit field (common to FBR and L1B MDSR): indicate if a correction algorithm returned an error when called</cd:Description>
+  <cd:Field name="dry_tropo_corr_err">
+    <cd:Integer>
+      <cd:Description>Dry tropospheric correction error: 0 = OK, 1 = error</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="wet_tropo_corr_err">
+    <cd:Integer>
+      <cd:Description>Wet tropospheric correction error: 0 = OK, 1 = error</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="inv_barom_corr_err">
+    <cd:Integer>
+      <cd:Description>Inverse barometric correction error: 0 = OK, 1 = error</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dyn_atm_corr_err">
+    <cd:Integer>
+      <cd:Description>Dynamic atmospheric correction error: 0 = OK, 1 = error</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ion_gim_corr_err">
+    <cd:Integer>
+      <cd:Description>GIM ionospheric correction error: 0 = OK, 1 = error</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ion_mdl_corr_err">
+    <cd:Integer>
+      <cd:Description>Model ionospheric correction error: 0 = OK, 1 = error</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ocean_eq_tide_err">
+    <cd:Integer>
+      <cd:Description>Ocean equilibrium tide error: 0 = OK, 1 = error</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lp_ocean_tide_err">
+    <cd:Integer>
+      <cd:Description>Long period ocean tide error: 0 = OK, 1 = error</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ocean_load_tide_err">
+    <cd:Integer>
+      <cd:Description>Ocean loading tide error: 0 = OK, 1 = error</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sol_earth_tide_err">
+    <cd:Integer>
+      <cd:Description>Solid earth tide error: 0 = OK, 1 = error</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="geocen_pol_tide_err">
+    <cd:Integer>
+      <cd:Description>Geocentric polar tide error: 0 = OK, 1 = error</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="surf_type_err">
+    <cd:Integer>
+      <cd:Description>Surface type error: 0 = OK, 1 = error</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare (reserved, set to 0)</cd:Description>
+      <cd:BitSize>20</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

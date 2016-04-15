@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="AISP_TM_STR" last-modified="2015-02-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>SIRAL Annotated Instrument Source Packet for TM_STR</cd:Description>
+  <cd:Field name="sensing_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>ISP Sensing Time. Time of the actual acquisition of the source packet</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="downlink_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>ISP Downlink Time. Time of the downlink on ground of the source packet (G/S time)</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="packet_length">
+    <cd:Integer>
+      <cd:Description>ISP Length = (length of source packet excluding 6 bytes) - 1. This field uses the same definition as the Packet Length field of the Packet Header as specified in CCSDS definitions.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs containing current ISP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu_rs">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs containing current ISP that are corrected with Reed-Solomon</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu_no_rs">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs containing current ISP that were incorrigible with Reed-Solomon</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vcdu_missing">
+    <cd:Integer>
+      <cd:Description>Number of missing VCDUs containing current ISP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_corr_sym">
+    <cd:Integer>
+      <cd:Description>Number of symbols corrected by Reed-Solomon in CADUs containing current ISP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="crc_flag">
+    <cd:Integer>
+      <cd:Description>CRC Error Flag, identifying the detection of a CRC error in the packet (set to FF in case of error, otherwise set to 00)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>24</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="source_packet">
+    <cd:Record>
+      <cd:Description>Instrument Source Packet</cd:Description>
+      <cd:Field name="packet_header">
+        <cd:NamedType id="CCSDS_packet_header"/>
+      </cd:Field>
+      <cd:Field name="filler_1">
+        <cd:Raw>
+          <cd:Description>Filler (=0)</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="error_control_flags">
+        <cd:Integer>
+          <cd:Description>Error control flags</cd:Description>
+          <cd:BitSize>3</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="filler_2">
+        <cd:Raw>
+          <cd:Description>Filler</cd:Description>
+          <cd:BitSize>4</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="service_type">
+        <cd:Integer>
+          <cd:Description>Service type</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="service_subtype">
+        <cd:Integer>
+          <cd:Description>Service subtype</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="filler_3">
+        <cd:Raw>
+          <cd:Description>Filler</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="time1">
+        <cd:Time timeformat="float(./day) * 86400 + float(./msec) * 1E-3">
+          <cd:Record>
+            <cd:Field name="day">
+              <cd:Integer>
+                <cd:Description>Julian Day</cd:Description>
+                <cd:BitSize>16</cd:BitSize>
+                <cd:NativeType>uint16</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="msec">
+              <cd:Integer>
+                <cd:Description>Msec of day</cd:Description>
+                <cd:BitSize>32</cd:BitSize>
+                <cd:NativeType>uint32</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+          </cd:Record>
+        </cd:Time>
+      </cd:Field>
+      <cd:Field name="id">
+        <cd:Integer>
+          <cd:Description>ID</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_attitudes">
+        <cd:Integer>
+          <cd:Description>Number of attitudes (always 1)</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="str_timestamp_first">
+        <cd:Integer>
+          <cd:Description>STR timestamp, first</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="str_timestamp_last">
+        <cd:Integer>
+          <cd:Description>STR timestamp, last</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="quaternion">
+        <cd:Array>
+          <cd:Dimension>4</cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="timestamp">
+        <cd:Time timeformat="float(./day) * 86400 + float(./msec) * 1E-3">
+          <cd:Record>
+            <cd:Field name="day">
+              <cd:Integer>
+                <cd:Description>Julian Day</cd:Description>
+                <cd:BitSize>16</cd:BitSize>
+                <cd:NativeType>uint16</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="msec">
+              <cd:Integer>
+                <cd:Description>Msec of day</cd:Description>
+                <cd:BitSize>32</cd:BitSize>
+                <cd:NativeType>uint32</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+          </cd:Record>
+        </cd:Time>
+      </cd:Field>
+      <cd:Field name="status">
+        <cd:Record>
+          <cd:Field name="unused">
+            <cd:Raw>
+              <cd:BitSize>5</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+          <cd:Field name="mode">
+            <cd:Integer>
+              <cd:Description>0: initial acquisition mode; 1: attitude update mode; 2: test mode (not-flight conf. only)</cd:Description>
+              <cd:BitSize>2</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="valid">
+            <cd:Integer>
+              <cd:Description>0: attitude invalid; 1: attitude valid</cd:Description>
+              <cd:BitSize>1</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="penalty">
+        <cd:Float>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:BitSize>8</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="crc">
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

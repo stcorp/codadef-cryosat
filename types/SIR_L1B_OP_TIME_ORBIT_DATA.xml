@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_L1B_OP_TIME_ORBIT_DATA" last-modified="2013-09-09" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>SIRAL L1B Ocean Products time and orbit data</cd:Description>
+  <cd:Field name="mdsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Data record time (MDSR time stamp)</cd:Description>
+      <ct:NamedTest id="RangeSecondOrBlank" path="seconds"/>
+      <ct:NamedTest id="RangeMicrosecondOrBlank" path="microseconds"/>
+      <ct:NamedTest id="RangeSensingStartStopOrBlank"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="tai_utc_diff">
+    <cd:Integer>
+      <cd:Description>TAI - UTC Difference</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>Spares</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="mode_id">
+    <cd:Record>
+      <cd:Field name="instr_mode">
+        <cd:Integer>
+          <cd:Description>Instrument mode: 1 = LRM, 2 = SAR, 3 = SARin, 11 = CAL1-LRM, 12 = CAL1-SAR, 13 = CAL1-SARin, 22 = CAL2-SAR, 23 = CAL-SARin</cd:Description>
+          <cd:BitSize>6</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>spare (reserved, set to 0)</cd:Description>
+          <cd:BitSize>10</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="src_seq_count">
+    <cd:Integer>
+      <cd:Description>Source sequence counter (only for LRM - spare in SAR and SARin)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="instr_conf_flags">
+    <cd:NamedType id="SIR_L1B_OP_INSTR_CONFIG"/>
+  </cd:Field>
+  <cd:Field name="burst_count">
+    <cd:Integer>
+      <cd:Description>Burst counter (surface sample counter, always starts from 1 and incremented at group rate)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lat">
+    <cd:Integer>
+      <cd:Description>Latitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLatitudeOrBlank_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lon">
+    <cd:Integer>
+      <cd:Description>Longitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLongitudeOrBlank_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="alt_cog_ref_ellip">
+    <cd:Integer>
+      <cd:Description>Altitude of CoG above reference ellipsoid (interpolated value)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeAltitudeCOGOrBlank"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="inst_alt_rate">
+    <cd:Integer>
+      <cd:Description>Instantaneous altitude rate derived from orbit</cd:Description>
+      <cd:Unit>mm/s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="meas_conf_flags">
+    <cd:NamedType id="SIR_L1B_OP_MEAS_CONF"/>
+  </cd:Field>
+</cd:Record>

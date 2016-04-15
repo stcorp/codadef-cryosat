@@ -1,0 +1,1199 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="SIR_L2_SPH" last-modified="2015-03-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>SIRAL L2 specific product header</cd:Description>
+  <cd:Field name="sph_desc_title">
+    <cd:Text>
+      <cd:Description>SPH_DESCRIPTOR=</cd:Description>
+      <cd:FixedValue>SPH_DESCRIPTOR=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_1">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sph_descriptor">
+    <cd:Text>
+      <cd:Description>SPH descriptor (ASCII string describing the product)</cd:Description>
+      <cd:ByteSize>28</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_2">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_1">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="start_record_tai_time_title">
+    <cd:Text>
+      <cd:Description>START_RECORD_TAI_TIME=</cd:Description>
+      <cd:FixedValue>START_RECORD_TAI_TIME=</cd:FixedValue>
+      <cd:ByteSize>22</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_3">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="start_record_tai_time">
+    <cd:Time timeformat="ascii_envisat_datetime">
+      <cd:Description>TAI time of the first record in the main MDS of this product</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quote_4">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_2">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_record_tai_time_title">
+    <cd:Text>
+      <cd:Description>STOP_RECORD_TAI_TIME=</cd:Description>
+      <cd:FixedValue>STOP_RECORD_TAI_TIME=</cd:FixedValue>
+      <cd:ByteSize>21</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_5">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_record_tai_time">
+    <cd:Time timeformat="ascii_envisat_datetime">
+      <cd:Description>TAI time of the last record in the main MDS of this product</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quote_6">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_3">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="abs_orbit_start_title">
+    <cd:Text>
+      <cd:Description>ABS_ORBIT_START=</cd:Description>
+      <cd:FixedValue>ABS_ORBIT_START=</cd:FixedValue>
+      <cd:ByteSize>16</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="abs_orbit_start">
+    <cd:Integer>
+      <cd:Description>Absolute orbit number at product start time</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_4">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="rel_time_asc_node_start_title">
+    <cd:Text>
+      <cd:Description>REL_TIME_ASC_NODE_START=</cd:Description>
+      <cd:FixedValue>REL_TIME_ASC_NODE_START=</cd:FixedValue>
+      <cd:ByteSize>24</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="rel_time_asc_node_start">
+    <cd:Float>
+      <cd:Description>Relative time since crossing ascending node time relative to start time of data sensing</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rel_time_asc_node_start_units">
+    <cd:Text>
+      <cd:FixedValue>\074s\076</cd:FixedValue>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_5">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="abs_orbit_stop_title">
+    <cd:Text>
+      <cd:Description>ABS_ORBIT_STOP=</cd:Description>
+      <cd:FixedValue>ABS_ORBIT_STOP=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="abs_orbit_stop">
+    <cd:Integer>
+      <cd:Description>Absolute orbit number at product stop time</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_6">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="rel_time_asc_node_stop_title">
+    <cd:Text>
+      <cd:Description>REL_TIME_ASC_NODE_STOP=</cd:Description>
+      <cd:FixedValue>REL_TIME_ASC_NODE_STOP=</cd:FixedValue>
+      <cd:ByteSize>23</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="rel_time_asc_node_stop">
+    <cd:Float>
+      <cd:Description>Relative time since crossing ascending node time relative to stop time of data sensing</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rel_time_asc_node_stop_units">
+    <cd:Text>
+      <cd:FixedValue>\074s\076</cd:FixedValue>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_7">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="equator_cross_time_utc_title">
+    <cd:Text>
+      <cd:Description>EQUATOR_CROSS_TIME_UTC=</cd:Description>
+      <cd:FixedValue>EQUATOR_CROSS_TIME_UTC=</cd:FixedValue>
+      <cd:ByteSize>23</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_7">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="equator_cross_time_utc">
+    <cd:Time timeformat="ascii_envisat_datetime">
+      <cd:Description>Time of equator crossing at the ascending node of the sensing start time</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quote_8">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_8">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="equator_cross_long_title">
+    <cd:Text>
+      <cd:Description>EQUATOR_CROSS_LONG=</cd:Description>
+      <cd:FixedValue>EQUATOR_CROSS_LONG=</cd:FixedValue>
+      <cd:ByteSize>19</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="equator_cross_long">
+    <cd:Integer>
+      <cd:Description>Longitude of equator crossing at the ascending node of the sensing start time (positive = East, 0 = Greenwich, referred to WGS84)</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLongitude_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="equator_cross_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_9">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ascending_flag_title">
+    <cd:Text>
+      <cd:Description>ASCENDING_FLAG=</cd:Description>
+      <cd:FixedValue>ASCENDING_FLAG=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ascending_flag">
+    <cd:Text>
+      <cd:Description>Orbit orientation at the sensing start time: 'A' = ascending, 'D' = descending</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+      <ct:NamedTest id="EnumOrbitAscendingFlag"/>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="newline_char_10">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="start_lat_title">
+    <cd:Text>
+      <cd:Description>START_LAT=</cd:Description>
+      <cd:FixedValue>START_LAT=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="start_lat">
+    <cd:Integer>
+      <cd:Description>WGS84 latitude of the first record in the main MDS (positive = North)</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLatitude_6"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="start_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_11">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="start_long_title">
+    <cd:Text>
+      <cd:Description>START_LONG=</cd:Description>
+      <cd:FixedValue>START_LONG=</cd:FixedValue>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="start_long">
+    <cd:Integer>
+      <cd:Description>WGS84 longitude of the first record in the main MDS (positive = East, 0 = Greenwich)</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLongitude_6"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="start_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_12">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_lat_title">
+    <cd:Text>
+      <cd:Description>STOP_LAT=</cd:Description>
+      <cd:FixedValue>STOP_LAT=</cd:FixedValue>
+      <cd:ByteSize>9</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_lat">
+    <cd:Integer>
+      <cd:Description>WGS84 latitude of the last record in the main MDS (positive = North)</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLatitude_6"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="stop_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_13">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_long_title">
+    <cd:Text>
+      <cd:Description>STOP_LONG=</cd:Description>
+      <cd:FixedValue>STOP_LONG=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_long">
+    <cd:Integer>
+      <cd:Description>WGS84 longitude of the last record in the main MDS (positive = East, 0 = Greenwich)</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLongitude_6"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="stop_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_14">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Text>
+      <cd:Description>spare</cd:Description>
+      <cd:ByteSize>50</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_15">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="l1_proc_flag_title">
+    <cd:Text>
+      <cd:Description>L1_PROC_FLAG=</cd:Description>
+      <cd:FixedValue>L1_PROC_FLAG=</cd:FixedValue>
+      <cd:ByteSize>13</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="l1_proc_flag">
+    <cd:Integer>
+      <cd:Description>Processing errors significance flag: set to 1 if the percentage of L1B records free of processing errors is less than the acceptable threshold, 0 otherwise</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="QualityFlag"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_16">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="l1_processing_quality_title">
+    <cd:Text>
+      <cd:Description>L1_PROCESSING_QUALITY=</cd:Description>
+      <cd:FixedValue>L1_PROCESSING_QUALITY=</cd:FixedValue>
+      <cd:ByteSize>22</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="l1_processing_quality">
+    <cd:Integer>
+      <cd:Description>Percentage of quality checks successfully passed during L1B processing (max allowed +10000)</cd:Description>
+      <cd:Unit>1e-2 %</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangePercentage_2"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="l1_processing_quality_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-2%\076</cd:FixedValue>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_17">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="l1_proc_thresh_title">
+    <cd:Text>
+      <cd:Description>L1_PROC_THRESH=</cd:Description>
+      <cd:FixedValue>L1_PROC_THRESH=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="l1_proc_thresh">
+    <cd:Integer>
+      <cd:Description>Minimum acceptable percentage of quality threshold that must be passed during L1B processing (max allowed +10000)</cd:Description>
+      <cd:Unit>1e-2 %</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangePercentage_2"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="l1_proc_thresh_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-2%\076</cd:FixedValue>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_18">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_l1_dsr_proc_title">
+    <cd:Text>
+      <cd:Description>NUM_L1_DSR_PROC=</cd:Description>
+      <cd:FixedValue>NUM_L1_DSR_PROC=</cd:FixedValue>
+      <cd:ByteSize>16</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_l1_dsr_proc">
+    <cd:Integer>
+      <cd:Description>Number of L1B data set records analysed</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_19">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Text>
+      <cd:Description>spare</cd:Description>
+      <cd:ByteSize>37</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_20">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="instr_id_title">
+    <cd:Text>
+      <cd:Description>INSTR_ID=</cd:Description>
+      <cd:FixedValue>INSTR_ID=</cd:FixedValue>
+      <cd:ByteSize>9</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_9">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="instr_id">
+    <cd:Text>
+      <cd:Description>Instrument identifier. 'A' stands for SIRAL Nominal, 'B' stands for SIRAL Backup</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+      <ct:NamedTest id="RangeInstrumentIdentifier"/>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_10">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_20b">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="lrm_mode_percent_title">
+    <cd:Text>
+      <cd:Description>LRM_MODE_PERCENT=</cd:Description>
+      <cd:FixedValue>LRM_MODE_PERCENT=</cd:FixedValue>
+      <cd:ByteSize>17</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="lrm_mode_percent">
+    <cd:Integer>
+      <cd:Description>Percentage of input L1B records detected in LRM mode</cd:Description>
+      <cd:Unit>1e-2 %</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangePercentage_2"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lrm_mode_percent_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-2%\076</cd:FixedValue>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_21">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sar_mode_percent_title">
+    <cd:Text>
+      <cd:Description>SAR_MODE_PERCENT=</cd:Description>
+      <cd:FixedValue>SAR_MODE_PERCENT=</cd:FixedValue>
+      <cd:ByteSize>17</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sar_mode_percent">
+    <cd:Integer>
+      <cd:Description>Percentage of input L1B records detected in SAR mode</cd:Description>
+      <cd:Unit>1e-2 %</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangePercentage_2"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sar_mode_percent_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-2%\076</cd:FixedValue>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_22">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sarin_mode_percent_title">
+    <cd:Text>
+      <cd:Description>SARIN_MODE_PERCENT=</cd:Description>
+      <cd:FixedValue>SARIN_MODE_PERCENT=</cd:FixedValue>
+      <cd:ByteSize>19</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sarin_mode_percent">
+    <cd:Integer>
+      <cd:Description>Percentage of input L1B records detected in SARIN mode</cd:Description>
+      <cd:Unit>1e-2 %</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangePercentage_2"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sarin_mode_percent_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-2%\076</cd:FixedValue>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_23">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="other_modes_percent_title">
+    <cd:Text>
+      <cd:Description>OTHER_MODES_PERCENT=</cd:Description>
+      <cd:FixedValue>OTHER_MODES_PERCENT=</cd:FixedValue>
+      <cd:ByteSize>20</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="other_modes_percent">
+    <cd:Integer>
+      <cd:Description>Percentage of input L1B records detected in any other mode</cd:Description>
+      <cd:Unit>1e-2 %</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangePercentage_2"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="other_modes_percent_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-2%\076</cd:FixedValue>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_24">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Text>
+      <cd:Description>spare</cd:Description>
+      <cd:ByteSize>50</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_25">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="open_ocean_percent_title">
+    <cd:Text>
+      <cd:Description>OPEN_OCEAN_PERCENT=</cd:Description>
+      <cd:FixedValue>OPEN_OCEAN_PERCENT=</cd:FixedValue>
+      <cd:ByteSize>19</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="open_ocean_percent">
+    <cd:Integer>
+      <cd:Description>Percentage of records detected on open ocean or semi-enclosed seas</cd:Description>
+      <cd:Unit>1e-2 %</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangePercentage_2"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="open_ocean_percent_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-2%\076</cd:FixedValue>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_26">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="close_sea_percent_title">
+    <cd:Text>
+      <cd:Description>CLOSE_SEA_PERCENT=</cd:Description>
+      <cd:FixedValue>CLOSE_SEA_PERCENT=</cd:FixedValue>
+      <cd:ByteSize>18</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="close_sea_percent">
+    <cd:Integer>
+      <cd:Description>Percentage of records detected on close seas or lakes</cd:Description>
+      <cd:Unit>1e-2 %</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangePercentage_2"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="close_sea_percent_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-2%\076</cd:FixedValue>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_27">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="continent_ice_percent_title">
+    <cd:Text>
+      <cd:Description>CONTINENT_ICE_PERCENT=</cd:Description>
+      <cd:FixedValue>CONTINENT_ICE_PERCENT=</cd:FixedValue>
+      <cd:ByteSize>22</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="continent_ice_percent">
+    <cd:Integer>
+      <cd:Description>Percentage of records detected on continental ice</cd:Description>
+      <cd:Unit>1e-2 %</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangePercentage_2"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="continent_ice_percent_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-2%\076</cd:FixedValue>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_28">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="land_percent_title">
+    <cd:Text>
+      <cd:Description>LAND_PERCENT=</cd:Description>
+      <cd:FixedValue>LAND_PERCENT=</cd:FixedValue>
+      <cd:ByteSize>13</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="land_percent">
+    <cd:Integer>
+      <cd:Description>Percentage of records detected on land</cd:Description>
+      <cd:Unit>1e-2 %</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangePercentage_2"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="land_percent_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-2%\076</cd:FixedValue>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_29">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Text>
+      <cd:Description>spare</cd:Description>
+      <cd:ByteSize>50</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_30">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="l2_prod_status_title">
+    <cd:Text>
+      <cd:Description>L2_PROD_STATUS=</cd:Description>
+      <cd:FixedValue>L2_PROD_STATUS=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="l2_prod_status">
+    <cd:Integer>
+      <cd:Description>Product completion flag: set to 1 if the product has a duration shorter than the input product, 0 otherwise</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="EnumFlag"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_31">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="l2_proc_flag_title">
+    <cd:Text>
+      <cd:Description>L2_PROC_FLAG=</cd:Description>
+      <cd:FixedValue>L2_PROC_FLAG=</cd:FixedValue>
+      <cd:ByteSize>13</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="l2_proc_flag">
+    <cd:Integer>
+      <cd:Description>Processing errors significance flag: set to 1 if the percentage of DSR free of processing errors is less than the acceptance threshold, 0 otherwise</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="QualityFlag"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_32">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="l2_processing_quality_title">
+    <cd:Text>
+      <cd:Description>L2_PROCESSING_QUALITY=</cd:Description>
+      <cd:FixedValue>L2_PROCESSING_QUALITY=</cd:FixedValue>
+      <cd:ByteSize>22</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="l2_processing_quality">
+    <cd:Integer>
+      <cd:Description>Percentage of quality checks successfully passed during L1B processing (max allowed +10000)</cd:Description>
+      <cd:Unit>1e-2 %</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangePercentage_2"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="l2_processing_quality_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-2%\076</cd:FixedValue>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_33">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="l2_proc_thresh_title">
+    <cd:Text>
+      <cd:Description>L2_PROC_THRESH=</cd:Description>
+      <cd:FixedValue>L2_PROC_THRESH=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="l2_proc_thresh">
+    <cd:Integer>
+      <cd:Description>Minimum acceptable percentage of quality threshold that must be passed during L1B processing (max allowed +10000)</cd:Description>
+      <cd:Unit>1e-2 %</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+      <ct:NamedTest id="RangePercentage_2"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="l2_proc_thresh_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-2%\076</cd:FixedValue>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_34">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_5">
+    <cd:Text>
+      <cd:Description>spare</cd:Description>
+      <cd:ByteSize>50</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_35">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <ct:NamedTest id="L1QualityThreshold"/>
+  <ct:NamedTest id="L2QualityThreshold"/>
+  <ct:NamedTest id="SPHRecordTaiTimeOrder"/>
+  <ct:NamedTest id="SPHAbsoluteOrbitOrder"/>
+</cd:Record>

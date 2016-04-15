@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_FBR_MEAS_DATA" last-modified="2012-01-30" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>SIRAL FBR mode independent measurement data</cd:Description>
+  <cd:Field name="win_delay">
+    <cd:Integer>
+      <cd:Description>Window delay (two-way) uncorrected for instrument delays</cd:Description>
+      <cd:Unit>1e-12 s</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000000000.000000">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="init_ht">
+    <cd:Integer>
+      <cd:Description>HO initial height word</cd:Description>
+      <cd:Unit>48.8 ps</cd:Unit>
+      <cd:Conversion numerator="48.800000" denominator="1000000000000.000000">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="hpr_ht_rate">
+    <cd:Integer>
+      <cd:Description>HPR height rate (unit: 3.05 ps/rc)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lai">
+    <cd:Integer>
+      <cd:Description>LAI</cd:Description>
+      <cd:Unit>12.5 ns</cd:Unit>
+      <cd:Conversion numerator="12.500000" denominator="1000000000.000000">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fai">
+    <cd:Integer>
+      <cd:Description>FAI</cd:Description>
+      <cd:Unit>12.5/256 ns</cd:Unit>
+      <cd:Conversion numerator="12.500000" denominator="256000000000.000000">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="agc_1">
+    <cd:Integer>
+      <cd:Description>AGC_1 (not corrected)</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeAGCOrFlagged"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="agc_2">
+    <cd:Integer>
+      <cd:Description>AGC_2 (not corrected)</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeAGCOrFlagged"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="tot_fix_gain_rx1">
+    <cd:Integer>
+      <cd:Description>Total fixed gain Rx 1</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeTotalFixedGain"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="tot_fix_gain_rx2">
+    <cd:Integer>
+      <cd:Description>Total fixed gain Rx 2</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeTotalFixedGain"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="tx_pow">
+    <cd:Integer>
+      <cd:Description>Transmit power</cd:Description>
+      <cd:Unit>1e-6 W</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>W</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dopp_range_corr">
+    <cd:Integer>
+      <cd:Description>Doppler range correction (radial component)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="instr_txrx_range_corr">
+    <cd:Integer>
+      <cd:Description>Instrument range correction (Tx-Rx antenna)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="instr_rx_range_corr">
+    <cd:Integer>
+      <cd:Description>Instrument range correction (Rx only antenna)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="instr_sig_0_txrx_corr">
+    <cd:Integer>
+      <cd:Description>Instrument sigma 0 correction (Tx-Rx antenna)</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="instr_sig_0_rx_corr">
+    <cd:Integer>
+      <cd:Description>Instrument sigma 0 correction (Rx only antenna)</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="int_phase_corr">
+    <cd:Integer>
+      <cd:Description>Internal phase correction</cd:Description>
+      <cd:Unit>1e-6 rad</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>rad</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangePhaseCorrection"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ext_phase_corr">
+    <cd:Integer>
+      <cd:Description>External phase correction</cd:Description>
+      <cd:Unit>1e-6 rad</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>rad</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangePhaseCorrection"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="noise_pow_meas">
+    <cd:Integer>
+      <cd:Description>Noise power measurement</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="phase_slope_corr">
+    <cd:Integer>
+      <cd:Description>Phase slope correction</cd:Description>
+      <cd:Unit>1e-6 rad</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>rad</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

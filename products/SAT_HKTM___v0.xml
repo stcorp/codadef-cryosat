@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="SAT_HKTM___v0" format="binary" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Array format="binary">
+    <cd:Description>Recorded House-Keeping Telemetry root type</cd:Description>
+    <cd:Dimension><![CDATA[filesize() / 1131]]></cd:Dimension>
+    <cd:NamedType id="AFTF"/>
+  </cd:Array>
+</cd:ProductDefinition>

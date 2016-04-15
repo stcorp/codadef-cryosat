@@ -1,0 +1,412 @@
+<?xml version="1.0"?>
+<cd:Record name="SPH_Level2B" format="xml" namexml="SPH" last-modified="2015-03-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07"  xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Specific Product Header for ALD Level 2 products</cd:Description>
+  <cd:Field name="SPH_Descriptor">
+    <cd:Text namexml="SPH_Descriptor">
+      <cd:Description>Name describing the Specific Product Header</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Time_Information">
+    <cd:Record namexml="Time_Information">
+      <cd:Field name="Start_Record_Time">
+        <cd:Type namexml="Start_Record_Time">
+          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+            <cd:Description>TAI of the first record in the main MDS of this product</cd:Description>
+            <cd:Mapping string="TAI=0000-00-00T00:00:00.000000" value="-inf"/>
+            <cd:Mapping string="TAI=9999-99-99T99:99:99.999999" value="+inf"/>
+            <cd:Mapping string="" value="nan"/>
+          </cd:Time>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Stop_Record_Time">
+        <cd:Type namexml="Stop_Record_Time">
+          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+            <cd:Description>TAI of the last record in in the main MDS of this product</cd:Description>
+            <cd:Mapping string="TAI=0000-00-00T00:00:00.000000" value="-inf"/>
+            <cd:Mapping string="TAI=9999-99-99T99:99:99.999999" value="+inf"/>
+            <cd:Mapping string="" value="nan"/>
+          </cd:Time>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Orbit_Information">
+    <cd:Record namexml="Orbit_Information">
+      <cd:Field name="ABS_Orbit_Start">
+        <cd:Type namexml="ABS_Orbit_Start">
+          <cd:Integer format="ascii">
+            <cd:Description>Absolute Orbit Number at sensing start time</cd:Description>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Rel_Time_ASC_Node_Start">
+        <cd:Type namexml="Rel_Time_ASC_Node_Start">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>s</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Relative time since crossing ascending node time relative to start time of data sensing</cd:Description>
+            <cd:Unit>s</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="ABS_Orbit_Stop">
+        <cd:Type namexml="ABS_Orbit_Stop">
+          <cd:Integer format="ascii">
+            <cd:Description>Absolute Orbit Number at sensing stop time</cd:Description>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Rel_Time_ASC_Node_Stop">
+        <cd:Type namexml="Rel_Time_ASC_Node_Stop">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>s</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Time of the ascending node relative to stop time of data sensing. Relative time since crossing ascending node time relative to stop time of data sensing</cd:Description>
+            <cd:Unit>s</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Equator_Cross_Time">
+        <cd:Type namexml="Equator_Cross_Time">
+          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+            <cd:Description>Time of equator crossing at the ascending node relative to the sensing start time</cd:Description>
+            <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+            <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+            <cd:Mapping string="" value="nan"/>
+          </cd:Time>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Equator_Cross_Long">
+        <cd:Type namexml="Equator_Cross_Long">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-6 deg</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Longitude of equator crossing at the ascending node relative to the sensing start time (positive East, 0 = Greenwich) referred to WGS84</cd:Description>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_east</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Ascending_Flag">
+        <cd:Text namexml="Ascending_Flag">
+          <cd:Description>Orbit orientation at the sensing start time. -A = Ascending -D = Descending</cd:Description>
+        </cd:Text>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Product_Location">
+    <cd:Record namexml="Product_Location">
+      <cd:Field name="Start_Lat">
+        <cd:Type namexml="Start_Lat">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-6 deg</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Latitude of first satellite nadir point at the Sensing Start time (positive North)</cd:Description>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_north</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Start_Long">
+        <cd:Type namexml="Start_Long">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-6 deg</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Longitude of first satellite nadir point at the Sensing Start time (positive East, 0 = Greenwich)</cd:Description>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_east</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Stop_Lat">
+        <cd:Type namexml="Stop_Lat">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-6 deg</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Latitude of first satellite nadir point at the Sensing Stop time (positive North)</cd:Description>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_north</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Stop_Long">
+        <cd:Type namexml="Stop_Long">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-6 deg</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Longitude of first satellite nadir point at the Sensing Stop tim (positive East, 0 = Greenwich)</cd:Description>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_east</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Level_1_Confidence_Data">
+    <cd:Record namexml="Level_1_Confidence_Data">
+      <cd:Field name="L1_Proc_Flag">
+        <cd:Type namexml="L1_Proc_Flag">
+          <cd:Integer format="ascii">
+            <cd:Description>Processing errors significance flag. 1 errors (percentage of errors greater than threshold). 0 no erros</cd:Description>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="L1_Processing_Quality">
+        <cd:Type namexml="L1_Processing_Quality">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-2 %</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Percentage of quality checks successfully passed during the SP processing (max allowed +10000)</cd:Description>
+            <cd:Unit>1e-2 %</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="100.000000">
+              <cd:Unit>%</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="L1_Proc_Thresh">
+        <cd:Type namexml="L1_Proc_Thresh">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-2 %</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Minimum acceptable percentage of quality threshold that must be passed during SP processing (max allowed +10000)</cd:Description>
+            <cd:Unit>1e-2 %</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="100.000000">
+              <cd:Unit>%</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Num_L1_DSR_Processed">
+        <cd:Type namexml="Num_L1_DSR_Processed">
+          <cd:Integer format="ascii">
+            <cd:Description>Number of L1 Data Set Records analysed</cd:Description>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="SIR_Instrument_Configuration">
+    <cd:Record namexml="SIR_Instrument_Configuration">
+      <cd:Field name="Instrument_Identifier">
+        <cd:Text namexml="Instrument_Identifier">
+          <cd:Description>A (SIRAL Nominal), B (SIRAL Redundant)</cd:Description>
+          <ct:NamedTest id="RangeInstrumentIdentifier"/>
+        </cd:Text>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="SIR_Mode_Statistics">
+    <cd:Record namexml="SIR_Mode_Statistics">
+      <cd:Field name="LRM_Mode_Percent">
+        <cd:Type namexml="LRM_Mode_Percent">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-2 %</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Percentage of input Level 1B records detected in LRM mode</cd:Description>
+            <cd:Unit>1e-2 %</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="100.000000">
+              <cd:Unit>%</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="SAR_Mode_Percent">
+        <cd:Type namexml="SAR_Mode_Percent">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-2 %</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Percentage of input Level 1B records detected in SAR mode</cd:Description>
+            <cd:Unit>1e-2 %</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="100.000000">
+              <cd:Unit>%</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="SARIN_Mode_Percent">
+        <cd:Type namexml="SARIN_Mode_Percent">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-2 %</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Percentage of input Level 1B records detected in SARIN mode</cd:Description>
+            <cd:Unit>1e-2 %</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="100.000000">
+              <cd:Unit>%</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Other_Modes_Percent">
+        <cd:Type namexml="Other_Modes_Percent">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-2 %</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Percentage of input Level 1B records detected in other modes</cd:Description>
+            <cd:Unit>1e-2 %</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="100.000000">
+              <cd:Unit>%</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Surface_Statistics">
+    <cd:Record namexml="Surface_Statistics">
+      <cd:Field name="Open_Ocean_Percent">
+        <cd:Type namexml="Open_Ocean_Percent">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-2 %</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Percentage of input L1B records detected on open ocean or semienclosed seas</cd:Description>
+            <cd:Unit>1e-2 %</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="100.000000">
+              <cd:Unit>%</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Close_Sea_Percent">
+        <cd:Type namexml="Close_Sea_Percent">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-2 %</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Percentage of input L1B records detected on close seas or lakes</cd:Description>
+            <cd:Unit>1e-2 %</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="100.000000">
+              <cd:Unit>%</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Continent_Ice_Percent">
+        <cd:Type namexml="Continent_Ice_Percent">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-2 %</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Percentage of input L1B records detected on continental ice</cd:Description>
+            <cd:Unit>1e-2 %</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="100.000000">
+              <cd:Unit>%</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Land_Percent">
+        <cd:Type namexml="Land_Percent">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-2 %</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Percentage of input L1B records detected on land</cd:Description>
+            <cd:Unit>1e-2 %</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="100.000000">
+              <cd:Unit>%</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Level_2_Confidence_Data">
+    <cd:Record namexml="Level_2_Confidence_Data">
+      <cd:Field name="L2_Prod_Status">
+        <cd:Type namexml="L2_Prod_Status">
+          <cd:Integer format="ascii">
+            <cd:Description>Complete/Incomplete Product Completion Flag (0 or 1). 1 if the Product as a duration shorter than the input Level 0</cd:Description>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="L2_Proc_Flag">
+        <cd:Type namexml="L2_Proc_Flag">
+          <cd:Integer format="ascii">
+            <cd:Description>Processing errors significance flag. 1 errors (percentage of errors greater than threshold). 0 no erros</cd:Description>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="L2_Processing_Quality">
+        <cd:Type namexml="L2_Processing_Quality">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-2 %</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Percentage of quality checks successfully passed during Level-2 processing (max allowed +10000)</cd:Description>
+            <cd:Unit>1e-2 %</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="100.000000">
+              <cd:Unit>%</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="L2_Proc_Thresh">
+        <cd:Type namexml="L2_Proc_Thresh">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>10-2 %</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Integer format="ascii">
+            <cd:Description>Minimum acceptable percentage of quality threshold that must be passed during Level-2 processing (max allowed +10000)</cd:Description>
+            <cd:Unit>1e-2 %</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="100.000000">
+              <cd:Unit>%</cd:Unit>
+            </cd:Conversion>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="DSDs">
+    <cd:NamedType id="DSDs"/>
+  </cd:Field>
+</cd:Record>

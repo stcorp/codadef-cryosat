@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_FBR_TIME_ORBIT_DATA_v0" last-modified="2012-01-30" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>SIRAL FBR mode independent time and orbit data</cd:Description>
+  <cd:Field name="mdsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Data record time (MDSR time stamp)</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="uso_corr">
+    <cd:Integer>
+      <cd:Description>USO correction factor</cd:Description>
+      <cd:Conversion numerator="1" denominator="1e15"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mode_id">
+    <cd:NamedType id="SIR_FBR_L1B_MODE_ID"/>
+  </cd:Field>
+  <cd:Field name="src_seq_count">
+    <cd:Integer>
+      <cd:Description>Source sequence counter</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="instr_conf_flags">
+    <cd:NamedType id="SIR_FBR_L1B_INSTR_CONFIG_v0"/>
+  </cd:Field>
+  <cd:Field name="burst_count">
+    <cd:Integer>
+      <cd:Description>Burst counter (always starts from 1 and incremented at group rate)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lat">
+    <cd:Integer>
+      <cd:Description>Latitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lon">
+    <cd:Integer>
+      <cd:Description>Longitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="alt_cog_ref_ellip">
+    <cd:Integer>
+      <cd:Description>Altitude of CoG above reference ellipsoid (interpolated value)</cd:Description>
+      <cd:Unit>mm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="inst_alt_rate">
+    <cd:Integer>
+      <cd:Description>Instantaneous altitude rate derived from orbit</cd:Description>
+      <cd:Unit>mm/s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sat_vel_vec">
+    <cd:Array>
+      <cd:Description>Satellite velocity vector[3] described in the international terrestial reference frame in the international earth fixed system. Note that this is not a unit vector, because the velocity magnitude is needed as well.</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Velocity vector component</cd:Description>
+        <cd:Unit>mm/s</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="beam_dir_vec">
+    <cd:Array>
+      <cd:Description>Real beam direction vector[3] described in the CRYOSAT reference frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Beam direction vector component</cd:Description>
+        <cd:Unit>1e-6 m</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ifm_basel_vec">
+    <cd:Array>
+      <cd:Description>Interferometer baseline vector[3] described in the CRYOSAT reference frame</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Baseline vector component</cd:Description>
+        <cd:Unit>1e-6 m</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="meas_conf_flags">
+    <cd:NamedType id="SIR_FBR_MEAS_CONF_v0"/>
+  </cd:Field>
+</cd:Record>

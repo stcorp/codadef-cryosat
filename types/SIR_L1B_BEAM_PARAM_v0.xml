@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_L1B_BEAM_PARAM_v0" last-modified="2012-01-30" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Beam behaviour parameters</cd:Description>
+  <cd:Field name="standard_dev">
+    <cd:Integer>
+      <cd:Description>Standard Deviation (Stack beam/100)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="stack_centre">
+    <cd:Integer>
+      <cd:Description>Stack Centre (Beam in stack at maximum of the fitted gaussian) (Stack beam/100)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="stack_scaled_ampl">
+    <cd:Integer>
+      <cd:Description>Stack Scaled Amplitude (db/100)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="stack_skewness">
+    <cd:Integer>
+      <cd:Description>Stack Skewness (Value/100 or -99900 if cannot be computed)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="stack_kurtosis">
+    <cd:Integer>
+      <cd:Description>Stack Kurtosis (Value/100 or -99900 if cannot be computed)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="standard_dev_microrad">
+    <cd:Integer>
+      <cd:Description>Standard deviation (as a function of angle)</cd:Description>
+      <cd:Unit>1E-6 rad</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="stack_centre_microrad">
+    <cd:Integer>
+      <cd:Description>Stack Centre angle (as a function of angle)</cd:Description>
+      <cd:Unit>1E-6 rad</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare (reserved, set to 0)</cd:Description>
+      <cd:BitSize>688</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,409 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="SIR_COMPLEX_CAL1_SARIN_MDSR" last-modified="2012-01-30" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>SIRAL COMPLEX CAL1-SARin measurement data set record</cd:Description>
+  <cd:Field name="mdsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Data record time (MDSR time stamp)</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicrosecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="uso_corr">
+    <cd:Integer>
+      <cd:Description>USO correction factor</cd:Description>
+      <cd:Conversion numerator="1" denominator="1e15"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mode_id">
+    <cd:Integer>
+      <cd:Description>Mode ID</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="instr_conf_flags">
+    <cd:Integer>
+      <cd:Description>Instrument configuration flags</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rec_count">
+    <cd:Integer>
+      <cd:Description>Record counter</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RecordCountMDSR"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lat">
+    <cd:Integer>
+      <cd:Description>Latitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLatitude_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lon">
+    <cd:Integer>
+      <cd:Description>Longitude of measurement</cd:Description>
+      <cd:Unit>1e-7 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLongitude_7"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cal_agc1_ch1">
+    <cd:Array>
+      <cd:Description>Calibrated AGC1 chain 1 (32 combinations)</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 dB</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>dB</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cal_agc1_ch2">
+    <cd:Array>
+      <cd:Description>Calibrated AGC1 chain 2 (32 combinations)</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 dB</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>dB</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cal_agc2_ch1">
+    <cd:Array>
+      <cd:Description>Calibrated AGC2 chain 1 (32 combinations)</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 dB</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>dB</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cal_agc2_ch2">
+    <cd:Array>
+      <cd:Description>Calibrated AGC2 chain 2 (32 combinations)</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 dB</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>dB</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="avg_gain_cal_comp">
+    <cd:Integer>
+      <cd:Description>Average gain calibration component</cd:Description>
+      <cd:Unit>1e-2 dB</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>dB</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cal_agc_cmd_ch1">
+    <cd:Array>
+      <cd:Description>Calibrated AGC command table chain 1 (63 commands)</cd:Description>
+      <cd:Dimension>63</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 dB</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>dB</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cal_agc_meas_cmd_ch2">
+    <cd:Array>
+      <cd:Description>Calibrated AGC measurement command table chain 2 (63 commands)</cd:Description>
+      <cd:Dimension>63</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 dB</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>dB</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="inv_qual_ch1">
+    <cd:Integer>
+      <cd:Description>Inversion quality chain 1 (AGC cal)</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="100.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="inv_qual_ch2">
+    <cd:Integer>
+      <cd:Description>Inversion quality chain 2 (AGC cal)</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="100.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="phase_diff_curve_agc1">
+    <cd:Array>
+      <cd:Description>Phase difference curves AGC1 settings</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Dimension>11</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 rad</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>rad</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangePhaseDifference"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="phase_diff_curve_agc2">
+    <cd:Array>
+      <cd:Description>Phase difference curves AGC2 settings</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Dimension>11</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 rad</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>rad</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangePhaseDifference"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="freq_avg_agc_phase">
+    <cd:Array>
+      <cd:Description>11 Frequency averaged components used to reconstruct AGC phase tables</cd:Description>
+      <cd:Dimension>11</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 rad</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>rad</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="freq_interp_phase_diff_curve">
+    <cd:Array>
+      <cd:Description>Frequency interpolated (512 points) phase difference curves for all AGC measurement command table settings</cd:Description>
+      <cd:Dimension>63</cd:Dimension>
+      <cd:Dimension>512</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 rad</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>rad</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangePhaseDifference"/>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="phase_diff_curv_no_att">
+    <cd:Array>
+      <cd:Description>Phase difference curve at AGC setting CAL4_AGC1, CAL4_AGC2 with attenuator OFF</cd:Description>
+      <cd:Dimension>11</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="phase_diff_curv_att">
+    <cd:Array>
+      <cd:Description>Phase difference curve at AGC setting CAL4_AGC1, CAL4_AGC2 with attenuator ON</cd:Description>
+      <cd:Dimension>11</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="att_cal_curv">
+    <cd:Array>
+      <cd:Description>Attenuator calibration curve (11 frequencies)</cd:Description>
+      <cd:Dimension>11</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 rad</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>rad</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="att_cal_curv_intp">
+    <cd:Array>
+      <cd:Description>Attenuator calibration curve interpolated over 512 range samples</cd:Description>
+      <cd:Dimension>512</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 rad</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>rad</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="adc_pow_lvl_cal_curv">
+    <cd:Array>
+      <cd:Description>8 ADC power level (-30dBm to -16dBm) calibration curves in steps of 2dB at 11 frequencies</cd:Description>
+      <cd:Dimension>8</cd:Dimension>
+      <cd:Dimension>11</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 rad</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>rad</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="adc_pow_lvl_cal_curv_intp">
+    <cd:Array>
+      <cd:Description>8 ADC power level (-30dBm to -16dBm) calibration curves in steps of 2dB interpolated over 512 range bins</cd:Description>
+      <cd:Dimension>8</cd:Dimension>
+      <cd:Dimension>512</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 rad</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>rad</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="inv_qual">
+    <cd:Array>
+      <cd:Description>Inversion quality at 11 frequencies (phase difference cal)</cd:Description>
+      <cd:Dimension>11</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="100.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="meas_conf_flags">
+    <cd:Record>
+      <cd:Description>Measurement confidence flags</cd:Description>
+      <cd:Field name="cal_err">
+        <cd:Integer>
+          <cd:Description>CAL error: 0 = valid record, 1 = invalid record</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>spare (reserved, set to 0)</cd:Description>
+          <cd:BitSize>18</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="agc_res">
+        <cd:Integer>
+          <cd:Description>AGC results from SICCFR or SICC1B or IPFDB: 0 = SICCFR, 1 = SICC1B, 2 = IPFDB</cd:Description>
+          <cd:BitSize>2</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="adc_res">
+        <cd:Integer>
+          <cd:Description>ADC results from SICCFR or SICC1B or IPFDB: 0 = SICCFR, 1 = SICC1B, 2 = IPFDB</cd:Description>
+          <cd:BitSize>2</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="agc_cal">
+        <cd:Integer>
+          <cd:Description>AGC calibration computed: 0 = calibrated, 1 = non calibrated</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="adc_cal">
+        <cd:Integer>
+          <cd:Description>ADC calibration computed: 0 = calibrated, 1 = non calibrated</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="auto_cal1_att_cal">
+        <cd:Integer>
+          <cd:Description>Auto CAL1 attenuator calibrated: 0 = calibrated, 1 = not calibrated</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="gain_inv_mat_cond">
+        <cd:Integer>
+          <cd:Description>Gain inversion matrix condition greater than threshold: 0 = OK, 1 = threshold exceeded</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="phase_diff_mat_cond">
+        <cd:Integer>
+          <cd:Description>Phase difference matrix condition greater than threshold: 0 = OK, 1 = threshold exceeded</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_2">
+        <cd:Raw>
+          <cd:Description>spare (reserved, set to 0)</cd:Description>
+          <cd:BitSize>4</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>
