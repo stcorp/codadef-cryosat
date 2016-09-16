@@ -42,7 +42,7 @@
       <cd:Description>Record counter</cd:Description>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
-      <ct:NamedTest id="RecordCountMDSR"/>
+      <ct:NamedTest id="RecordCountMDSR1"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="lat">

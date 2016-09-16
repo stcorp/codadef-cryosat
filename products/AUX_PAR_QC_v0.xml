@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AUX_PAR_QC_v0" format="xml" last-modified="2008-10-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="AUX_PAR_QC_v0" format="xml" last-modified="2016-06-27" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -25,6 +25,24 @@
                   <cd:Type namexml="Max_Warning">
                     <cd:Integer format="ascii">
                       <cd:Description>Limit to the number of Warning messages that will be shown in the output</cd:Description>
+                      <cd:NativeType>int32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Max_Error_Per_Test">
+                  <cd:Optional/>
+                  <cd:Type namexml="Max_Error_Per_Test">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Limit to the number of test error messages for each combination of test name and product parameter</cd:Description>
+                      <cd:NativeType>int32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Max_Warning_Per_Test">
+                  <cd:Optional/>
+                  <cd:Type namexml="Max_Warning_Per_Test">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Limit to the number of test warning messages for each combination of test name and product parameter</cd:Description>
                       <cd:NativeType>int32</cd:NativeType>
                     </cd:Integer>
                   </cd:Type>

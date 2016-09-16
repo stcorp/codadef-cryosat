@@ -13,7 +13,7 @@
       <cd:Description>Record counter (always starts from 1)</cd:Description>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>uint32</cd:NativeType>
-      <ct:NamedTest id="RecordCountMDSR"/>
+      <ct:NamedTest id="RecordCountMDSR1"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="lat">

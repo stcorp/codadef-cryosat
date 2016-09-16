@@ -31,7 +31,7 @@
     <ct:NamedTest id="RangeFreeboardOceanFD3SF20Hz" path="siral_l2_mds[]/meas_data[]/freeb"/>
     <ct:NamedTest id="RangeDynamicAtmosphericCorrectionOceanSF20Hz" path="siral_l2_mds[]/dyn_atm_corr"/>
     <ct:NamedTest id="RangeInverseBarometricCorrectionOceanSF20Hz" path="siral_l2_mds[]/inv_barom_corr"/>
-    <ct:NamedTest id="RangeSeaSurfaceHeightAnomaly" path="siral_l2_mds[]/meas_data[]/surf_ht_anom"/>
+    <ct:NamedTest id="RangeSeaSurfaceHeightAnomalyOceanFD3" path="siral_l2_mds[]/meas_data[]/surf_ht_anom"/>
   </cd:Record>
 
   <!-- MPH Cross File Tests -->

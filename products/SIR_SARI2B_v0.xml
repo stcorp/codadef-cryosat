@@ -27,8 +27,8 @@
     <ct:NamedTest id="RangeInverseBarometricCorrectionOcean" path="siral_l2_interm_mds[]/inv_barom_corr"/>
     <ct:NamedTest id="RangeIonosphericCorrection" path="siral_l2_interm_mds[]/ion_corr_gim"/>
     <ct:NamedTest id="RangeIonosphericCorrection" path="siral_l2_interm_mds[]/ion_corr_mdl"/>
-    <ct:NamedTest id="RangeSeaSurfaceHeightAnomaly" path="siral_l2_interm_mds[]/surf_ht_anom"/>
-    <ct:NamedTest id="RangeSeaSurfaceHeightAnomaly" path="siral_l2_interm_mds[]/interp_sea_surf_anom"/>
+    <ct:NamedTest id="RangeSeaSurfaceHeightAnomalyOcean" path="siral_l2_interm_mds[]/surf_ht_anom"/>
+    <ct:NamedTest id="RangeSeaSurfaceHeightAnomalyOcean" path="siral_l2_interm_mds[]/interp_sea_surf_anom"/>
     <ct:NamedTest id="RangeSnowDepth" path="siral_l2_interm_mds[]/snow_depth"/>
   </cd:Record>
 
