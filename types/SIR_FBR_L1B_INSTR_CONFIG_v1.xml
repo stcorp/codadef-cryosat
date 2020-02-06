@@ -99,26 +99,26 @@
       <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="spare_4">
-    <cd:Raw>
-      <cd:Description>spare (reserved, set to 0)</cd:Description>
+  <cd:Field name="reserved_1">
+    <cd:Integer>
+      <cd:Description>Reserved (used to be Star tracker 1)</cd:Description>
       <cd:BitSize>1</cd:BitSize>
-    </cd:Raw>
-    <cd:Hidden/>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
   </cd:Field>
-  <cd:Field name="spare_5">
-    <cd:Raw>
-      <cd:Description>spare (reserved, set to 0)</cd:Description>
+  <cd:Field name="reserved_2">
+    <cd:Integer>
+      <cd:Description>Reserved (used to be Star tracker 2)</cd:Description>
       <cd:BitSize>1</cd:BitSize>
-    </cd:Raw>
-    <cd:Hidden/>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
   </cd:Field>
-  <cd:Field name="spare_6">
-    <cd:Raw>
-      <cd:Description>spare (reserved, set to 0)</cd:Description>
+  <cd:Field name="reserved_3">
+    <cd:Integer>
+      <cd:Description>Reserved (used to be Star tracker 3)</cd:Description>
       <cd:BitSize>1</cd:BitSize>
-    </cd:Raw>
-    <cd:Hidden/>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
   </cd:Field>
   <cd:Field name="str_attref">
     <cd:Integer>
@@ -127,7 +127,7 @@
       <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="spare_7">
+  <cd:Field name="reserved_4">
     <cd:Raw>
       <cd:Description>spare (reserved, set to 0)</cd:Description>
       <cd:BitSize>10</cd:BitSize>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="ascii" name="MPH" last-modified="2013-10-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record format="ascii" name="MPH" last-modified="2018-11-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>CRYOSAT main product header</cd:Description>
   <cd:Field name="product_name_title">
     <cd:Text>
@@ -25,6 +25,7 @@
       <cd:ByteSize>62</cd:ByteSize>
       <cd:NativeType>string</cd:NativeType>
       <ct:NamedTest id="FileNameCheckDBL"/>
+      <!-- QC id="FileNameCheckDBL" -->
     </cd:Text>
   </cd:Field>
   <cd:Field name="quote_2">
@@ -823,6 +824,7 @@
       <cd:ByteSize>2</cd:ByteSize>
       <cd:NativeType>string</cd:NativeType>
       <ct:NamedTest id="EnumOrbitVectorSource"/>
+      <!-- QC id="EnumOrbitVectorSource" -->
     </cd:Text>
   </cd:Field>
   <cd:Field name="quote_20">
@@ -882,6 +884,7 @@
     <cd:Time timeformat="ascii_envisat_datetime">
       <cd:Description>Not used for CRYOSAT, set to all-blanks</cd:Description>
       <cd:Mapping string="                           " value="nan"/>
+      <!-- QC id="UtcSbtTimeValid" -->
     </cd:Time>
   </cd:Field>
   <cd:Field name="quote_22">
@@ -916,6 +919,7 @@
       <cd:Description>Not used for CRYOSAT, set to all-zeros.</cd:Description>
       <cd:ByteSize>11</cd:ByteSize>
       <cd:NativeType>uint32</cd:NativeType>
+      <!-- QC id="SbtValid" -->
     </cd:Integer>
   </cd:Field>
   <cd:Field name="newline_char_28">
@@ -942,6 +946,7 @@
       <cd:Unit>ps</cd:Unit>
       <cd:ByteSize>11</cd:ByteSize>
       <cd:NativeType>uint32</cd:NativeType>
+      <!-- QC id="ClockStepValid" -->
     </cd:Integer>
   </cd:Field>
   <cd:Field name="clock_step_units">
@@ -1000,6 +1005,7 @@
     <cd:Time timeformat="ascii_envisat_datetime">
       <cd:Description>UTC time of the occurrence of the leap second. If a leap second occurred in the product window, this field is set to the time after the leap second occurrence (i.e. midnight of the day after the leap second), otherwise it is set to all-blanks</cd:Description>
       <cd:Mapping string="                           " value="nan"/>
+      <!-- QC id="LeapUtcValid" -->
     </cd:Time>
   </cd:Field>
   <cd:Field name="quote_24">
@@ -1060,6 +1066,7 @@
       <cd:Description>Leap second error. This field is always set to 0, considering that CRYOSAT products have true UTC times.</cd:Description>
       <cd:ByteSize>1</cd:ByteSize>
       <cd:NativeType>int32</cd:NativeType>
+      <!-- QC id="LeapErrValid" -->
     </cd:Integer>
   </cd:Field>
   <cd:Field name="newline_char_33">
@@ -1103,6 +1110,7 @@
       <cd:ByteSize>1</cd:ByteSize>
       <cd:NativeType>int32</cd:NativeType>
       <ct:NamedTest id="QualityFlag"/>
+      <!-- QC id="ProductErrFlag" -->
     </cd:Integer>
   </cd:Field>
   <cd:Field name="newline_char_35">
@@ -1130,6 +1138,7 @@
       <cd:ByteSize>21</cd:ByteSize>
       <cd:NativeType>int64</cd:NativeType>
       <ct:NamedTest id="MPHProductSize"/>
+      <!-- QC id="MPHProductSize" -->
     </cd:Integer>
   </cd:Field>
   <cd:Field name="total_size_units">

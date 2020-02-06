@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="SIR1SIC10__v0" format="binary" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="SIR1SIC10__v0" format="binary" last-modified="2019-05-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="binary">
     <cd:Description>Level-0 CAL1 SARin Mode Rx1 root type</cd:Description>
     <cd:Field name="mph">
@@ -25,7 +25,12 @@
     <ct:NamedTest id="DSDTypeMDSR" path="dsd[0]/ds_type"/>
     <ct:NamedTest id="MPHStartTimeAISP" path="mph/sensing_start"/>
     <ct:NamedTest id="MPHStopTimeAISP" path="mph/sensing_stop"/>
+    <!-- QC id="ProcessingStageValidL0" path="mph/proc_stage" -->
     <ct:NamedTest id="MPHRefDocL0" path="mph/ref_doc"/>
+    <!-- QC id="MPHRefDocL0" path="mph/ref_doc" -->
+    <!-- QC id="AcquisitionStationValid" path="mph/acquisition_station" -->
+    <!-- QC id="ProcessingCenterValidL0" path="mph/proc_center" -->
+    <!-- QC id="MphTotSizeMatchesComputedSize" -->
   </cd:Record>
 
   <!-- MPH Cross File Tests -->

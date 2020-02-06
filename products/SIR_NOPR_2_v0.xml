@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="SIR_NOPR_2_v0" format="hdf5" last-modified="2019-02-08">
+  <cd:NamedType id="SIR_NEW_OP_2_netcdf_v0"/>
+  <ct:NamedTest id="AttributeXrefCal1HrMustExist"/>
+  <ct:NamedTest id="AttributeXrefCal1SarinMustExist"/>
+  <ct:NamedTest id="AttributeXrefCal2HrMustExist"/>
+  <ct:NamedTest id="AttributeXrefOrbitHrMustExist"/>
+  <ct:NamedTest id="AttributeXrefSiralCharacterisationHrMustExist"/>
+  <ct:NamedTest id="AttributeXrefSiralL0HrMustExist"/>
+  <ct:NamedTest id="AttributeXrefUsoHrMustExist"/>
+  <ct:NamedTest id="AttributeXrefGpdWtcMustNotExist"/>
+  <ct:NamedTest id="AttributeXrefSiralL2MustNotExist"/>
+  <ct:NamedTest id="AttributeXrefStarTrackerAttcopMustNotExist"/>
+  <ct:NamedTest id="RangeAltitudeCOGOceanFD2PLRMNetCDF" path="alt_20_plrm_ku[]"/>
+  <ct:NamedTest id="RangeAltimeterWindSpeedOCeanNetCDF" path="wind_speed_alt_01_plrm_ku[]"/>
+  <ct:NamedTest id="RangeBackscatterSigmaZeroOPOceanExcludingPolarNetCDF" path="sig0_ocean_01_plrm_ku[]"/>
+  <ct:NamedTest id="RangeBackscatterSigmaZeroOPOceanExcludingPolarNetCDF" path="sig0_ocog_01_plrm_ku[]"/>
+  <ct:NamedTest id="RangeBackscatterSigmaZeroOPOceanExcludingPolarFD2PLRMNetCDF" path="sig0_ocean_20_plrm_ku[]"/>
+  <ct:NamedTest id="RangeBackscatterSigmaZeroOPOceanExcludingPolarFD2PLRMNetCDF" path="sig0_ocog_20_plrm_ku[]"/>
+  <ct:NamedTest id="RangeIceRangeToOceanSurfaceOceanNetCDF" path="range_ocog_01_plrm_ku[]"/>
+  <ct:NamedTest id="RangeIceRangeToOceanSurfaceOceanFD2PLRMNetCDF" path="range_ocog_20_plrm_ku[]"/>
+  <ct:NamedTest id="RangeLatitude_7" path="lat_20_plrm_ku[]"/>
+  <ct:NamedTest id="RangeLongitude_7" path="lon_20_plrm_ku[]"/>
+  <ct:NamedTest id="RangeOceanRangeToOceanSurfaceOceanNetCDF" path="range_ocean_01_plrm_ku[]"/>
+  <ct:NamedTest id="RangeOceanRangeToOceanSurfaceOceanFD2PLRMNetCDF" path="range_ocean_20_plrm_ku[]"/>
+  <ct:NamedTest id="RangePeakinessExcludingPolarOPSARNetCDF" path="peakiness_01_ku[]"/>
+  <ct:NamedTest id="RangePeakinessExcludingPolarOPFD2SARNetCDF" path="peakiness_20_ku[]"/>
+  <ct:NamedTest id="RangePeakinessExcludingPolarOPSARNetCDF" path="peakiness_01_plrm_ku[]"/>
+  <ct:NamedTest id="RangePeakinessExcludingPolarOPFD2PLRMSARNetCDF" path="peakiness_20_plrm_ku[]"/>
+  <ct:NamedTest id="RangeSeaStateBiasCorrectionOceanNetCDF" path="sea_state_bias_01_plrm_ku[]"/>
+  <ct:NamedTest id="RangeSeaSurfaceHeightAnomalyOceanNetCDF" path="ssha_01_plrm_ku[]"/>
+  <ct:NamedTest id="RangeSeaSurfaceHeightAnomalyOceanFD3PLRMNetCDF" path="ssha_20_plrm_ku[]"/>
+  <ct:NamedTest id="RangeSignificantWaveHeightOceanExcludingPolarNetCDF" path="swh_ocean_01_plrm_ku[]"/>
+  <ct:NamedTest id="RangeSignificantWaveHeightOceanExcludingPolarFD2PLRMNetCDF" path="swh_ocean_20_plrm_ku[]"/>
+  <ct:NamedTest id="SameOrOneHigher1HzIndexFor20HzData" path="ind_meas_1hz_20_ku[]"/>
+  <ct:NamedTest id="SameOrOneHigher1HzIndexFor20HzData" path="ind_meas_1hz_20_plrm_ku[]"/>
+  <!-- QC id="FixedValueDorisNavigator" path="@vector_source" -->
+  <!-- MPH Cross File Tests -->
+  <ct:NamedCrossFileTest id="MPH_Product_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Proc_Stage_Code_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Ref_Doc_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Software_Version_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Phase_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Cycle_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Rel_Orbit_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Abs_Orbit_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Delta_UT1_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_X_Position_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Y_Position_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Z_Position_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_X_Velocity_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Y_Velocity_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Z_Velocity_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_State_Vector_Source_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Product_Err_NetCDF"/>
+  <!-- SPH Cross File Tests -->
+  <ct:NamedCrossFileTest id="SPH_Start_Record_Time_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Stop_Record_Time_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_ABS_Orbit_Start_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Rel_Time_ASC_Node_Start_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_ABS_Orbit_Stop_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Rel_Time_ASC_Node_Stop_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Equator_Cross_Time_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Equator_Cross_Long_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Ascending_Flag_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Start_Lat_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Start_Long_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Stop_Lat_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Stop_Long_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_L1_Proc_Flag_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_L1_Processing_Quality_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_L1_Proc_Thresh_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Instrument_Identifier_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_LRM_Mode_Percent_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_SAR_Mode_Percent_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_SARIN_Mode_Percent_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Open_Ocean_Percent_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Close_Sea_Percent_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Continent_Ice_Percent_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Land_Percent_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_L2_Prod_Status_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_L2_Proc_Flag_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_L2_Processing_Quality_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_L2_Proc_Thresh_NetCDF"/>
+</cd:ProductDefinition>

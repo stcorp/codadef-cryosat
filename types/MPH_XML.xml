@@ -1,14 +1,16 @@
 <?xml version="1.0"?>
-<cd:Record name="MPH_XML" format="xml" namexml="MPH" last-modified="2013-10-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="MPH_XML" format="xml" namexml="MPH" last-modified="2018-11-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>Main Product Header</cd:Description>
   <cd:Field name="Product">
     <cd:Text namexml="Product">
       <cd:Description>Product File Name</cd:Description>
+      <!-- QC id="MPHProductMatchesFixedHeader" -->
     </cd:Text>
   </cd:Field>
   <cd:Field name="Proc_Stage_Code">
     <cd:Text namexml="Proc_Stage_Code">
       <cd:Description>Processing stage code. For level 0: OPER = Routine Operations, TEST = Test. For level 1 and 2: RPR0 = Reprocessing, OFFL = Routine Operations, NRT_ = Near Real Time, TEST = Test, LTA_ = Long Term Archive</cd:Description>
+      <!-- QC id="MPHProcStageCodeMatchesFilename" -->
     </cd:Text>
   </cd:Field>
   <cd:Field name="Ref_Doc">
@@ -18,11 +20,9 @@
   </cd:Field>
   <cd:Field name="Proc_Time">
     <cd:Type namexml="Proc_Time">
-      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+      <cd:Time timeformat="if(length(.) == 0, nan, if(str(., 30) == &quot;UTC=9999-99-99T99:99:99.999999&quot;, +inf, if(str(., 30) == &quot;UTC=0000-00-00T00:00:00.000000&quot;, -inf, time(str(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))">
         <cd:Description>Processing Time (Product Generation Time)</cd:Description>
-        <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
-        <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
-        <cd:Mapping string="" value="nan"/>
+        <cd:Text/>
       </cd:Time>
     </cd:Type>
   </cd:Field>
@@ -62,11 +62,9 @@
   </cd:Field>
   <cd:Field name="State_Vector_Time">
     <cd:Type namexml="State_Vector_Time">
-      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+      <cd:Time timeformat="if(length(.) == 0, nan, if(str(., 30) == &quot;UTC=9999-99-99T99:99:99.999999&quot;, +inf, if(str(., 30) == &quot;UTC=0000-00-00T00:00:00.000000&quot;, -inf, time(str(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))">
         <cd:Description>UTC state vector time</cd:Description>
-        <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
-        <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
-        <cd:Mapping string="" value="nan"/>
+        <cd:Text/>
       </cd:Time>
     </cd:Type>
   </cd:Field>
@@ -157,6 +155,7 @@
   <cd:Field name="State_Vector_Source">
     <cd:Text namexml="State_Vector_Source">
       <cd:Description>Source of Orbit State Vector. Record: FP = FOS predicted; DN = DORIS Level 0 navigator; DP = DORIS precise orbit; FR = FOS restituted; DI = DORIS Preliminary</cd:Description>
+      <!-- QC id="EnumOrbitVectorSource" -->
     </cd:Text>
   </cd:Field>
   <cd:Field name="Product_Err">
@@ -168,6 +167,7 @@
         <cd:Mapping string="false" value="0"/>
         <cd:Mapping string="True" value="1"/>
         <cd:Mapping string="true" value="1"/>
+        <!-- QC id="ProductErrFlag" -->
       </cd:Integer>
     </cd:Type>
   </cd:Field>

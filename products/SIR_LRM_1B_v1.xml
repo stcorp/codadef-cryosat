@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="SIR_LRM_1B_v1" format="binary" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="SIR_LRM_1B_v1" format="binary" last-modified="2018-11-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record>
     <cd:Description>SIRAL L1B LRM root type</cd:Description>
     <cd:Field name="mph">
@@ -23,7 +23,10 @@
       <cd:BitOffset><![CDATA[8 * int(/dsd[0]/ds_offset)]]></cd:BitOffset>
     </cd:Field>
     <ct:NamedTest id="DSDTypeMDSR" path="dsd[0]/ds_type"/>
+    <!-- QC id="ProcessingStageValidL1" path="mph/proc_stage" -->
     <ct:NamedTest id="MPHRefDocL1" path="mph/ref_doc"/>
+    <!-- QC id="MPHRefDocL1" path="mph/ref_doc" -->
+    <!-- QC id="FixedValueDP" path="mph/vector_source" -->
     <ct:NamedTest id="SequenceCounterStepTOD" path="siral_l1b_mds[]/time_orb_data[]/src_seq_count"/>
     <ct:NamedTest id="RangeAltitudeCOGOrBlank" path="siral_l1b_mds[]/time_orb_data[]/alt_cog_ref_ellip"/>
     <ct:NamedTest id="RangeWindowDelay" path="siral_l1b_mds[]/meas_data[]/win_delay"/>
@@ -33,6 +36,7 @@
     <ct:NamedTest id="RangeTotalFixedGain" path="siral_l1b_mds[]/meas_data[]/tot_fix_gain_rx2"/>
     <ct:NamedTest id="RangeAltitudeCOG" path="siral_l1b_mds[]/alt_cog_ref_ellip"/>
     <ct:NamedTest id="RangeWindowDelay" path="siral_l1b_mds[]/win_delay"/>
+    <!-- QC id="MphTotSizeMatchesComputedSize" -->
   </cd:Record>
 
   <!-- MPH Cross File Tests -->

@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
-<cd:Record name="Fixed_Header" format="xml" namexml="Fixed_Header" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record name="Fixed_Header" format="xml" namexml="Fixed_Header" last-modified="2018-11-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>Earth Explorer Fixed Header</cd:Description>
   <cd:Field name="File_Name">
     <cd:Text namexml="File_Name">
       <cd:Description>The Logical File Name, i.e. the File Name excluding the extension</cd:Description>
       <ct:NamedTest id="FileNameMatchFileType"/>
       <ct:NamedTest id="FileNameMatchFileVersion"/>
+      <!-- QC id="FileNameMatchValidityStart" -->
+      <!-- QC id="FileNameMatchValidityStop" -->
     </cd:Text>
   </cd:Field>
   <cd:Field name="File_Description">
@@ -38,21 +40,17 @@
     <cd:Record namexml="Validity_Period">
       <cd:Field name="Validity_Start">
         <cd:Type namexml="Validity_Start">
-          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+          <cd:Time timeformat="if(length(.) == 0, nan, if(str(., 23) == &quot;UTC=9999-99-99T99:99:99&quot;, +inf, if(str(., 23) == &quot;UTC=0000-00-00T00:00:00&quot;, -inf, time(str(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss&quot;))))">
             <cd:Description>This is the UTC Validity Start Time, coherent with the Validity Start Time in the File Name, but in CCSDS ASCII format with time reference. Note that this can have the special value indicating "beginning of mission" (without an absolute time specified)</cd:Description>
-            <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
-            <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-            <cd:Mapping string="" value="nan"/>
+            <cd:Text/>
           </cd:Time>
         </cd:Type>
       </cd:Field>
       <cd:Field name="Validity_Stop">
         <cd:Type namexml="Validity_Stop">
-          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+          <cd:Time timeformat="if(length(.) == 0, nan, if(str(., 23) == &quot;UTC=9999-99-99T99:99:99&quot;, +inf, if(str(., 23) == &quot;UTC=0000-00-00T00:00:00&quot;, -inf, time(str(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss&quot;))))">
             <cd:Description>This is the UTC Validity Stop Time, coherent with the Validity Stop Time in the File Name, but in CCSDS ASCII format with time reference. Note that this can have the special value indicating "end of mission" (without an absolute time specified)</cd:Description>
-            <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
-            <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-            <cd:Mapping string="" value="nan"/>
+            <cd:Text/>
           </cd:Time>
         </cd:Type>
       </cd:Field>
@@ -73,6 +71,7 @@
       <cd:Field name="System">
         <cd:Text namexml="System">
           <cd:Description>Name of the Ground Segment element creating the file (e.g. FOS, PDS, SSALTO...)</cd:Description>
+          <!-- QC id="FixedValuePDS" -->
         </cd:Text>
       </cd:Field>
       <cd:Field name="Creator">
@@ -87,11 +86,9 @@
       </cd:Field>
       <cd:Field name="Creation_Date">
         <cd:Type namexml="Creation_Date">
-          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+          <cd:Time timeformat="if(length(.) == 0, nan, if(str(., 23) == &quot;UTC=9999-99-99T99:99:99&quot;, +inf, if(str(., 23) == &quot;UTC=0000-00-00T00:00:00&quot;, -inf, time(str(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss&quot;))))">
             <cd:Description>This is the UTC Creation Date, in CCSDS ASCII format with time reference</cd:Description>
-            <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
-            <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-            <cd:Mapping string="" value="nan"/>
+            <cd:Text/>
           </cd:Time>
         </cd:Type>
       </cd:Field>

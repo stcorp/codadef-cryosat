@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="SIR2SAR_0__HDR_v0" format="xml" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="SIR2SAR_0__HDR_v0" format="xml" last-modified="2018-11-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_Header">
       <cd:Record namexml="Earth_Explorer_Header">
@@ -23,6 +23,10 @@
         </cd:Field>
         <ct:NamedTest id="FixedValueSIR2SAR_0_" path="Fixed_Header/File_Type"/>
         <ct:NamedTest id="FileNameCheckHDR" path="Fixed_Header/File_Name"/>
+        <!-- QC id="FileClassCheckL0" path="Fixed_Header/File_Class" -->
+        <!-- QC id="FixedValueL0_Processor" path="Fixed_Header/Source/Creator" -->
+        <!-- QC id="ProcessingStageValidL0HDR" path="Variable_Header/MPH/Proc_Stage_Code" -->
+        <!-- QC id="MPHRefDocL0" path="Variable_Header/MPH/Ref_Doc" -->
       </cd:Record>
     </cd:Field>
   </cd:Record>

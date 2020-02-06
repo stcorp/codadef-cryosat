@@ -1,0 +1,702 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="STR_ATTREF_v1" format="xml" last-modified="2019-06-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_File">
+      <cd:Record namexml="Earth_Explorer_File">
+        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance schemaLocation">
+          <cd:Optional/>
+        </cd:Attribute>      
+        <cd:Attribute name="schemaVersion">
+          <cd:Optional/>
+        </cd:Attribute>      
+        <cd:Description>Earth Explorer File</cd:Description>
+        <cd:Field name="Earth_Explorer_Header">
+          <cd:Record namexml="Earth_Explorer_Header">
+            <cd:Description>Earth Explorer Header File</cd:Description>
+            <cd:Field name="Fixed_Header">
+              <cd:NamedType id="Fixed_Header"/>
+            </cd:Field>
+            <cd:Field name="Variable_Header">
+              <cd:Record namexml="Variable_Header">
+                <cd:Description>Variable Header Section</cd:Description>
+                <cd:Field name="List_of_Star_Trackers_Misalignment_Angles">
+                  <cd:Record namexml="List_of_Star_Trackers_Misalignment_Angles">
+                    <cd:Description>List of Star Trackers Misalignment Angles</cd:Description>
+                    <cd:Attribute name="count">
+                      <cd:FixedValue>3</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Field name="Star_Tracker_1">
+                      <cd:Record namexml="Star_Tracker_1">                        
+                        <cd:Description>Star Tracker 1</cd:Description>
+                        <cd:Field name="Pre_Launch_Angles">
+                          <cd:Record namexml="Pre_Launch_Angles">                          
+                            <cd:Description>The pre-launch angles for a given star tracker</cd:Description>
+                            <cd:Field name="X_Rotation">
+                              <cd:Type namexml="X_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The x component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Y_Rotation">
+                              <cd:Type namexml="Y_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The y component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Z_Rotation">
+                              <cd:Type namexml="Z_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The x component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Field>                                                                        
+                        <cd:Field name="Post_Launch_Misalignment">
+                          <cd:Record namexml="Post_Launch_Misalignment">
+                            <cd:Description>The post launch misalignment angles for a given star tracker</cd:Description>
+                            <cd:Field name="X_Rotation">
+                              <cd:Type namexml="X_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The x component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Y_Rotation">
+                              <cd:Type namexml="Y_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The y component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Z_Rotation">
+                              <cd:Type namexml="Z_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The x component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Field>
+                        <cd:Field name="Note">
+                          <cd:Text namexml="Note">
+                            <cd:Description>Not used (and undocumented in product spec).</cd:Description>
+                          </cd:Text>
+                        </cd:Field>                                                
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="Star_Tracker_2">
+                      <cd:Record namexml="Star_Tracker_2"> 
+                        <cd:Description>Star Tracker 1</cd:Description>
+                        <cd:Field name="Pre_Launch_Angles">
+                          <cd:Record namexml="Pre_Launch_Angles">                          
+                            <cd:Description>The pre-launch angles for a given star tracker</cd:Description>
+                            <cd:Field name="X_Rotation">
+                              <cd:Type namexml="X_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The x component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Y_Rotation">
+                              <cd:Type namexml="Y_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The y component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Z_Rotation">
+                              <cd:Type namexml="Z_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The x component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Field>                                                                        
+                        <cd:Field name="Post_Launch_Misalignment">
+                          <cd:Record namexml="Post_Launch_Misalignment">
+                            <cd:Description>The post launch misalignment angles for a given star tracker</cd:Description>
+                            <cd:Field name="X_Rotation">
+                              <cd:Type namexml="X_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The x component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Y_Rotation">
+                              <cd:Type namexml="Y_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The y component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Z_Rotation">
+                              <cd:Type namexml="Z_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The x component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Field>
+                        <cd:Field name="Note">
+                          <cd:Text namexml="Note">
+                            <cd:Description>Not used (and undocumented in product spec).</cd:Description>
+                          </cd:Text>
+                        </cd:Field>                                                
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="Star_Tracker_3">
+                      <cd:Record namexml="Star_Tracker_3"> 
+                        <cd:Description>Star Tracker 1</cd:Description>
+                        <cd:Field name="Pre_Launch_Angles">
+                          <cd:Record namexml="Pre_Launch_Angles">                          
+                            <cd:Description>The pre-launch angles for a given star tracker</cd:Description>
+                            <cd:Field name="X_Rotation">
+                              <cd:Type namexml="X_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The x component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Y_Rotation">
+                              <cd:Type namexml="Y_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The y component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Z_Rotation">
+                              <cd:Type namexml="Z_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The x component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Field>                                                                        
+                        <cd:Field name="Post_Launch_Misalignment">
+                          <cd:Record namexml="Post_Launch_Misalignment">
+                            <cd:Description>The post launch misalignment angles for a given star tracker</cd:Description>
+                            <cd:Field name="X_Rotation">
+                              <cd:Type namexml="X_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The x component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Y_Rotation">
+                              <cd:Type namexml="Y_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The y component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Z_Rotation">
+                              <cd:Type namexml="Z_Rotation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>deg</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The x component of the rotation angle in degrees</cd:Description>
+                                  <cd:Unit>degrees</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Field>
+                        <cd:Field name="Note">
+                          <cd:Text namexml="Note">
+                            <cd:Description>Not used (and undocumented in product spec).</cd:Description>
+                          </cd:Text>
+                        </cd:Field>                        
+                      </cd:Record>
+                    </cd:Field>
+                  </cd:Record> 
+                </cd:Field>
+                <cd:Field name="STRK_1_Roll_Angle">
+                  <cd:Record namexml="STRK_1_Roll_Angle"> 
+                    <cd:Description>This is the roll component of the star tracker 1 bias angles</cd:Description>
+                    <cd:Field name="Description">
+                      <cd:Text namexml="Description">
+                        <cd:Description>A 1-line description of the mispointing angle value.</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                    <cd:Field name="Value">
+                      <cd:Type namexml="Value">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>deg</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>The value of the mispointing angle in the unit provided in the attribute field.</cd:Description>
+                          <cd:Unit>degrees</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Note">
+                      <cd:Text namexml="Note">
+                        <cd:Description>Not used (reported only to have exactly the same content of the IPFDB file).</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>                  
+                <cd:Field name="STRK_1_Pitch_Angle">
+                  <cd:Record namexml="STRK_1_Pitch_Angle"> 
+                    <cd:Description>This is the pitch component of the star tracker 1 bias angles</cd:Description>
+                    <cd:Field name="Description">
+                      <cd:Text namexml="Description">
+                        <cd:Description>A 1-line description of the mispointing angle value.</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                    <cd:Field name="Value">
+                      <cd:Type namexml="Value">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>deg</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>The value of the mispointing angle in the unit provided in the attribute field.</cd:Description>
+                          <cd:Unit>degrees</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Note">
+                      <cd:Text namexml="Note">
+                        <cd:Description>Not used (reported only to have exactly the same content of the IPFDB file).</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>                  
+                <cd:Field name="STRK_1_Yaw_Angle">
+                  <cd:Record namexml="STRK_1_Yaw_Angle"> 
+                    <cd:Description>This is the yaw component of the star tracker 1 bias angles</cd:Description>
+                    <cd:Field name="Description">
+                      <cd:Text namexml="Description">
+                        <cd:Description>A 1-line description of the mispointing angle value.</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                    <cd:Field name="Value">
+                      <cd:Type namexml="Value">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>deg</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>The value of the mispointing angle in the unit provided in the attribute field.</cd:Description>
+                          <cd:Unit>degrees</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Note">
+                      <cd:Text namexml="Note">
+                        <cd:Description>Not used (reported only to have exactly the same content of the IPFDB file).</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>                  
+                <cd:Field name="STRK_2_Roll_Angle">
+                  <cd:Record namexml="STRK_2_Roll_Angle"> 
+                    <cd:Description>This is the roll component of the star tracker 2 bias angles</cd:Description>
+                    <cd:Field name="Description">
+                      <cd:Text namexml="Description">
+                        <cd:Description>A 1-line description of the mispointing angle value.</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                    <cd:Field name="Value">
+                      <cd:Type namexml="Value">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>deg</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>The value of the mispointing angle in the unit provided in the attribute field.</cd:Description>
+                          <cd:Unit>degrees</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Note">
+                      <cd:Text namexml="Note">
+                        <cd:Description>Not used (reported only to have exactly the same content of the IPFDB file).</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>                  
+                <cd:Field name="STRK_2_Pitch_Angle">
+                  <cd:Record namexml="STRK_2_Pitch_Angle"> 
+                    <cd:Description>This is the pitch component of the star tracker 2 bias angles</cd:Description>
+                    <cd:Field name="Description">
+                      <cd:Text namexml="Description">
+                        <cd:Description>A 1-line description of the mispointing angle value.</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                    <cd:Field name="Value">
+                      <cd:Type namexml="Value">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>deg</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>The value of the mispointing angle in the unit provided in the attribute field.</cd:Description>
+                          <cd:Unit>degrees</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Note">
+                      <cd:Text namexml="Note">
+                        <cd:Description>Not used (reported only to have exactly the same content of the IPFDB file).</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>                  
+                <cd:Field name="STRK_2_Yaw_Angle">
+                  <cd:Record namexml="STRK_2_Yaw_Angle"> 
+                    <cd:Description>This is the yaw component of the star tracker 2 bias angles</cd:Description>
+                    <cd:Field name="Description">
+                      <cd:Text namexml="Description">
+                        <cd:Description>A 1-line description of the mispointing angle value.</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                    <cd:Field name="Value">
+                      <cd:Type namexml="Value">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>deg</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>The value of the mispointing angle in the unit provided in the attribute field.</cd:Description>
+                          <cd:Unit>degrees</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Note">
+                      <cd:Text namexml="Note">
+                        <cd:Description>Not used (reported only to have exactly the same content of the IPFDB file).</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>                  
+                <cd:Field name="STRK_3_Roll_Angle">
+                  <cd:Record namexml="STRK_3_Roll_Angle"> 
+                    <cd:Description>This is the roll component of the star tracker 3 bias angles</cd:Description>
+                    <cd:Field name="Description">
+                      <cd:Text namexml="Description">
+                        <cd:Description>A 1-line description of the mispointing angle value.</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                    <cd:Field name="Value">
+                      <cd:Type namexml="Value">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>deg</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>The value of the mispointing angle in the unit provided in the attribute field.</cd:Description>
+                          <cd:Unit>degrees</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Note">
+                      <cd:Text namexml="Note">
+                        <cd:Description>Not used (reported only to have exactly the same content of the IPFDB file).</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>                  
+                <cd:Field name="STRK_3_Pitch_Angle">
+                  <cd:Record namexml="STRK_3_Pitch_Angle"> 
+                    <cd:Description>This is the pitch component of the star tracker 3 bias angles</cd:Description>
+                    <cd:Field name="Description">
+                      <cd:Text namexml="Description">
+                        <cd:Description>A 1-line description of the mispointing angle value.</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                    <cd:Field name="Value">
+                      <cd:Type namexml="Value">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>deg</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>The value of the mispointing angle in the unit provided in the attribute field.</cd:Description>
+                          <cd:Unit>degrees</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Note">
+                      <cd:Text namexml="Note">
+                        <cd:Description>Not used (reported only to have exactly the same content of the IPFDB file).</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>                  
+                <cd:Field name="STRK_3_Yaw_Angle">
+                  <cd:Record namexml="STRK_3_Yaw_Angle"> 
+                    <cd:Description>This is the yaw component of the star tracker 3 bias angles</cd:Description>
+                    <cd:Field name="Description">
+                      <cd:Text namexml="Description">
+                        <cd:Description>A 1-line description of the mispointing angle value.</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                    <cd:Field name="Value">
+                      <cd:Type namexml="Value">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>deg</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>The value of the mispointing angle in the unit provided in the attribute field.</cd:Description>
+                          <cd:Unit>degrees</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Note">
+                      <cd:Text namexml="Note">
+                        <cd:Description>Not used (reported only to have exactly the same content of the IPFDB file).</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>  
+                <cd:Field name="Attitude_Sampling_Step">
+                  <cd:Record namexml="Attitude_Sampling_Step"> 
+                    <cd:Description>Attitude sampling step of output product</cd:Description>
+                    <cd:Field name="Description">
+                      <cd:Text namexml="Description">
+                        <cd:Description>A 1-line description of the attitude sampling step value</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                    <cd:Field name="Value">
+                      <cd:Type namexml="Value">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>milliseconds</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>The value of the attitude sampling step of output product in the unit provided in the attribute field.</cd:Description>
+                          <cd:Unit>ms</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>  
+                <cd:Field name="Moving_Average_Interval">
+                  <cd:Record namexml="Moving_Average_Interval"> 
+                    <cd:Description>Moving average length if applied during processing</cd:Description>
+                    <cd:Field name="Description">
+                      <cd:Text namexml="Description">
+                        <cd:Description>A 1-line description of the moving average interval</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                    <cd:Field name="Value">
+                      <cd:Type namexml="Value">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>milliseconds</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>The value of the moving average interval (if applied during processing) in the unit provided in the attribute field.</cd:Description>
+                          <cd:Unit>ms</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>            
+        <cd:Field name="Data_Block">
+          <cd:Record namexml="Data_Block">
+            <cd:Attribute name="type">
+              <cd:Optional/>
+              <cd:FixedValue>xml</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Field name="Attitude_File_Type">
+              <cd:Text namexml="Attitude_File_Type">
+                <cd:Description>The initial attitude frame: Sat_Attitude.</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="Attitude_Data_Type">
+              <cd:Text namexml="Attitude_Data_Type">
+                <cd:Description>The type of attitude for this product: Attitude_Angles.</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="Max_Gap">
+              <cd:Type namexml="Max_Gap">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>s</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Integer format="ascii">
+                  <cd:Description>Maximum time gap between two consecutive measurements of attitude angles.</cd:Description>
+                  <cd:Unit>s</cd:Unit>
+                  <cd:NativeType>int32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Attitude_Angles_Data">            
+              <cd:Record namexml="Attitude_Angles_Data">
+                <cd:Description>Structure for the list of attitude angles</cd:Description>
+                <cd:Field name="List_of_Attitude_Angles">
+                  <cd:Record namexml="List_of_Attitude_Angles">
+                    <cd:Description>List of Attitude_Angles</cd:Description>
+                    <cd:Attribute name="count"/>
+                    <cd:Field name="Attitude_Angles">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Record namexml="Attitude_Angles">
+                          <cd:Description>Pitch, roll and yaw angles for a given time and coming for a given star tracker.</cd:Description>
+                          <cd:Attribute name="source"/>
+                          <cd:Attribute name="Lat"/>
+                          <cd:Attribute name="Lon"/>
+                          <cd:Attribute name="Alt"/>
+                          <cd:Field name="Time">
+                            <cd:Type namexml="Time">
+                              <cd:Attribute name="ref">
+                                <cd:Optional/>
+                                <cd:FixedValue>TAI</cd:FixedValue>
+                              </cd:Attribute>                            
+                              <cd:Time timeformat="if(length(.) == 0, nan, if(str(., 30) == &quot;TAI=9999-99-99T99:99:99.999999&quot;, +inf, if(str(., 30) == &quot;TAI=0000-00-00T00:00:00.000000&quot;, -inf, time(str(.), &quot;'TAI='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))">
+                                <cd:Description>Date for the angles. The date format is CCSDS-A with reference and microseconds (RRR=yyyy-mm-ddThh:nn:uuuuuu)</cd:Description>
+                                <cd:Text/>
+                              </cd:Time>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Pitch">
+                            <cd:Type namexml="Pitch">
+                              <cd:Attribute name="unit">
+                                <cd:FixedValue>deg</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Pitch angle</cd:Description>
+                                <cd:Unit>degrees</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>            
+                          <cd:Field name="Roll">
+                            <cd:Type namexml="Roll">
+                              <cd:Attribute name="unit">
+                                <cd:FixedValue>deg</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Roll angle</cd:Description>
+                                <cd:Unit>degrees</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Yaw">
+                            <cd:Type namexml="Yaw">
+                              <cd:Attribute name="unit">
+                                <cd:FixedValue>deg</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Yaw angle</cd:Description>
+                                <cd:Unit>degrees</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>                          
+                      </cd:Array>
+                    </cd:Field>                      
+                  </cd:Record>
+                </cd:Field>                    
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>                  
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

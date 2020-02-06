@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="SPH_Level2B" format="xml" namexml="SPH" last-modified="2015-03-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07"  xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record name="SPH_Level2B" format="xml" namexml="SPH" last-modified="2018-11-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07"  xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>Specific Product Header for ALD Level 2 products</cd:Description>
   <cd:Field name="SPH_Descriptor">
     <cd:Text namexml="SPH_Descriptor">
@@ -10,21 +10,17 @@
     <cd:Record namexml="Time_Information">
       <cd:Field name="Start_Record_Time">
         <cd:Type namexml="Start_Record_Time">
-          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+          <cd:Time timeformat="if(length(.) == 0, nan, if(str(., 30) == &quot;TAI=9999-99-99T99:99:99.999999&quot;, +inf, if(str(., 30) == &quot;TAI=0000-00-00T00:00:00.000000&quot;, -inf, time(str(.), &quot;'TAI='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))">
             <cd:Description>TAI of the first record in the main MDS of this product</cd:Description>
-            <cd:Mapping string="TAI=0000-00-00T00:00:00.000000" value="-inf"/>
-            <cd:Mapping string="TAI=9999-99-99T99:99:99.999999" value="+inf"/>
-            <cd:Mapping string="" value="nan"/>
+            <cd:Text/>
           </cd:Time>
         </cd:Type>
       </cd:Field>
       <cd:Field name="Stop_Record_Time">
         <cd:Type namexml="Stop_Record_Time">
-          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+          <cd:Time timeformat="if(length(.) == 0, nan, if(str(., 30) == &quot;TAI=9999-99-99T99:99:99.999999&quot;, +inf, if(str(., 30) == &quot;TAI=0000-00-00T00:00:00.000000&quot;, -inf, time(str(.), &quot;'TAI='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))">
             <cd:Description>TAI of the last record in in the main MDS of this product</cd:Description>
-            <cd:Mapping string="TAI=0000-00-00T00:00:00.000000" value="-inf"/>
-            <cd:Mapping string="TAI=9999-99-99T99:99:99.999999" value="+inf"/>
-            <cd:Mapping string="" value="nan"/>
+            <cd:Text/>
           </cd:Time>
         </cd:Type>
       </cd:Field>
@@ -74,11 +70,9 @@
       </cd:Field>
       <cd:Field name="Equator_Cross_Time">
         <cd:Type namexml="Equator_Cross_Time">
-          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+          <cd:Time timeformat="if(length(.) == 0, nan, if(str(., 30) == &quot;UTC=9999-99-99T99:99:99.999999&quot;, +inf, if(str(., 30) == &quot;UTC=0000-00-00T00:00:00.000000&quot;, -inf, time(str(.), &quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSSSSS&quot;))))">
             <cd:Description>Time of equator crossing at the ascending node relative to the sensing start time</cd:Description>
-            <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
-            <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
-            <cd:Mapping string="" value="nan"/>
+            <cd:Text/>
           </cd:Time>
         </cd:Type>
       </cd:Field>
@@ -94,12 +88,14 @@
               <cd:Unit>degrees_east</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="RangeLongitude_6" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
       <cd:Field name="Ascending_Flag">
         <cd:Text namexml="Ascending_Flag">
           <cd:Description>Orbit orientation at the sensing start time. -A = Ascending -D = Descending</cd:Description>
+          <!-- QC id="EnumOrbitAscendingFlag" -->
         </cd:Text>
       </cd:Field>
     </cd:Record>
@@ -118,6 +114,7 @@
               <cd:Unit>degrees_north</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="RangeLatitude_6" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -133,6 +130,7 @@
               <cd:Unit>degrees_east</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="RangeLongitude_6" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -148,6 +146,7 @@
               <cd:Unit>degrees_north</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="RangeLatitude_6" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -163,6 +162,7 @@
               <cd:Unit>degrees_east</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="RangeLongitude_6" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -176,6 +176,7 @@
             <cd:Description>Processing errors significance flag. 1 errors (percentage of errors greater than threshold). 0 no erros</cd:Description>
             <cd:NativeType>uint8</cd:NativeType>
           </cd:Integer>
+          <!-- QC id="L1BProcFlag" -->
         </cd:Type>
       </cd:Field>
       <cd:Field name="L1_Processing_Quality">
@@ -190,6 +191,7 @@
               <cd:Unit>%</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="L1ProcQuality" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -205,6 +207,7 @@
               <cd:Unit>%</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="RangePercentage_2" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -224,6 +227,8 @@
         <cd:Text namexml="Instrument_Identifier">
           <cd:Description>A (SIRAL Nominal), B (SIRAL Redundant)</cd:Description>
           <ct:NamedTest id="RangeInstrumentIdentifier"/>
+          <!-- QC id="RangeInstrumentIdentifier" -->
+          <!-- QC id="FixedValueInstrumentIDA" -->
         </cd:Text>
       </cd:Field>
     </cd:Record>
@@ -242,6 +247,7 @@
               <cd:Unit>%</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="RangePercentage_2" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -257,6 +263,7 @@
               <cd:Unit>%</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="RangePercentage_2" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -272,6 +279,7 @@
               <cd:Unit>%</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="RangePercentage_2" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -287,6 +295,7 @@
               <cd:Unit>%</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="RangePercentage_2" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -306,6 +315,7 @@
               <cd:Unit>%</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="RangePercentage_2" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -321,6 +331,7 @@
               <cd:Unit>%</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="RangePercentage_2" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -336,6 +347,7 @@
               <cd:Unit>%</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="RangePercentage_2" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -351,6 +363,7 @@
               <cd:Unit>%</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="RangePercentage_2" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -363,6 +376,7 @@
           <cd:Integer format="ascii">
             <cd:Description>Complete/Incomplete Product Completion Flag (0 or 1). 1 if the Product as a duration shorter than the input Level 0</cd:Description>
             <cd:NativeType>uint8</cd:NativeType>
+            <!-- QC id="L2ProdStatus" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -371,6 +385,7 @@
           <cd:Integer format="ascii">
             <cd:Description>Processing errors significance flag. 1 errors (percentage of errors greater than threshold). 0 no erros</cd:Description>
             <cd:NativeType>uint8</cd:NativeType>
+            <!-- QC id="L2ProcFlag" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -386,6 +401,7 @@
               <cd:Unit>%</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="L2ProcQuality" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -401,6 +417,7 @@
               <cd:Unit>%</cd:Unit>
             </cd:Conversion>
             <cd:NativeType>int32</cd:NativeType>
+            <!-- QC id="RangePercentage_2" -->
           </cd:Integer>
         </cd:Type>
       </cd:Field>

@@ -822,6 +822,7 @@
     </cd:Text>
     <cd:Hidden/>
   </cd:Field>
+  <!-- QC id="SPHAbsoluteOrbitStartMatchesMPH" -->
   <ct:NamedTest id="SPHSensingTimeTAIOrder"/>
   <ct:NamedTest id="SPHDownlinkTimeOrder"/>
   <ct:NamedTest id="SPHAbsoluteOrbitOrder"/>

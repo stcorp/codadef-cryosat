@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="SIR_L2_INTERM_MDSR_v1" last-modified="2015-11-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record format="binary" name="SIR_L2_INTERM_MDSR_v1" last-modified="2016-07-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>SIRAL L2 intermediate measurement data set record</cd:Description>
   <cd:Field name="mdsr_time">
     <cd:Time timeformat="binary_envisat_datetime">
@@ -1383,7 +1383,7 @@
           <cd:NativeType>uint8</cd:NativeType>
         </cd:Integer>
       </cd:Field>
-      <cd:Field name="corr_lp_eq_ocean_tide">
+      <cd:Field name="corr_lp_ocean_tide">
         <cd:Integer>
           <cd:Description>Corrected for Long period equilibrium Ocean Tide: 0 = no, 1 = corrected</cd:Description>
           <cd:BitSize>1</cd:BitSize>
@@ -2143,7 +2143,7 @@
           <cd:NativeType>uint8</cd:NativeType>
         </cd:Integer>
       </cd:Field>
-      <cd:Field name="lp_eq_ocean_tide_call">
+      <cd:Field name="lp_ocean_tide_call">
         <cd:Integer>
           <cd:Description>Long period equilibrium ocean tide called: 0 = no, 1 = yes</cd:Description>
           <cd:BitSize>1</cd:BitSize>
@@ -2309,7 +2309,7 @@
           <cd:NativeType>uint8</cd:NativeType>
         </cd:Integer>
       </cd:Field>
-      <cd:Field name="lp_eq_ocean_tide_err">
+      <cd:Field name="lp_ocean_tide_err">
         <cd:Integer>
           <cd:Description>Long period equilibrium ocean tide error: 0 = OK, 1 = error</cd:Description>
           <cd:BitSize>1</cd:BitSize>
