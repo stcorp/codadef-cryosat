@@ -820,7 +820,7 @@
             </cd:Field>
             <cd:Field name="sarin_basel">
               <cd:Integer>
-                <cd:Description>SARin baseline bad: 0 = baseline OK, 1 = baseline error</cd:Description>
+                <cd:Description>SARin baseline state: 0 = baseline OK, 1 = baseline error</cd:Description>
                 <cd:BitSize>1</cd:BitSize>
                 <cd:NativeType>uint8</cd:NativeType>
               </cd:Integer>
@@ -1035,7 +1035,7 @@
             </cd:Field>
             <cd:Field name="sarin_basel">
             <cd:Integer>
-               <cd:Description>SARin baseline bag: 0 = no, 1 = yes</cd:Description>
+               <cd:Description>SARin bad baseline: 0 = no, 1 = yes</cd:Description>
                <cd:BitSize>1</cd:BitSize>
                <cd:NativeType>uint8</cd:NativeType>
             </cd:Integer>
