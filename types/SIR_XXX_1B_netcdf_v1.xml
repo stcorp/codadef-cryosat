@@ -716,12 +716,6 @@
           </cd:Float>
         </cd:Array>
       </cd:Attribute>
-      <cd:Attribute name="standard_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
       <cd:Attribute name="units">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -743,7 +737,7 @@
            <cd:Unit>m</cd:Unit>
         </cd:Conversion>
       </cd:Integer>
-      <cd:Description>altitude of CoM above reference ellipsoid</cd:Description>
+      <cd:Description>altitude of the satellite CoM above reference ellipsoid</cd:Description>
     </cd:Array>
   </cd:Field>
   <cd:Field name="alt_avg_01_ku">
@@ -2172,6 +2166,12 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
       <cd:Attribute name="flag_masks">
         <cd:Array>
           <cd:Dimension>12</cd:Dimension>
@@ -2221,7 +2221,16 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Text/>
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="flag_masks">
         <cd:Array>
@@ -2233,10 +2242,16 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="flag_meanings">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
+        </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="long_name">
-        <cd:Text/>
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
@@ -2251,7 +2266,7 @@
         <cd:NativeType>int32</cd:NativeType>
         <cd:Unit></cd:Unit>
       </cd:Integer>
-      <cd:Description>correction status flags</cd:Description>
+      <cd:Description>Correction status flags - showing which correction algorithms have been called</cd:Description>
     </cd:Array>
   </cd:Field>
   <cd:Field name="flag_echo_20_ku">
@@ -2339,7 +2354,7 @@
       </cd:Attribute>
       <cd:Attribute name="flag_masks">
         <cd:Array>
-          <cd:Dimension>8</cd:Dimension>
+          <cd:Dimension>2</cd:Dimension>
           <cd:Integer>
             <cd:NativeType>int16</cd:NativeType>
             <cd:LittleEndian/>
@@ -3325,6 +3340,12 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
       <cd:Attribute name="institution">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -4004,6 +4025,12 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
       <cd:Attribute name="institution">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -4087,6 +4114,12 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
       <cd:Attribute name="institution">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -4165,6 +4198,12 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -4371,7 +4410,7 @@
         <cd:Hidden/>
         <cd:Optional/>
       </cd:Attribute>
-      <cd:Dimension>1</cd:Dimension>
+      <cd:Dimension></cd:Dimension>
       <cd:Integer>
         <cd:NativeType>int32</cd:NativeType>
         <cd:Conversion numerator="1e-07" denominator="1" invalid="-2.14748e+09">
@@ -4534,7 +4573,7 @@
       <cd:Description>latitude of measurement</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="lat_cor_01_ku">
+  <cd:Field name="lat_cor_01">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
         <cd:Array>
@@ -4632,6 +4671,12 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -4996,7 +5041,7 @@
       <cd:Description>longitude of measurement</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="lon_cor_01_ku">
+  <cd:Field name="lon_cor_01">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
         <cd:Array>
@@ -5243,6 +5288,12 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
       <cd:Attribute name="institution">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -5321,6 +5372,12 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -5576,6 +5633,12 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
       <cd:Attribute name="institution">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -5654,6 +5717,12 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -6171,6 +6240,12 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
       <cd:Attribute name="institution">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -6661,6 +6736,12 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -7385,12 +7466,6 @@
           </cd:Float>
         </cd:Array>
       </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
           <cd:NativeType>int32</cd:NativeType>
@@ -7399,7 +7474,7 @@
         <cd:Hidden/>
         <cd:Optional/>
       </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
       <cd:Integer>
         <cd:NativeType>int16</cd:NativeType>
         <cd:Conversion numerator="0.01" denominator="1" invalid="-32768">
@@ -7709,6 +7784,12 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -8026,6 +8107,12 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>

@@ -1162,47 +1162,6 @@
       <cd:Description>surface height (sea-ice floe retracker)</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="flag_sea_ice_type_20_ku">
-    <cd:Array>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int8</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="standard_name">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int8</cd:NativeType>
-      </cd:Integer>
-      <cd:Description>flag sea-ice type</cd:Description>
-    </cd:Array>
-  </cd:Field>
   <cd:Field name="height_sea_ice_lead_20_ku">
     <cd:Array>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
@@ -3147,7 +3106,7 @@
     <cd:Array>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
+          <cd:NativeType>int16</cd:NativeType>
           <cd:LittleEndian/>
         </cd:Integer>
         <cd:Hidden/>
@@ -3168,9 +3127,6 @@
       <cd:Attribute name="coordinates">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Attribute name="institution">
-        <cd:Text/>
-      </cd:Attribute>
       <cd:Attribute name="long_name">
         <cd:Text/>
       </cd:Attribute>
@@ -3183,12 +3139,6 @@
           </cd:Float>
         </cd:Array>
       </cd:Attribute>
-      <cd:Attribute name="source">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="standard_name">
-        <cd:Text/>
-      </cd:Attribute>
       <cd:Attribute name="units">
         <cd:Text/>
       </cd:Attribute>
@@ -3199,7 +3149,7 @@
            <cd:Unit>m</cd:Unit>
         </cd:Conversion>
       </cd:Integer>
-      <cd:Description>snow depth</cd:Description>
+      <cd:Description>Snow depth correction. This one-way correction corrects for the propagation delay caused by snow present on top of sea ice. It has been accounted for in the computation of height, SSHA and freeboard. The correction in m is directly proportional to [snow_depth_20_ku]</cd:Description>
     </cd:Array>
   </cd:Field>
   <cd:Field name="solid_earth_tide_01">
