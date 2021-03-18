@@ -90,6 +90,8 @@
   <ct:Test name="FileNameMatchFileVersion" description="The version of the file should be consistent with the product name" criticality="Error"><![CDATA[int(substr(52, 3, str(.))) == int(../File_Version)]]></ct:Test>
   <ct:Test name="FixedValue0" description="The value of this field should be 0" criticality="Error"><![CDATA[int(.) == 0]]></ct:Test>
   <ct:Test name="FixedValueInstrumentIDA" description="The instrument ID should be 'A'" criticality="Error"><![CDATA[str(.) == "A"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_DSITNH" description="The value should be 'AUX_DSITNH'" criticality="Error"><![CDATA[str(.) == "AUX_DSITNH"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_DSITSH" description="The value should be 'AUX_DSITSH'" criticality="Error"><![CDATA[str(.) == "AUX_DSITSH"]]></ct:Test>
   <ct:Test name="FixedValueAUX_IONGIM" description="The value should be 'AUX_IONGIM'" criticality="Error"><![CDATA[str(.) == "AUX_IONGIM"]]></ct:Test>
   <ct:Test name="FixedValueAUX_ORBDOP" description="The value should be 'AUX_ORBDOP'" criticality="Error"><![CDATA[str(.) == "AUX_ORBDOP"]]></ct:Test>
   <ct:Test name="FixedValueAUX_ORBDOR" description="The value should be 'AUX_ORBDOR'" criticality="Error"><![CDATA[str(.) == "AUX_ORBDOR"]]></ct:Test>

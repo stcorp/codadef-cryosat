@@ -419,6 +419,14 @@
     <cd:Optional/>
     <cd:Text/>
   </cd:Attribute>
+  <cd:Attribute name="xref_sea_ice_type_south">
+    <cd:Optional/>
+    <cd:Text/>
+  </cd:Attribute>
+  <cd:Attribute name="xref_sea_ice_type_north">
+    <cd:Optional/>
+    <cd:Text/>
+  </cd:Attribute>
   <cd:Attribute name="xref_siral_characterisation">
     <cd:Text/>
   </cd:Attribute>

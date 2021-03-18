@@ -2303,6 +2303,24 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+  <cd:ProductType name="AUX_DSITNH">
+    <cd:Description>Northern hemisphere sea ice type</cd:Description>
+    <cd:ProductDefinition id="AUX_DSITNH_v0" format="xml" version="0">
+      <cd:Description>MFFS CS-ID-ESA-GS-0224 3.1</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AUX_DSITNH</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AUX_DSITSH">
+    <cd:Description>Southern hemisphere sea ice type</cd:Description>
+    <cd:ProductDefinition id="AUX_DSITSH_v0" format="xml" version="0">
+      <cd:Description>MFFS CS-ID-ESA-GS-0224 3.1</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AUX_DSITSH</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
   <cd:ProductType name="MPL_ORBPRE">
     <cd:Description>FOS Predicted Orbit File (EEF)</cd:Description>
     <cd:ProductDefinition id="MPL_ORBPRE_v0" format="xml" version="0">
