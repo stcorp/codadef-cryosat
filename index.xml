@@ -890,6 +890,11 @@
         <cd:MatchData offset="17">SIR1LRC11B</cd:MatchData>
         <cd:MatchData offset="60">C</cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
+        <cd:MatchData offset="17">SIR1LRC11B</cd:MatchData>
+        <cd:MatchData offset="60">E</cd:MatchData>
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="SIR1LRC11B_HDR">
@@ -966,6 +971,11 @@
         <cd:MatchData offset="17">SIR1SAC11B</cd:MatchData>
         <cd:MatchData offset="60">C</cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
+        <cd:MatchData offset="17">SIR1SAC11B</cd:MatchData>
+        <cd:MatchData offset="60">E</cd:MatchData>
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="SIR1SAC11B_HDR">
@@ -1041,6 +1051,11 @@
         <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
         <cd:MatchData offset="17">SIR_SIC11B</cd:MatchData>
         <cd:MatchData offset="60">C</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
+        <cd:MatchData offset="17">SIR_SIC11B</cd:MatchData>
+        <cd:MatchData offset="60">E</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
