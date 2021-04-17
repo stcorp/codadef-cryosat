@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="SIRNSINI2__v0" format="hdf5" last-modified="2021-04-17" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:NamedType id="SIR_XXXI2__netcdf_v1"/>
+  <ct:NamedTest id="AttributeXrefDemMustExist"/>
+  <ct:NamedTest id="AttributeXrefSeaIceMustExist"/>
+  <ct:NamedTest id="AttributeXrefSsbMustNotExist"/>  
+  <ct:NamedTest id="AttributeXrefSiralL2MustNotExist"/>
+  <ct:NamedTest id="AttributeXrefSlopeModelMustNotExist"/>
+  <ct:NamedTest id="AttributeXrefSnowDepthMustExist"/>
+  <ct:NamedTest id="AttributeXrefWindModelMustNotExist"/>
+  <!-- QC id="FixedValueDorisPrecise" path="@vector_source" -->
+  <!-- MPH Cross File Tests -->
+  <ct:NamedCrossFileTest id="MPH_Product_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Proc_Stage_Code_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Ref_Doc_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Software_Version_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Phase_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Cycle_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Rel_Orbit_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Abs_Orbit_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Delta_UT1_Float_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_X_Position_Float_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Y_Position_Float_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Z_Position_Float_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_X_Velocity_Float_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Y_Velocity_Float_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Z_Velocity_Float_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_State_Vector_Source_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Product_Err_NetCDF"/>
+  <!-- SPH Cross File Tests -->
+  <ct:NamedCrossFileTest id="SPH_Start_Record_Time_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Stop_Record_Time_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_ABS_Orbit_Start_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Rel_Time_ASC_Node_Start_v3_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_ABS_Orbit_Stop_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Rel_Time_ASC_Node_Stop_v3_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Equator_Cross_Time_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Equator_Cross_Long_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Ascending_Flag_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Start_Lat_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Start_Long_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Stop_Lat_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Stop_Long_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_L1_Proc_Flag_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_L1_Processing_Quality_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_L1_Proc_Thresh_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Instrument_Identifier_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_LRM_Mode_Percent_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_SAR_Mode_Percent_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_SARIN_Mode_Percent_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Open_Ocean_Percent_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Close_Sea_Percent_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Continent_Ice_Percent_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Land_Percent_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_L2_Prod_Status_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_L2_Proc_Flag_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_L2_Processing_Quality_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_L2_Proc_Thresh_NetCDF"/>
+</cd:ProductDefinition>
