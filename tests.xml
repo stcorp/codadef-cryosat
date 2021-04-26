@@ -120,6 +120,9 @@
   <ct:Test name="FixedValueSIR_FDM_1B" description="The value should be 'SIR_FDM_1B'" criticality="Error"><![CDATA[str(.) == "SIR_FDM_1B"]]></ct:Test>
   <ct:Test name="FixedValueSIR_FDM_2_" description="The value should be 'SIR_FDM_2_'" criticality="Error"><![CDATA[str(.) == "SIR_FDM_2_"]]></ct:Test>
   <ct:Test name="FixedValueSIR_FDMI2_" description="The value should be 'SIR_FDMI2_'" criticality="Error"><![CDATA[str(.) == "SIR_FDMI2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_NRT_1B" description="The value should be 'SIR_NRT_1B'" criticality="Error"><![CDATA[str(.) == "SIR_NRT_1B"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_NRT_2_" description="The value should be 'SIR_NRT_2_'" criticality="Error"><![CDATA[str(.) == "SIR_NRT_2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_NRTI2_" description="The value should be 'SIR_NRTI2_'" criticality="Error"><![CDATA[str(.) == "SIR_NRTI2_"]]></ct:Test>
   <ct:Test name="FixedValueSIR_GDR_2_" description="The value should be 'SIR_GDR_2_'" criticality="Error"><![CDATA[str(.) == "SIR_GDR_2_"]]></ct:Test>
   <ct:Test name="FixedValueSIR_GDR_2A" description="The value should be 'SIR_GDR_2A'" criticality="Error"><![CDATA[str(.) == "SIR_GDR_2A"]]></ct:Test>
   <ct:Test name="FixedValueSIR_GDR_2B" description="The value should be 'SIR_GDR_2B'" criticality="Error"><![CDATA[str(.) == "SIR_GDR_2B"]]></ct:Test>
