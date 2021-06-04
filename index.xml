@@ -868,8 +868,8 @@
     <cd:ProductDefinition id="SIR_SARN1B_v0" format="hdf5" version="0">
       <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9</cd:Description>
       <cd:DetectionRule>
-        <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
-        <cd:MatchData offset="8">SIR_SARN1B</cd:MatchData>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIR_SARN1B</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -887,8 +887,8 @@
     <cd:ProductDefinition id="SIR_SINN1B_v0" format="hdf5" version="0">
       <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9</cd:Description>
       <cd:DetectionRule>
-        <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
-        <cd:MatchData offset="8">SIR_SINN1B</cd:MatchData>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIR_SINN1B</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -1979,8 +1979,8 @@
     <cd:ProductDefinition id="SIR_SARN2__v0" format="hdf5" version="0">
       <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9</cd:Description>
       <cd:DetectionRule>
-        <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
-        <cd:MatchData offset="8">SIR_SARN2_</cd:MatchData>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIR_SARN2_</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -1998,8 +1998,8 @@
     <cd:ProductDefinition id="SIR_SINN2__v0" format="hdf5" version="0">
       <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9</cd:Description>
       <cd:DetectionRule>
-        <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
-        <cd:MatchData offset="8">SIR_SINN2_</cd:MatchData>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIR_SINN2_</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -2291,8 +2291,8 @@
     <cd:ProductDefinition id="SIRNSARI2__v0" format="hdf5" version="0">
       <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9</cd:Description>
       <cd:DetectionRule>
-        <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
-        <cd:MatchData offset="8">SIRNSARI2_</cd:MatchData>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIRNSARI2_</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -2310,8 +2310,8 @@
     <cd:ProductDefinition id="SIRNSINI2__v0" format="hdf5" version="0">
       <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9</cd:Description>
       <cd:DetectionRule>
-        <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
-        <cd:MatchData offset="8">SIRNSINI2_</cd:MatchData>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIRNSINI2_</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
