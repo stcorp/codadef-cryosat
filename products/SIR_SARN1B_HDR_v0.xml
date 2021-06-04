@@ -26,7 +26,7 @@
         <!-- QC id="FileClassCheckL1" path="Fixed_Header/File_Class" -->
         <!-- QC id="ProcessingStageValidL1HDR" path="Variable_Header/MPH/Proc_Stage_Code" -->
         <!-- QC id="MPHRefDocL1" path="Variable_Header/MPH/Ref_Doc" -->
-        <!-- QC id="FixedValueDP" path="Variable_Header/MPH/State_Vector_Source" -->
+        <!-- QC id="FixedValueDN" path="Variable_Header/MPH/State_Vector_Source" -->
       </cd:Record>
     </cd:Field>
   </cd:Record>
