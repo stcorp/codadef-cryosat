@@ -1938,10 +1938,7 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
+        <cd:Text/>
       </cd:Attribute>
       <cd:Attribute name="coordinates">
         <cd:Array>
@@ -1959,16 +1956,10 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="flag_meanings">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
+        <cd:Text/>
       </cd:Attribute>
       <cd:Attribute name="long_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
+        <cd:Text/>
       </cd:Attribute>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
