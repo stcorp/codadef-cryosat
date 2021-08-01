@@ -836,7 +836,7 @@
       <cd:Description>quality flag</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="freeboard_20_ku">
+  <cd:Field name="radar_freeboard_20_ku">
     <cd:Array>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
@@ -872,9 +872,6 @@
             <cd:LittleEndian/>
           </cd:Float>
         </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="standard_name">
-        <cd:Text/>
       </cd:Attribute>
       <cd:Attribute name="units">
         <cd:Text/>

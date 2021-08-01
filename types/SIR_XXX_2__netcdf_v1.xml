@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2020-01-08" name="SIR_XXX_2__netcdf_v1">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2021-07-27" name="SIR_XXX_2__netcdf_v1">
   <cd:Attribute name="product_name">
     <cd:Text/>
   </cd:Attribute>
@@ -848,7 +848,7 @@
       <cd:Description>quality flag</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="freeboard_20_ku">
+  <cd:Field name="radar_freeboard_20_ku">
     <cd:Array>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
@@ -884,9 +884,6 @@
             <cd:LittleEndian/>
           </cd:Float>
         </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="standard_name">
-        <cd:Text/>
       </cd:Attribute>
       <cd:Attribute name="units">
         <cd:Text/>
