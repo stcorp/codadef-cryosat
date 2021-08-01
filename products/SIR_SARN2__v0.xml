@@ -8,7 +8,7 @@
   <ct:NamedTest id="AttributeXrefSnowDepthMustExist"/>
   <ct:NamedTest id="AttributeXrefSsbMustNotExist"/>
   <ct:NamedTest id="AttributeXrefWindModelMustNotExist"/>
-  <!-- QC id="FixedValueDorisNavigator" path="@vector_source" -->
+  <!-- QC id="EnumNRTOrbitVectorSourceNetCDF" path="@vector_source" -->
   <!-- MPH Cross File Tests -->
   <ct:NamedCrossFileTest id="MPH_Product_NetCDF"/>
   <ct:NamedCrossFileTest id="MPH_Proc_Stage_Code_NetCDF"/>
