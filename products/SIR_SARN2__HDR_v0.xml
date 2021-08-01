@@ -26,7 +26,7 @@
         <!-- QC id="FileClassCheckL2" path="Fixed_Header/File_Class" -->
         <!-- QC id="ProcessingStageValidL2HDR" path="Variable_Header/MPH/Proc_Stage_Code" -->
         <!-- QC id="MPHRefDocL2" path="Variable_Header/MPH/Ref_Doc" -->
-        <!-- QC id="FixedValueDN" path="Variable_Header/MPH/State_Vector_Source" -->
+        <!-- QC id="EnumOrbitVectorSource" path="Variable_Header/MPH/State_Vector_Source" -->
       </cd:Record>
     </cd:Field>
   </cd:Record>
