@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="SIR_SINN2__v0" format="hdf5" last-modified="2021-04-17">
-  <cd:NamedType id="SIR_XXX_2__netcdf_v1"/>
+  <cd:NamedType id="SIRNXXX_2__netcdf_v0"/>
   <ct:NamedTest id="AttributeXrefDemMustExist"/>
   <ct:NamedTest id="AttributeXrefSeaIceMustExist"/>
   <ct:NamedTest id="AttributeXrefSsbMustNotExist"/>  
