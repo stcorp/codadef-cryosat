@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="SIRNSARI2A_HDR_v0" format="xml" last-modified="2021-04-17" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_Header">
+      <cd:Record namexml="Earth_Explorer_Header">
+        <cd:Description>Earth Explorer Header File</cd:Description>
+        <cd:Attribute name="Schema_Server_Url">
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Field name="Fixed_Header">
+          <cd:NamedType id="Fixed_Header"/>
+        </cd:Field>
+        <cd:Field name="Variable_Header">
+          <cd:Record namexml="Variable_Header">
+            <cd:Description>Variable Header Section</cd:Description>
+            <cd:Field name="MPH">
+              <cd:NamedType id="MPH_XML"/>
+            </cd:Field>
+            <cd:Field name="SPH">
+              <cd:NamedType id="SPH_Level2B"/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <ct:NamedTest id="FixedValueSIRNSARI2A" path="Fixed_Header/File_Type"/>
+        <ct:NamedTest id="FileNameCheckHDR" path="Fixed_Header/File_Name"/>
+        <!-- QC id="FileClassCheckL2" path="Fixed_Header/File_Class" -->
+        <!-- QC id="ProcessingStageValidL2HDR" path="Variable_Header/MPH/Proc_Stage_Code" -->
+        <!-- QC id="MPHRefDocL2" path="Variable_Header/MPH/Ref_Doc" -->
+        <!-- QC id="EnumOrbitVectorSource" path="Variable_Header/MPH/State_Vector_Source" -->
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
