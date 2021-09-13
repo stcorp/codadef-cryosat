@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ct:Tests xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" last-modified="2019-08-13">
+<ct:Tests xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" last-modified="2021-07-27">
   <ct:Test name="AcquisitionStationValid" description="Acquisition station must be Kiruna" criticality="Warning"><![CDATA[rtrim(str(.)) == "Kiruna"]]></ct:Test>
   <ct:Test name="AttributeL1bProcessingQualityHrMustExist" description="Existence of Attribute l1b_processing_quality_hr is mandatory" criticality="Warning"><![CDATA[exists(@l1b_processing_quality_hr)]]></ct:Test>
   <ct:Test name="AttributeL1bProcFlagHrMustExist" description="Existence of Attribute l1b_proc_flag_hr is mandatory" criticality="Warning"><![CDATA[exists(@l1b_proc_flag_hr)]]></ct:Test>
@@ -66,7 +66,8 @@
   <ct:Test name="EnumFlagNetCDF" description="The Flag field should be either 0 or 1 - NetCDF" criticality="Error"><![CDATA[str(.) == "0" || str(.) == "1"]]></ct:Test>
   <ct:Test name="EnumOrbitAscendingFlag" description="The orbit ascending flag should be either A or D" criticality="Error"><![CDATA[str(.) == "A" || str(.) == "D"]]></ct:Test>
   <ct:Test name="EnumOrbitVectorSource" description="orbit vector source should match one of the allowed enumeration values" criticality="Error"><![CDATA[str(.) == "FP" || str(.) == "DN" || str(.) == "DP" || str(.) == "FR" || str(.) == "DI"]]></ct:Test>
-  <ct:Test name="EnumOrbitVectorSourceNetCDF" description="orbit vector source should match one of the allowed enumeration values - NetCDF" criticality="Error"><![CDATA[str(.) == "fos_predicted" || str(.) == "doris_navigator" || str(.) == "doris_precise" || str(.) == "fos_restituted" || str(.) == "doris_preliminary"]]></ct:Test>
+  <ct:Test name="EnumOrbitVectorSourceNetCDF" description="orbit vector source should match one of the allowed enumeration values - NetCDF" criticality="Error"><![CDATA[str(.) == "fos predicted" || str(.) == "doris_navigator" || str(.) == "doris_precise" || str(.) == "fos_restituted" || str(.) == "doris_preliminary"]]></ct:Test>
+  <ct:Test name="EnumNRTOrbitVectorSourceNetCDF" description="orbit vector source should match one of the allowed enumeration values - NetCDF" criticality="Error"><![CDATA[str(.) == "fos predicted" || str(.) == "doris_navigator"]]></ct:Test>
   <ct:Test name="EnumSiralConfiguration" description="The siral configuration should match one of the allowed enumeration values" criticality="Error"><![CDATA[str(.) == "RX_1   " || str(.) == "RX_2   " || str(.) == "BOTH   " || str(.) == "UNKNOWN"]]></ct:Test>
   <ct:Test name="EnumSiralConfigurationUnderscore" description="The siral configuration should match one of the allowed enumeration values" criticality="Error"><![CDATA[str(.) == "RX_1___" || str(.) == "RX_2___" || str(.) == "BOTH___" || str(.) == "UNKNOWN"]]></ct:Test>
   <ct:Test name="EnumSiralConfigurationKnown" description="The siral configuration should match one of the allowed enumeration values 'RX_1   ', RX_2   ' or 'BOTH   '" criticality="Error"><![CDATA[str(.) == "RX_1   " || str(.) == "RX_2   " || str(.) == "BOTH   "]]></ct:Test>
@@ -137,10 +138,12 @@
   <ct:Test name="FixedValueSIR_SARN1B" description="The value should be 'SIR_SARN1B'" criticality="Error"><![CDATA[str(.) == "SIR_SARN1B"]]></ct:Test>
   <ct:Test name="FixedValueSIR_SAR_2_" description="The value should be 'SIR_SAR_2_'" criticality="Error"><![CDATA[str(.) == "SIR_SAR_2_"]]></ct:Test>
   <ct:Test name="FixedValueSIR_SARN2_" description="The value should be 'SIR_SARN2_'" criticality="Error"><![CDATA[str(.) == "SIR_SARN2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIR_SARN2A" description="The value should be 'SIR_SARN2A'" criticality="Error"><![CDATA[str(.) == "SIR_SARN2A"]]></ct:Test>
   <ct:Test name="FixedValueSIR_SAR_2A" description="The value should be 'SIR_SAR_2A'" criticality="Error"><![CDATA[str(.) == "SIR_SAR_2A"]]></ct:Test>
   <ct:Test name="FixedValueSIR_SAR_2B" description="The value should be 'SIR_SAR_2B'" criticality="Error"><![CDATA[str(.) == "SIR_SAR_2B"]]></ct:Test>
   <ct:Test name="FixedValueSIR_SARI2_" description="The value should be 'SIR_SARI2_'" criticality="Error"><![CDATA[str(.) == "SIR_SARI2_"]]></ct:Test>
   <ct:Test name="FixedValueSIRNSARI2_" description="The value should be 'SIRNSARI2_'" criticality="Error"><![CDATA[str(.) == "SIRNSARI2_"]]></ct:Test>
+  <ct:Test name="FixedValueSIRNSARI2A" description="The value should be 'SIRNSARI2A'" criticality="Error"><![CDATA[str(.) == "SIRNSARI2A"]]></ct:Test>
   <ct:Test name="FixedValueSIR_SARI2A" description="The value should be 'SIR_SARI2A'" criticality="Error"><![CDATA[str(.) == "SIR_SARI2A"]]></ct:Test>
   <ct:Test name="FixedValueSIR_SARI2B" description="The value should be 'SIR_SARI2B'" criticality="Error"><![CDATA[str(.) == "SIR_SARI2B"]]></ct:Test>
   <ct:Test name="FixedValueSIR_SIC11B" description="The value should be 'SIR_SIC11B'" criticality="Error"><![CDATA[str(.) == "SIR_SIC11B"]]></ct:Test>
@@ -268,11 +271,11 @@
   <ct:Test name="MPHProcStageCodeMatchesFilename" description="The Processing Stage Code in the MPH should be consistent with the file name" criticality="Error"><![CDATA[str(.) == substr(3,4,filename())]]></ct:Test>
   <ct:Test name="MPHProductSize" description="The size reported in the MPH should equal the actual product size" criticality="Error"><![CDATA[int(.) == filesize()]]></ct:Test>
   <ct:Test name="MPHRefDocL0" description="The REF_DOC field in the MPH should have the value 'CS-ID-ACS-GS-0119 03.03'" criticality="Warning"><![CDATA[str(.) == "CS-ID-ACS-GS-0119 03.03"]]></ct:Test>
-  <ct:Test name="MPHRefDocL1" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-GS-5106 06.00' or 'CS-RS-ACS-ESL-5364 1.8'" criticality="Warning"><![CDATA[str(.) == "CS-RS-ACS-GS-5106 06.00" || rtrim(str(.)) == "CS-RS-ACS-ESL-5364 1.8"]]></ct:Test>
-  <ct:Test name="MPHRefDocL1NetCDF" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-ESL-5364 1.8' (NetCDF version)" criticality="Warning"><![CDATA[rtrim(str(.)) == "CS-RS-ACS-ESL-5364 1.8"]]></ct:Test>
-  <ct:Test name="MPHRefDocL2" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-GS-5123 04.00' or 'CS-RS-ACS-ESL-5265 1.6'" criticality="Warning"><![CDATA[str(.) == "CS-RS-ACS-GS-5123 04.00" || rtrim(str(.)) == "CS-RS-ACS-ESL-5265 1.6"]]></ct:Test>
-  <ct:Test name="MPHRefDocL2NetCDF" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-ESL-5265 1.6' (NetCDF version)" criticality="Warning"><![CDATA[rtrim(str(.)) == "CS-RS-ACS-ESL-5265 1.6"]]></ct:Test>
-  <ct:Test name="MPHRefDocOPL1" description="The REF_DOC field in the MPH should have the value 'C2-RS-ACS-ESL-5213 1.4 '" criticality="Warning"><![CDATA[str(.) == "C2-RS-ACS-ESL-5213 1.4 "]]></ct:Test>
+  <ct:Test name="MPHRefDocL1" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-GS-5106 06.00', 'CS-RS-ACS-ESL-5364 1.8' or 'CS-RS-ACS-ESL-5364 2.0'" criticality="Warning"><![CDATA[str(.) == "CS-RS-ACS-GS-5106 06.00" || rtrim(str(.)) == "CS-RS-ACS-ESL-5364 1.8" || rtrim(str(.)) == "CS-RS-ACS-ESL-5364 2.0"]]></ct:Test>
+  <ct:Test name="MPHRefDocL1NetCDF" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-ESL-5364 1.8' or 'CS-RS-ACS-ESL-5364 2.0' (NetCDF version)" criticality="Warning"><![CDATA[rtrim(str(.)) == "CS-RS-ACS-ESL-5364 1.8" || rtrim(str(.)) == "CS-RS-ACS-ESL-5364 2.0"]]></ct:Test>
+  <ct:Test name="MPHRefDocL2" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-GS-5123 04.00' or 'CS-RS-ACS-ESL-5265 1.6'" criticality="Warning"><![CDATA[str(.) == "CS-RS-ACS-GS-5123 04.00" || rtrim(str(.)) == "CS-RS-ACS-ESL-5265 1.6" || rtrim(str(.)) == "CS-RS-ACS-ESL-5265 2.1"]]></ct:Test>
+  <ct:Test name="MPHRefDocL2NetCDF" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-ESL-5265 1.6' or 'CS-RS-ACS-ESL-5265 2.1' (NetCDF version)" criticality="Warning"><![CDATA[rtrim(str(.)) == "CS-RS-ACS-ESL-5265 1.6" || rtrim(str(.)) == "CS-RS-ACS-ESL-5265 2.1"]]></ct:Test>
+  <ct:Test name="MPHRefDocOPL1" description="The REF_DOC field in the MPH should have the value 'C2-RS-ACS-ESL-5213 1.4' or ''CS-RS-ACS-ESL-5265 2.1''" criticality="Warning"><![CDATA[str(.) == "C2-RS-ACS-ESL-5213 1.4 " || str(.) == "CS-RS-ACS-ESL-5265 2.1"]]></ct:Test>
   <ct:Test name="MPHRefDocOPHDRNetCDF" description="The REF_DOC field in the MPH should have the value 'C2-RS-ACS-ESL-5266 3.1' or 'C2-RS-ACS-ESL-5266 3.3' or 'C2-RS-ACS-ESL-5266 3.4'" criticality="Warning"><![CDATA[trim(str(.)) == "C2-RS-ACS-ESL-5266 3.1" || trim(str(.)) == "C2-RS-ACS-ESL-5266 3.3" || trim(str(.)) == "C2-RS-ACS-ESL-5266 3.4"]]></ct:Test>
   <ct:Test name="MPHRefDocOPL2" description="The REF_DOC field in the MPH should have the value 'C2-RS-ACS-ESL-5213 1.4' for baseline B and 'C2-RS-ACS-ESL-5266 3.1' or 'C2-RS-ACS-ESL-5266 3.3' for baseline C" criticality="Warning"><![CDATA[(substr(51,1,filename()) =="C" && (trim(str(.)) == "C2-RS-ACS-ESL-5266 3.1" || trim(str(.)) == "C2-RS-ACS-ESL-5266 3.3")) || str(.) == "C2-RS-ACS-ESL-5213 1.4"]]></ct:Test>
   <ct:Test name="MPHRefDocOPV31NetCDF" description="The REF_DOC field in the MPH should have the value 'C2-RS-ACS-ESL-5266 3.1'" criticality="Warning"><![CDATA[trim(str(.)) == "C2-RS-ACS-ESL-5266 3.1"]]></ct:Test>
@@ -880,7 +883,7 @@
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_State_Vector_Source_NetCDF" description="State_Vector_Source mismatch" criticality="Error">
     <ct:ValueExpressionDbl><![CDATA[trim(str(/@vector_source))]]></ct:ValueExpressionDbl>
-    <ct:ValueExpressionHdr><![CDATA[if(str(/Earth_Explorer_Header/Variable_Header/MPH/State_Vector_Source) == "FP", "fos_predicted", if(str(/Earth_Explorer_Header/Variable_Header/MPH/State_Vector_Source) == "DN" , "doris_navigator", if(str(/Earth_Explorer_Header/Variable_Header/MPH/State_Vector_Source) == "DP", "doris_precise", if(str(/Earth_Explorer_Header/Variable_Header/MPH/State_Vector_Source) == "FR", "fos_restituted",if(str(/Earth_Explorer_Header/Variable_Header/MPH/State_Vector_Source) == "DI", "doris_preliminary", str(/Earth_Explorer_Header/Variable_Header/MPH/State_Vector_Source))))))]]></ct:ValueExpressionHdr>
+    <ct:ValueExpressionHdr><![CDATA[if(str(/Earth_Explorer_Header/Variable_Header/MPH/State_Vector_Source) == "FP", "fos predicted", if(str(/Earth_Explorer_Header/Variable_Header/MPH/State_Vector_Source) == "DN" , "doris_navigator", if(str(/Earth_Explorer_Header/Variable_Header/MPH/State_Vector_Source) == "DP", "doris_precise", if(str(/Earth_Explorer_Header/Variable_Header/MPH/State_Vector_Source) == "FR", "fos_restituted",if(str(/Earth_Explorer_Header/Variable_Header/MPH/State_Vector_Source) == "DI", "doris_preliminary", str(/Earth_Explorer_Header/Variable_Header/MPH/State_Vector_Source))))))]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Product_Err_NetCDF" description="Product_Err mismatch" criticality="Error">
     <ct:ValueExpressionDbl><![CDATA[int(str(/@product_err))]]></ct:ValueExpressionDbl>

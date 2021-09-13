@@ -327,9 +327,6 @@
   <cd:Attribute name="xref_earth_tide">
     <cd:Text/>
   </cd:Attribute>
-  <cd:Attribute name="xref_gim">
-    <cd:Text/>
-  </cd:Attribute>
   <cd:Attribute name="xref_iono_cor">
     <cd:Text/>
   </cd:Attribute>
@@ -337,9 +334,6 @@
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_meteo">
-    <cd:Text/>
-  </cd:Attribute>
-  <cd:Attribute name="xref_mog2d">
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_ocean_tide">
@@ -390,9 +384,10 @@
   <cd:Attribute name="xref_siral_l0">
     <cd:Text/>
   </cd:Attribute>
-  <cd:Attribute name="xref_star_tracker_attref">
+  <cd:Attribute name="xref_star_tracker_0">
+    <cd:Optional/>
     <cd:Text/>
-  </cd:Attribute>
+  </cd:Attribute>  
   <cd:Attribute name="xref_surf_pressure">
     <cd:Text/>
   </cd:Attribute>
@@ -669,78 +664,7 @@
       <cd:Description>altitude of CoM above reference ellipsoid</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="alt_plrm_20_ku">
-    <cd:Array>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="add_offset">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="scale_factor">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int32</cd:NativeType>
-        <cd:Conversion numerator="0.001" denominator="1" invalid="-2.14748e+09">
-           <cd:Unit>m</cd:Unit>
-        </cd:Conversion>
-      </cd:Integer>
-      <cd:Description>altitude of the satellite CoM above reference ellipsoid</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="alt_plrm_01_ku">
+  <cd:Field name="alt_avg_01_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
         <cd:Array>
@@ -1308,76 +1232,7 @@
       <cd:Description>number of echoes averaged</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="echo_numval_plrm_20_ku">
-    <cd:Array>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int16</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="add_offset">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int16</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="scale_factor">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int16</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int16</cd:NativeType>
-        <cd:Unit>count</cd:Unit>
-      </cd:Integer>
-      <cd:Description>number of echoes averaged</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="echo_numval_plrm_01_ku">
+  <cd:Field name="echo_numval_avg_01_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
         <cd:Array>
@@ -1517,148 +1372,6 @@
       <cd:Description>echo scale factor (to scale echo to watts)</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="echo_scale_factor_plrm_20_ku">
-    <cd:Array>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="add_offset">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="scale_factor">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int32</cd:NativeType>
-        <cd:Conversion numerator="1e-09" denominator="1" invalid="-2.14748e+09">
-           <cd:Unit>count</cd:Unit>
-        </cd:Conversion>
-      </cd:Integer>
-      <cd:Description>echo scale factor (to scale echo to watts)</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="echo_scale_factor_plrm_01_ku">
-    <cd:Array>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="add_offset">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="scale_factor">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int32</cd:NativeType>
-        <cd:Conversion numerator="1e-09" denominator="1" invalid="-2.14748e+09">
-           <cd:Unit>count</cd:Unit>
-        </cd:Conversion>
-      </cd:Integer>
-      <cd:Description>echo scale factor (to scale echo to watts)</cd:Description>
-    </cd:Array>
-  </cd:Field>
   <cd:Field name="echo_scale_pwr_20_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
@@ -1728,7 +1441,7 @@
       <cd:Description>echo scale power (a power of 2)</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="echo_scale_pwr_plrm_20_ku">
+  <cd:Field name="echo_scale_pwr_avg_01_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
         <cd:Array>
@@ -1797,7 +1510,7 @@
       <cd:Description>echo scale power (a power of 2)</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="echo_scale_pwr_plrm_01_ku">
+  <cd:Field name="echo_scale_factor_avg_01_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
         <cd:Array>
@@ -1811,10 +1524,10 @@
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
             <cd:LittleEndian/>
-          </cd:Integer>
+          </cd:Float>
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
@@ -1838,10 +1551,10 @@
       <cd:Attribute name="scale_factor">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
             <cd:LittleEndian/>
-          </cd:Integer>
+          </cd:Float>
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="units">
@@ -1861,9 +1574,11 @@
       <cd:Dimension></cd:Dimension>
       <cd:Integer>
         <cd:NativeType>int32</cd:NativeType>
-        <cd:Unit>count</cd:Unit>
+        <cd:Conversion numerator="1e-09" denominator="1" invalid="-2.14748e+09">
+           <cd:Unit>count</cd:Unit>
+        </cd:Conversion>
       </cd:Integer>
-      <cd:Description>echo scale power (a power of 2)</cd:Description>
+      <cd:Description>echo scale factor (to scale echo to watts)</cd:Description>
     </cd:Array>
   </cd:Field>
   <cd:Field name="flag_cor_err_01">
@@ -1878,12 +1593,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -1939,12 +1648,6 @@
       </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="flag_masks">
         <cd:Array>
@@ -2037,67 +1740,7 @@
       <cd:Description>flags for errors or information about L1b 20Hz power waveform</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="flag_echo_plrm_20_ku">
-    <cd:Array>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int16</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="flag_masks">
-        <cd:Array>
-          <cd:Dimension>2</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int16</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="flag_meanings">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int16</cd:NativeType>
-        <cd:Unit></cd:Unit>
-      </cd:Integer>
-      <cd:Description>flags for errors or information about L1b 20Hz power waveform</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="flag_echo_plrm_01_ku">
+  <cd:Field name="flag_echo_avg_01_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
         <cd:Array>
@@ -2987,12 +2630,6 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
       <cd:Attribute name="institution">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3670,12 +3307,6 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
       <cd:Attribute name="institution">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3759,12 +3390,6 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
       <cd:Attribute name="institution">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3843,12 +3468,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -3988,83 +3607,7 @@
       <cd:Description>20 Hz latitude</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="lat_plrm_20_ku">
-    <cd:Array>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="add_offset">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="scale_factor">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="standard_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int32</cd:NativeType>
-        <cd:Conversion numerator="1e-07" denominator="1" invalid="-2.14748e+09">
-           <cd:Unit>degrees_north</cd:Unit>
-        </cd:Conversion>
-      </cd:Integer>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="lat_plrm_01_ku">
+  <cd:Field name="lat_avg_01_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
         <cd:Array>
@@ -4141,83 +3684,6 @@
       <cd:Description>latitude of measurement</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="lat_cor_01">
-    <cd:Array>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="add_offset">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="scale_factor">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="standard_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int32</cd:NativeType>
-        <cd:Conversion numerator="1e-07" denominator="1" invalid="-2.14748e+09">
-           <cd:Unit>degrees_north</cd:Unit>
-        </cd:Conversion>
-      </cd:Integer>
-      <cd:Description>latitude of corrections</cd:Description>
-    </cd:Array>
-  </cd:Field>
   <cd:Field name="load_tide_01">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
@@ -4239,12 +3705,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -4378,84 +3838,7 @@
       <cd:Description>20 Hz longitude</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="lon_plrm_20_ku">
-    <cd:Array>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="add_offset">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="scale_factor">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="standard_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int32</cd:NativeType>
-        <cd:Conversion numerator="1e-07" denominator="1" invalid="-2.14748e+09">
-           <cd:Unit>degrees_east</cd:Unit>
-        </cd:Conversion>
-      </cd:Integer>
-      <cd:Description>20 Hz longitude</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="lon_plrm_01_ku">
+  <cd:Field name="lon_avg_01_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
         <cd:Array>
@@ -4530,83 +3913,6 @@
         </cd:Conversion>
       </cd:Integer>
       <cd:Description>longitude of measurement</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="lon_cor_01">
-    <cd:Array>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="add_offset">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="scale_factor">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="standard_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int32</cd:NativeType>
-        <cd:Conversion numerator="1e-07" denominator="1" invalid="-2.14748e+09">
-           <cd:Unit>degrees_east</cd:Unit>
-        </cd:Conversion>
-      </cd:Integer>
-      <cd:Description>longitude of corrections</cd:Description>
     </cd:Array>
   </cd:Field>
   <cd:Field name="look_angle_start_20_ku">
@@ -4777,12 +4083,6 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
       <cd:Attribute name="institution">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -4861,12 +4161,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -5122,12 +4416,6 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
       <cd:Attribute name="institution">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -5206,12 +4494,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -5727,12 +5009,6 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
       <cd:Attribute name="institution">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -5845,68 +5121,7 @@
       <cd:Description>l1b power waveform scaled 0-65535</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="pwr_waveform_plrm_20_ku">
-    <cd:Array>
-      <cd:Attribute name="add_offset">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>uint16</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="scale_factor">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>uint16</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>uint16</cd:NativeType>
-        <cd:Unit>count</cd:Unit>
-      </cd:Integer>
-      <cd:Description>l1b power waveform scaled 0-65535</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="pwr_waveform_plrm_01_ku">
+  <cd:Field name="pwr_waveform_avg_01_ku">
     <cd:Array>
       <cd:Attribute name="add_offset">
         <cd:Array>
@@ -6162,12 +5377,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -6836,69 +6045,6 @@
       <cd:Description>Stack peakiness computed from the range integrated power of the single look echoes within a stack.</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="stack_mask_start_stop_20_ku">
-    <cd:Array>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension></cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int16</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="add_offset">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="scale_factor">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int16</cd:NativeType>
-      </cd:Integer>
-      <cd:Description>Zero-mask between the start and stop looks within the stack.</cd:Description>
-    </cd:Array>
-  </cd:Field>
   <cd:Field name="stack_scaled_amplitude_20_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
@@ -7200,12 +6346,6 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
       <cd:Attribute name="flag_meanings">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -7315,67 +6455,7 @@
       <cd:Description>time in TAI: seconds since 1 Jan 2000</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="time_plrm_01_ku">
-    <cd:Array>
-      <cd:Attribute name="CLASS">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="NAME">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="calendar">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="standard_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Float>
-        <cd:NativeType>double</cd:NativeType>
-        <cd:Unit>seconds since 2000-01-01 00:00:00.0</cd:Unit>
-      </cd:Float>
-      <cd:Description>time in TAI: seconds since 1 Jan 2000</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="time_plrm_20_ku">
+  <cd:Field name="time_avg_01_ku">
     <cd:Array>
       <cd:Attribute name="CLASS">
         <cd:Text/>
@@ -7458,12 +6538,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -7779,7 +6853,7 @@
       <cd:Description>uso correction (2-way)</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="uso_cor_plrm_20_ku">
+  <cd:Field name="uso_cor_avg_01_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
         <cd:Array>
@@ -7848,77 +6922,6 @@
         </cd:Conversion>
       </cd:Integer>
       <cd:Description>uso correction (2-way)</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="uso_cor_plrm_01_ku">
-    <cd:Array>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="add_offset">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="scale_factor">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int32</cd:NativeType>
-        <cd:Conversion numerator="1e-12" denominator="1" invalid="2.14748e+09">
-           <cd:Unit>seconds</cd:Unit>
-        </cd:Conversion>
-      </cd:Integer>
-      <cd:Description>uso correction applied to window delay (2-way)</cd:Description>
     </cd:Array>
   </cd:Field>
   <cd:Field name="window_del_20_ku">
@@ -7992,78 +6995,7 @@
       <cd:Description>calibrated window delay (2-way)</cd:Description>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="window_del_plrm_20_ku">
-    <cd:Array>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int64</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="add_offset">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="scale_factor">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int64</cd:NativeType>
-        <cd:Conversion numerator="1e-12" denominator="1" invalid="-9.22337e+18">
-           <cd:Unit>seconds</cd:Unit>
-        </cd:Conversion>
-      </cd:Integer>
-      <cd:Description>calibrated window delay (2-way)</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="window_del_plrm_01_ku">
+  <cd:Field name="window_del_avg_01_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
         <cd:Array>
@@ -8139,7 +7071,7 @@
   <!-- QC id="MPHRefDocL1NetCDF" path="@reference_document" -->
   <!-- QC id="AcquisitionStationValid" path="@acquisition_station" -->
   <!-- QC id="ProcessingCenterValidL1" path="@processing_centre" -->
-  <!-- QC id="EnumOrbitVectorSourceNetCDF" path="@vector_source" -->
+  <!-- QC id="EnumNRTOrbitVectorSourceNetCDF" path="@vector_source" -->
   <!-- QC id="LeapUtcValidNetCDF" path="@leap_utc" -->
   <!-- QC id="LeapErrValidNetCDF" path="@leap_err" -->
   <!-- QC id="ProductErrFlagNetCDF" path="@product_err" -->
