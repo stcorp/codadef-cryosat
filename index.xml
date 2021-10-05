@@ -872,6 +872,14 @@
         <cd:MatchFilename offset="8">SIR_SARN1B</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="SIR_SARN1B_v1" format="binary" version="1">
+      <cd:Description>L1B binary product tot include MDSR fields</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
+        <cd:MatchData offset="17">SIR_SARN1B</cd:MatchData>
+        <cd:MatchData offset="60">C</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="SIR_SARN1B_HDR">
     <cd:Description>SIRAL L1B NRT SAR mode product (HDR)</cd:Description>
@@ -1999,6 +2007,14 @@
         <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
         <cd:MatchFilename offset="8">SIR_SARN2_</cd:MatchFilename>
         <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="SIR_SARN2__v2" format="binary" version="2">
+      <cd:Description>L2 Binary product tot include MDSR fields</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
+        <cd:MatchData offset="17">SIR_SARN2</cd:MatchData>
+        <cd:MatchData offset="60">C</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
