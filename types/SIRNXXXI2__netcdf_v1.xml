@@ -6408,6 +6408,56 @@
       <cd:Description>snow depth</cd:Description>
     </cd:Array>
   </cd:Field>
+  <cd:Field name="snow_depth_cor_20_ku">
+    <cd:Array>
+      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+        <cd:Integer>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:LittleEndian/>
+        </cd:Integer>
+        <cd:Hidden/>
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Attribute name="FillValue" real_name="_FillValue">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="comment">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="long_name">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="scale_factor">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="units">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Integer>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="1e-03" denominator="1" invalid="-32768">
+           <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+      <cd:Description>snow depth</cd:Description>
+    </cd:Array>
+  </cd:Field>
   <cd:Field name="solid_earth_tide_01">
     <cd:Array>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
