@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2021-07-27" name="SIR_XXX_2__netcdf_v1">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2022-01-20" name="SIR_XXX_2__netcdf_v1">
   <cd:Attribute name="product_name">
     <cd:Text/>
   </cd:Attribute>
@@ -3111,7 +3111,7 @@
     <cd:Array>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
-          <cd:NativeType>int16</cd:NativeType>
+          <cd:NativeType>int32</cd:NativeType>
           <cd:LittleEndian/>
         </cd:Integer>
         <cd:Hidden/>
