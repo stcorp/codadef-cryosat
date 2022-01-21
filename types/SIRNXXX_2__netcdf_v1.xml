@@ -361,6 +361,10 @@
   <cd:Attribute name="xref_meteo">
     <cd:Text/>
   </cd:Attribute>
+  <cd:Attribute name="xref_mog2d">
+    <cd:Optional/>
+    <cd:Text/>
+  </cd:Attribute>
   <cd:Attribute name="xref_mss">
     <cd:Text/>
   </cd:Attribute>
