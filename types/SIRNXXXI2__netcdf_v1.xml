@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2021-01-20" name="SIRNXXXI2__netcdf_v1">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2022-01-24" name="SIRNXXXI2__netcdf_v1">
   <cd:Attribute name="abs_orbit_number">
     <cd:Array>
       <cd:Dimension>1</cd:Dimension>
@@ -1097,7 +1097,7 @@
       </cd:Attribute>
       <cd:Attribute name="flag_masks">
         <cd:Array>
-          <cd:Dimension>21</cd:Dimension>
+          <cd:Dimension>22</cd:Dimension>
           <cd:Integer>
             <cd:NativeType>int32</cd:NativeType>
             <cd:LittleEndian/>
@@ -1116,6 +1116,59 @@
         <cd:Unit></cd:Unit>
       </cd:Integer>
       <cd:Description>corrections error flags</cd:Description>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="flag_sea_ice_type_20_ku">
+    <cd:Array>
+      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+        <cd:Integer>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:LittleEndian/>
+        </cd:Integer>
+        <cd:Hidden/>
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Attribute name="FillValue" real_name="_FillValue">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Integer>
+            <cd:NativeType>int8</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="comment">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="flag_masks">
+        <cd:Array>
+          <cd:Dimension>4</cd:Dimension>
+          <cd:Integer>
+            <cd:NativeType>int8</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="flag_meanings">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="institution">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="long_name">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="source">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Integer>
+        <cd:NativeType>int8</cd:NativeType>
+      </cd:Integer>
+      <cd:Description>flag sea-ice type</cd:Description>
     </cd:Array>
   </cd:Field>
   <cd:Field name="flag_cor_status_20_ku">
@@ -1145,7 +1198,7 @@
       </cd:Attribute>
       <cd:Attribute name="flag_masks">
         <cd:Array>
-          <cd:Dimension>21</cd:Dimension>
+          <cd:Dimension>22</cd:Dimension>
           <cd:Integer>
             <cd:NativeType>int32</cd:NativeType>
             <cd:LittleEndian/>
