@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2019-05-29" name="SIR_NEW_OP_1B_netcdf_v1">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2022-10-04" name="SIR_NEW_OP_1B_netcdf_v1">
   <cd:Attribute name="product_name">
     <ct:NamedTest id="FileNameCheckProductName" path="@product_name"/>    
     <cd:Text>
@@ -12,6 +12,11 @@
   <cd:Attribute name="reference_document">
     <cd:Text>
     </cd:Text>
+  </cd:Attribute>
+  <cd:Attribute name="doi">
+    <cd:Text>
+    </cd:Text>
+    <cd:Optional/>
   </cd:Attribute>
   <cd:Attribute name="acquisition_station">
     <cd:Text>
@@ -3567,6 +3572,71 @@
       <cd:Description>internal calibration correction on the backscatter coefficient: 1 Hz</cd:Description>
     </cd:Array>
   </cd:Field>
+  <cd:Field name="internal_tide_01">
+    <cd:Array>
+      <cd:Attribute name="FillValue" real_name="_FillValue">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Integer>
+            <cd:NativeType>int16</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="add_offset">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="institution">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="long_name">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="scale_factor">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="source">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="standard_name">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="units">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+        <cd:Integer>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:LittleEndian/>
+        </cd:Integer>
+        <cd:Hidden/>
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Integer>
+        <cd:NativeType>int16</cd:NativeType>
+        <cd:Conversion numerator="0.001" denominator="1" invalid="-32768"/>
+        <cd:Unit>m</cd:Unit>
+      </cd:Integer>
+      <cd:Description>internal tide height: 1 Hz</cd:Description>
+    </cd:Array>
+    <cd:Optional/>
+  </cd:Field>
   <cd:Field name="inv_bar_cor_01">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
@@ -6371,6 +6441,7 @@
       </cd:Attribute>
       <cd:Attribute name="institution">
         <cd:Text/>
+        <cd:Optional/>
       </cd:Attribute>
       <cd:Attribute name="long_name">
         <cd:Text/>
