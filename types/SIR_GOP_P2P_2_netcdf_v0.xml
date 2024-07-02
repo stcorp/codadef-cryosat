@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2022-10-04" name="SIR_NEW_OP_2_netcdf_v1">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2024-05-14" name="SIR_GOP_P2P_2_netcdf_v0">
   <cd:Attribute name="product_name">
     <ct:NamedTest id="FileNameCheckProductName" path="@product_name"/>    
     <cd:Text>
@@ -8856,7 +8856,6 @@
   <!-- QC id="RangeLongitude_6" path="@last_record_lon[0]" -->
   <!-- QC id="RangeInstrumentIdentifier" path="@instr_id" -->
   <!-- QC id="FixedValueInstrumentIDA" path="@instr_id" -->
-  <!-- QC id="EnumSiralOperativeModeOPL2NetCDF" path="@sir_op_mode" -->
   <!-- QC id="EnumSiralConfigurationKnown" path="@sir_configuration" -->
   <!-- QC id="RangePercentage_2" path="@open_ocean_percent[0]" -->
   <!-- QC id="RangePercentage_2" path="@close_sea_percent[0]" -->

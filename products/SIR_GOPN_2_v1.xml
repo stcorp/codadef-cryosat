@@ -16,9 +16,11 @@
   <ct:NamedTest id="AttributeXrefUWindMustExist"/>
   <ct:NamedTest id="AttributeXrefUsoHrMustExist"/>
   <ct:NamedTest id="AttributeXrefVWindMustExist"/>
-  <ct:NamedTest id="AttributeXrefWetTropMustExist"/>
+  <ct:NamedTest id="AttributeXrefWetTropMustExist"/>  
   <ct:NamedTest id="AttributeXrefSiralL2MustNotExist"/>
   <ct:NamedTest id="AttributeXrefStarTracker0MustNotExist"/>
+  <ct:NamedTest id="AttributeXrefSlopeMustExist"/>
+  <ct:NamedTest id="AttributeXrefSlopeModelMustExistOverOcean"/>
   <ct:NamedTest id="MissingValueIntOceanNetCDF" path="gpd_wet_tropo_cor_01[]"/>
   <ct:NamedTest id="MissingValueIntOceanNetCDF" path="hf_fluct_cor_01[]"/>
   <ct:NamedTest id="RangeAltitudeCOGOceanFD2PLRMNetCDF" path="alt_20_plrm_ku[]"/>

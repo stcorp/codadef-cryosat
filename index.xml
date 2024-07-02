@@ -2629,6 +2629,16 @@
         <cd:MatchExpression>exists(/@rel_time_asc_node_start)</cd:MatchExpression>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <!-- Ocean Baseline D -->
+    <cd:ProductDefinition id="SIR_GOP_2__v3" format="hdf5" version="3">
+      <cd:Description>OP-PFS C2-RS-ACS-ESL-5266 3.4</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIR_GOP_2_</cd:MatchFilename>
+        <cd:MatchExpression>exists(/@rel_time_asc_node_start)</cd:MatchExpression>
+        <cd:MatchFilename offset="51">D</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="SIR_GOP_2__HDR">
     <cd:Description>Geophysical L2 Pole-to-Pole Ocean Product (HDR)</cd:Description>
