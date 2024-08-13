@@ -3595,10 +3595,10 @@
       <cd:Attribute name="coordinates">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Attribute name="institution">
+      <cd:Attribute name="long_name">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Attribute name="long_name">
+      <cd:Attribute name="comment">
         <cd:Text/>
       </cd:Attribute>
       <cd:Attribute name="scale_factor">
@@ -5438,6 +5438,9 @@
         <cd:Text/>
       </cd:Attribute>
       <cd:Attribute name="long_name">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="comment">
         <cd:Text/>
       </cd:Attribute>
       <cd:Attribute name="scale_factor">
