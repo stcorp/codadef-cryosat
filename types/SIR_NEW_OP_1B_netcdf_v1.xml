@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2022-10-04" name="SIR_NEW_OP_1B_netcdf_v1">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2024-08-13" name="SIR_NEW_OP_1B_netcdf_v1">
   <cd:Attribute name="product_name">
     <ct:NamedTest id="FileNameCheckProductName" path="@product_name"/>    
     <cd:Text>
