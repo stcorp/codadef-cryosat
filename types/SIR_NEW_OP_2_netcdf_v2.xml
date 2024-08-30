@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2022-10-04" name="SIR_NEW_OP_2_netcdf_v1">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2022-10-04" name="SIR_NEW_OP_2_netcdf_v2">
   <cd:Attribute name="product_name">
     <ct:NamedTest id="FileNameCheckProductName" path="@product_name"/>    
     <cd:Text>
@@ -480,6 +480,9 @@
   </cd:Attribute>
   <cd:Attribute name="xref_siral_l2">
     <cd:Optional/>
+    <cd:Text/>
+  </cd:Attribute>
+  <cd:Attribute name="xref_slope">
     <cd:Text/>
   </cd:Attribute>  
   <cd:Attribute name="xref_star_tracker_0">
@@ -1572,7 +1575,7 @@
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Integer>
-            <cd:NativeType>int16</cd:NativeType>
+            <cd:NativeType>int32</cd:NativeType>
             <cd:LittleEndian/>
           </cd:Integer>
         </cd:Array>
@@ -1609,7 +1612,7 @@
       </cd:Attribute>
       <cd:Dimension></cd:Dimension>
       <cd:Integer>
-        <cd:NativeType>int16</cd:NativeType>
+        <cd:NativeType>int32</cd:NativeType>
         <cd:Conversion numerator="0.001" denominator="1" invalid="-32768">
            <cd:Unit>m</cd:Unit>
         </cd:Conversion>
@@ -1699,10 +1702,10 @@
       <cd:Attribute name="coordinates">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Attribute name="institution">
+      <cd:Attribute name="long_name">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Attribute name="long_name">
+      <cd:Attribute name="comment">
         <cd:Text/>
       </cd:Attribute>
       <cd:Attribute name="scale_factor">
@@ -4290,6 +4293,9 @@
         <cd:Text/>
       </cd:Attribute>
       <cd:Attribute name="long_name">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="comment">
         <cd:Text/>
       </cd:Attribute>
       <cd:Attribute name="scale_factor">
@@ -8694,6 +8700,59 @@
       <cd:Description>V component of the model wind vector: 1 Hz</cd:Description>
     </cd:Array>
   </cd:Field>
+  <cd:Field name="surface_slope_cor_01">
+    <cd:Array>
+      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+        <cd:Integer>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:LittleEndian/>
+        </cd:Integer>
+        <cd:Hidden/>
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Attribute name="FillValue" real_name="_FillValue">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="comment">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="long_name">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="scale_factor">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="source">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="units">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Integer>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:Conversion numerator="0.0001" denominator="1" invalid="-2.14748e+09">
+           <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+      <cd:Description>The surface slope correction should be used with both mean sea surface solutions provided in the product.</cd:Description>
+    </cd:Array>
+  </cd:Field>
   <ct:NamedTest id="EnumFlagNetCDF" path="@l1b_prod_status"/>
   <ct:NamedTest id="EnumFlagNetCDF" path="@l2_prod_status"/>
   <ct:NamedTest id="EnumOrbitAscendingFlag" path="@ascending_flag"/>    
@@ -8703,7 +8762,7 @@
   <ct:NamedTest id="IndexOf1Hzin20HzMappingOutOfRange" path="ind_meas_1hz_20_ku[]"/>
   <ct:NamedTest id="L1QualityThresholdNetCDF"/>
   <ct:NamedTest id="L2QualityThresholdNetCDF"/>
-  <ct:NamedTest id="MPHRefDocOPV34NetCDF" path="@reference_document"/>
+  <ct:NamedTest id="MPHRefDocOPV37NetCDF" path="@reference_document"/>
   <ct:NamedTest id="MPHSensingTimeOrderNetCDF"/>
   <ct:NamedTest id="MissingValueIntOceanExcludingPolarFD2NetCDF" path="sig0_ocean_20_ku[]"/>
   <ct:NamedTest id="MissingValueIntOceanExcludingPolarNetCDF" path="sea_state_bias_01_ku[]"/>
@@ -8782,7 +8841,7 @@
   <ct:NamedTest id="RangeAltitudeCOGOceanFD2NetCDF" path="alt_20_ku[]"/>
   <!-- QC id="FileNameCheckProductName" path="@product_name" -->
   <!-- QC id="ProcessingStageValidL2HDR" path="@processing_stage" -->
-  <!-- QC id="MPHRefDocOPV34NetCDF" path="@reference_document" -->
+  <!-- QC id="MPHRefDocOPV37NetCDF" path="@reference_document" -->
   <!-- QC id="AcquisitionStationValid" path="@acquisition_station" -->
   <!-- QC id="ProcessingCenterValidL2" path="@processing_centre" -->
   <!-- QC id="EnumOrbitVectorSourceNetCDF" path="@vector_source" -->

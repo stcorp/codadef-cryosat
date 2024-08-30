@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="SIR_GOPM_2_v1" format="hdf5" last-modified="2019-02-08">
-  <cd:NamedType id="SIR_NEW_OP_2_netcdf_v1"/>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="SIR_GOPM_2_v2" format="hdf5" last-modified="2024-08-28">
+  <cd:NamedType id="SIR_NEW_OP_2_netcdf_v2"/>
   <ct:NamedTest id="AttributeXrefGimMustExist"/>
   <ct:NamedTest id="AttributeXrefGpdWtcMustExist"/>
   <ct:NamedTest id="AttributeXrefMeanPressureMustExist"/>
@@ -16,6 +16,8 @@
   <ct:NamedTest id="AttributeXrefSiralCharacterisationHrMustNotExist"/>
   <ct:NamedTest id="AttributeXrefSiralL0HrMustNotExist"/>
   <ct:NamedTest id="AttributeXrefSiralL2MustNotExist"/>
+  <ct:NamedTest id="AttributeXrefSlopeMustExist"/>
+  <ct:NamedTest id="AttributeXrefSlopeModelMustExistOverOcean"/>
   <ct:NamedTest id="AttributeXrefStarTracker0MustNotExist"/>
   <ct:NamedTest id="AttributeXrefStarTrackerAttcopMustNotExist"/>
   <ct:NamedTest id="AttributeXrefUsoHrMustNotExist"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2022-10-04" name="SIR_NEW_OP_1B_netcdf_v1">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2024-08-13" name="SIR_NEW_OP_1B_netcdf_v2">
   <cd:Attribute name="product_name">
     <ct:NamedTest id="FileNameCheckProductName" path="@product_name"/>    
     <cd:Text>
@@ -3406,7 +3406,7 @@
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Integer>
-            <cd:NativeType>int16</cd:NativeType>
+            <cd:NativeType>int32</cd:NativeType>
             <cd:LittleEndian/>
           </cd:Integer>
         </cd:Array>
@@ -3451,7 +3451,7 @@
       </cd:Attribute>
       <cd:Dimension></cd:Dimension>
       <cd:Integer>
-        <cd:NativeType>int16</cd:NativeType>
+        <cd:NativeType>int32</cd:NativeType>
         <cd:Conversion numerator="0.001" denominator="1" invalid="-32768"/>
         <cd:Unit>m</cd:Unit>
       </cd:Integer>
@@ -3595,10 +3595,10 @@
       <cd:Attribute name="coordinates">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Attribute name="institution">
+      <cd:Attribute name="long_name">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Attribute name="long_name">
+      <cd:Attribute name="comment">
         <cd:Text/>
       </cd:Attribute>
       <cd:Attribute name="scale_factor">
@@ -5440,6 +5440,9 @@
       <cd:Attribute name="long_name">
         <cd:Text/>
       </cd:Attribute>
+      <cd:Attribute name="comment">
+        <cd:Text/>
+      </cd:Attribute>
       <cd:Attribute name="scale_factor">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -7178,7 +7181,7 @@
   <ct:NamedTest id="L0GapsFieldNetCDF"/>  
   <ct:NamedTest id="L0QualityThresholdNetCDF"/>  
   <ct:NamedTest id="L1BQualityThresholdNetCDF"/>  
-  <ct:NamedTest id="MPHRefDocOPV34NetCDF" path="@reference_document"/>
+  <ct:NamedTest id="MPHRefDocOPV37NetCDF" path="@reference_document"/>
   <ct:NamedTest id="MPHSensingTimeOrderNetCDF"/>  
   <ct:NamedTest id="QualityFlagNetCDF" path="@product_err"/>
   <ct:NamedTest id="QualityFlagNetCDF" path="@l0_proc_flag"/>
@@ -7213,7 +7216,7 @@
   <ct:NamedTest id="SequenceCounterStepTODNetCDF" path="seq_count_20_ku[]"/>
   <!-- QC id="FileNameCheckProductName" path="@product_name" -->
   <!-- QC id="ProcessingStageValidL1HDR" path="@processing_stage" -->
-  <!-- QC id="MPHRefDocOPV34NetCDF" path="@reference_document" -->
+  <!-- QC id="MPHRefDocOPV37NetCDF" path="@reference_document" -->
   <!-- QC id="AcquisitionStationValid" path="@acquisition_station" -->
   <!-- QC id="ProcessingCenterValidL1" path="@processing_centre" -->
   <!-- QC id="EnumOrbitVectorSourceNetCDF" path="@vector_source" -->

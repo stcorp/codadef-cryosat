@@ -2993,6 +2993,15 @@
         <cd:MatchExpression>exists(/@rel_time_asc_node_start)</cd:MatchExpression>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="SIR_GOPM1B_v2" format="hdf5" version="2">
+      <cd:Description>OP-PFS C2-RS-ACS-ESL-5266 3.4</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIR_GOPM1B</cd:MatchFilename>
+        <cd:MatchExpression>exists(/@rel_time_asc_node_start)</cd:MatchExpression>
+        <cd:MatchFilename offset="51">D</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="SIR_GOPM1B_HDR">
     <cd:Description>Geophysical L1B LRM Ocean Product (HDR)</cd:Description>
@@ -3020,6 +3029,15 @@
         <cd:MatchExpression>exists(/@rel_time_asc_node_start)</cd:MatchExpression>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="SIR_GOPR1B_v2" format="hdf5" version="2">
+      <cd:Description>OP-PFS C2-RS-ACS-ESL-5266 3.4</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIR_GOPR1B</cd:MatchFilename>
+        <cd:MatchExpression>exists(/@rel_time_asc_node_start)</cd:MatchExpression>
+        <cd:MatchFilename offset="51">D</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="SIR_GOPR1B_HDR">
     <cd:Description>Geophysical L1B SAR Ocean Product (HDR)</cd:Description>
@@ -3045,6 +3063,15 @@
         <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
         <cd:MatchFilename offset="8">SIR_GOPN1B</cd:MatchFilename>
         <cd:MatchExpression>exists(/@rel_time_asc_node_start)</cd:MatchExpression>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="SIR_GOPN1B_v2" format="hdf5" version="2">
+      <cd:Description>OP-PFS C2-RS-ACS-ESL-5266 3.4</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIR_GOPN1B</cd:MatchFilename>
+        <cd:MatchExpression>exists(/@rel_time_asc_node_start)</cd:MatchExpression>
+        <cd:MatchFilename offset="51">D</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -3236,6 +3263,15 @@
         <cd:MatchExpression>exists(/@rel_time_asc_node_start)</cd:MatchExpression>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="SIR_GOPM_2_v2" format="hdf5" version="2">
+      <cd:Description>OP-PFS C2-RS-ACS-ESL-5266 3.4</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIR_GOPM_2</cd:MatchFilename>
+        <cd:MatchExpression>exists(/@rel_time_asc_node_start)</cd:MatchExpression>
+        <cd:MatchFilename offset="51">D</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="SIR_GOPM_2_HDR">
     <cd:Description>Geophysical L2 LRM Ocean Product (HDR)</cd:Description>
@@ -3263,6 +3299,15 @@
         <cd:MatchExpression>exists(/@rel_time_asc_node_start)</cd:MatchExpression>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="SIR_GOPR_2_v2" format="hdf5" version="2">
+      <cd:Description>OP-PFS C2-RS-ACS-ESL-5266 3.4</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIR_GOPR_2</cd:MatchFilename>
+        <cd:MatchExpression>exists(/@rel_time_asc_node_start)</cd:MatchExpression>
+        <cd:MatchFilename offset="51">D</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="SIR_GOPR_2_HDR">
     <cd:Description>Geophysical L2 SAR Ocean Product (HDR)</cd:Description>
@@ -3288,6 +3333,15 @@
         <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
         <cd:MatchFilename offset="8">SIR_GOPN_2</cd:MatchFilename>
         <cd:MatchExpression>exists(/@rel_time_asc_node_start)</cd:MatchExpression>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="SIR_GOPN_2_v2" format="hdf5" version="2">
+      <cd:Description>OP-PFS C2-RS-ACS-ESL-5266 3.4</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIR_GOPN_2</cd:MatchFilename>
+        <cd:MatchExpression>exists(/@rel_time_asc_node_start)</cd:MatchExpression>
+        <cd:MatchFilename offset="51">D</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
