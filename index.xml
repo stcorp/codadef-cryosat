@@ -747,6 +747,14 @@
         <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="SIR_LRM_1B_v4" format="hdf5" version="4">
+      <cd:Description>CS-RS-ACS-ESL-5364 3.0</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIR_LRM_1B</cd:MatchFilename>
+        <cd:MatchFilename offset="50">_F0</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="SIR_LRM_1B_HDR">
     <cd:Description>SIRAL L1B LRM product (HDR)</cd:Description>
