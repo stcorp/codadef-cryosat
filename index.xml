@@ -2060,7 +2060,9 @@
         <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
         <cd:MatchFilename offset="8">SIR_GDR_2_</cd:MatchFilename>
       </cd:DetectionRule>
-     </cd:ProductDefinition>
+    </cd:ProductDefinition>
+
+    <!--
     <cd:ProductDefinition id="SIR_GDR_2__v3" format="hdf5" version="3">
       <cd:Description>CS-RS-ACS-ESL-5265 1.6</cd:Description>
       <cd:DetectionRule>
@@ -2068,7 +2070,18 @@
         <cd:MatchFilename offset="8">SIR_GDR_2_</cd:MatchFilename>
         <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
       </cd:DetectionRule>
-     </cd:ProductDefinition>
+    </cd:ProductDefinition>
+    -->
+
+    <cd:ProductDefinition id="SIR_GDR_2__v4" format="hdf5" version="4">
+      <cd:Description>CS-RS-ACS-ESL-5265 1.6</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIR_GDR_2_</cd:MatchFilename>
+        <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+
   </cd:ProductType>
   <cd:ProductType name="SIR_GDR_2__HDR">
     <cd:Description>SIRAL L2 consolidated product including SAR data (SIR_SAR_2_) (HDR)</cd:Description>
