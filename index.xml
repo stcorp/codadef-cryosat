@@ -870,6 +870,8 @@
         <cd:MatchFilename offset="8">SIR_SIN_1B</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+
+    <!--
     <cd:ProductDefinition id="SIR_SIN_1B_v3" format="hdf5" version="3">
       <cd:Description>CS-RS-ACS-ESL-5364 1.8 baseline-E</cd:Description>
       <cd:DetectionRule>
@@ -878,6 +880,17 @@
         <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    -->
+
+    <cd:ProductDefinition id="SIR_SIN_1B_v4" format="hdf5" version="4">
+      <cd:Description>CS-RS-ACS-ESL-5364 1.8 baseline-F</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIR_SIN_1B</cd:MatchFilename>
+        <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+
   </cd:ProductType>
   <cd:ProductType name="SIR_SIN_1B_HDR">
     <cd:Description>SIRAL L1B SARin mode product (HDR)</cd:Description>
