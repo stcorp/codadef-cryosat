@@ -321,7 +321,13 @@
   <cd:Attribute name="xref_constants">
     <cd:Text/>
   </cd:Attribute>
+  <cd:Attribute name="xref_distance_to_coast">
+    <cd:Text/>
+  </cd:Attribute>
   <cd:Attribute name="xref_dip_map">
+    <cd:Text/>
+  </cd:Attribute>
+  <cd:Attribute name="xref_ocean_load_tide">
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_earth_tide">
@@ -1026,6 +1032,100 @@
       <cd:Description>cor2 height rate</cd:Description>
     </cd:Array>
   </cd:Field>
+
+  <cd:Field name="distance_to_coast_01">
+    <cd:Array>
+      <cd:Attribute name="FillValue" real_name="_FillValue">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Integer>
+            <cd:NativeType>int16</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="comment">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="institution">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="long_name">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="scale_factor">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="source">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="units">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Integer>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+      <cd:Description>Distance to the closest coast: negative over land, positive over water bodies</cd:Description>
+    </cd:Array>
+  </cd:Field>
+
+  <cd:Field name="distance_to_coast_20_ku">
+    <cd:Array>
+      <cd:Attribute name="FillValue" real_name="_FillValue">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Integer>
+            <cd:NativeType>int16</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="comment">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="institution">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="long_name">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="scale_factor">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="source">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="units">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Integer>
+        <cd:NativeType>int16</cd:NativeType>
+        <cd:LittleEndian/>
+      </cd:Integer>
+      <cd:Description>Distance to the closest coast: negative over land, positive over water bodies</cd:Description>
+    </cd:Array>
+  </cd:Field>
+
   <cd:Field name="dop_angle_start_20_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
@@ -3374,7 +3474,7 @@
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
+            <cd:NativeType>int64</cd:NativeType>
             <cd:LittleEndian/>
           </cd:Integer>
         </cd:Array>
@@ -3421,17 +3521,9 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
       <cd:Dimension></cd:Dimension>
       <cd:Integer>
-        <cd:NativeType>int32</cd:NativeType>
+        <cd:NativeType>int64</cd:NativeType>
         <cd:Conversion numerator="0.001" denominator="1" invalid="-2.14748e+09">
            <cd:Unit>m</cd:Unit>
         </cd:Conversion>
@@ -6018,6 +6110,78 @@
       <cd:Description>record counter</cd:Description>
     </cd:Array>
   </cd:Field>
+
+  <cd:Field name="rip_20_ku">
+    <cd:Array>
+      <cd:Attribute name="FillValue" real_name="_FillValue">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+        <cd:Integer>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:LittleEndian/>
+        </cd:Integer>
+        <cd:Hidden/>
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Attribute name="add_offset">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="comment">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="long_name">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="scale_factor">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="units">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Dimension></cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>double</cd:NativeType>
+        <cd:LittleEndian/>
+      </cd:Float>
+      <cd:Description>Range integrated power L1B.</cd:Description>
+    </cd:Array>
+  </cd:Field>
+
   <cd:Field name="sat_vel_vec_20_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
