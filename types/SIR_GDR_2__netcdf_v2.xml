@@ -4760,7 +4760,7 @@
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Integer>
-            <cd:NativeType>int8</cd:NativeType>
+            <cd:NativeType>int16</cd:NativeType>
             <cd:LittleEndian/>
           </cd:Integer>
         </cd:Array>

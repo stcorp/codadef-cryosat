@@ -2118,7 +2118,7 @@
     -->
 
     <cd:ProductDefinition id="SIR_GDR_2__v4" format="hdf5" version="4">
-      <cd:Description>CS-RS-ACS-ESL-5265 1.6</cd:Description>
+      <cd:Description>CS-RS-ACS-ESL-5265 3.0</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
         <cd:MatchFilename offset="8">SIR_GDR_2_</cd:MatchFilename>
