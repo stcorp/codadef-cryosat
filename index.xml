@@ -739,8 +739,6 @@
         <cd:MatchFilename offset="8">SIR_LRM_1B</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-
-    <!--
     <cd:ProductDefinition id="SIR_LRM_1B_v3" format="hdf5" version="3">
       <cd:Description>CS-RS-ACS-ESL-5364 1.8</cd:Description>
       <cd:DetectionRule>
@@ -749,14 +747,12 @@
         <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-    -->
-
     <cd:ProductDefinition id="SIR_LRM_1B_v4" format="hdf5" version="4">
       <cd:Description>CS-RS-ACS-ESL-5364 3.0</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
         <cd:MatchFilename offset="8">SIR_LRM_1B</cd:MatchFilename>
-        <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
+        <cd:MatchFilename offset="50">_F0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -804,8 +800,6 @@
         <cd:MatchFilename offset="8">SIR_SAR_1B</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-
-    <!--
     <cd:ProductDefinition id="SIR_SAR_1B_v3" format="hdf5" version="3">
       <cd:Description>CS-RS-ACS-ESL-5364 1.8</cd:Description>
       <cd:DetectionRule>
@@ -814,18 +808,15 @@
         <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-    -->
-
     <cd:ProductDefinition id="SIR_SAR_1B_v4" format="hdf5" version="4">
       <cd:Description>CS-RS-ACS-ESL-5364 1.8</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
         <cd:MatchFilename offset="8">SIR_SAR_1B</cd:MatchFilename>
-        <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
+        <cd:MatchFilename offset="50">_F0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
-
   <cd:ProductType name="SIR_SAR_1B_HDR">
     <cd:Description>SIRAL L1B SAR mode product (HDR)</cd:Description>
     <cd:ProductDefinition id="SIR_SAR_1B_HDR_v0" format="xml" version="0">
@@ -870,8 +861,6 @@
         <cd:MatchFilename offset="8">SIR_SIN_1B</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-
-    <!--
     <cd:ProductDefinition id="SIR_SIN_1B_v3" format="hdf5" version="3">
       <cd:Description>CS-RS-ACS-ESL-5364 1.8 baseline-E</cd:Description>
       <cd:DetectionRule>
@@ -880,17 +869,14 @@
         <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-    -->
-
     <cd:ProductDefinition id="SIR_SIN_1B_v4" format="hdf5" version="4">
       <cd:Description>CS-RS-ACS-ESL-5364 1.8 baseline-F</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
         <cd:MatchFilename offset="8">SIR_SIN_1B</cd:MatchFilename>
-        <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
+        <cd:MatchFilename offset="50">_F0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-
   </cd:ProductType>
   <cd:ProductType name="SIR_SIN_1B_HDR">
     <cd:Description>SIRAL L1B SARin mode product (HDR)</cd:Description>
@@ -1811,8 +1797,6 @@
         <cd:MatchFilename offset="8">SIR_LRM_2_</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-
-    <!--
     <cd:ProductDefinition id="SIR_LRM_2__v3" format="hdf5" version="3">
       <cd:Description>CS-RS-ACS-ESL-5265 1.6</cd:Description>
       <cd:DetectionRule>
@@ -1821,17 +1805,14 @@
         <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-    -->
-
     <cd:ProductDefinition id="SIR_LRM_2__v4" format="hdf5" version="4">
-      <cd:Description>CS-RS-ACS-ESL-5265 1.6</cd:Description>
+      <cd:Description>CS-RS-ACS-ESL-5265 3.0</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
         <cd:MatchFilename offset="8">SIR_LRM_2_</cd:MatchFilename>
-        <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
+        <cd:MatchFilename offset="50">_F0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-
   </cd:ProductType>
   <cd:ProductType name="SIR_LRM_2__HDR">
     <cd:Description>SIRAL L2 product from LRM processing (HDR)</cd:Description>
@@ -1877,8 +1858,6 @@
         <cd:MatchFilename offset="8">SIR_SIN_2_</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-
-    <!--
     <cd:ProductDefinition id="SIR_SIN_2__v3" format="hdf5" version="3">
       <cd:Description>CS-RS-ACS-ESL-5265 1.6</cd:Description>
       <cd:DetectionRule>
@@ -1887,17 +1866,14 @@
         <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-    -->
-
     <cd:ProductDefinition id="SIR_SIN_2__v4" format="hdf5" version="3">
-      <cd:Description>CS-RS-ACS-ESL-5265 1.6</cd:Description>
+      <cd:Description>CS-RS-ACS-ESL-5265 3.0</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
         <cd:MatchFilename offset="8">SIR_SIN_2_</cd:MatchFilename>
-        <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
+        <cd:MatchFilename offset="50">_F0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-
   </cd:ProductType>
   <cd:ProductType name="SIR_SIN_2__HDR">
     <cd:Description>SIRAL L2 product from SARin processing (HDR)</cd:Description>
@@ -2105,8 +2081,6 @@
         <cd:MatchFilename offset="8">SIR_GDR_2_</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-
-    <!--
     <cd:ProductDefinition id="SIR_GDR_2__v3" format="hdf5" version="3">
       <cd:Description>CS-RS-ACS-ESL-5265 1.6</cd:Description>
       <cd:DetectionRule>
@@ -2115,17 +2089,14 @@
         <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-    -->
-
     <cd:ProductDefinition id="SIR_GDR_2__v4" format="hdf5" version="4">
       <cd:Description>CS-RS-ACS-ESL-5265 3.0</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
         <cd:MatchFilename offset="8">SIR_GDR_2_</cd:MatchFilename>
-        <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
+        <cd:MatchFilename offset="50">_F0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-
   </cd:ProductType>
   <cd:ProductType name="SIR_GDR_2__HDR">
     <cd:Description>SIRAL L2 consolidated product including SAR data (SIR_SAR_2_) (HDR)</cd:Description>
