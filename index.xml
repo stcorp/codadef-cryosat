@@ -896,6 +896,7 @@
         <cd:MatchFilename offset="8">SIR_SARN1B</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+
     <cd:ProductDefinition id="SIR_SARN1B_v1" format="binary" version="1">
       <cd:Description>L1B binary product tot include MDSR fields</cd:Description>
       <cd:DetectionRule>
@@ -904,6 +905,17 @@
         <cd:MatchData offset="60">E</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+
+    <!-- baseline-F -->
+    <cd:ProductDefinition id="SIR_SARN1B_v2" format="binary" version="2">
+      <cd:Description>L1B binary product tot include MDSR fields</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
+        <cd:MatchData offset="17">SIR_SARN1B</cd:MatchData>
+        <cd:MatchData offset="60">F</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+
   </cd:ProductType>
   <cd:ProductType name="SIR_SARN1B_HDR">
     <cd:Description>SIRAL L1B NRT SAR mode product (HDR)</cd:Description>
@@ -916,6 +928,7 @@
   </cd:ProductType>
   <cd:ProductType name="SIR_SINN1B">
     <cd:Description>SIRAL L1B NRT SARin mode product (DBL)</cd:Description>
+
     <cd:ProductDefinition id="SIR_SINN1B_v0" format="hdf5" version="0">
       <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9</cd:Description>
       <cd:DetectionRule>
@@ -923,6 +936,17 @@
         <cd:MatchFilename offset="8">SIR_SINN1B</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+
+    <!-- baseline-F -->
+    <cd:ProductDefinition id="SIR_SINN1B_v1" format="hdf5" version="1">
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIR_SINN1B</cd:MatchFilename>
+        <cd:MatchFilename offset="50">_F0</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+
   </cd:ProductType>
   <cd:ProductType name="SIR_SINN1B_HDR">
     <cd:Description>SIRAL L1B NRT SARin mode product (HDR)</cd:Description>
@@ -1866,7 +1890,7 @@
         <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-    <cd:ProductDefinition id="SIR_SIN_2__v4" format="hdf5" version="3">
+    <cd:ProductDefinition id="SIR_SIN_2__v4" format="hdf5" version="4">
       <cd:Description>CS-RS-ACS-ESL-5265 3.0</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
@@ -2182,6 +2206,7 @@
         <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+
     <cd:ProductDefinition id="SIR_SARN2__v2" format="binary" version="2">
       <cd:Description>L2 Binary product tot include MDSR fields</cd:Description>
       <cd:DetectionRule>
@@ -2190,6 +2215,17 @@
         <cd:MatchData offset="60">E</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+
+    <!-- baseline-F -->
+    <cd:ProductDefinition id="SIR_SARN2__v3" format="binary" version="3">
+      <cd:Description>L2 Binary product tot include MDSR fields</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="CS_</cd:MatchData>
+        <cd:MatchData offset="17">SIR_SARN2</cd:MatchData>
+        <cd:MatchData offset="60">F</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+
   </cd:ProductType>
   <cd:ProductType name="SIR_SARN2__HDR">
     <cd:Description>SIRAL L2 NRT SAR mode product (HDR)</cd:Description>
@@ -2236,6 +2272,7 @@
         <cd:MatchFilename offset="8">SIR_SINN2_</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+
     <cd:ProductDefinition id="SIR_SINN2__v1" format="hdf5" version="1">
       <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9</cd:Description>
       <cd:DetectionRule>
@@ -2244,6 +2281,17 @@
         <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+
+    <!-- baseline-F -->
+    <cd:ProductDefinition id="SIR_SINN2__v2" format="hdf5" version="2">
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIR_SINN2_</cd:MatchFilename>
+        <cd:MatchFilename offset="50">_F0</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+
   </cd:ProductType>
   <cd:ProductType name="SIR_SINN2__HDR">
     <cd:Description>SIRAL L2 NRT SARin mode product (HDR)</cd:Description>
@@ -2547,6 +2595,7 @@
         <cd:MatchFilename offset="8">SIRNSARI2_</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+
     <cd:ProductDefinition id="SIRNSARI2__v1" format="hdf5" version="1">
       <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9</cd:Description>
       <cd:DetectionRule>
@@ -2555,6 +2604,17 @@
         <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+
+    <!-- Baseline-F -->
+    <cd:ProductDefinition id="SIRNSARI2__v2" format="hdf5" version="2">
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIRNSARI2_</cd:MatchFilename>
+        <cd:MatchFilename offset="50">_F0</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+
   </cd:ProductType>
   <cd:ProductType name="SIRNSARI2__HDR">
     <cd:Description>SIRAL L2I NRT SAR mode product (HDR)</cd:Description>
@@ -2601,6 +2661,7 @@
         <cd:MatchFilename offset="8">SIRNSINI2_</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+
     <cd:ProductDefinition id="SIRNSINI2__v1" format="hdf5" version="1">
       <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9</cd:Description>
       <cd:DetectionRule>
@@ -2609,6 +2670,17 @@
         <cd:MatchFilename offset="50">_E0</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+
+    <!-- baseline-F -->
+    <cd:ProductDefinition id="SIRNSINI2__v2" format="hdf5" version="2">
+      <cd:Description>L1-PFS CS-RS-ACS-GS-5106 4.9</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">CS_</cd:MatchFilename>
+        <cd:MatchFilename offset="8">SIRNSINI2_</cd:MatchFilename>
+        <cd:MatchFilename offset="50">_F0</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+
   </cd:ProductType>
   <cd:ProductType name="SIRNSINI2__HDR">
     <cd:Description>SIRAL L2I NRT SARin mode product (HDR)</cd:Description>
