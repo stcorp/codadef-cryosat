@@ -324,10 +324,16 @@
   <cd:Attribute name="xref_dip_map">
     <cd:Text/>
   </cd:Attribute>
+  <cd:Attribute name="xref_distance_to_coast">
+    <cd:Text/>
+  </cd:Attribute>
   <cd:Attribute name="xref_earth_tide">
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_iono_cor">
+    <cd:Text/>
+  </cd:Attribute>
+  <cd:Attribute name="xref_ocean_load_tide">
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_mean_pressure">
@@ -338,9 +344,6 @@
   </cd:Attribute>
   <cd:Attribute name="xref_mog2d">
     <cd:Optional/>
-    <cd:Text/>
-  </cd:Attribute>
-  <cd:Attribute name="xref_ocean_tide">
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_orbit">
@@ -396,9 +399,6 @@
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_surf_type">
-    <cd:Text/>
-  </cd:Attribute>
-  <cd:Attribute name="xref_tidal_load">
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_u_wind">
@@ -1025,6 +1025,139 @@
       <cd:Description>cor2 height rate</cd:Description>
     </cd:Array>
   </cd:Field>
+
+  <cd:Field name="distance_to_coast_20_ku">
+    <cd:Array>
+      <cd:Attribute name="FillValue" real_name="_FillValue">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Integer>
+            <cd:NativeType>int16</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="comment">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="institution">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="long_name">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="scale_factor">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="source">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="units">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+        <cd:Integer>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:LittleEndian/>
+        </cd:Integer>
+        <cd:Hidden/>
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Integer>
+        <cd:NativeType>int16</cd:NativeType>
+        <cd:Conversion numerator="0.01" denominator="1" invalid="-32768">
+           <cd:Unit>seconds/rc</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+      <cd:Description>cor2 height rate</cd:Description>
+    </cd:Array>
+  </cd:Field>
+
+  <cd:Field name="distance_to_coast_01">
+    <cd:Array>
+      <cd:Attribute name="FillValue" real_name="_FillValue">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Integer>
+            <cd:NativeType>int16</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="comment">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="institution">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="long_name">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="scale_factor">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="source">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="units">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+        <cd:Integer>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:LittleEndian/>
+        </cd:Integer>
+        <cd:Hidden/>
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Integer>
+        <cd:NativeType>int16</cd:NativeType>
+        <cd:Conversion numerator="0.01" denominator="1" invalid="-32768">
+           <cd:Unit>seconds/rc</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+      <cd:Description>cor2 height rate</cd:Description>
+    </cd:Array>
+  </cd:Field>
+
   <cd:Field name="dop_angle_start_20_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
@@ -3373,7 +3506,7 @@
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
+            <cd:NativeType>int64</cd:NativeType>
             <cd:LittleEndian/>
           </cd:Integer>
         </cd:Array>
@@ -3430,8 +3563,9 @@
       </cd:Attribute>
       <cd:Dimension></cd:Dimension>
       <cd:Integer>
-        <cd:NativeType>int32</cd:NativeType>
-        <cd:Conversion numerator="0.001" denominator="1" invalid="-2.14748e+09">
+        <cd:NativeType>int64</cd:NativeType>
+        <cd:LittleEndian/>
+        <cd:Conversion numerator="1e-12" denominator="1" invalid="-9.22337e+18">
            <cd:Unit>m</cd:Unit>
         </cd:Conversion>
       </cd:Integer>
