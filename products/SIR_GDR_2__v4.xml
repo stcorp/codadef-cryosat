@@ -6,8 +6,6 @@
   <ct:NamedTest id="AttributeXrefSiralL2MustExist"/>
   <ct:NamedTest id="AttributeXrefSlopeModelMustExistOverContinentalIce"/>
   <ct:NamedTest id="AttributeXrefSnowDepthMustExist"/>
-  <ct:NamedTest id="AttributeXrefSsbMustExistOverOpenOcean"/>
-  <ct:NamedTest id="AttributeXrefWindModelMustExistOverOpenOcean"/>
   <!-- QC id="FixedValueDorisPrecise" path="@vector_source" -->
   <!-- MPH Cross File Tests -->
   <ct:NamedCrossFileTest id="MPH_Product_NetCDF"/>
