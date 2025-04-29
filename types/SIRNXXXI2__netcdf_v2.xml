@@ -377,9 +377,6 @@
   <cd:Attribute name="xref_mss">
     <cd:Text/>
   </cd:Attribute>
-  <cd:Attribute name="xref_ocean_tide">
-    <cd:Text/>
-  </cd:Attribute>
   <cd:Attribute name="xref_ocean_load_tide">
     <cd:Text/>
   </cd:Attribute>
@@ -466,9 +463,6 @@
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_surf_type">
-    <cd:Text/>
-  </cd:Attribute>
-  <cd:Attribute name="xref_tidal_load">
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_u_wind">
