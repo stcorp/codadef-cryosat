@@ -1498,15 +1498,6 @@
 		      </cd:Integer>
 		    </cd:Array>
 		  </cd:Attribute>
-		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
-		    <cd:Array>
-		      <cd:Dimension>1</cd:Dimension>
-		      <cd:Integer>
-		        <cd:NativeType>int32</cd:NativeType>
-		        <cd:LittleEndian/>
-		      </cd:Integer>
-		    </cd:Array>
-		  </cd:Attribute>
       <cd:Attribute name="FillValue" real_name="_FillValue">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
