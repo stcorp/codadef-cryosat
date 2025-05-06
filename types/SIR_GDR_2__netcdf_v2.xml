@@ -5486,7 +5486,7 @@
         <cd:NativeType>double</cd:NativeType>
         <cd:Conversion numerator="1.0" denominator="86400.0" invalid="0.0"/>
       </cd:Float>
-      <cd:Description></cd:Description>
+      <cd:Description>TAI time in seconds since 2000-01-01.</cd:Description>
     </cd:Array>
   </cd:Field>
 
