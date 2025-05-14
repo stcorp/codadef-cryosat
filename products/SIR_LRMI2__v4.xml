@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="SIR_LRMI2__v4" format="hdf5" last-modified="2025-05-13" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
-  <cd:NamedType id="SIR_XXXI2__netcdf_v2"/>
+  <cd:NamedType id="SIR_LRMI2__netcdf_v0"/>
   <ct:NamedTest id="AttributeXrefDemMustNotExist"/>
   <ct:NamedTest id="AttributeXrefSeaIceMustNotExist"/>
   <ct:NamedTest id="AttributeXrefSiralL2MustNotExist"/>
