@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ct:Tests xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" last-modified="2021-07-27">
+<ct:Tests xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" last-modified="2025-12-22">
   <ct:Test name="AcquisitionStationValid" description="Acquisition station must be Kiruna" criticality="Warning"><![CDATA[rtrim(str(.)) == "Kiruna"]]></ct:Test>
   <ct:Test name="AttributeL1bProcessingQualityHrMustExist" description="Existence of Attribute l1b_processing_quality_hr is mandatory" criticality="Warning"><![CDATA[exists(@l1b_processing_quality_hr)]]></ct:Test>
   <ct:Test name="AttributeL1bProcFlagHrMustExist" description="Existence of Attribute l1b_proc_flag_hr is mandatory" criticality="Warning"><![CDATA[exists(@l1b_proc_flag_hr)]]></ct:Test>
@@ -273,10 +273,10 @@
   <ct:Test name="MPHProcStageCodeMatchesFilename" description="The Processing Stage Code in the MPH should be consistent with the file name" criticality="Error"><![CDATA[str(.) == substr(3,4,filename())]]></ct:Test>
   <ct:Test name="MPHProductSize" description="The size reported in the MPH should equal the actual product size" criticality="Error"><![CDATA[int(.) == filesize()]]></ct:Test>
   <ct:Test name="MPHRefDocL0" description="The REF_DOC field in the MPH should have the value 'CS-ID-ACS-GS-0119 03.03'" criticality="Warning"><![CDATA[str(.) == "CS-ID-ACS-GS-0119 03.03"]]></ct:Test>
-  <ct:Test name="MPHRefDocL1" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-GS-5106 06.00', 'CS-RS-ACS-ESL-5364 1.8' or 'CS-RS-ACS-ESL-5364 2.0'" criticality="Warning"><![CDATA[str(.) == "CS-RS-ACS-GS-5106 06.00" || rtrim(str(.)) == "CS-RS-ACS-ESL-5364 1.8" || rtrim(str(.)) == "CS-RS-ACS-ESL-5364 2.0"]]></ct:Test>
-  <ct:Test name="MPHRefDocL1NetCDF" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-ESL-5364 1.8' or 'CS-RS-ACS-ESL-5364 2.0' (NetCDF version)" criticality="Warning"><![CDATA[rtrim(str(.)) == "CS-RS-ACS-ESL-5364 1.8" || rtrim(str(.)) == "CS-RS-ACS-ESL-5364 2.0"]]></ct:Test>
-  <ct:Test name="MPHRefDocL2" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-GS-5123 04.00' or 'CS-RS-ACS-ESL-5265 1.6'" criticality="Warning"><![CDATA[str(.) == "CS-RS-ACS-GS-5123 04.00" || rtrim(str(.)) == "CS-RS-ACS-ESL-5265 1.6" || rtrim(str(.)) == "CS-RS-ACS-ESL-5265 2.1"]]></ct:Test>
-  <ct:Test name="MPHRefDocL2NetCDF" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-ESL-5265 1.6' or 'CS-RS-ACS-ESL-5265 2.1' (NetCDF version)" criticality="Warning"><![CDATA[rtrim(str(.)) == "CS-RS-ACS-ESL-5265 1.6" || rtrim(str(.)) == "CS-RS-ACS-ESL-5265 2.1"]]></ct:Test>
+  <ct:Test name="MPHRefDocL1" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-GS-5106 06.00', 'CS-RS-ACS-ESL-5364 1.8', 'CS-RS-ACS-ESL-5364 2.0' or 'CS-RS-ACS-ESL-5364 3.0'" criticality="Warning"><![CDATA[str(.) == "CS-RS-ACS-GS-5106 06.00" || rtrim(str(.)) == "CS-RS-ACS-ESL-5364 1.8" || rtrim(str(.)) == "CS-RS-ACS-ESL-5364 2.0" || rtrim(str(.)) == "CS-RS-ACS-ESL-5364 3.1"]]></ct:Test>
+  <ct:Test name="MPHRefDocL1NetCDF" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-ESL-5364 1.8', 'CS-RS-ACS-ESL-5364 2.0' or 'CS-RS-ACS-ESL-5364 3.0' (NetCDF version)" criticality="Warning"><![CDATA[rtrim(str(.)) == "CS-RS-ACS-ESL-5364 1.8" || rtrim(str(.)) == "CS-RS-ACS-ESL-5364 2.0" || rtrim(str(.)) == "CS-RS-ACS-ESL-5364 3.1"]]></ct:Test>
+  <ct:Test name="MPHRefDocL2" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-GS-5123 04.00' or 'CS-RS-ACS-ESL-5265 1.6' or CS-RS-ACS-ESL-5265 2.1 or 'CS-RS-ACS-ESL-5265 3.0'" criticality="Warning"><![CDATA[str(.) == "CS-RS-ACS-GS-5123 04.00" || rtrim(str(.)) == "CS-RS-ACS-ESL-5265 1.6" || rtrim(str(.)) == "CS-RS-ACS-ESL-5265 2.1" || rtrim(str(.)) == "CS-RS-ACS-ESL-5265 3.1"]]></ct:Test>
+  <ct:Test name="MPHRefDocL2NetCDF" description="The REF_DOC field in the MPH should have the value 'CS-RS-ACS-ESL-5265 1.6' or 'CS-RS-ACS-ESL-5265 2.1' or 'CS-RS-ACS-ESL-5265 3.0' (NetCDF version)" criticality="Warning"><![CDATA[rtrim(str(.)) == "CS-RS-ACS-ESL-5265 1.6" || rtrim(str(.)) == "CS-RS-ACS-ESL-5265 2.1" || rtrim(str(.)) == "CS-RS-ACS-ESL-5265 3.1"]]></ct:Test>
   <ct:Test name="MPHRefDocOPL1" description="The REF_DOC field in the MPH should have the value 'C2-RS-ACS-ESL-5213 1.4' or ''CS-RS-ACS-ESL-5265 2.1''" criticality="Warning"><![CDATA[str(.) == "C2-RS-ACS-ESL-5213 1.4 " || str(.) == "CS-RS-ACS-ESL-5265 2.1"]]></ct:Test>
   <ct:Test name="MPHRefDocOPHDRNetCDF" description="The REF_DOC field in the MPH should have the value 'C2-RS-ACS-ESL-5266 3.1' or 'C2-RS-ACS-ESL-5266 3.3' or 'C2-RS-ACS-ESL-5266 3.4' or 'C2-RS-ACS-ESL-5266 3.7'" criticality="Warning"><![CDATA[trim(str(.)) == "C2-RS-ACS-ESL-5266 3.1" || trim(str(.)) == "C2-RS-ACS-ESL-5266 3.3" || trim(str(.)) == "C2-RS-ACS-ESL-5266 3.4" || trim(str(.)) == "C2-RS-ACS-ESL-5266 3.7" ]]></ct:Test>
   <ct:Test name="MPHRefDocOPL2" description="The REF_DOC field in the MPH should have the value 'C2-RS-ACS-ESL-5213 1.4' for baseline B and 'C2-RS-ACS-ESL-5266 3.1' or 'C2-RS-ACS-ESL-5266 3.3' or 'C2-RS-ACS-ESL-5266 3.4' for baseline C and 'C2-RS-ACS-ESL-5266 3.7' for baseline D" criticality="Warning"><![CDATA[(substr(51,1,filename()) =="C" && (trim(str(.)) == "C2-RS-ACS-ESL-5266 3.1" || trim(str(.)) == "C2-RS-ACS-ESL-5266 3.3" || trim(str(.)) == "C2-RS-ACS-ESL-5266 3.4")) || str(.) == "C2-RS-ACS-ESL-5213 1.4" || (substr(51,1,filename()) =="D" && (trim(str(.)) == "C2-RS-ACS-ESL-5266 3.6" ||trim(str(.)) == "C2-RS-ACS-ESL-5266 3.7" ))]]></ct:Test>
@@ -794,7 +794,7 @@
     <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/MPH/Abs_Orbit)]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Delta_UT1_NetCDF" description="Delta_UT1 mismatch" criticality="Warning">
-    <ct:ValueExpressionDbl><![CDATA[float(str(/@delta_ut1))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionDbl><![CDATA[float(/@delta_ut1[0])]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/MPH/Delta_UT1)]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Delta_UT1_Float_NetCDF" description="Delta_UT1 mismatch (DBL float)" criticality="Warning">
@@ -816,11 +816,11 @@
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_X_Position_Float_v2_NetCDF" description="X_Position mismatch (DBL float (GDR), rounded to 100)" criticality="Warning">
     <!-- The following expression is needed to overcome problems with a missing round function in coda, in combination with dbl values that are on the rounding edge .xxx5 -->
-    <ct:ValueExpressionDbl><![CDATA[if(((abs(float(str(/@x_position))) % 1) / (1/16.0) % 4 == 3), if(float(str(/@x_position)) < 0,ceil(0.01*float(str(/@x_position))-0.5),floor(0.01*float(str(/@x_position))+0.5))*100.0,if(float(str(/@x_position)) < 0,floor(0.01*float(str(/@x_position))+0.5),ceil(0.01*float(str(/@x_position))-0.5))*100.0)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionDbl><![CDATA[if(((abs(float(/@x_position[0])) % 1) / (1/16.0) % 4 == 3), if(float(/@x_position[0]) < 0,ceil(0.01*float(/@x_position[0])-0.5),floor(0.01*float(@x_position[0])+0.5))*100.0,if(float(/@x_position[0]) < 0,floor(0.01*float(/@x_position[0])+0.5),ceil(0.01*float(/@x_position[0])-0.5))*100.0)]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[if(float(/Earth_Explorer_Header/Variable_Header/MPH/X_Position) < 0,floor(0.01*float(/Earth_Explorer_Header/Variable_Header/MPH/X_Position)+0.5),ceil(0.01*float(/Earth_Explorer_Header/Variable_Header/MPH/X_Position)-0.5))*100.0]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Y_Position_NetCDF" description="Y_Position mismatch" criticality="Warning">
-    <ct:ValueExpressionDbl><![CDATA[float(str(/@y_position))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionDbl><![CDATA[float(/@y_position[0])]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/MPH/Y_Position)]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Y_Position_Float_NetCDF" description="Y_Position mismatch (DBL float, rounded to 0.001)" criticality="Warning">
@@ -829,11 +829,11 @@
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Y_Position_Float_v2_NetCDF" description="Y_Position mismatch (DBL float (GDR), rounded to 100)" criticality="Warning">
     <!-- The following expression is needed to overcome problems with a missing round function in coda, in combination with dbl values that are on the rounding edge .xxx5 -->
-    <ct:ValueExpressionDbl><![CDATA[if(((abs(float(str(/@y_position))) % 1) / (1/16.0) % 4 == 3), if(float(str(/@y_position)) < 0,ceil(0.01*float(str(/@y_position))-0.5),floor(0.01*float(str(/@y_position))+0.5))*100.0,if(float(str(/@y_position)) < 0,floor(0.01*float(str(/@y_position))+0.5),ceil(0.01*float(str(/@y_position))-0.5))*100.0)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionDbl><![CDATA[if(((abs(float(/@y_position[0])) % 1) / (1/16.0) % 4 == 3), if(float(/@y_position[0]) < 0,ceil(0.01*float(/@y_position[0])-0.5),floor(0.01*float(/@y_position[0])+0.5))*100.0,if(float(/@y_position[0]) < 0,floor(0.01*float(/@y_position[0])+0.5),ceil(0.01*float(/@y_position[0])-0.5))*100.0)]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[if(float(/Earth_Explorer_Header/Variable_Header/MPH/Y_Position) < 0,floor(0.01*float(/Earth_Explorer_Header/Variable_Header/MPH/Y_Position)+0.5),ceil(0.01*float(/Earth_Explorer_Header/Variable_Header/MPH/Y_Position)-0.5))*100.0]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Z_Position_NetCDF" description="Z_Position mismatch" criticality="Warning">
-    <ct:ValueExpressionDbl><![CDATA[float(str(/@z_position))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionDbl><![CDATA[float(/@z_position[0])]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/MPH/Z_Position)]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Z_Position_Float_NetCDF" description="Z_Position mismatch (DBL float, rounded to 0.001)" criticality="Warning">
@@ -842,11 +842,11 @@
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Z_Position_Float_v2_NetCDF" description="Z_Position mismatch (DBL float (GDR), rounded to 100)" criticality="Warning">
     <!-- The following expression is needed to overcome problems with a missing round function in coda, in combination with dbl values that are on the rounding edge .xxx5 -->
-    <ct:ValueExpressionDbl><![CDATA[if(((abs(float(str(/@z_position))) % 1) / (1/16.0) % 4 == 3), if(float(str(/@z_position)) < 0,ceil(0.01*float(str(/@z_position))-0.5),floor(0.01*float(str(/@z_position))+0.5))*100.0,if(float(str(/@z_position)) < 0,floor(0.01*float(str(/@z_position))+0.5),ceil(0.01*float(str(/@z_position))-0.5))*100.0)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionDbl><![CDATA[if(((abs(float(/@z_position[0])) % 1) / (1/16.0) % 4 == 3), if(float(/@z_position[0]) < 0,ceil(0.01*float(/@z_position[0])-0.5),floor(0.01*float(/@z_position[0])+0.5))*100.0,if(float(/@z_position[0]) < 0,floor(0.01*float(/@z_position[0])+0.5),ceil(0.01*float(/@z_position[0])-0.5))*100.0)]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[if(float(/Earth_Explorer_Header/Variable_Header/MPH/Z_Position) < 0,floor(0.01*float(/Earth_Explorer_Header/Variable_Header/MPH/Z_Position)+0.5),ceil(0.01*float(/Earth_Explorer_Header/Variable_Header/MPH/Z_Position)-0.5))*100.0]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_X_Velocity_NetCDF" description="X_Velocity mismatch" criticality="Warning">
-    <ct:ValueExpressionDbl><![CDATA[float(str(/@x_velocity))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionDbl><![CDATA[float(/@x_velocity[0])]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/MPH/X_Velocity)]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_X_Velocity_Float_NetCDF" description="X_Velocity mismatch (DBL float, rounded to 0.000001)" criticality="Warning">
@@ -855,11 +855,11 @@
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_X_Velocity_Float_v2_NetCDF" description="X_Velocity mismatch (DBL float (GDR), rounded to 1)" criticality="Warning">
     <!-- The following expression is needed to overcome problems with a missing round function in coda, in combination with dbl values that are on the rounding edge .xxx5 -->
-    <ct:ValueExpressionDbl><![CDATA[if(((abs(float(str(/@x_velocity))) % 1) / (1/16.0) % 4 == 3), if(float(str(/@x_velocity)) < 0,ceil(float(str(/@x_velocity))-0.5),floor(float(str(/@x_velocity))+0.5)),if(float(str(/@x_velocity)) < 0,floor(float(str(/@x_velocity))+0.5),ceil(float(str(/@x_velocity))-0.5)))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionDbl><![CDATA[if(((abs(float(/@x_velocity[0])) % 1) / (1/16.0) % 4 == 3), if(float(/@x_velocity[0]) < 0,ceil(float(/@x_velocity[0])-0.5),floor(float(/@x_velocity[0])+0.5)),if(float(/@x_velocity[0]) < 0,floor(float(/@x_velocity[0])+0.5),ceil(float(/@x_velocity[0])-0.5)))]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[if(float(/Earth_Explorer_Header/Variable_Header/MPH/X_Velocity) < 0,floor(float(/Earth_Explorer_Header/Variable_Header/MPH/X_Velocity)+0.5),ceil(float(/Earth_Explorer_Header/Variable_Header/MPH/X_Velocity)-0.5))]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Y_Velocity_NetCDF" description="Y_Velocity mismatch" criticality="Warning">
-    <ct:ValueExpressionDbl><![CDATA[float(str(/@y_velocity))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionDbl><![CDATA[float(/@y_velocity[0])]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/MPH/Y_Velocity)]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Y_Velocity_Float_NetCDF" description="Y_Velocity mismatch (DBL float, rounded to 0.000001)" criticality="Warning">
@@ -868,11 +868,11 @@
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Y_Velocity_Float_v2_NetCDF" description="Y_Velocity mismatch (DBL float (GDR), rounded to 1)" criticality="Warning">
     <!-- The following expression is needed to overcome problems with a missing round function in coda, in combination with dbl values that are on the rounding edge .xxx5 -->
-    <ct:ValueExpressionDbl><![CDATA[if(((abs(float(str(/@y_velocity))) % 1) / (1/16.0) % 4 == 3), if(float(str(/@y_velocity)) < 0,ceil(float(str(/@y_velocity))-0.5),floor(float(str(/@y_velocity))+0.5)),if(float(str(/@y_velocity)) < 0,floor(float(str(/@y_velocity))+0.5),ceil(float(str(/@y_velocity))-0.5)))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionDbl><![CDATA[if(((abs(float(/@y_velocity[0])) % 1) / (1/16.0) % 4 == 3), if(float(/@y_velocity[0]) < 0,ceil(float(/@y_velocity[0])-0.5),floor(float(/@y_velocity[0])+0.5)),if(float(/@y_velocity[0]) < 0,floor(float(/@y_velocity[0])+0.5),ceil(float(/@y_velocity[0])-0.5)))]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[if(float(/Earth_Explorer_Header/Variable_Header/MPH/Y_Velocity) < 0,floor(float(/Earth_Explorer_Header/Variable_Header/MPH/Y_Velocity)+0.5),ceil(float(/Earth_Explorer_Header/Variable_Header/MPH/Y_Velocity)-0.5))]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Z_Velocity_NetCDF" description="Z_Velocity mismatch" criticality="Warning">
-    <ct:ValueExpressionDbl><![CDATA[float(str(/@z_velocity))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionDbl><![CDATA[float(/@z_velocity[0])]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/MPH/Z_Velocity)]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Z_Velocity_Float_NetCDF" description="Z_Velocity mismatch (DBL float, rounded to 0.000001)" criticality="Warning">
@@ -881,7 +881,7 @@
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Z_Velocity_Float_v2_NetCDF" description="Z_Velocity mismatch (DBL float (GDR), rounded to 1)" criticality="Warning">
     <!-- The following expression is needed to overcome problems with a missing round function in coda, in combination with dbl values that are on the rounding edge .xxx5 -->
-    <ct:ValueExpressionDbl><![CDATA[if(((abs(float(str(/@z_velocity))) % 1) / (1/16.0) % 4 == 3), if(float(str(/@z_velocity)) < 0,ceil(float(str(/@z_velocity))-0.5),floor(float(str(/@z_velocity))+0.5)),if(float(str(/@z_velocity)) < 0,floor(float(str(/@z_velocity))+0.5),ceil(float(str(/@z_velocity))-0.5)))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionDbl><![CDATA[if(((abs(float(/@z_velocity[0])) % 1) / (1/16.0) % 4 == 3), if(float(/@z_velocity[0]) < 0,ceil(float(/@z_velocity[0])-0.5),floor(float(/@z_velocity[0])+0.5)),if(float(/@z_velocity[0]) < 0,floor(float(/@z_velocity[0])+0.5),ceil(float(/@z_velocity[0])-0.5)))]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[if(float(/Earth_Explorer_Header/Variable_Header/MPH/Z_Velocity) < 0,floor(float(/Earth_Explorer_Header/Variable_Header/MPH/Z_Velocity)+0.5),ceil(float(/Earth_Explorer_Header/Variable_Header/MPH/Z_Velocity)-0.5))]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_State_Vector_Source_NetCDF" description="State_Vector_Source mismatch" criticality="Error">

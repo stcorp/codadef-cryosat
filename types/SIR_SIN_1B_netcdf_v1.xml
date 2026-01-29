@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2022-12-22" name="SIR_SARN1B_netcdf_v0">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2025-12-22" name="SIR_SIN_1B_netcdf_v1">
   <cd:Attribute name="abs_orbit_number">
     <cd:Array>
       <cd:Dimension>1</cd:Dimension>
@@ -321,16 +321,19 @@
   <cd:Attribute name="xref_constants">
     <cd:Text/>
   </cd:Attribute>
+  <cd:Attribute name="xref_distance_to_coast">
+    <cd:Text/>
+  </cd:Attribute>
   <cd:Attribute name="xref_dip_map">
     <cd:Text/>
-  </cd:Attribute>  
+  </cd:Attribute>
   <cd:Attribute name="xref_earth_tide">
     <cd:Text/>
   </cd:Attribute>
-  <cd:Attribute name="xref_iono_cor">
+  <cd:Attribute name="xref_gim">
     <cd:Text/>
   </cd:Attribute>
-   <cd:Attribute name="xref_ocean_tide">
+  <cd:Attribute name="xref_iono_cor">
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_mean_pressure">
@@ -338,12 +341,11 @@
   </cd:Attribute>
   <cd:Attribute name="xref_meteo">
     <cd:Text/>
-  </cd:Attribute>  
-  <cd:Attribute name="xref_tidal_load">
-    <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_mog2d">
-    <cd:Optional/>
+    <cd:Text/>
+  </cd:Attribute>
+  <cd:Attribute name="xref_ocean_load_tide">
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_orbit">
@@ -391,8 +393,7 @@
   <cd:Attribute name="xref_siral_l0">
     <cd:Text/>
   </cd:Attribute>
-  <cd:Attribute name="xref_star_tracker_0">
-    <cd:Optional/>
+  <cd:Attribute name="xref_star_tracker_attref">
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_surf_pressure">
@@ -411,6 +412,9 @@
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_wet_trop">
+    <cd:Text/>
+  </cd:Attribute>
+  <cd:Attribute name="xref_cats2008_tide">
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="y_position">
@@ -449,6 +453,11 @@
       </cd:Float>
     </cd:Array>
   </cd:Attribute>
+
+  <cd:Attribute name="NCProperties" real_name="_NCProperties">
+    <cd:Text/>
+  </cd:Attribute>
+
   <cd:Field name="agc_ch1_20_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
@@ -460,6 +469,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -531,6 +549,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -602,6 +629,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -679,6 +715,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -750,6 +795,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -821,6 +875,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>2</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -893,6 +956,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>2</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -965,6 +1037,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -1025,6 +1106,134 @@
       <cd:Description>cor2 height rate</cd:Description>
     </cd:Array>
   </cd:Field>
+
+  <cd:Field name="distance_to_coast_01">
+    <cd:Array>
+      <cd:Attribute name="FillValue" real_name="_FillValue">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Integer>
+            <cd:NativeType>int16</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
+      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+        <cd:Integer>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:LittleEndian/>
+        </cd:Integer>
+        <cd:Hidden/>
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Attribute name="comment">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="institution">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="long_name">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="scale_factor">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="source">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="units">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Integer>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+      <cd:Description>Distance to the closest coast: negative over land, positive over water bodies</cd:Description>
+    </cd:Array>
+  </cd:Field>
+
+  <cd:Field name="distance_to_coast_20_ku">
+    <cd:Array>
+      <cd:Attribute name="FillValue" real_name="_FillValue">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Integer>
+            <cd:NativeType>int16</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
+      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+        <cd:Integer>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:LittleEndian/>
+        </cd:Integer>
+        <cd:Hidden/>
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Attribute name="comment">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="institution">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="long_name">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="scale_factor">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="source">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="units">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Integer>
+        <cd:NativeType>int16</cd:NativeType>
+        <cd:LittleEndian/>
+      </cd:Integer>
+      <cd:Description>Distance to the closest coast: negative over land, positive over water bodies</cd:Description>
+    </cd:Array>
+  </cd:Field>
+
   <cd:Field name="dop_angle_start_20_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
@@ -1036,6 +1245,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -1107,6 +1325,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -1178,6 +1405,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -1249,6 +1485,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -1318,6 +1563,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -1387,6 +1641,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -1456,6 +1719,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -1527,6 +1799,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -1598,6 +1879,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -1669,6 +1959,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -1738,6 +2037,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -1807,6 +2115,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -1865,6 +2182,72 @@
       <cd:Description>echo scale power (a power of 2)</cd:Description>
     </cd:Array>
   </cd:Field>
+  <cd:Field name="cats2008_tide_01">
+    <cd:Array>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
+      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+        <cd:Integer>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:LittleEndian/>
+        </cd:Integer>
+        <cd:Hidden/>
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Attribute name="FillValue" real_name="_FillValue">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="comment">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="institution">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="long_name">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="scale_factor">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="source">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="units">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Integer>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:LittleEndian/>
+        <cd:Conversion numerator="1e-03" denominator="1" invalid="-2.14748e+09">
+           <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+      <cd:Description>CATS2008 tide correction</cd:Description>
+    </cd:Array>
+  </cd:Field>
   <cd:Field name="flag_cor_err_01">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
@@ -1876,6 +2259,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -1936,6 +2328,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -1996,6 +2397,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -2056,6 +2466,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -2116,6 +2535,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -2176,6 +2604,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -2260,6 +2697,15 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
           <cd:NativeType>int32</cd:NativeType>
@@ -2287,6 +2733,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -2347,6 +2802,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -2407,6 +2871,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -2467,6 +2940,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -2527,6 +3009,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -2587,6 +3078,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -2647,6 +3147,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -2707,6 +3216,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -2767,6 +3285,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -2838,6 +3365,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -2909,6 +3445,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -2980,6 +3525,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3069,6 +3623,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3120,6 +3683,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3165,6 +3737,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3236,6 +3817,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3302,11 +3892,20 @@
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
+            <cd:NativeType>int64</cd:NativeType>
             <cd:LittleEndian/>
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3359,7 +3958,7 @@
       </cd:Attribute>
       <cd:Dimension></cd:Dimension>
       <cd:Integer>
-        <cd:NativeType>int32</cd:NativeType>
+        <cd:NativeType>int64</cd:NativeType>
         <cd:Conversion numerator="0.001" denominator="1" invalid="-2.14748e+09">
            <cd:Unit>m</cd:Unit>
         </cd:Conversion>
@@ -3373,11 +3972,20 @@
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
+            <cd:NativeType>int64</cd:NativeType>
             <cd:LittleEndian/>
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3430,9 +4038,8 @@
       </cd:Attribute>
       <cd:Dimension></cd:Dimension>
       <cd:Integer>
-        <cd:NativeType>int32</cd:NativeType>
-        <cd:LittleEndian/>
-        <cd:Conversion numerator="1e-12" denominator="1" invalid="-9.22337e+18">
+        <cd:NativeType>int64</cd:NativeType>
+        <cd:Conversion numerator="0.001" denominator="1" invalid="-2.14748e+09">
            <cd:Unit>m</cd:Unit>
         </cd:Conversion>
       </cd:Integer>
@@ -3450,6 +4057,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3521,6 +4137,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3592,6 +4217,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>2</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3664,6 +4298,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3753,6 +4396,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3842,6 +4494,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3931,6 +4592,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -3941,12 +4611,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -4008,6 +4672,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -4018,12 +4691,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -4084,6 +4751,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -4094,12 +4770,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -4161,6 +4831,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -4171,12 +4850,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -4238,6 +4911,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -4321,6 +5003,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -4331,12 +5022,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -4398,6 +5083,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -4408,12 +5102,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -4475,6 +5163,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -4485,12 +5182,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -4552,6 +5243,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -4562,12 +5262,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Text/>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
           <cd:Text/>
@@ -4629,6 +5323,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -4700,6 +5403,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -4771,6 +5483,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -4860,6 +5581,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -4949,6 +5679,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -5041,6 +5780,15 @@
       <cd:Attribute name="NAME">
         <cd:Text/>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
           <cd:NativeType>int32</cd:NativeType>
@@ -5116,6 +5864,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -5205,6 +5962,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -5294,6 +6060,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -5365,6 +6140,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -5436,6 +6220,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -5507,6 +6300,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -5578,6 +6380,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>2</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -5650,6 +6461,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -5721,6 +6541,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -5804,6 +6633,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>2</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -5898,6 +6736,15 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>2</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
           <cd:NativeType>int32</cd:NativeType>
@@ -5959,6 +6806,15 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>2</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
           <cd:NativeType>int32</cd:NativeType>
@@ -6002,6 +6858,15 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
           <cd:NativeType>int32</cd:NativeType>
@@ -6018,6 +6883,69 @@
       <cd:Description>record counter</cd:Description>
     </cd:Array>
   </cd:Field>
+
+  <cd:Field name="rip_20_ku">
+    <cd:Array>
+      <cd:Attribute name="FillValue" real_name="_FillValue">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>float</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+        <cd:Integer>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:LittleEndian/>
+        </cd:Integer>
+        <cd:Hidden/>
+        <cd:Optional/>
+      </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>2</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
+      <cd:Attribute name="comment">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="long_name">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="units">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Text/>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Dimension></cd:Dimension>
+      <cd:Float>
+        <cd:NativeType>float</cd:NativeType>
+        <cd:LittleEndian/>
+      </cd:Float>
+      <cd:Description>Range integrated power L1B.</cd:Description>
+    </cd:Array>
+  </cd:Field>
+
   <cd:Field name="sat_vel_vec_20_ku">
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
@@ -6029,6 +6957,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>2</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -6134,6 +7071,15 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
           <cd:NativeType>int32</cd:NativeType>
@@ -6161,6 +7107,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -6292,6 +7247,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -6363,6 +7327,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -6434,6 +7407,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -6505,6 +7487,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -6576,6 +7567,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -6647,6 +7647,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -6716,6 +7725,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -6785,6 +7803,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -6849,13 +7876,22 @@
     <cd:Array>
       <cd:Attribute name="FillValue" real_name="_FillValue">
         <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
+          <cd:Dimension></cd:Dimension>
           <cd:Integer>
-            <cd:NativeType>int8</cd:NativeType>
+            <cd:NativeType>int16</cd:NativeType>
             <cd:LittleEndian/>
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>2</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -6903,7 +7939,7 @@
       <cd:Dimension></cd:Dimension>
       <cd:Dimension></cd:Dimension>
       <cd:Integer>
-        <cd:NativeType>int8</cd:NativeType>
+        <cd:NativeType>int16</cd:NativeType>
       </cd:Integer>
       <cd:Description>Zero-mask between the start and stop looks within the stack.</cd:Description>
     </cd:Array>
@@ -6919,6 +7955,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -6990,6 +8035,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -7061,6 +8115,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -7132,6 +8195,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -7203,6 +8275,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -7308,6 +8389,15 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
           <cd:NativeType>int32</cd:NativeType>
@@ -7368,6 +8458,15 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
           <cd:NativeType>int32</cd:NativeType>
@@ -7428,6 +8527,15 @@
           <cd:Text/>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
           <cd:NativeType>int32</cd:NativeType>
@@ -7452,6 +8560,15 @@
       <cd:Attribute name="NAME">
         <cd:Text/>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
         <cd:Integer>
           <cd:NativeType>int32</cd:NativeType>
@@ -7515,6 +8632,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -7586,6 +8712,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -7657,6 +8792,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -7728,6 +8872,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -7799,6 +8952,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -7870,6 +9032,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -7941,6 +9112,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -8012,6 +9192,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -8083,6 +9272,15 @@
           </cd:Integer>
         </cd:Array>
       </cd:Attribute>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
       <cd:Attribute name="add_offset">
         <cd:Array>
           <cd:Dimension>1</cd:Dimension>
@@ -8148,7 +9346,7 @@
   <!-- QC id="MPHRefDocL1NetCDF" path="@reference_document" -->
   <!-- QC id="AcquisitionStationValid" path="@acquisition_station" -->
   <!-- QC id="ProcessingCenterValidL1" path="@processing_centre" -->
-  <!-- QC id="EnumNRTOrbitVectorSourceNetCDF" path="@vector_source" -->
+  <!-- QC id="EnumOrbitVectorSourceNetCDF" path="@vector_source" -->
   <!-- QC id="LeapUtcValidNetCDF" path="@leap_utc" -->
   <!-- QC id="LeapErrValidNetCDF" path="@leap_err" -->
   <!-- QC id="ProductErrFlagNetCDF" path="@product_err" -->
