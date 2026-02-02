@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="SIR_SIN_2__v4" format="hdf5" last-modified="2025-04-02">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="SIR_SIN_2__v4" format="hdf5" last-modified="2026-01-30">
   <cd:NamedType id="SIR_XXX_2__netcdf_v2"/>
   <ct:NamedTest id="AttributeXrefDemMustExist"/>
   <ct:NamedTest id="AttributeXrefSeaIceMustExist"/>
   <ct:NamedTest id="AttributeXrefSsbMustNotExist"/>
   <ct:NamedTest id="AttributeXrefSiralL2MustNotExist"/>
-  <ct:NamedTest id="AttributeXrefSlopeModelMustNotExist"/>
+  <ct:NamedTest id="AttributeXrefSlopeMustExist"/>
   <ct:NamedTest id="AttributeXrefSnowDepthMustExist"/>
   <ct:NamedTest id="AttributeXrefWindModelMustNotExist"/>
   <!-- QC id="FixedValueDorisPrecise" path="@vector_source" -->

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2025-12-22" name="SIR_GDR_2__netcdf_v2">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2026-01-30" name="SIR_GDR_2__netcdf_v2">
   <cd:Attribute name="product_name">
     <cd:Text/>
   </cd:Attribute>
@@ -764,6 +764,9 @@
           </cd:Float>
         </cd:Array>
       </cd:Attribute>
+      <cd:Attribute name="source">
+        <cd:Text/>
+      </cd:Attribute>
       <cd:Attribute name="units">
         <cd:Text/>
       </cd:Attribute>
@@ -845,8 +848,7 @@
       <cd:Description>CATS2008 tide correction</cd:Description>
     </cd:Array>
   </cd:Field>
-
-  <cd:Field name="echo_avg_numval_20_ku">
+  <cd:Field name="echo_numval_20_ku">
     <cd:Array>
 		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
 		    <cd:Array>
@@ -894,8 +896,8 @@
       <cd:Description>count of echoes or beams averaged</cd:Description>
     </cd:Array>
   </cd:Field>
-
-  <cd:Field name="echo_avg_numval_plrm_20_ku">
+  <cd:Field name="echo_numval_plrm_20_ku">
+    <cd:Optional/>
     <cd:Array>
 		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
 		    <cd:Array>
@@ -2409,137 +2411,9 @@
       </cd:Integer>
       <cd:Description>GIM ionospheric correction</cd:Description>
     </cd:Array>
-  </cd:Field><cd:Field name="larm_wf_metric_1_ku">
-    <cd:Array>
-		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
-		    <cd:Array>
-		      <cd:Dimension>1</cd:Dimension>
-		      <cd:Integer>
-		        <cd:NativeType>int32</cd:NativeType>
-		        <cd:LittleEndian/>
-		      </cd:Integer>
-		    </cd:Array>
-		  </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="institution">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="scale_factor">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="source">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="standard_name">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int32</cd:NativeType>
-        <cd:Conversion numerator="1E-6" denominator="1" invalid="-2.14748e+09">
-          <cd:Unit>m</cd:Unit>
-        </cd:Conversion>
-      </cd:Integer>
-      <cd:Description>LARM waveform metric 1 (sigma_si)</cd:Description>
-    </cd:Array>
-  </cd:Field>  
-  <cd:Field name="larm_wf_metric_2_ku">
-    <cd:Array>
-		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
-		    <cd:Array>
-		      <cd:Dimension>1</cd:Dimension>
-		      <cd:Integer>
-		        <cd:NativeType>int32</cd:NativeType>
-		        <cd:LittleEndian/>
-		      </cd:Integer>
-		    </cd:Array>
-		  </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="institution">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="scale_factor">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Float>
-            <cd:NativeType>double</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Float>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="source">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="standard_name">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int32</cd:NativeType>
-        <cd:Conversion numerator="1E-6" denominator="1" invalid="-2.14748e+09">
-          <cd:Unit>m</cd:Unit>
-        </cd:Conversion>
-      </cd:Integer>
-      <cd:Description>LARM waveform metric 1 (sigma_si)</cd:Description>
-    </cd:Array>
   </cd:Field>
   <cd:Field name="sig0_larm_20_ku">
+    <cd:Optional/>
     <cd:Array>
 		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
 		    <cd:Array>
@@ -2657,7 +2531,6 @@
       <cd:Description>latitude</cd:Description>
     </cd:Array>
   </cd:Field>
-
   <cd:Field name="lat_20_ku">
     <cd:Array>
 		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
@@ -2685,9 +2558,6 @@
             <cd:LittleEndian/>
           </cd:Integer>
         </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Text/>
       </cd:Attribute>
       <cd:Attribute name="comment">
         <cd:Text/>
@@ -2750,9 +2620,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Text/>
       </cd:Attribute>
       <cd:Attribute name="long_name">
@@ -2873,9 +2740,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Text/>
       </cd:Attribute>
       <cd:Attribute name="long_name">
@@ -3004,9 +2868,6 @@
       <cd:Attribute name="comment">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Text/>
-      </cd:Attribute>
       <cd:Attribute name="long_name">
         <cd:Text/>
       </cd:Attribute>
@@ -3127,9 +2988,6 @@
       <cd:Attribute name="comment">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Text/>
-      </cd:Attribute>
       <cd:Attribute name="long_name">
         <cd:Text/>
       </cd:Attribute>
@@ -3248,9 +3106,6 @@
         </cd:Array>
       </cd:Attribute>
       <cd:Attribute name="comment">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
         <cd:Text/>
       </cd:Attribute>
       <cd:Attribute name="long_name">
@@ -4091,8 +3946,8 @@
       <cd:Description>geocentric pole tide height</cd:Description>
     </cd:Array>
   </cd:Field>
-  
   <cd:Field name="range_larm_20_ku">
+    <cd:Optional/>
     <cd:Array>
 		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
 		    <cd:Array>
@@ -4539,53 +4394,6 @@
       <cd:Description>quality metric (retracker 3)</cd:Description>
     </cd:Array>
   </cd:Field>
-
-  <cd:Field name="retracker_ocog_quality_plrm_20_ku">
-    <cd:Array>
-		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
-		    <cd:Array>
-		      <cd:Dimension>1</cd:Dimension>
-		      <cd:Integer>
-		        <cd:NativeType>int32</cd:NativeType>
-		        <cd:LittleEndian/>
-		      </cd:Integer>
-		    </cd:Array>
-		  </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int32</cd:NativeType>
-        <cd:Unit></cd:Unit>
-      </cd:Integer>
-      <cd:Description>quality metric (retracker 3)</cd:Description>
-    </cd:Array>
-  </cd:Field>
-
   <cd:Field name="sea_ice_concentration_01">
     <cd:Array>
 		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
