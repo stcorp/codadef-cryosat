@@ -18,6 +18,7 @@
   <ct:Test name="AttributeXrefSiralL0HrMustExist" description="Existence of Attribute xref_siral_l0_hr is mandatory" criticality="Warning"><![CDATA[exists(@xref_siral_l0_hr)]]></ct:Test>
   <ct:Test name="AttributeXrefSiralL2MustExist" description="Existence of Attribute xref_siral_l2 is mandatory" criticality="Warning"><![CDATA[exists(@xref_siral_l2)]]></ct:Test>
   <ct:Test name="AttributeXrefSlopeModelMustExistOverContinentalIce" description="Existence of Attribute xref_slope_model is mandatory when measuring over continental ice" criticality="Warning"><![CDATA[int(@continent_ice_percent[0]) == 0 || exists(@xref_slope_model)]]></ct:Test>
+  <ct:Test name="AttributeXrefSlopeModelMustExist" description="Existence of Attribute xref_slope_model is mandatory" criticality="Warning"><![CDATA[exists(@xref_slope_model)]]></ct:Test>
   <ct:Test name="AttributeXrefSlopeMustExist" description="Existence of Attribute xref_slope is mandatory" criticality="Warning"><![CDATA[exists(@xref_slope)]]></ct:Test>
   <ct:Test name="AttributeXrefSlopeModelMustExistOverOcean" description="Attribute xref_slope is should be Sandwell_Smith_2014" criticality="Warning"><![CDATA[ str(@xref_slope) == "Sandwell_Smith_2014"]]></ct:Test>
   <ct:Test name="AttributeXrefSnowDepthMustExist" description="Existence of Attribute xref_snow_depth is mandatory" criticality="Warning"><![CDATA[exists(@xref_snow_depth)]]></ct:Test>

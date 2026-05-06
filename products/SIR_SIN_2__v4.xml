@@ -5,7 +5,7 @@
   <ct:NamedTest id="AttributeXrefSeaIceMustExist"/>
   <ct:NamedTest id="AttributeXrefSsbMustNotExist"/>
   <ct:NamedTest id="AttributeXrefSiralL2MustNotExist"/>
-  <ct:NamedTest id="AttributeXrefSlopeMustExist"/>
+  <ct:NamedTest id="AttributeXrefSlopeModelMustExist"/>
   <ct:NamedTest id="AttributeXrefSnowDepthMustExist"/>
   <ct:NamedTest id="AttributeXrefWindModelMustNotExist"/>
   <!-- QC id="FixedValueDorisPrecise" path="@vector_source" -->

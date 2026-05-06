@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2026-01-30" name="SIR_LRM_2__netcdf_v1">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2026-05-06" name="SIR_LRM_2__netcdf_v1">
   <cd:Attribute name="product_name">
     <cd:Text/>
   </cd:Attribute>
@@ -775,6 +775,54 @@
         <cd:LittleEndian/>
       </cd:Integer>
       <cd:Description>Distance to the closest coast: negative over land, positive over water bodies</cd:Description>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="echo_numval_20_ku">
+    <cd:Array>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
+      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+        <cd:Integer>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:LittleEndian/>
+        </cd:Integer>
+        <cd:Hidden/>
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Attribute name="FillValue" real_name="_FillValue">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Integer>
+            <cd:NativeType>int16</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="comment">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="coordinates">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="long_name">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="units">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Integer>
+        <cd:NativeType>int16</cd:NativeType>
+        <cd:Unit>count</cd:Unit>
+      </cd:Integer>
+      <cd:Description>For LRM is the number of echoes averaged to compute the corresponding L1B 20Hz power waveform. For SAR/SARin is the number of single look echoes in the Surface Sample Stack that have been multilooked to compute the corresponding L1B 20Hz power waveform. This variable includes only one receiving channel however, in SARin, single looks from both channels are averaged in order to reduce the SNR</cd:Description>
     </cd:Array>
   </cd:Field>
   <cd:Field name="flag_bedmachine_mask_20_ku">
@@ -3480,54 +3528,6 @@
         </cd:Conversion>
       </cd:Integer>
       <cd:Description>geocentric pole tide height</cd:Description>
-    </cd:Array>
-  </cd:Field>
-  <cd:Field name="echo_numval_20_ku">
-    <cd:Array>
-		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
-		    <cd:Array>
-		      <cd:Dimension>1</cd:Dimension>
-		      <cd:Integer>
-		        <cd:NativeType>int32</cd:NativeType>
-		        <cd:LittleEndian/>
-		      </cd:Integer>
-		    </cd:Array>
-		  </cd:Attribute>
-      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-        <cd:Integer>
-          <cd:NativeType>int32</cd:NativeType>
-          <cd:LittleEndian/>
-        </cd:Integer>
-        <cd:Hidden/>
-        <cd:Optional/>
-      </cd:Attribute>
-      <cd:Attribute name="FillValue" real_name="_FillValue">
-        <cd:Array>
-          <cd:Dimension>1</cd:Dimension>
-          <cd:Integer>
-            <cd:NativeType>int16</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Array>
-      </cd:Attribute>
-      <cd:Attribute name="comment">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="coordinates">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="long_name">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Attribute name="units">
-        <cd:Text/>
-      </cd:Attribute>
-      <cd:Dimension></cd:Dimension>
-      <cd:Integer>
-        <cd:NativeType>int16</cd:NativeType>
-        <cd:Unit>count</cd:Unit>
-      </cd:Integer>
-      <cd:Description>Count of echoes or beams averaged</cd:Description>
     </cd:Array>
   </cd:Field>
   <cd:Field name="range_1_20_ku">
