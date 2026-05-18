@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2026-01-30" name="SIR_XXX_2__netcdf_v2">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2026-05-18" name="SIR_XXX_2__netcdf_v2">
   <cd:Attribute name="product_name">
     <cd:Text/>
   </cd:Attribute>
@@ -961,7 +961,7 @@
       </cd:Attribute>
       <cd:Attribute name="flag_masks">
         <cd:Array>
-          <cd:Dimension>30</cd:Dimension>
+          <cd:Dimension>29</cd:Dimension>
           <cd:Integer>
             <cd:NativeType>int32</cd:NativeType>
             <cd:LittleEndian/>
@@ -1077,7 +1077,7 @@
       </cd:Attribute>
       <cd:Attribute name="flag_masks">
         <cd:Array>
-          <cd:Dimension>23</cd:Dimension>
+          <cd:Dimension>22</cd:Dimension>
           <cd:Integer>
             <cd:NativeType>int32</cd:NativeType>
             <cd:LittleEndian/>
