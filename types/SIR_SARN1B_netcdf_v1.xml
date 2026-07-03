@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2022-12-22" name="SIR_SARN1B_netcdf_v0">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="hdf5" last-modified="2025-12-22" name="SIR_SARN1B_netcdf_v1">
   <cd:Attribute name="abs_orbit_number">
     <cd:Array>
       <cd:Dimension>1</cd:Dimension>
@@ -323,14 +323,11 @@
   </cd:Attribute>
   <cd:Attribute name="xref_dip_map">
     <cd:Text/>
-  </cd:Attribute>  
+  </cd:Attribute>
   <cd:Attribute name="xref_earth_tide">
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_iono_cor">
-    <cd:Text/>
-  </cd:Attribute>
-   <cd:Attribute name="xref_ocean_tide">
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_mean_pressure">
@@ -338,12 +335,12 @@
   </cd:Attribute>
   <cd:Attribute name="xref_meteo">
     <cd:Text/>
-  </cd:Attribute>  
-  <cd:Attribute name="xref_tidal_load">
-    <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_mog2d">
     <cd:Optional/>
+    <cd:Text/>
+  </cd:Attribute>
+  <cd:Attribute name="xref_ocean_tide">
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_orbit">
@@ -399,6 +396,9 @@
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_surf_type">
+    <cd:Text/>
+  </cd:Attribute>
+  <cd:Attribute name="xref_tidal_load">
     <cd:Text/>
   </cd:Attribute>
   <cd:Attribute name="xref_u_wind">
@@ -1863,6 +1863,69 @@
         <cd:Unit>count</cd:Unit>
       </cd:Integer>
       <cd:Description>echo scale power (a power of 2)</cd:Description>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cats2008_tide_01">
+    <cd:Array>
+		  <cd:Attribute name="Netcdf4Coordinates" real_name="_Netcdf4Coordinates">
+		    <cd:Array>
+		      <cd:Dimension>1</cd:Dimension>
+		      <cd:Integer>
+		        <cd:NativeType>int32</cd:NativeType>
+		        <cd:LittleEndian/>
+		      </cd:Integer>
+		    </cd:Array>
+		  </cd:Attribute>
+      <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+        <cd:Integer>
+          <cd:NativeType>int32</cd:NativeType>
+          <cd:LittleEndian/>
+        </cd:Integer>
+        <cd:Hidden/>
+        <cd:Optional/>
+      </cd:Attribute>
+      <cd:Attribute name="FillValue" real_name="_FillValue">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="comment">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="institution">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="long_name">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="scale_factor">
+        <cd:Array>
+          <cd:Dimension>1</cd:Dimension>
+          <cd:Float>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Float>
+        </cd:Array>
+      </cd:Attribute>
+      <cd:Attribute name="source">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Attribute name="units">
+        <cd:Text/>
+      </cd:Attribute>
+      <cd:Dimension></cd:Dimension>
+      <cd:Integer>
+        <cd:NativeType>int32</cd:NativeType>
+        <cd:LittleEndian/>
+        <cd:Conversion numerator="1e-03" denominator="1" invalid="-2.14748e+09">
+           <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+      </cd:Integer>
+      <cd:Description>CATS2008 tide correction</cd:Description>
     </cd:Array>
   </cd:Field>
   <cd:Field name="flag_cor_err_01">
@@ -3431,8 +3494,7 @@
       <cd:Dimension></cd:Dimension>
       <cd:Integer>
         <cd:NativeType>int32</cd:NativeType>
-        <cd:LittleEndian/>
-        <cd:Conversion numerator="1e-12" denominator="1" invalid="-9.22337e+18">
+        <cd:Conversion numerator="0.001" denominator="1" invalid="-2.14748e+09">
            <cd:Unit>m</cd:Unit>
         </cd:Conversion>
       </cd:Integer>

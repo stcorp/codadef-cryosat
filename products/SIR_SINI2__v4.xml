@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="SIR_GDR_2__v3" format="hdf5" last-modified="2021-02-12" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
-  <cd:NamedType id="SIR_GDR_2__netcdf_v1"/>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="SIR_SINI2__v4" format="hdf5" last-modified="2026-01-30" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:NamedType id="SIR_XXXI2__netcdf_v2"/>
   <ct:NamedTest id="AttributeXrefDemMustExist"/>
   <ct:NamedTest id="AttributeXrefSeaIceMustExist"/>
-  <ct:NamedTest id="AttributeXrefSiralL2MustExist"/>
-  <ct:NamedTest id="AttributeXrefSlopeModelMustExistOverContinentalIce"/>
+  <ct:NamedTest id="AttributeXrefSsbMustNotExist"/>
+  <ct:NamedTest id="AttributeXrefSiralL2MustNotExist"/>
+  <ct:NamedTest id="AttributeXrefSlopeModelMustExist"/>
   <ct:NamedTest id="AttributeXrefSnowDepthMustExist"/>
-  <ct:NamedTest id="AttributeXrefSsbMustExistOverOpenOcean"/>
-  <ct:NamedTest id="AttributeXrefWindModelMustExistOverOpenOcean"/>
+  <ct:NamedTest id="AttributeXrefWindModelMustNotExist"/>
   <!-- QC id="FixedValueDorisPrecise" path="@vector_source" -->
   <!-- MPH Cross File Tests -->
   <ct:NamedCrossFileTest id="MPH_Product_NetCDF"/>
@@ -19,21 +19,21 @@
   <ct:NamedCrossFileTest id="MPH_Rel_Orbit_NetCDF"/>
   <ct:NamedCrossFileTest id="MPH_Abs_Orbit_NetCDF"/>
   <ct:NamedCrossFileTest id="MPH_Delta_UT1_Float_NetCDF"/>
-  <ct:NamedCrossFileTest id="MPH_X_Position_Float_v2_NetCDF"/>
-  <ct:NamedCrossFileTest id="MPH_Y_Position_Float_v2_NetCDF"/>
-  <ct:NamedCrossFileTest id="MPH_Z_Position_Float_v2_NetCDF"/>
-  <ct:NamedCrossFileTest id="MPH_X_Velocity_Float_v2_NetCDF"/>
-  <ct:NamedCrossFileTest id="MPH_Y_Velocity_Float_v2_NetCDF"/>
-  <ct:NamedCrossFileTest id="MPH_Z_Velocity_Float_v2_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_X_Position_Float_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Y_Position_Float_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Z_Position_Float_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_X_Velocity_Float_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Y_Velocity_Float_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Z_Velocity_Float_NetCDF"/>
   <ct:NamedCrossFileTest id="MPH_State_Vector_Source_NetCDF"/>
   <ct:NamedCrossFileTest id="MPH_Product_Err_NetCDF"/>
   <!-- SPH Cross File Tests -->
   <ct:NamedCrossFileTest id="SPH_Start_Record_Time_NetCDF"/>
   <ct:NamedCrossFileTest id="SPH_Stop_Record_Time_NetCDF"/>
   <ct:NamedCrossFileTest id="SPH_ABS_Orbit_Start_NetCDF"/>
-  <ct:NamedCrossFileTest id="SPH_Rel_Time_ASC_Node_Start_v4_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Rel_Time_ASC_Node_Start_v3_NetCDF"/>
   <ct:NamedCrossFileTest id="SPH_ABS_Orbit_Stop_NetCDF"/>
-  <ct:NamedCrossFileTest id="SPH_Rel_Time_ASC_Node_Stop_v4_NetCDF"/>
+  <ct:NamedCrossFileTest id="SPH_Rel_Time_ASC_Node_Stop_v3_NetCDF"/>
   <ct:NamedCrossFileTest id="SPH_Equator_Cross_Time_NetCDF"/>
   <ct:NamedCrossFileTest id="SPH_Equator_Cross_Long_NetCDF"/>
   <ct:NamedCrossFileTest id="SPH_Ascending_Flag_NetCDF"/>

@@ -1,13 +1,11 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="SIR_GDR_2__v3" format="hdf5" last-modified="2021-02-12" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
-  <cd:NamedType id="SIR_GDR_2__netcdf_v1"/>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="SIR_GDR_2__v4" format="hdf5" last-modified="2025-03-31" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:NamedType id="SIR_GDR_2__netcdf_v2"/>
   <ct:NamedTest id="AttributeXrefDemMustExist"/>
   <ct:NamedTest id="AttributeXrefSeaIceMustExist"/>
   <ct:NamedTest id="AttributeXrefSiralL2MustExist"/>
   <ct:NamedTest id="AttributeXrefSlopeModelMustExistOverContinentalIce"/>
   <ct:NamedTest id="AttributeXrefSnowDepthMustExist"/>
-  <ct:NamedTest id="AttributeXrefSsbMustExistOverOpenOcean"/>
-  <ct:NamedTest id="AttributeXrefWindModelMustExistOverOpenOcean"/>
   <!-- QC id="FixedValueDorisPrecise" path="@vector_source" -->
   <!-- MPH Cross File Tests -->
   <ct:NamedCrossFileTest id="MPH_Product_NetCDF"/>
@@ -18,7 +16,7 @@
   <ct:NamedCrossFileTest id="MPH_Cycle_NetCDF"/>
   <ct:NamedCrossFileTest id="MPH_Rel_Orbit_NetCDF"/>
   <ct:NamedCrossFileTest id="MPH_Abs_Orbit_NetCDF"/>
-  <ct:NamedCrossFileTest id="MPH_Delta_UT1_Float_NetCDF"/>
+  <ct:NamedCrossFileTest id="MPH_Delta_UT1_NetCDF"/>
   <ct:NamedCrossFileTest id="MPH_X_Position_Float_v2_NetCDF"/>
   <ct:NamedCrossFileTest id="MPH_Y_Position_Float_v2_NetCDF"/>
   <ct:NamedCrossFileTest id="MPH_Z_Position_Float_v2_NetCDF"/>

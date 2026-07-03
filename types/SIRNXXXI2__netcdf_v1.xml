@@ -2006,7 +2006,7 @@
       <cd:Attribute name="flag_meanings">
         <cd:Text/>
       </cd:Attribute>
-      <cd:Attribute name="flag_mask">
+      <cd:Attribute name="flag_masks">
         <cd:Array>
           <cd:Dimension>9</cd:Dimension>
           <cd:Integer>
