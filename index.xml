@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass name="CRYOSAT" last-modified="2026-05-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductClass name="CRYOSAT" last-modified="2026-08-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>CRYOSAT products</cd:Description>
   <cd:ProductType name="SAT_HKTM__">
     <cd:Description>Recorded House-Keeping Telemetry product (DBL)</cd:Description>
@@ -2835,6 +2835,15 @@
       <cd:Description>IPF-STR-PROC-PFS C2-TN-ARS-GS-5153 1.0</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://eop-cfi.esa.int/CFI}Earth_Explorer_File/{http://eop-cfi.esa.int/CFI}Earth_Explorer_Header/{http://eop-cfi.esa.int/CFI}Fixed_Header/{http://eop-cfi.esa.int/CFI}File_Type">STR_ATTREF</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="STR_ATTREF_v2" format="xml" version="2">
+      <cd:Description>IPF-STR-PROC-PFS C2-TN-ARS-GS-5153 1.1</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://eop-cfi.esa.int/CFI}Earth_Explorer_File/{http://eop-cfi.esa.int/CFI}Earth_Explorer_Header/{http://eop-cfi.esa.int/CFI}Fixed_Header/{http://eop-cfi.esa.int/CFI}File_Type">STR_ATTREF</cd:MatchData>
+        <cd:MatchExpression>exists(/Earth_Explorer_File/Earth_Explorer_Header/Variable_Header/Attitude_Sampling_Step)</cd:MatchExpression>
+        <cd:MatchExpression>exists(/Earth_Explorer_File/Earth_Explorer_Header/Variable_Header/List_of_InputFiles)</cd:MatchExpression>
+        <cd:MatchFilename offset="51">F</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="STR_ATTREF_v1" format="xml" version="1">
